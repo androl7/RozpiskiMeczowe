@@ -54,13 +54,13 @@ public class FragmentTabBraz8_1 extends Fragment {
         final Button team8 = view.findViewById(R.id.Team08);
 
         team1.setText(getActivity().getIntent().getStringExtra("NameOfTeam1"));
-        team2.setText(getActivity().getIntent().getStringExtra("NameOfTeam8"));
-        team3.setText(getActivity().getIntent().getStringExtra("NameOfTeam6"));
-        team4.setText(getActivity().getIntent().getStringExtra("NameOfTeam3"));
-        team5.setText(getActivity().getIntent().getStringExtra("NameOfTeam4"));
-        team6.setText(getActivity().getIntent().getStringExtra("NameOfTeam5"));
+        team2.setText(getActivity().getIntent().getStringExtra("NameOfTeam2"));
+        team3.setText(getActivity().getIntent().getStringExtra("NameOfTeam3"));
+        team4.setText(getActivity().getIntent().getStringExtra("NameOfTeam4"));
+        team5.setText(getActivity().getIntent().getStringExtra("NameOfTeam5"));
+        team6.setText(getActivity().getIntent().getStringExtra("NameOfTeam6"));
         team7.setText(getActivity().getIntent().getStringExtra("NameOfTeam7"));
-        team8.setText(getActivity().getIntent().getStringExtra("NameOfTeam2"));
+        team8.setText(getActivity().getIntent().getStringExtra("NameOfTeam8"));
 
 
         final Button win1 = view.findViewById(R.id.WIN_1);
@@ -91,16 +91,16 @@ public class FragmentTabBraz8_1 extends Fragment {
         toast = Toast.makeText(getActivity().getApplicationContext(), "Wprowadz wczesniejszy wynik !", Toast.LENGTH_SHORT);
 
         // 1 MECZ
-        setResult(team1,team2,win1,"WIN.1",lost1,"LOST.1",res1_1,res1_8);
+        setResult(team1,team8,win1,"WIN.1",lost1,"LOST.1",res1_1,res1_8);
 
         // 2 MECZ
-        setResult(team3,team4,win2,"WIN.2",lost2,"LOST.2",res2_6,res2_3);
+        setResult(team6,team3,win2,"WIN.2",lost2,"LOST.2",res2_6,res2_3);
 
         // 3 MECZ
-        setResult(team5,team6,win3,"WIN.3",lost3,"LOST.3",res3_4,res3_5);
+        setResult(team4,team5,win3,"WIN.3",lost3,"LOST.3",res3_4,res3_5);
 
         // 4 MECZ
-        setResult(team7,team8,win4,"WIN.4",lost4,"LOST.4",res4_7,res4_2);
+        setResult(team7,team2,win4,"WIN.4",lost4,"LOST.4",res4_7,res4_2);
 
         // 5 MECZ
         setResult(win1,"WIN.1",win2,"WIN.2",win5,"WIN.5",lost5,"LOST.5");
