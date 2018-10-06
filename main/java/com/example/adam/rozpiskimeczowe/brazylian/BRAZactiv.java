@@ -18,14 +18,14 @@ public class BRAZactiv extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brazactiv);
 
-        final EditText name1 = (EditText) findViewById(R.id.Name1);
-        final EditText name2 = (EditText) findViewById(R.id.Name2);
-        final EditText name3 = (EditText) findViewById(R.id.Name3);
-        final EditText name4 = (EditText) findViewById(R.id.Name4);
-        final EditText name5 = (EditText) findViewById(R.id.Name5);
-        final EditText name6 = (EditText) findViewById(R.id.Name6);
-        final EditText name7 = (EditText) findViewById(R.id.Name7);
-        final EditText name8 = (EditText) findViewById(R.id.Name8);
+        final EditText name1 = findViewById(R.id.Name1);
+        final EditText name2 = findViewById(R.id.Name2);
+        final EditText name3 = findViewById(R.id.Name3);
+        final EditText name4 = findViewById(R.id.Name4);
+        final EditText name5 = findViewById(R.id.Name5);
+        final EditText name6 = findViewById(R.id.Name6);
+        final EditText name7 = findViewById(R.id.Name7);
+        final EditText name8 = findViewById(R.id.Name8);
 
         name1.setVisibility(View.INVISIBLE);
         name2.setVisibility(View.INVISIBLE);
@@ -113,7 +113,7 @@ public class BRAZactiv extends AppCompatActivity {
         });
 
 
-        Button EFE = (Button)findViewById(R.id.start);
+        Button EFE = findViewById(R.id.start);
         EFE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
