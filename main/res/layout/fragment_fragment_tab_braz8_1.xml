@@ -10,7 +10,7 @@
         android:layout_alignParentStart="true">
 
         <RelativeLayout
-            android:layout_width="650dp"
+            android:layout_width="700dp"
             android:layout_height="600dp"
             android:background="#ffe4e1">
 
@@ -44,7 +44,11 @@
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
-                android:textSize="15dp" />
+                android:textSize="12dp"
+                android:layout_below="@+id/brazRes1_1"
+                android:layout_marginTop="90dp"
+                android:layout_toEndOf="@+id/Team03"
+                />
 
 
             <EditText
@@ -53,7 +57,9 @@
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
-                android:textSize="15dp" />
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/Team03"
+                android:layout_below="@+id/WIN.2"/>
 
 
             <EditText
@@ -96,7 +102,7 @@
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:textColor="#020101"
+                android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_marginTop="10dp"/>
 
@@ -106,8 +112,10 @@
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_below="@+id/Team07"
+                android:layout_marginTop="5dp"/>
 
             <Button
                 android:id="@+id/Team03"
@@ -115,7 +123,7 @@
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
-                android:textColor="#66310c"
+                android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_below="@+id/Team06"
                 android:layout_marginTop="5dp"/>
@@ -126,8 +134,10 @@
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_below="@+id/Team03"
+                android:layout_marginTop="150dp"/>
 
             <Button
                 android:id="@+id/Team05"
@@ -135,8 +145,10 @@
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_below="@+id/Team04"
+                android:layout_marginTop="5dp"/>
 
             <Button
                 android:id="@+id/Team06"
@@ -144,7 +156,7 @@
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
-                android:textColor="#66310c"
+                android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_below="@+id/Team01"
                 android:layout_marginTop="75dp"
@@ -156,8 +168,10 @@
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_below="@+id/Team04"
+                android:layout_marginTop="75dp"/>
 
             <Button
                 android:id="@+id/Team08"
@@ -165,7 +179,7 @@
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
-                android:textColor="#66310c"
+                android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_below="@+id/Team01"
                 android:layout_marginTop="5dp"/>
@@ -177,11 +191,11 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.1"
-                android:textColor="#66310c"
+                android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_toEndOf="@+id/Team01"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="32.5dp"/>
+                android:layout_marginTop="35dp"/>
 
             <Button
                 android:id="@+id/WIN.2"
@@ -190,7 +204,7 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.2"
-                android:textColor="#66310c"
+                android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_toEndOf="@+id/Team06"
                 android:layout_marginStart="5dp"
@@ -204,8 +218,12 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.3"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/Team04"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/WIN.2"
+                android:layout_marginTop="200dp"/>
 
             <Button
                 android:id="@+id/WIN.4"
@@ -214,8 +232,12 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.4"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/Team07"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="75dp"
+                android:layout_below="@+id/WIN.3"/>
 
             <Button
                 android:id="@+id/LOST.4"
@@ -224,8 +246,12 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="LOST.4"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_below="@+id/LOST.3"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/WIN.8"
+                android:layout_marginStart="5dp"/>
 
             <Button
                 android:id="@+id/LOST.5"
@@ -234,8 +260,12 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="LOST.5"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/WIN.4"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="75dp"
+                android:layout_below="@+id/WIN.3"/>
 
             <Button
                 android:id="@+id/Win.5"
@@ -244,7 +274,7 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.5"
-                android:textColor="#66310c"
+                android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_toEndOf="@+id/WIN.1"
                 android:layout_below="@+id/WIN.1"
@@ -258,8 +288,11 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.6"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/WIN.3"
+                android:layout_below="@+id/WIN.3"
+                android:layout_marginTop="15dp"/>
 
             <Button
                 android:id="@+id/LOST.2"
@@ -268,8 +301,12 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="LOST.2"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_below="@+id/Team06"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/WIN.7"
+                android:layout_marginStart="5dp"/>
 
             <Button
                 android:id="@+id/LOST.1"
@@ -279,8 +316,12 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="LOST.1"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/WIN.7"
+                android:layout_marginStart="5dp"
+                android:layout_below="@+id/Team01"
+                android:layout_marginTop="75dp"/>
 
             <Button
                 android:id="@+id/WIN.7"
@@ -289,8 +330,13 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.7"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/WIN.2"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="75dp"
+                android:layout_below="@+id/WIN.1"
+                />
 
             <Button
                 android:id="@+id/LOST.6"
@@ -299,8 +345,11 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="LOST.6"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/WIN.1"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="35dp"/>
 
             <Button
                 android:id="@+id/WIN.9"
@@ -309,8 +358,12 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.9"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/Win.5"
+                android:layout_below="@+id/WIN.1"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"/>
 
             <Button
                 android:id="@+id/WIN.11"
@@ -319,8 +372,11 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.11"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_below="@+id/Team03"
+                android:layout_toEndOf="@+id/WIN.2"
+                android:layout_marginTop="25.5dp"/>
 
             <Button
                 android:id="@+id/WIN.12"
@@ -329,8 +385,11 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.12"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_below="@+id/WIN.11"
+                android:layout_toEndOf="@+id/WIN.2"
+                android:layout_marginTop="9dp"/>
 
             <Button
                 android:id="@+id/WIN.14"
@@ -339,8 +398,11 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.14"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_marginStart="105dp"
+                android:layout_marginTop="75dp"
+                android:layout_below="@+id/WIN.2"/>
 
             <Button
                 android:id="@+id/LOST.11"
@@ -349,8 +411,12 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="LOST.11"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/Win.5"
+                android:layout_below="@+id/WIN.9"
+                android:layout_marginTop="111dp"
+                android:layout_marginStart="30dp"/>
 
             <Button
                 android:id="@+id/LOST.12"
@@ -359,8 +425,12 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="LOST.12"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_below="@+id/LOST.11"
+                android:layout_toEndOf="@+id/WIN.12"
+                android:layout_marginTop="9dp"
+                android:layout_marginStart="30dp"/>
 
             <Button
                 android:id="@+id/WIN.13"
@@ -369,8 +439,12 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.13"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/LOST.11"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="75dp"
+                android:layout_below="@+id/WIN.7"/>
 
             <Button
                 android:id="@+id/LOST.3"
@@ -379,8 +453,12 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="LOST.3"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/WIN.7"
+                android:layout_below="@+id/LOST.2"
+                android:layout_marginTop="150dp"
+                android:layout_marginStart="5dp"/>
 
             <Button
                 android:id="@+id/WIN.8"
@@ -389,8 +467,11 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.8"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/WIN.10"
+                android:layout_above="@+id/LOST.5"
+                />
 
             <Button
                 android:id="@+id/WIN.10"
@@ -399,140 +480,213 @@
                 android:background="@drawable/button_shape"
                 android:maxLength="10"
                 android:text="WIN.10"
-                android:textColor="#66310c"
-                android:textSize="11dp" />
+                android:textColor="#000000"
+                android:textSize="11dp"
+                android:layout_toEndOf="@+id/Win.6"
+                android:layout_below="@+id/WIN.3"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"/>
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/thirdPlace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="serif"
                 android:text="III"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/WIN.13"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="52dp"
+                android:layout_below="@+id/Team03"
+                android:textColor="#000000"
+                />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/firstPlace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="serif"
                 android:text=" I"
-                android:textSize="40dp"
-                android:textStyle="bold" />
+                android:textSize="30dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="52dp"
+                android:layout_below="@+id/Team03"/>
 
             <TextView
                 android:id="@+id/numberOfMatch1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#020101"
-                android:textSize="20dp"
-                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="13dp"
                 android:text="1"
-                android:layout_marginStart="105dp"
-                android:layout_marginTop="45dp"/>
+                android:layout_marginStart="107dp"
+                android:layout_marginTop="49dp"/>
 
             <TextView
                 android:id="@+id/numberOfMatch2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="11dp"
-                android:textStyle="bold"
-                android:text="2"/>
+                android:textColor="#000000"
+                android:textSize="13dp"
+                android:text="2"
+                android:layout_marginStart="107dp"
+                android:layout_below="@+id/numberOfMatch1"
+                android:layout_marginTop="102dp"/>
 
             <TextView
                 android:id="@+id/numberOfMatch3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3"
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_marginStart="107dp"
+                android:layout_below="@+id/numberOfMatch2"
+                android:layout_marginTop="227dp"
+                />
 
             <TextView
                 android:id="@+id/numberOfMatch4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4"
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_marginStart="107dp"
+                android:layout_below="@+id/numberOfMatch3"
+                android:layout_marginTop="102dp" />
 
             <TextView
                 android:id="@+id/numberOfMatch7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7"
-                android:textStyle="bold" />
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/WIN.7"
+                android:layout_marginStart="2dp"
+                android:layout_below="@+id/LOST.6"
+                android:layout_marginTop="89dp"/>
 
             <TextView
                 android:id="@+id/numberOfMatch8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8"
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/WIN.8"
+                android:layout_marginStart="2dp"
+                android:layout_below="@+id/numberOfMatch7"
+                android:layout_marginTop="226dp"/>
 
             <TextView
                 android:id="@+id/numberOfMatch12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Semi-Final 12"
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:text="@string/semiFinal2"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/WIN.2"
+                android:layout_below="@+id/WIN.1"
+                android:layout_marginTop="11dp"
+                android:layout_marginStart="108dp"
+                />
 
             <TextView
                 android:id="@+id/numberOfMatch11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Semi-final 11"
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:text="@string/semiFinal1"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/WIN.3"
+                android:layout_below="@+id/numberOfMatch12"
+                android:layout_marginTop="315dp"
+                android:layout_marginStart="108dp"
+
+                 />
 
             <TextView
                 android:id="@+id/numberOfMatch6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="        6"
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:layout_centerInParent= "true"
+                android:text="6"
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/Team03"
+                android:layout_marginStart="105dp"
+                android:layout_below="@+id/WIN.3"
+                android:layout_marginTop="28dp" />
 
             <TextView
                 android:id="@+id/numberOfMatch13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="        13"
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:text="13"
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/Win.5"
+                android:layout_marginStart="135dp"
+                android:layout_below="@+id/numberOfMatch9"
+                android:layout_marginTop="164dp"
+                />
 
             <TextView
                 android:id="@+id/numberOfMatch14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="14"
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/WIN.14"
+                android:layout_marginStart="1dp"
+                android:layout_below="@+id/WIN.2"
+                android:layout_marginTop="90dp"/>
 
             <TextView
                 android:id="@+id/numberOfMatch10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10"
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/WIN.9"
+                android:layout_marginStart="2dp"
+                android:layout_below="@+id/WIN.8"
+                android:layout_marginTop="28dp" />
 
             <TextView
                 android:id="@+id/numberOfMatch9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9"
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/WIN.9"
+                android:layout_marginStart="2dp"
+                android:layout_below="@+id/LOST.6"
+                android:layout_marginTop="28dp" />
 
             <TextView
                 android:id="@+id/numberOfMatch5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5"
-                android:textSize="11dp"
-                android:textStyle="bold" />
+                android:textSize="13dp"
+                android:textColor="#000000"
+                android:layout_toEndOf="@+id/Team03"
+                android:layout_marginStart="105dp"
+                android:layout_below="@+id/WIN.1"
+                android:layout_marginTop="28dp" />
         </RelativeLayout>
     </com.greycellofp.droiduiscrollview.DroidUIScrollView>
 
