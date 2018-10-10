@@ -18,6 +18,8 @@ public class BRAZactiv extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brazactiv);
 
+        getSupportActionBar().setTitle("System brazylijski");
+
         final EditText name1 = findViewById(R.id.Name1);
         final EditText name2 = findViewById(R.id.Name2);
         final EditText name3 = findViewById(R.id.Name3);

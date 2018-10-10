@@ -18,11 +18,12 @@ public class BRAZactiv8 extends AppCompatActivity {
         setContentView(R.layout.activity_brazactiv8);
 
 
-        ViewPager mViewPager = findViewById(R.id.container);
+        NonSwipeableViewPager mViewPager = findViewById(R.id.container);
         setupViewPager(mViewPager);
 
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+        getSupportActionBar().setTitle("System brazylijski dla 8 zespołów");
 
     }
 

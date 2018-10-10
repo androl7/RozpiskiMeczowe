@@ -1,13 +1,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <com.greycellofp.droiduiscrollview.DroidUIScrollView
+    <com.otaliastudios.zoom.ZoomLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:scrollbars="vertical|horizontal"
+        android:background="#ffe4e1"
+        app:overScrollHorizontal="true"
+        app:overScrollVertical="true"
+        app:overPinchable="true"
+        app:horizontalPanEnabled="true"
+        app:verticalPanEnabled="true"
+        app:zoomEnabled="true"
+        app:minZoom="1.0"
+        app:minZoomType="zoom"
+        app:maxZoom="2.0"
+        app:maxZoomType="zoom"
+        app:hasClickableChildren="true">
 
         <RelativeLayout
             android:layout_width="700dp"
@@ -23,6 +35,7 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/Team01"
+                android:layout_marginTop="7dp"
                 />
 
 
@@ -66,10 +79,12 @@
                 android:id="@+id/brazRes3_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/LOST.3"
                 android:maxLength="2"
                 android:inputType="number"
-                android:textSize="15dp" />
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/Team04"
+                android:layout_above="@+id/brazRes3_5"
+                android:layout_marginBottom="36dp"/>
 
             <EditText
                 android:id="@+id/brazRes3_5"
@@ -77,7 +92,9 @@
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
-                android:textSize="15dp" />
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/Team05"
+                android:layout_below="@+id/WIN.3"/>
 
             <EditText
                 android:id="@+id/brazRes4_7"
@@ -85,15 +102,19 @@
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
-                android:textSize="15dp" />
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/Team02"
+                android:layout_below="@+id/WIN.4"/>
 
             <EditText
                 android:id="@+id/brazRes4_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxLength="2"
                 android:inputType="number"
-                android:textSize="15dp" />
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/Team07"
+                android:layout_above="@+id/brazRes4_7"
+                android:layout_marginBottom="36dp" />
 
 
             <Button
@@ -104,7 +125,8 @@
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"/>
 
             <Button
                 android:id="@+id/Team02"
@@ -115,7 +137,8 @@
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_below="@+id/Team07"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"/>
 
             <Button
                 android:id="@+id/Team03"
@@ -126,7 +149,8 @@
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_below="@+id/Team06"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"/>
 
             <Button
                 android:id="@+id/Team04"
@@ -137,7 +161,8 @@
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_below="@+id/Team03"
-                android:layout_marginTop="150dp"/>
+                android:layout_marginTop="150dp"
+                android:layout_marginStart="20dp"/>
 
             <Button
                 android:id="@+id/Team05"
@@ -148,7 +173,8 @@
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_below="@+id/Team04"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"/>
 
             <Button
                 android:id="@+id/Team06"
@@ -160,6 +186,7 @@
                 android:textSize="11dp"
                 android:layout_below="@+id/Team01"
                 android:layout_marginTop="75dp"
+                android:layout_marginStart="20dp"
                 />
 
             <Button
@@ -171,7 +198,8 @@
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_below="@+id/Team04"
-                android:layout_marginTop="75dp"/>
+                android:layout_marginTop="75dp"
+                android:layout_marginStart="20dp"/>
 
             <Button
                 android:id="@+id/Team08"
@@ -182,7 +210,8 @@
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_below="@+id/Team01"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"/>
 
             <Button
                 android:id="@+id/WIN.1"
@@ -400,7 +429,7 @@
                 android:text="WIN.14"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_marginStart="105dp"
+                android:layout_marginStart="125dp"
                 android:layout_marginTop="75dp"
                 android:layout_below="@+id/WIN.2"/>
 
@@ -511,7 +540,7 @@
                 android:textSize="30dp"
                 android:textColor="#000000"
                 android:textStyle="bold"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginTop="52dp"
                 android:layout_below="@+id/Team03"/>
 
@@ -522,7 +551,7 @@
                 android:textColor="#000000"
                 android:textSize="13dp"
                 android:text="1"
-                android:layout_marginStart="107dp"
+                android:layout_marginStart="127dp"
                 android:layout_marginTop="49dp"/>
 
             <TextView
@@ -532,7 +561,7 @@
                 android:textColor="#000000"
                 android:textSize="13dp"
                 android:text="2"
-                android:layout_marginStart="107dp"
+                android:layout_marginStart="127dp"
                 android:layout_below="@+id/numberOfMatch1"
                 android:layout_marginTop="102dp"/>
 
@@ -543,7 +572,7 @@
                 android:text="3"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_marginStart="107dp"
+                android:layout_marginStart="127dp"
                 android:layout_below="@+id/numberOfMatch2"
                 android:layout_marginTop="227dp"
                 />
@@ -555,7 +584,7 @@
                 android:text="4"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_marginStart="107dp"
+                android:layout_marginStart="127dp"
                 android:layout_below="@+id/numberOfMatch3"
                 android:layout_marginTop="102dp" />
 
@@ -688,6 +717,6 @@
                 android:layout_below="@+id/WIN.1"
                 android:layout_marginTop="28dp" />
         </RelativeLayout>
-    </com.greycellofp.droiduiscrollview.DroidUIScrollView>
+    </com.otaliastudios.zoom.ZoomLayout>
 
 </RelativeLayout>

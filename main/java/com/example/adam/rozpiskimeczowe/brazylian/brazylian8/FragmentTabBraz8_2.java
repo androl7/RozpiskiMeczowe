@@ -20,14 +20,6 @@ public class FragmentTabBraz8_2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_fragment_tab_braz8_2, container, false);
 
-        return view;
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-
-
         ScrollView scrollView = view.findViewById(R.id.scrollView);
 
         final String teamR1 = getActivity().getIntent().getStringExtra("NameOfTeam1");
@@ -39,7 +31,7 @@ public class FragmentTabBraz8_2 extends Fragment {
         final String teamR7 = getActivity().getIntent().getStringExtra("NameOfTeam7");
         final String teamR8 = getActivity().getIntent().getStringExtra("NameOfTeam8");
 
-        final LinearLayout linearLayout = new LinearLayout(this.getContext());
+        final LinearLayout linearLayout = new LinearLayout(getActivity().getApplicationContext());
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
 
@@ -57,7 +49,9 @@ public class FragmentTabBraz8_2 extends Fragment {
         //DODANIE DO LAYOUTU
         scrollView.addView(linearLayout);
 
+        return view;
     }
+
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
