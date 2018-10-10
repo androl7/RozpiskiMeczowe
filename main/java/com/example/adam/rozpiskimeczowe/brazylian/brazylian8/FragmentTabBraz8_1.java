@@ -27,22 +27,40 @@ public class FragmentTabBraz8_1 extends Fragment {
         imm = (InputMethodManager) Objects.requireNonNull(getActivity()).getSystemService(Context.INPUT_METHOD_SERVICE);
 
         final EditText res1_1 = view.findViewById(R.id.brazRes1_1);
+        final EditText res1_1_2set = view.findViewById(R.id.brazRes1_1_2set);
         final EditText res1_8 = view.findViewById(R.id.brazRes1_8);
+        final EditText res1_8_2set = view.findViewById(R.id.brazRes1_8_2set);
         final EditText res2_6 = view.findViewById(R.id.brazRes2_6);
+        final EditText res2_6_2set = view.findViewById(R.id.brazRes2_6_2set);
         final EditText res2_3 = view.findViewById(R.id.brazRes2_3);
+        final EditText res2_3_2set = view.findViewById(R.id.brazRes2_3_2set);
         final EditText res3_4 = view.findViewById(R.id.brazRes3_4);
+        final EditText res3_4_2set = view.findViewById(R.id.brazRes3_4_2set);
         final EditText res3_5 = view.findViewById(R.id.brazRes3_5);
+        final EditText res3_5_2set = view.findViewById(R.id.brazRes3_5_2set);
         final EditText res4_7 = view.findViewById(R.id.brazRes4_7);
+        final EditText res4_7_2set = view.findViewById(R.id.brazRes4_7_2set);
         final EditText res4_2 = view.findViewById(R.id.brazRes4_2);
+        final EditText res4_2_2set = view.findViewById(R.id.brazRes4_2_2set);
+        //Dopisać dla reszty EditTextow !!!
 
         res1_1.setVisibility(View.INVISIBLE);
+        res1_1_2set.setVisibility(View.INVISIBLE);
         res1_8.setVisibility(View.INVISIBLE);
+        res1_8_2set.setVisibility(View.INVISIBLE);
         res2_6.setVisibility(View.INVISIBLE);
+        res2_6_2set.setVisibility(View.INVISIBLE);
         res2_3.setVisibility(View.INVISIBLE);
+        res2_3_2set.setVisibility(View.INVISIBLE);
         res3_4.setVisibility(View.INVISIBLE);
+        res3_4_2set.setVisibility(View.INVISIBLE);
         res3_5.setVisibility(View.INVISIBLE);
+        res3_5_2set.setVisibility(View.INVISIBLE);
         res4_7.setVisibility(View.INVISIBLE);
+        res4_7_2set.setVisibility(View.INVISIBLE);
         res4_2.setVisibility(View.INVISIBLE);
+        res4_2_2set.setVisibility(View.INVISIBLE);
+        //Dopisać dla reszty EditTextow !!!
 
         final Button team1 = view.findViewById(R.id.Team01);
         final Button team2 = view.findViewById(R.id.Team02);
@@ -91,16 +109,16 @@ public class FragmentTabBraz8_1 extends Fragment {
         toast = Toast.makeText(getActivity().getApplicationContext(), "Wprowadz wczesniejszy wynik !", Toast.LENGTH_SHORT);
 
         // 1 MECZ
-        setResult(team1,team8,win1,"WIN.1",lost1,"LOST.1",res1_1,res1_8);
+        setResult(team1,team8,win1,"WIN.1",lost1,"LOST.1",res1_1,res1_1_2set,res1_8,res1_8_2set);
 
-        // 2 MECZ
+        /*// 2 MECZ
         setResult(team6,team3,win2,"WIN.2",lost2,"LOST.2",res2_6,res2_3);
 
         // 3 MECZ
         setResult(team4,team5,win3,"WIN.3",lost3,"LOST.3",res3_4,res3_5);
 
         // 4 MECZ
-        setResult(team7,team2,win4,"WIN.4",lost4,"LOST.4",res4_7,res4_2);
+        setResult(team7,team2,win4,"WIN.4",lost4,"LOST.4",res4_7,res4_2);*/
 
         // 5 MECZ
         setResult(win1,"WIN.1",win2,"WIN.2",win5,"WIN.5",lost5,"LOST.5");
@@ -213,13 +231,13 @@ public class FragmentTabBraz8_1 extends Fragment {
         });
     }
     // Method to set results to next Buttons with loser without check
-    void setResult (final Button firstPlayer, final Button secundPlayer, final Button resultButton, final String undoResultString, final Button resultButton2, final String undoResultString2, final EditText pointsInSetFor1, final EditText pointsInSetFor2) {
+    void setResult (final Button firstPlayer, final Button secundPlayer, final Button resultButton, final String undoResultString, final Button resultButton2, final String undoResultString2, final EditText pointsFor1In1Set,final EditText pointsFor1In2Set, final EditText pointsFor2In1Set,final EditText pointsFor2In2Set) {
         firstPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 resultButton.setText(firstPlayer.getText());
                 resultButton2.setText(secundPlayer.getText());
-                setDetailedResult(pointsInSetFor1, pointsInSetFor2);
+                setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set,pointsFor2In1Set,pointsFor2In2Set);
             }
         });
 
@@ -229,7 +247,7 @@ public class FragmentTabBraz8_1 extends Fragment {
             public void onClick(View v) {
                 resultButton.setText(secundPlayer.getText());
                 resultButton2.setText(firstPlayer.getText());
-                setDetailedResult(pointsInSetFor2, pointsInSetFor1);
+                setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set,pointsFor2In1Set,pointsFor2In2Set);
             }
         });
 
@@ -254,21 +272,24 @@ public class FragmentTabBraz8_1 extends Fragment {
     }
 
     // Method to add points of Sets
-    void setDetailedResult(final EditText wynik1, final EditText wynik2) {
 
-        wynik1.setVisibility(View.VISIBLE);
-        wynik2.setVisibility(View.VISIBLE);
-        wynik1.requestFocus();
-        imm.showSoftInput(wynik1, InputMethodManager.SHOW_IMPLICIT);
+    void setDetailedResultFor2Sets(final EditText team1Set1,final EditText team1Set2, final EditText team2Set1, final EditText team2Set2) {
 
-        wynik1.addTextChangedListener(new TextWatcher() {
+        team1Set1.setVisibility(View.VISIBLE);
+        team2Set1.setVisibility(View.VISIBLE);
+        team1Set2.setVisibility(View.VISIBLE);
+        team2Set2.setVisibility(View.VISIBLE);
+        team1Set1.requestFocus();
+        imm.showSoftInput(team1Set1, InputMethodManager.SHOW_IMPLICIT);
+
+        team1Set1.addTextChangedListener(new TextWatcher() {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
 
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (wynik1.getText().toString().length() == 2) {
-                    wynik2.requestFocus();
+                if (team1Set1.getText().toString().length() == 2) {
+                    team2Set1.requestFocus();
                 }
             }
 
@@ -276,15 +297,49 @@ public class FragmentTabBraz8_1 extends Fragment {
             }
         });
 
-        wynik2.addTextChangedListener(new TextWatcher() {
+        team2Set1.addTextChangedListener(new TextWatcher() {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (wynik2.getText().toString().length() == 2) {
-                    wynik1.setVisibility(View.INVISIBLE);
-                    wynik2.setVisibility(View.INVISIBLE);
-                    imm.hideSoftInputFromWindow(wynik2.getWindowToken(), 0);
+                if (team2Set1.getText().toString().length() == 2) {
+                    team1Set2.requestFocus();
+                    imm.showSoftInput(team1Set2, InputMethodManager.SHOW_IMPLICIT);
+                }
+            }
+
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
+        team1Set2.addTextChangedListener(new TextWatcher() {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (team1Set2.getText().toString().length() == 2) {
+                    team2Set2.requestFocus();
+                }
+            }
+
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        team2Set2.addTextChangedListener(new TextWatcher() {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (team2Set2.getText().toString().length() == 2) {
+                    team1Set1.setVisibility(View.INVISIBLE);
+                    team2Set1.setVisibility(View.INVISIBLE);
+                    team1Set2.setVisibility(View.INVISIBLE);
+                    team2Set2.setVisibility(View.INVISIBLE);
+                    imm.hideSoftInputFromWindow(team2Set2.getWindowToken(), 0);
                 }
             }
 
