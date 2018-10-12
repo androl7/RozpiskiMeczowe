@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical|horizontal"
-        android:background="#ffe4e1"
+        android:background="@drawable/pilki"
         app:overScrollHorizontal="true"
         app:overScrollVertical="true"
         app:overPinchable="true"
@@ -24,7 +24,83 @@
         <RelativeLayout
             android:layout_width="700dp"
             android:layout_height="600dp"
-            android:background="#ffe4e1">
+            >
+
+
+            <TextView
+                android:id="@+id/braz8R1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:text="R1"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:id="@+id/braz8R8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:text="R8"
+                android:layout_below="@+id/braz8R1"
+                android:layout_marginTop="30dp"/>
+            <TextView
+                android:id="@+id/braz8R6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:text="R6"
+                android:layout_below="@+id/braz8R8"
+                android:layout_marginTop="50dp"/>
+            <TextView
+                android:id="@+id/braz8R3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:text="R3"
+                android:layout_below="@+id/braz8R6"
+                android:layout_marginTop="28dp"/>
+            <TextView
+                android:id="@+id/braz8R4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:text="R4"
+                android:layout_below="@+id/braz8R3"
+                android:layout_marginTop="173dp"/>
+
+            <TextView
+                android:id="@+id/braz8R5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:text="R5"
+                android:layout_below="@+id/braz8R4"
+                android:layout_marginTop="28dp"/>
+
+            <TextView
+                android:id="@+id/braz8R7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:text="R7"
+                android:layout_below="@+id/braz8R5"
+                android:layout_marginTop="48dp"/>
+
+            <TextView
+                android:id="@+id/braz8R2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:text="R2"
+                android:layout_below="@+id/braz8R7"
+                android:layout_marginTop="30dp"/>
 
 
             <EditText
