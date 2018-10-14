@@ -11,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,8 +21,9 @@ import com.example.adam.rozpiskimeczowe.brazylian.brazylian8.BRAZactiv8;
 
 
 public class BRAZactiv extends AppCompatActivity {
-    int quantityOfTeam = 8;
+    int quantityOfTeam=0;
     String[] names;
+    CustomAdapter customAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,42 +31,83 @@ public class BRAZactiv extends AppCompatActivity {
 
         getSupportActionBar().setTitle("System brazylijski");
 
-        ListView list = findViewById(R.id.listView);
-
+        final ListView list = findViewById(R.id.listView);
         list.setItemsCanFocus(true);
 
-        final CustomAdapter customAdapter = new CustomAdapter(this);
-        list.setAdapter(customAdapter);
 
 
 
-        /*final CheckBox box3 = findViewById(R.id.checkBox3);
-        final CheckBox box4 = findViewById(R.id.checkBox4);
-        final CheckBox box5 = findViewById(R.id.checkBox5);
-        final CheckBox box6 = findViewById(R.id.checkBox6);*/
+
+        final RadioButton radioButton8 = findViewById(R.id.brazRadioButton8);
+        final RadioButton radioButton16 = findViewById(R.id.brazRadioButton16);
+        final RadioButton radioButton24 = findViewById(R.id.brazRadioButton24);
+
+        radioButton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(quantityOfTeam!=8) {
+                    quantityOfTeam = 8;
+                    customAdapter = new CustomAdapter(getApplicationContext());
+                    list.setAdapter(customAdapter);
+                }
+            }
+        });
+
+        radioButton16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(quantityOfTeam!=16) {
+                    quantityOfTeam = 16;
+                    customAdapter = new CustomAdapter(getApplicationContext());
+                    list.setAdapter(customAdapter);
+                }
+            }
+        });
+
+        radioButton24.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(quantityOfTeam!=24) {
+                    quantityOfTeam = 24;
+                    customAdapter = new CustomAdapter(getApplicationContext());
+                    list.setAdapter(customAdapter);
+                }
+            }
+        });
+
+
 
 
         Button EFE = findViewById(R.id.start);
         EFE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(quantityOfTeam!=0) {
                 boolean checkNull=true;
                 for(int i =0;i<names.length;i++){
-                    if(names[i]==null)checkNull=false;
+                    if(names[i]==null||names[i].equals("")){
+                        checkNull=false;
+                        break;
+                    }
                 }
                 if(checkNull) {
-                    Intent intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
-                    intent.putExtra("NameOfTeam1", customAdapter.getItem(0));
-                    intent.putExtra("NameOfTeam2", customAdapter.getItem(1));
-                    intent.putExtra("NameOfTeam3", customAdapter.getItem(2));
-                    intent.putExtra("NameOfTeam4", customAdapter.getItem(3));
-                    intent.putExtra("NameOfTeam5", customAdapter.getItem(4));
-                    intent.putExtra("NameOfTeam6", customAdapter.getItem(5));
-                    intent.putExtra("NameOfTeam7", customAdapter.getItem(6));
-                    intent.putExtra("NameOfTeam8", customAdapter.getItem(7));
-                    startActivity(intent);
-                }else {
+                    Intent intent = null;
+                    switch (quantityOfTeam) {
+                        case 8:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
+                        case 16:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
+                        case 24:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
+                    }
+
+                        for (int i = 0; i < names.length / 2; i++) {
+                            intent.putExtra("NameOfTeam" + (i+1), customAdapter.getItem(i));
+                        }
+                        startActivity(intent);
+
+                    }else {
                     Toast.makeText(getApplicationContext(),"Podaj nazwiska wszystkich graczy",Toast.LENGTH_SHORT).show();
+                }
+                }else {
+                    Toast.makeText(getApplicationContext(),"Wybierz ilość drużyn.",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -136,8 +179,6 @@ public class BRAZactiv extends AppCompatActivity {
             }
 
             holder.textView.setText(rValues[position]);
-
-
 
             holder.editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                 @Override
