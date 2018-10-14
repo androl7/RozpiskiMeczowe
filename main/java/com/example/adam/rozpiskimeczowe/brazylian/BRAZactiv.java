@@ -4,20 +4,25 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian8.BRAZactiv8;
 
+import java.util.Objects;
 
 
 public class BRAZactiv extends AppCompatActivity {
@@ -34,9 +39,28 @@ public class BRAZactiv extends AppCompatActivity {
         final ListView list = findViewById(R.id.listView);
         list.setItemsCanFocus(true);
 
+        // lost focus after set points in set
+        final EditText editTextPkt = findViewById(R.id.editTextPkt);
+        final RelativeLayout relativeLayout = findViewById(R.id.brazMainLayout);
+        final InputMethodManager imm = (InputMethodManager) Objects.requireNonNull(getApplicationContext()).getSystemService(Context.INPUT_METHOD_SERVICE);
 
+        editTextPkt.addTextChangedListener(new TextWatcher() {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
 
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (editTextPkt.getText().toString().length() == 2) {
+                    relativeLayout.requestFocus();
+                    imm.hideSoftInputFromWindow(editTextPkt.getWindowToken(), 0);
+                }
+            }
+
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        //RadioButtons with modify listView
 
         final RadioButton radioButton8 = findViewById(R.id.brazRadioButton8);
         final RadioButton radioButton16 = findViewById(R.id.brazRadioButton16);

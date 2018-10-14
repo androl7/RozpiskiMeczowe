@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.adam.rozpiskimeczowe.brazylian.BRAZactiv">
+    tools:context="com.example.adam.rozpiskimeczowe.brazylian.BRAZactiv"
+    android:background="@drawable/brazwybor2"
+    android:focusableInTouchMode="true"
+    android:id="@+id/brazMainLayout">
 
     <Button
         android:id="@+id/start"
@@ -11,33 +14,39 @@
         android:layout_height="wrap_content"
         android:text="START"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-<RadioGroup
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_shape"
+        android:layout_marginBottom="10dp"/>
+
+    <RadioGroup
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_toEndOf="@+id/textHowMuchTeams"
-    android:orientation='horizontal'
+    android:orientation="horizontal"
     >
     <RadioButton
         android:id="@+id/brazRadioButton8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="8"
-        android:layout_marginStart="5dp"/>
+        android:layout_marginStart="5dp"
+        android:buttonTint="#66310c"/>
 
     <RadioButton
         android:id="@+id/brazRadioButton16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="16"
-        android:layout_marginStart="15dp"/>
+        android:layout_marginStart="15dp"
+        android:buttonTint="#66310c"/>
 
     <RadioButton
         android:id="@+id/brazRadioButton24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="24"
-        android:layout_marginStart="15dp"/>
+        android:layout_marginStart="15dp"
+        android:buttonTint="#66310c"/>
 </RadioGroup>
 
     <TextView
@@ -47,7 +56,8 @@
         android:layout_alignParentTop="true"
         android:text="Ilość drużyn: "
         android:textSize="23sp"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"/>
 
 
     <TextView
@@ -56,18 +66,23 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textHowMuchTeams"
         android:text="Pkt:"
-        android:textSize="23sp" />
+        android:textSize="23sp"
+        android:textColor="#000000"/>
 
     <EditText
         android:id="@+id/editTextPkt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textHowMuchTeams"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="2dp"
         android:layout_toEndOf="@+id/textPkt"
         android:ems="2"
         android:inputType="number"
-        android:textSize="15sp"
-        android:maxLength="2"/>
+        android:textSize="20sp"
+        android:maxLength="2"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center"
+        />
 
     <ListView
         android:id="@+id/listView"
