@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".everyoneForEveryone.EFEactiv" />
         <activity android:name=".everyoneForEveryone.EFEactiv3" />
-        <activity android:name=".brazylian.BRAZactiv" />
+        <activity android:name=".brazylian.BRAZactiv"
+            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".brazylian.brazylian8.BRAZactiv8" />
         <activity android:name=".everyoneForEveryone.Results" />
         <activity android:name=".everyoneForEveryone.EFEactiv4" />

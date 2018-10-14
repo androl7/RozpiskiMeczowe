@@ -5,25 +5,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.adam.rozpiskimeczowe.brazylian.BRAZactiv">
 
-    <TextView
-        android:id="@+id/textIleDruzyn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="23dp"
-        android:text="Wybierz ilość zawodników/dryżyn: "
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:id="@+id/textNazwyDruzyn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="23dp"
-        android:text="Nazwij zawodników/drużyny: "
-        android:layout_below="@+id/checkBox3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="11dp" />
-
     <Button
         android:id="@+id/start"
         android:layout_width="wrap_content"
@@ -31,131 +12,74 @@
         android:text="START"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@+id/textHowMuchTeams"
+    android:orientation='horizontal'
+    >
+    <RadioButton
+        android:id="@+id/brazRadioButton8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="8"
-        android:layout_marginTop="14dp"
-        android:layout_below="@+id/textIleDruzyn"
-        android:layout_alignStart="@+id/textNazwyDruzyn"
-        android:layout_alignLeft="@+id/textNazwyDruzyn" />
+        android:layout_marginStart="5dp"/>
 
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="12"
-        android:layout_marginStart="45dp"
-        android:layout_alignTop="@+id/checkBox3"
-        android:layout_toEndOf="@+id/checkBox3"
-        android:layout_toRightOf="@+id/checkBox3"
-        android:layout_marginLeft="45dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox5"
+    <RadioButton
+        android:id="@+id/brazRadioButton16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="16"
-        android:layout_marginEnd="46dp"
-        android:layout_alignBaseline="@+id/checkBox4"
-        android:layout_alignBottom="@+id/checkBox4"
-        android:layout_toStartOf="@+id/checkBox6"
-        android:layout_toLeftOf="@+id/checkBox6"
-        android:layout_marginRight="46dp" />
+        android:layout_marginStart="15dp"/>
 
-    <CheckBox
-        android:id="@+id/checkBox6"
+    <RadioButton
+        android:id="@+id/brazRadioButton24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="24"
-        android:layout_alignBaseline="@+id/checkBox5"
-        android:layout_alignBottom="@+id/checkBox5"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_alignParentRight="true" />
+        android:layout_marginStart="15dp"/>
+</RadioGroup>
+
+    <TextView
+        android:id="@+id/textHowMuchTeams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Ilość drużyn: "
+        android:textSize="23sp"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:id="@+id/textPkt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textHowMuchTeams"
+        android:text="Pkt:"
+        android:textSize="23sp" />
 
     <EditText
-        android:textSize="15dp"
-        android:id="@+id/Name1"
-        android:layout_width="match_parent"
+        android:id="@+id/editTextPkt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="R1. "
-        android:layout_below="@+id/textNazwyDruzyn"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"/>
+        android:layout_below="@+id/textHowMuchTeams"
+        android:layout_toEndOf="@+id/textPkt"
+        android:ems="2"
+        android:inputType="number"
+        android:textSize="15sp"
+        android:maxLength="2"/>
 
-    <EditText
-        android:textSize="15dp"
-        android:id="@+id/Name2"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:divider="@null"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Name1"
-        android:text="R2. " />
-
-    <EditText
-        android:textSize="15dp"
-        android:id="@+id/Name3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Name2"
-        android:text="R3. " />
-
-    <EditText
-        android:textSize="15dp"
-        android:id="@+id/Name4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Name3"
-        android:text="R4. " />
-
-    <EditText
-        android:textSize="15dp"
-        android:id="@+id/Name5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Name4"
-        android:text="R5. "
-        />
-
-    <EditText
-        android:textSize="15dp"
-        android:id="@+id/Name6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Name5"
-        android:text="R6. " />
+        android:layout_below="@+id/textPkt"
+        android:layout_above="@+id/start"
+        android:layout_marginTop="20dp"
+        android:descendantFocusability="afterDescendants"/>
 
 
-    <EditText
-        android:textSize="15dp"
-        android:id="@+id/Name7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Name6"
-        android:text="R7. " />
-
-    <EditText
-        android:textSize="15dp"
-        android:id="@+id/Name8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Name7"
-        android:text="R8. " />
 </RelativeLayout>
