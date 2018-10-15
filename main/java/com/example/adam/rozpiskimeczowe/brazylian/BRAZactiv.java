@@ -110,7 +110,8 @@ public class BRAZactiv extends AppCompatActivity {
                 boolean checkNull=true;
                 for(int i =0;i<names.length;i++){
                     if(names[i]==null||names[i].equals("")){
-                        checkNull=false;
+                        //TU MA BYĆ FALSE !!!
+                        checkNull=true;
                         break;
                     }
                 }

@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Intent intent = new Intent (this, EFEactiv.class);
-        Button EFE = (Button)findViewById(R.id.EveryOneForEveryOne);
+        Button EFE = findViewById(R.id.EveryOneForEveryOne);
         EFE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         final Intent intent2 = new Intent (this, BRAZactiv.class);
-        Button BRAZ = (Button)findViewById(R.id.Brazilian);
+        Button BRAZ = findViewById(R.id.Brazilian);
         BRAZ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

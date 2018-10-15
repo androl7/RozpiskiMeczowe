@@ -134,7 +134,7 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/Team08"
-                android:layout_below="@+id/WIN.1"
+                android:layout_below="@+id/WIN_1"
                 />
             <EditText
                 android:id="@+id/brazRes1_8_2set"
@@ -144,7 +144,7 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/brazRes1_8"
-                android:layout_below="@+id/WIN.1"
+                android:layout_below="@+id/WIN_1"
                 />
 
 
@@ -181,7 +181,7 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/Team03"
-                android:layout_below="@+id/WIN.2"/>
+                android:layout_below="@+id/WIN_2"/>
 
             <EditText
                 android:id="@+id/brazRes2_3_2set"
@@ -191,7 +191,7 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/brazRes2_3"
-                android:layout_below="@+id/WIN.2"/>
+                android:layout_below="@+id/WIN_2"/>
 
 
             <EditText
@@ -224,7 +224,7 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/Team05"
-                android:layout_below="@+id/WIN.3"/>
+                android:layout_below="@+id/WIN_3"/>
 
             <EditText
                 android:id="@+id/brazRes3_5_2set"
@@ -234,7 +234,7 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/brazRes3_5"
-                android:layout_below="@+id/WIN.3"/>
+                android:layout_below="@+id/WIN_3"/>
 
             <EditText
                 android:id="@+id/brazRes4_2"
@@ -264,7 +264,7 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/Team02"
-                android:layout_below="@+id/WIN.4"/>
+                android:layout_below="@+id/WIN_4"/>
 
             <EditText
                 android:id="@+id/brazRes4_7_2set"
@@ -274,7 +274,7 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/brazRes4_7"
-                android:layout_below="@+id/WIN.4"/>
+                android:layout_below="@+id/WIN_4"/>
 
             <EditText
                 android:id="@+id/brazRes5_Win_1"
@@ -284,7 +284,7 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_below="@+id/Team01"
-                android:layout_toEndOf="@+id/WIN.1"
+                android:layout_toEndOf="@+id/WIN_1"
                 />
 
             <EditText
@@ -305,8 +305,8 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/Win.5"
-                android:layout_toEndOf="@+id/WIN.1"
+                android:layout_below="@+id/Win_5"
+                android:layout_toEndOf="@+id/WIN_1"
                 />
 
             <EditText
@@ -316,7 +316,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/Win.5"
+                android:layout_below="@+id/Win_5"
                 android:layout_toEndOf="@+id/brazRes5_Win_2"
                 />
 
@@ -328,7 +328,7 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_below="@+id/Team04"
-                android:layout_toEndOf="@+id/WIN.3"
+                android:layout_toEndOf="@+id/WIN_3"
                 />
 
             <EditText
@@ -349,8 +349,8 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/Win.6"
-                android:layout_toEndOf="@+id/WIN.4"
+                android:layout_below="@+id/Win_6"
+                android:layout_toEndOf="@+id/WIN_4"
                 />
 
             <EditText
@@ -360,7 +360,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/Win.6"
+                android:layout_below="@+id/Win_6"
                 android:layout_toEndOf="@+id/brazRes6_Win_4"
                 />
 
@@ -371,7 +371,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.7"
+                android:layout_below="@+id/WIN_7"
                 android:layout_toStartOf="@+id/brazRes7_Lost_1_2set"
                 />
 
@@ -382,8 +382,8 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.7"
-                android:layout_toStartOf="@+id/LOST.2"
+                android:layout_below="@+id/WIN_7"
+                android:layout_toStartOf="@+id/LOST_2"
                 />
 
 
@@ -395,7 +395,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/LOST.6"
+                android:layout_below="@+id/LOST_6"
                 android:layout_marginTop="44dp"
                 android:layout_toStartOf="@+id/brazRes7_Lost_2_2set"
                 />
@@ -407,9 +407,9 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/LOST.6"
+                android:layout_below="@+id/LOST_6"
                 android:layout_marginTop="44dp"
-                android:layout_toStartOf="@+id/LOST.1"
+                android:layout_toStartOf="@+id/LOST_1"
                 />
 
 
@@ -421,7 +421,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.13"
+                android:layout_below="@+id/WIN_13"
                 android:layout_marginTop="50dp"
                 android:layout_toStartOf="@+id/brazRes8_Lost_3_2set"
                 />
@@ -433,9 +433,9 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.13"
+                android:layout_below="@+id/WIN_13"
                 android:layout_marginTop="50dp"
-                android:layout_toStartOf="@+id/LOST.3"
+                android:layout_toStartOf="@+id/LOST_3"
                 />
 
 
@@ -447,7 +447,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.8"
+                android:layout_below="@+id/WIN_8"
                 android:layout_toStartOf="@+id/brazRes8_Lost_4_2set"
                 />
 
@@ -458,8 +458,8 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.8"
-                android:layout_toStartOf="@+id/LOST.4"
+                android:layout_below="@+id/WIN_8"
+                android:layout_toStartOf="@+id/LOST_4"
                 />
 
 
@@ -497,7 +497,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/Win.5"
+                android:layout_below="@+id/Win_5"
                 android:layout_toEndOf="@+id/brazRes5_Win_2_2set"
                 android:layout_marginStart="165dp"
                 />
@@ -509,7 +509,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/Win.5"
+                android:layout_below="@+id/Win_5"
                 android:layout_toEndOf="@+id/brazRes5_Win_2_2set"
                 android:layout_marginStart="185dp"
                 />
@@ -551,7 +551,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.10"
+                android:layout_below="@+id/WIN_10"
                 android:layout_toEndOf="@+id/brazRes5_Win_2_2set"
                 android:layout_marginStart="165dp"
                 />
@@ -563,7 +563,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.10"
+                android:layout_below="@+id/WIN_10"
                 android:layout_toEndOf="@+id/brazRes5_Win_2_2set"
                 android:layout_marginStart="185dp"
                 />
@@ -588,7 +588,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/Win.5"
+                android:layout_below="@+id/Win_5"
                 android:layout_toEndOf="@+id/brazRes5_Win_1"
                 android:layout_marginStart="65dp"
                 />
@@ -612,7 +612,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/Win.5"
+                android:layout_below="@+id/Win_5"
                 android:layout_toEndOf="@+id/brazRes5_Win_1"
                 android:layout_marginStart="125dp"
                 />
@@ -637,7 +637,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/Win.6"
+                android:layout_below="@+id/Win_6"
                 android:layout_toEndOf="@+id/brazRes5_Win_1"
                 android:layout_marginStart="65dp"
                 />
@@ -661,7 +661,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/Win.6"
+                android:layout_below="@+id/Win_6"
                 android:layout_toEndOf="@+id/brazRes5_Win_1"
                 android:layout_marginStart="125dp"
                 />
@@ -673,8 +673,8 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.7"
-                android:layout_toEndOf="@+id/LOST.11"
+                android:layout_below="@+id/WIN_7"
+                android:layout_toEndOf="@+id/LOST_11"
                 android:layout_marginTop="45dp"
                 />
 
@@ -685,7 +685,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.7"
+                android:layout_below="@+id/WIN_7"
                 android:layout_marginTop="45dp"
                 android:layout_toEndOf="@+id/brazRes13_Lost_11"
 
@@ -698,8 +698,8 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.13"
-                android:layout_toEndOf="@+id/LOST.11"
+                android:layout_below="@+id/WIN_13"
+                android:layout_toEndOf="@+id/LOST_11"
                 />
 
             <EditText
@@ -709,7 +709,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.13"
+                android:layout_below="@+id/WIN_13"
                 android:layout_toEndOf="@+id/brazRes13_Lost_12"
                 />
 
@@ -722,7 +722,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.7"
+                android:layout_below="@+id/WIN_7"
                 android:layout_marginTop="45dp"
                 android:layout_toStartOf="@+id/brazRes14_Win_11_2set"
 
@@ -735,8 +735,8 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.2"
-                android:layout_toStartOf="@+id/WIN.11"
+                android:layout_below="@+id/WIN_2"
+                android:layout_toStartOf="@+id/WIN_11"
                 android:layout_marginTop="45dp"
                 />
 
@@ -747,7 +747,7 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.13"
+                android:layout_below="@+id/WIN_13"
                 android:layout_toStartOf="@+id/brazRes14_Win_12_2set"
                 />
 
@@ -758,8 +758,8 @@
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/WIN.14"
-                android:layout_toStartOf="@+id/WIN.12"
+                android:layout_below="@+id/WIN_14"
+                android:layout_toStartOf="@+id/WIN_12"
                 />
 
 
@@ -862,12 +862,12 @@
                 android:layout_marginStart="20dp"/>
 
             <Button
-                android:id="@+id/WIN.1"
+                android:id="@+id/WIN_1"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.1"
+                android:text="WIN_1"
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_toEndOf="@+id/Team01"
@@ -875,292 +875,292 @@
                 android:layout_marginTop="35dp"/>
 
             <Button
-                android:id="@+id/WIN.2"
+                android:id="@+id/WIN_2"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.2"
+                android:text="WIN_2"
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_toEndOf="@+id/Team06"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/WIN.1"/>
+                android:layout_below="@+id/WIN_1"/>
 
             <Button
-                android:id="@+id/WIN.3"
+                android:id="@+id/WIN_3"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.3"
+                android:text="WIN_3"
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_toEndOf="@+id/Team04"
                 android:layout_marginStart="5dp"
-                android:layout_below="@+id/WIN.2"
+                android:layout_below="@+id/WIN_2"
                 android:layout_marginTop="200dp"/>
 
             <Button
-                android:id="@+id/WIN.4"
+                android:id="@+id/WIN_4"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.4"
+                android:text="WIN_4"
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_toEndOf="@+id/Team07"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/WIN.3"/>
+                android:layout_below="@+id/WIN_3"/>
 
             <Button
-                android:id="@+id/LOST.4"
+                android:id="@+id/LOST_4"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="LOST.4"
+                android:text="LOST_4"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/LOST.3"
+                android:layout_below="@+id/LOST_3"
                 android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/WIN.8"
+                android:layout_toEndOf="@+id/WIN_8"
                 android:layout_marginStart="5dp"/>
 
             <Button
-                android:id="@+id/LOST.5"
+                android:id="@+id/LOST_5"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="LOST.5"
+                android:text="LOST_5"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/WIN.4"
+                android:layout_toEndOf="@+id/WIN_4"
                 android:layout_marginStart="250dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/WIN.3"/>
+                android:layout_below="@+id/WIN_3"/>
 
             <Button
-                android:id="@+id/Win.5"
+                android:id="@+id/Win_5"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.5"
+                android:text="WIN_5"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/WIN.1"
-                android:layout_below="@+id/WIN.1"
+                android:layout_toEndOf="@+id/WIN_1"
+                android:layout_below="@+id/WIN_1"
                 android:layout_marginTop="15dp"
                 />
 
             <Button
-                android:id="@+id/Win.6"
+                android:id="@+id/Win_6"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.6"
+                android:text="WIN_6"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/WIN.3"
-                android:layout_below="@+id/WIN.3"
+                android:layout_toEndOf="@+id/WIN_3"
+                android:layout_below="@+id/WIN_3"
                 android:layout_marginTop="15dp"/>
 
             <Button
-                android:id="@+id/LOST.2"
+                android:id="@+id/LOST_2"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="LOST.2"
+                android:text="LOST_2"
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_below="@+id/Team06"
                 android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/WIN.7"
+                android:layout_toEndOf="@+id/WIN_7"
                 android:layout_marginStart="5dp"/>
 
             <Button
-                android:id="@+id/LOST.1"
+                android:id="@+id/LOST_1"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_marginBottom="19dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="LOST.1"
+                android:text="LOST_1"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/WIN.7"
+                android:layout_toEndOf="@+id/WIN_7"
                 android:layout_marginStart="5dp"
                 android:layout_below="@+id/Team01"
                 android:layout_marginTop="75dp"/>
 
             <Button
-                android:id="@+id/WIN.7"
+                android:id="@+id/WIN_7"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.7"
+                android:text="WIN_7"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/WIN.2"
+                android:layout_toEndOf="@+id/WIN_2"
                 android:layout_marginStart="250dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/WIN.1"
+                android:layout_below="@+id/WIN_1"
                 />
 
             <Button
-                android:id="@+id/LOST.6"
+                android:id="@+id/LOST_6"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="LOST.6"
+                android:text="LOST_6"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/WIN.1"
+                android:layout_toEndOf="@+id/WIN_1"
                 android:layout_marginStart="250dp"
                 android:layout_marginTop="35dp"/>
 
             <Button
-                android:id="@+id/WIN.9"
+                android:id="@+id/WIN_9"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.9"
+                android:text="WIN_9"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/Win.5"
-                android:layout_below="@+id/WIN.1"
+                android:layout_toEndOf="@+id/Win_5"
+                android:layout_below="@+id/WIN_1"
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="30dp"/>
 
             <Button
-                android:id="@+id/WIN.11"
+                android:id="@+id/WIN_11"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.11"
+                android:text="WIN_11"
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_below="@+id/Team03"
-                android:layout_toEndOf="@+id/WIN.2"
+                android:layout_toEndOf="@+id/WIN_2"
                 android:layout_marginTop="25.5dp"/>
 
             <Button
-                android:id="@+id/WIN.12"
+                android:id="@+id/WIN_12"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.12"
+                android:text="WIN_12"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/WIN.11"
-                android:layout_toEndOf="@+id/WIN.2"
+                android:layout_below="@+id/WIN_11"
+                android:layout_toEndOf="@+id/WIN_2"
                 android:layout_marginTop="9dp"/>
 
             <Button
-                android:id="@+id/WIN.14"
+                android:id="@+id/WIN_14"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.14"
+                android:text="WIN_14"
                 android:textColor="#000000"
                 android:textSize="11dp"
                 android:layout_marginStart="125dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/WIN.2"/>
+                android:layout_below="@+id/WIN_2"/>
 
             <Button
-                android:id="@+id/LOST.11"
+                android:id="@+id/LOST_11"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="LOST.11"
+                android:text="LOST_11"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/Win.5"
-                android:layout_below="@+id/WIN.9"
+                android:layout_toEndOf="@+id/Win_5"
+                android:layout_below="@+id/WIN_9"
                 android:layout_marginTop="111dp"
                 android:layout_marginStart="30dp"/>
 
             <Button
-                android:id="@+id/LOST.12"
+                android:id="@+id/LOST_12"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="LOST.12"
+                android:text="LOST_12"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/LOST.11"
-                android:layout_toEndOf="@+id/WIN.12"
+                android:layout_below="@+id/LOST_11"
+                android:layout_toEndOf="@+id/WIN_12"
                 android:layout_marginTop="9dp"
                 android:layout_marginStart="30dp"/>
 
             <Button
-                android:id="@+id/WIN.13"
+                android:id="@+id/WIN_13"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.13"
+                android:text="WIN_13"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/LOST.11"
+                android:layout_toEndOf="@+id/LOST_11"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/WIN.7"/>
+                android:layout_below="@+id/WIN_7"/>
 
             <Button
-                android:id="@+id/LOST.3"
+                android:id="@+id/LOST_3"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="LOST.3"
+                android:text="LOST_3"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/WIN.7"
-                android:layout_below="@+id/LOST.2"
+                android:layout_toEndOf="@+id/WIN_7"
+                android:layout_below="@+id/LOST_2"
                 android:layout_marginTop="150dp"
                 android:layout_marginStart="5dp"/>
 
             <Button
-                android:id="@+id/WIN.8"
+                android:id="@+id/WIN_8"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.8"
+                android:text="WIN_8"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/WIN.10"
-                android:layout_above="@+id/LOST.5"
+                android:layout_toEndOf="@+id/WIN_10"
+                android:layout_above="@+id/LOST_5"
                 />
 
             <Button
-                android:id="@+id/WIN.10"
+                android:id="@+id/WIN_10"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.10"
+                android:text="WIN_10"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/Win.6"
-                android:layout_below="@+id/WIN.3"
+                android:layout_toEndOf="@+id/Win_6"
+                android:layout_below="@+id/WIN_3"
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="30dp"/>
 
@@ -1172,7 +1172,7 @@
                 android:text="III"
                 android:textSize="30dp"
                 android:textStyle="bold"
-                android:layout_toEndOf="@+id/WIN.13"
+                android:layout_toEndOf="@+id/WIN_13"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="52dp"
                 android:layout_below="@+id/Team03"
@@ -1243,9 +1243,9 @@
                 android:text="7"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/WIN.7"
+                android:layout_toEndOf="@+id/WIN_7"
                 android:layout_marginStart="2dp"
-                android:layout_below="@+id/LOST.6"
+                android:layout_below="@+id/LOST_6"
                 android:layout_marginTop="89dp"/>
 
             <TextView
@@ -1255,7 +1255,7 @@
                 android:text="8"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/WIN.8"
+                android:layout_toEndOf="@+id/WIN_8"
                 android:layout_marginStart="2dp"
                 android:layout_below="@+id/numberOfMatch7"
                 android:layout_marginTop="226dp"/>
@@ -1269,8 +1269,8 @@
                 android:gravity="center"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/WIN.2"
-                android:layout_below="@+id/WIN.1"
+                android:layout_toEndOf="@+id/WIN_2"
+                android:layout_below="@+id/WIN_1"
                 android:layout_marginTop="11dp"
                 android:layout_marginStart="108dp"
                 />
@@ -1284,7 +1284,7 @@
                 android:gravity="center"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/WIN.3"
+                android:layout_toEndOf="@+id/WIN_3"
                 android:layout_below="@+id/numberOfMatch12"
                 android:layout_marginTop="315dp"
                 android:layout_marginStart="108dp"
@@ -1301,7 +1301,7 @@
                 android:textColor="#000000"
                 android:layout_toEndOf="@+id/Team03"
                 android:layout_marginStart="105dp"
-                android:layout_below="@+id/WIN.3"
+                android:layout_below="@+id/WIN_3"
                 android:layout_marginTop="28dp" />
 
             <TextView
@@ -1311,7 +1311,7 @@
                 android:text="13"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/Win.5"
+                android:layout_toEndOf="@+id/Win_5"
                 android:layout_marginStart="135dp"
                 android:layout_below="@+id/numberOfMatch9"
                 android:layout_marginTop="164dp"
@@ -1324,9 +1324,9 @@
                 android:text="14"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/WIN.14"
+                android:layout_toEndOf="@+id/WIN_14"
                 android:layout_marginStart="1dp"
-                android:layout_below="@+id/WIN.2"
+                android:layout_below="@+id/WIN_2"
                 android:layout_marginTop="90dp"/>
 
             <TextView
@@ -1336,9 +1336,9 @@
                 android:text="10"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/WIN.9"
+                android:layout_toEndOf="@+id/WIN_9"
                 android:layout_marginStart="2dp"
-                android:layout_below="@+id/WIN.8"
+                android:layout_below="@+id/WIN_8"
                 android:layout_marginTop="28dp" />
 
             <TextView
@@ -1348,9 +1348,9 @@
                 android:text="9"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/WIN.9"
+                android:layout_toEndOf="@+id/WIN_9"
                 android:layout_marginStart="2dp"
-                android:layout_below="@+id/LOST.6"
+                android:layout_below="@+id/LOST_6"
                 android:layout_marginTop="28dp" />
 
             <TextView
@@ -1362,7 +1362,7 @@
                 android:textColor="#000000"
                 android:layout_toEndOf="@+id/Team03"
                 android:layout_marginStart="105dp"
-                android:layout_below="@+id/WIN.1"
+                android:layout_below="@+id/WIN_1"
                 android:layout_marginTop="28dp" />
         </RelativeLayout>
     </com.otaliastudios.zoom.ZoomLayout>
