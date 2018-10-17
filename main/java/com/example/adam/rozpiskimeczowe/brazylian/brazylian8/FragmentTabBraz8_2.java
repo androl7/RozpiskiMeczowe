@@ -199,6 +199,7 @@ public class FragmentTabBraz8_2 extends Fragment {
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser) {
+            assert getFragmentManager() != null;
             getFragmentManager().beginTransaction().detach(this).attach(this).commit();
         }
     }
@@ -206,7 +207,6 @@ public class FragmentTabBraz8_2 extends Fragment {
     void setResult(String numberOfMatch, Button team1, Button team2, EditText res1, EditText res1_2set, EditText res2, EditText res2_2set) {
         if (!res1.getText().toString().equals("")) {
             Values value = new Values(numberOfMatch,team1.getText().toString(),team2.getText().toString(),res1.getText().toString(),res1_2set.getText().toString(),res2.getText().toString(),res2_2set.getText().toString());
-
             resultsOfMatches.put(numberOfMatch,value);
 
         }
@@ -216,8 +216,6 @@ public class FragmentTabBraz8_2 extends Fragment {
 
     class CustomAdapter extends BaseAdapter {
         private Context context;
-        int setFor1;
-        int setFor2;
 
         CustomAdapter(Context context) {
             this.context = context;
@@ -270,23 +268,30 @@ public class FragmentTabBraz8_2 extends Fragment {
             String key = resultsOfMatches.keySet().toArray()[position].toString();
 
             holder.textViewWithNumber.setText(resultsOfMatches.get(key).numberOfMatch);
-            holder.team1.setText(resultsOfMatches.get(key).team1);
-            holder.team2.setText(resultsOfMatches.get(key).team2);
+            StringBuilder team1 = new StringBuilder(resultsOfMatches.get(key).team1);
+            team1.setCharAt(team1.indexOf("\n"),'/');
+            StringBuilder team2 = new StringBuilder(resultsOfMatches.get(key).team2);
+            team2.setCharAt(team2.indexOf("\n"),'/');
+            holder.team1.setText(team1.toString());
+            holder.team2.setText(team2.toString());
             holder.PointsFor1_1.setText(resultsOfMatches.get(key).res1);
             holder.PointsFor1_2.setText(resultsOfMatches.get(key).res1_2set);
             holder.PointsFor2_1.setText(resultsOfMatches.get(key).res2);
             holder.PointsFor2_2.setText(resultsOfMatches.get(key).res2_2set);
 
-            if(Integer.getInteger(holder.PointsFor1_1.getText().toString())>Integer.getInteger(holder.PointsFor2_1.getText().toString())){
+            int setFor1=0;
+            int setFor2=0;
+
+            if(Integer.parseInt(resultsOfMatches.get(key).res1)>Integer.parseInt(resultsOfMatches.get(key).res2)){
                 setFor1++;
             }
-            if(Integer.getInteger(holder.PointsFor1_1.getText().toString())<Integer.getInteger(holder.PointsFor2_1.getText().toString())){
+            if(Integer.parseInt(resultsOfMatches.get(key).res1)<Integer.parseInt(resultsOfMatches.get(key).res2)){
                 setFor2++;
             }
-            if(Integer.getInteger(holder.PointsFor1_2.getText().toString())>Integer.getInteger(holder.PointsFor2_2.getText().toString())){
+            if(Integer.parseInt(resultsOfMatches.get(key).res1_2set)>Integer.parseInt(resultsOfMatches.get(key).res2_2set)){
                 setFor1++;
             }
-            if(Integer.getInteger(holder.PointsFor1_2.getText().toString())>Integer.getInteger(holder.PointsFor2_2.getText().toString())){
+            if(Integer.parseInt(resultsOfMatches.get(key).res1_2set)<Integer.parseInt(resultsOfMatches.get(key).res2_2set)){
                 setFor2++;
             }
 
