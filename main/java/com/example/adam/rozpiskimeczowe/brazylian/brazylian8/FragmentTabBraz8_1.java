@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -28,146 +29,200 @@ public class FragmentTabBraz8_1 extends Fragment {
 
         final EditText res1_1 = view.findViewById(R.id.brazRes1_1);
         final EditText res1_1_2set = view.findViewById(R.id.brazRes1_1_2set);
+        final EditText res1_1_3set = view.findViewById(R.id.brazRes1_1_3set);
         final EditText res1_8 = view.findViewById(R.id.brazRes1_8);
         final EditText res1_8_2set = view.findViewById(R.id.brazRes1_8_2set);
+        final EditText res1_8_3set = view.findViewById(R.id.brazRes1_8_3set);
 
         res1_1.setVisibility(View.INVISIBLE);
         res1_1_2set.setVisibility(View.INVISIBLE);
+        res1_1_3set.setVisibility(View.INVISIBLE);
         res1_8.setVisibility(View.INVISIBLE);
         res1_8_2set.setVisibility(View.INVISIBLE);
-
-
+        res1_8_3set.setVisibility(View.INVISIBLE);
 
 
         final EditText res2_6 = view.findViewById(R.id.brazRes2_6);
         final EditText res2_6_2set = view.findViewById(R.id.brazRes2_6_2set);
+        final EditText res2_6_3set = view.findViewById(R.id.brazRes2_6_3set);
         final EditText res2_3 = view.findViewById(R.id.brazRes2_3);
         final EditText res2_3_2set = view.findViewById(R.id.brazRes2_3_2set);
+        final EditText res2_3_3set = view.findViewById(R.id.brazRes2_3_3set);
 
         res2_6.setVisibility(View.INVISIBLE);
         res2_6_2set.setVisibility(View.INVISIBLE);
+        res2_6_3set.setVisibility(View.INVISIBLE);
         res2_3.setVisibility(View.INVISIBLE);
         res2_3_2set.setVisibility(View.INVISIBLE);
+        res2_3_3set.setVisibility(View.INVISIBLE);
 
         final EditText res3_4 = view.findViewById(R.id.brazRes3_4);
         final EditText res3_4_2set = view.findViewById(R.id.brazRes3_4_2set);
+        final EditText res3_4_3set = view.findViewById(R.id.brazRes3_4_3set);
         final EditText res3_5 = view.findViewById(R.id.brazRes3_5);
         final EditText res3_5_2set = view.findViewById(R.id.brazRes3_5_2set);
+        final EditText res3_5_3set = view.findViewById(R.id.brazRes3_5_3set);
 
         res3_4.setVisibility(View.INVISIBLE);
         res3_4_2set.setVisibility(View.INVISIBLE);
+        res3_4_3set.setVisibility(View.INVISIBLE);
         res3_5.setVisibility(View.INVISIBLE);
         res3_5_2set.setVisibility(View.INVISIBLE);
+        res3_5_3set.setVisibility(View.INVISIBLE);
 
         final EditText res4_7 = view.findViewById(R.id.brazRes4_7);
         final EditText res4_7_2set = view.findViewById(R.id.brazRes4_7_2set);
+        final EditText res4_7_3set = view.findViewById(R.id.brazRes4_7_3set);
         final EditText res4_2 = view.findViewById(R.id.brazRes4_2);
         final EditText res4_2_2set = view.findViewById(R.id.brazRes4_2_2set);
+        final EditText res4_2_3set = view.findViewById(R.id.brazRes4_2_3set);
 
         res4_7.setVisibility(View.INVISIBLE);
         res4_7_2set.setVisibility(View.INVISIBLE);
+        res4_7_3set.setVisibility(View.INVISIBLE);
         res4_2.setVisibility(View.INVISIBLE);
         res4_2_2set.setVisibility(View.INVISIBLE);
+        res4_2_3set.setVisibility(View.INVISIBLE);
 
         final EditText brazRes5_Win_1 = view.findViewById(R.id.brazRes5_Win_1);
         final EditText brazRes5_Win_1_2set = view.findViewById(R.id.brazRes5_Win_1_2set);
+        final EditText brazRes5_Win_1_3set = view.findViewById(R.id.brazRes5_Win_1_3set);
         final EditText brazRes5_Win_2 = view.findViewById(R.id.brazRes5_Win_2);
         final EditText brazRes5_Win_2_2set = view.findViewById(R.id.brazRes5_Win_2_2set);
+        final EditText brazRes5_Win_2_3set = view.findViewById(R.id.brazRes5_Win_2_3set);
 
         brazRes5_Win_1.setVisibility(View.INVISIBLE);
         brazRes5_Win_1_2set.setVisibility(View.INVISIBLE);
+        brazRes5_Win_1_3set.setVisibility(View.INVISIBLE);
         brazRes5_Win_2.setVisibility(View.INVISIBLE);
         brazRes5_Win_2_2set.setVisibility(View.INVISIBLE);
+        brazRes5_Win_2_3set.setVisibility(View.INVISIBLE);
 
         final EditText brazRes6_Win_3 = view.findViewById(R.id.brazRes6_Win_3);
         final EditText brazRes6_Win_3_2set = view.findViewById(R.id.brazRes6_Win_3_2set);
+        final EditText brazRes6_Win_3_3set = view.findViewById(R.id.brazRes6_Win_3_3set);
         final EditText brazRes6_Win_4 = view.findViewById(R.id.brazRes6_Win_4);
         final EditText brazRes6_Win_4_2set = view.findViewById(R.id.brazRes6_Win_4_2set);
+        final EditText brazRes6_Win_4_3set = view.findViewById(R.id.brazRes6_Win_4_3set);
 
         brazRes6_Win_3.setVisibility(View.INVISIBLE);
         brazRes6_Win_3_2set.setVisibility(View.INVISIBLE);
+        brazRes6_Win_3_3set.setVisibility(View.INVISIBLE);
         brazRes6_Win_4.setVisibility(View.INVISIBLE);
         brazRes6_Win_4_2set.setVisibility(View.INVISIBLE);
+        brazRes6_Win_4_3set.setVisibility(View.INVISIBLE);
 
         final EditText brazRes7_Lost_1 = view.findViewById(R.id.brazRes7_Lost_1);
         final EditText brazRes7_Lost_1_2set = view.findViewById(R.id.brazRes7_Lost_1_2set);
+        final EditText brazRes7_Lost_1_3set = view.findViewById(R.id.brazRes7_Lost_1_3set);
         final EditText brazRes7_Lost_2 = view.findViewById(R.id.brazRes7_Lost_2);
         final EditText brazRes7_Lost_2_2set = view.findViewById(R.id.brazRes7_Lost_2_2set);
+        final EditText brazRes7_Lost_2_3set = view.findViewById(R.id.brazRes7_Lost_2_3set);
 
         brazRes7_Lost_1.setVisibility(View.INVISIBLE);
         brazRes7_Lost_1_2set.setVisibility(View.INVISIBLE);
+        brazRes7_Lost_1_3set.setVisibility(View.INVISIBLE);
         brazRes7_Lost_2.setVisibility(View.INVISIBLE);
         brazRes7_Lost_2_2set.setVisibility(View.INVISIBLE);
+        brazRes7_Lost_2_3set.setVisibility(View.INVISIBLE);
 
         final EditText brazRes8_Lost_3 = view.findViewById(R.id.brazRes8_Lost_3);
         final EditText brazRes8_Lost_3_2set = view.findViewById(R.id.brazRes8_Lost_3_2set);
+        final EditText brazRes8_Lost_3_3set = view.findViewById(R.id.brazRes8_Lost_3_3set);
         final EditText brazRes8_Lost_4 = view.findViewById(R.id.brazRes8_Lost_4);
         final EditText brazRes8_Lost_4_2set = view.findViewById(R.id.brazRes8_Lost_4_2set);
+        final EditText brazRes8_Lost_4_3set = view.findViewById(R.id.brazRes8_Lost_4_3set);
 
         brazRes8_Lost_3.setVisibility(View.INVISIBLE);
         brazRes8_Lost_3_2set.setVisibility(View.INVISIBLE);
+        brazRes8_Lost_3_3set.setVisibility(View.INVISIBLE);
         brazRes8_Lost_4.setVisibility(View.INVISIBLE);
         brazRes8_Lost_4_2set.setVisibility(View.INVISIBLE);
+        brazRes8_Lost_4_3set.setVisibility(View.INVISIBLE);
 
         final EditText brazRes9_Lost_6 = view.findViewById(R.id.brazRes9_Lost_6);
         final EditText brazRes9_Lost_6_2set = view.findViewById(R.id.brazRes9_Lost_6_2set);
+        final EditText brazRes9_Lost_6_3set = view.findViewById(R.id.brazRes9_Lost_6_3set);
         final EditText brazRes9_Win_7 = view.findViewById(R.id.brazRes9_Win_7);
         final EditText brazRes9_Win_7_2set = view.findViewById(R.id.brazRes9_Win_7_2set);
+        final EditText brazRes9_Win_7_3set = view.findViewById(R.id.brazRes9_Win_7_3set);
 
         brazRes9_Lost_6.setVisibility(View.INVISIBLE);
         brazRes9_Lost_6_2set.setVisibility(View.INVISIBLE);
+        brazRes9_Lost_6_3set.setVisibility(View.INVISIBLE);
         brazRes9_Win_7.setVisibility(View.INVISIBLE);
         brazRes9_Win_7_2set.setVisibility(View.INVISIBLE);
+        brazRes9_Win_7_3set.setVisibility(View.INVISIBLE);
 
         final EditText brazRes10_Lost_5 = view.findViewById(R.id.brazRes10_Lost_5);
         final EditText brazRes10_Lost_5_2set = view.findViewById(R.id.brazRes10_Lost_5_2set);
+        final EditText brazRes10_Lost_5_3set = view.findViewById(R.id.brazRes10_Lost_5_3set);
         final EditText brazRes10_Win_8 = view.findViewById(R.id.brazRes10_Win_8);
         final EditText brazRes10_Win_8_2set = view.findViewById(R.id.brazRes10_Win_8_2set);
+        final EditText brazRes10_Win_8_3set = view.findViewById(R.id.brazRes10_Win_8_3set);
 
         brazRes10_Lost_5.setVisibility(View.INVISIBLE);
         brazRes10_Lost_5_2set.setVisibility(View.INVISIBLE);
+        brazRes10_Lost_5_3set.setVisibility(View.INVISIBLE);
         brazRes10_Win_8.setVisibility(View.INVISIBLE);
         brazRes10_Win_8_2set.setVisibility(View.INVISIBLE);
+        brazRes10_Win_8_3set.setVisibility(View.INVISIBLE);
 
         final EditText brazRes11_Win_5 = view.findViewById(R.id.brazRes11_Win_5);
         final EditText brazRes11_Win_5_2set = view.findViewById(R.id.brazRes11_Win_5_2set);
+        final EditText brazRes11_Win_5_3set = view.findViewById(R.id.brazRes11_Win_5_3set);
         final EditText brazRes11_Win_9 = view.findViewById(R.id.brazRes11_Win_9);
         final EditText brazRes11_Win_9_2set = view.findViewById(R.id.brazRes11_Win_9_2set);
+        final EditText brazRes11_Win_9_3set = view.findViewById(R.id.brazRes11_Win_9_3set);
 
         brazRes11_Win_5.setVisibility(View.INVISIBLE);
         brazRes11_Win_5_2set.setVisibility(View.INVISIBLE);
+        brazRes11_Win_5_3set.setVisibility(View.INVISIBLE);
         brazRes11_Win_9.setVisibility(View.INVISIBLE);
         brazRes11_Win_9_2set.setVisibility(View.INVISIBLE);
+        brazRes11_Win_9_3set.setVisibility(View.INVISIBLE);
 
         final EditText brazRes12_Win_6 = view.findViewById(R.id.brazRes12_Win_6);
         final EditText brazRes12_Win_6_2set = view.findViewById(R.id.brazRes12_Win_6_2set);
+        final EditText brazRes12_Win_6_3set = view.findViewById(R.id.brazRes12_Win_6_3set);
         final EditText brazRes12_Win_10 = view.findViewById(R.id.brazRes12_Win_10);
         final EditText brazRes12_Win_10_2set = view.findViewById(R.id.brazRes12_Win_10_2set);
+        final EditText brazRes12_Win_10_3set = view.findViewById(R.id.brazRes12_Win_10_3set);
 
         brazRes12_Win_6.setVisibility(View.INVISIBLE);
         brazRes12_Win_6_2set.setVisibility(View.INVISIBLE);
+        brazRes12_Win_6_3set.setVisibility(View.INVISIBLE);
         brazRes12_Win_10.setVisibility(View.INVISIBLE);
         brazRes12_Win_10_2set.setVisibility(View.INVISIBLE);
+        brazRes12_Win_10_3set.setVisibility(View.INVISIBLE);
 
         final EditText brazRes13_Lost_11 = view.findViewById(R.id.brazRes13_Lost_11);
         final EditText brazRes13_Lost_11_2set = view.findViewById(R.id.brazRes13_Lost_11_2set);
+        final EditText brazRes13_Lost_11_3set = view.findViewById(R.id.brazRes13_Lost_11_3set);
         final EditText brazRes13_Lost_12 = view.findViewById(R.id.brazRes13_Lost_12);
         final EditText brazRes13_Lost_12_2set = view.findViewById(R.id.brazRes13_Lost_12_2set);
+        final EditText brazRes13_Lost_12_3set = view.findViewById(R.id.brazRes13_Lost_12_3set);
 
         brazRes13_Lost_11.setVisibility(View.INVISIBLE);
         brazRes13_Lost_11_2set.setVisibility(View.INVISIBLE);
+        brazRes13_Lost_11_3set.setVisibility(View.INVISIBLE);
         brazRes13_Lost_12.setVisibility(View.INVISIBLE);
         brazRes13_Lost_12_2set.setVisibility(View.INVISIBLE);
+        brazRes13_Lost_12_3set.setVisibility(View.INVISIBLE);
 
         final EditText brazRes14_Win_11 = view.findViewById(R.id.brazRes14_Win_11);
         final EditText brazRes14_Win_11_2set = view.findViewById(R.id.brazRes14_Win_11_2set);
+        final EditText brazRes14_Win_11_3set = view.findViewById(R.id.brazRes14_Win_11_3set);
         final EditText brazRes14_Win_12 = view.findViewById(R.id.brazRes14_Win_12);
         final EditText brazRes14_Win_12_2set = view.findViewById(R.id.brazRes14_Win_12_2set);
+        final EditText brazRes14_Win_12_3set = view.findViewById(R.id.brazRes14_Win_12_3set);
 
         brazRes14_Win_11.setVisibility(View.INVISIBLE);
         brazRes14_Win_11_2set.setVisibility(View.INVISIBLE);
+        brazRes14_Win_11_3set.setVisibility(View.INVISIBLE);
         brazRes14_Win_12.setVisibility(View.INVISIBLE);
         brazRes14_Win_12_2set.setVisibility(View.INVISIBLE);
+        brazRes14_Win_12_3set.setVisibility(View.INVISIBLE);
 
 
 
@@ -218,55 +273,55 @@ public class FragmentTabBraz8_1 extends Fragment {
         toast = Toast.makeText(getActivity().getApplicationContext(), "Wprowadz wczesniejszy wynik !", Toast.LENGTH_SHORT);
 
         // 1 MECZ
-        setResult(team1,team8,win1,"WIN.1",lost1,"LOST.1",res1_1,res1_1_2set,res1_8,res1_8_2set);
+        setResult(team1,team8,win1,"WIN.1",lost1,"LOST.1",res1_1,res1_1_2set,res1_1_3set,res1_8,res1_8_2set,res1_8_3set);
 
         // 2 MECZ
-        setResult(team6,team3,win2,"WIN.2",lost2,"LOST.2",res2_6,res2_6_2set,res2_3,res2_3_2set);
+        setResult(team6,team3,win2,"WIN.2",lost2,"LOST.2",res2_6,res2_6_2set,res2_6_3set,res2_3,res2_3_2set,res2_3_3set);
 
         // 3 MECZ
-        setResult(team4,team5,win3,"WIN.3",lost3,"LOST.3",res3_4,res3_4_2set,res3_5,res3_5_2set);
+        setResult(team4,team5,win3,"WIN.3",lost3,"LOST.3",res3_4,res3_4_2set,res3_4_3set,res3_5,res3_5_2set,res3_5_3set);
 
         // 4 MECZ
-        setResult(team7,team2,win4,"WIN.4",lost4,"LOST.4",res4_2,res4_2_2set,res4_7,res4_7_2set);
+        setResult(team7,team2,win4,"WIN.4",lost4,"LOST.4",res4_2,res4_2_2set,res4_2_3set,res4_7,res4_7_2set,res4_7_3set);
 
         // 5 MECZ
 
-        setResult(win1,"WIN.1",win2,"WIN.2",win5,"WIN.5",lost5,"LOST.5",brazRes5_Win_1,brazRes5_Win_1_2set,brazRes5_Win_2,brazRes5_Win_2_2set);
+        setResult(win1,"WIN.1",win2,"WIN.2",win5,"WIN.5",lost5,"LOST.5",brazRes5_Win_1,brazRes5_Win_1_2set,brazRes5_Win_1_3set,brazRes5_Win_2,brazRes5_Win_2_2set,brazRes5_Win_2_3set);
 
 
         // 6 MECZ
-        setResult(win3,"WIN.3",win4,"WIN.4",win6,"WIN.6",lost6,"LOST.6",brazRes6_Win_3,brazRes6_Win_3_2set,brazRes6_Win_4,brazRes6_Win_4_2set);
+        setResult(win3,"WIN.3",win4,"WIN.4",win6,"WIN.6",lost6,"LOST.6",brazRes6_Win_3,brazRes6_Win_3_2set,brazRes6_Win_3_3set,brazRes6_Win_4,brazRes6_Win_4_2set,brazRes6_Win_4_3set);
 
         //7 MECZ
-        setResult(lost1, "LOST.1", lost2, "LOST.2", win7, "WIN.7",brazRes7_Lost_1,brazRes7_Lost_1_2set,brazRes7_Lost_2,brazRes7_Lost_2_2set);
+        setResult(lost1, "LOST.1", lost2, "LOST.2", win7, "WIN.7",brazRes7_Lost_1,brazRes7_Lost_1_2set,brazRes7_Lost_1_3set,brazRes7_Lost_2,brazRes7_Lost_2_2set,brazRes7_Lost_2_3set);
 
 
         //8 MECZ
-        setResult(lost3, "LOST.3", lost4, "LOST.4", win8, "WIN.8",brazRes8_Lost_3,brazRes8_Lost_3_2set,brazRes8_Lost_4,brazRes8_Lost_4_2set);
+        setResult(lost3, "LOST.3", lost4, "LOST.4", win8, "WIN.8",brazRes8_Lost_3,brazRes8_Lost_3_2set,brazRes8_Lost_3_3set,brazRes8_Lost_4,brazRes8_Lost_4_2set,brazRes8_Lost_4_3set);
 
         //9 MECZ
-        setResult(lost6, "LOST.6", win7, "WIN.7", win9, "WIN.9",brazRes9_Lost_6,brazRes9_Lost_6_2set,brazRes9_Win_7,brazRes9_Win_7_2set);
+        setResult(lost6, "LOST.6", win7, "WIN.7", win9, "WIN.9",brazRes9_Lost_6,brazRes9_Lost_6_2set,brazRes9_Lost_6_3set,brazRes9_Win_7,brazRes9_Win_7_2set,brazRes9_Win_7_3set);
 
         //10 MECZ
-        setResult(win8, "WIN.8", lost5, "LOST.5", win10, "WIN.10",brazRes10_Lost_5,brazRes10_Lost_5_2set,brazRes10_Win_8,brazRes10_Win_8_2set);
+        setResult(win8, "WIN.8", lost5, "LOST.5", win10, "WIN.10",brazRes10_Lost_5,brazRes10_Lost_5_2set,brazRes10_Lost_5_3set,brazRes10_Win_8,brazRes10_Win_8_2set,brazRes10_Win_8_3set);
 
         //11 MECZ
-        setResult(win5, "WIN.5", win9, "WIN.9", win11, "WIN.11", lost11, "LOST.11",brazRes11_Win_5,brazRes11_Win_5_2set,brazRes11_Win_9,brazRes11_Win_9_2set);
+        setResult(win5, "WIN.5", win9, "WIN.9", win11, "WIN.11", lost11, "LOST.11",brazRes11_Win_5,brazRes11_Win_5_2set,brazRes11_Win_5_3set,brazRes11_Win_9,brazRes11_Win_9_2set,brazRes11_Win_9_3set);
 
         //12 MECZ
-        setResult(win6, "WIN.6", win10, "WIN.10", win12, "WIN.12", lost12, "LOST.12",brazRes12_Win_6,brazRes12_Win_6_2set,brazRes12_Win_10,brazRes12_Win_10_2set);
+        setResult(win6, "WIN.6", win10, "WIN.10", win12, "WIN.12", lost12, "LOST.12",brazRes12_Win_6,brazRes12_Win_6_2set,brazRes12_Win_6_3set,brazRes12_Win_10,brazRes12_Win_10_2set,brazRes12_Win_10_3set);
 
         //13 MECZ
-        setResult(lost11, "LOST.11", lost12, "LOST.12", win13, "WIN13",brazRes13_Lost_11,brazRes13_Lost_11_2set,brazRes13_Lost_12,brazRes13_Lost_12_2set);
+        setResult(lost11, "LOST.11", lost12, "LOST.12", win13, "WIN13",brazRes13_Lost_11,brazRes13_Lost_11_2set,brazRes13_Lost_11_3set,brazRes13_Lost_12,brazRes13_Lost_12_2set,brazRes13_Lost_12_3set);
 
         //14 MECZ FINAL
-        setResult(win11, "WIN.11", win12, "WIN.12", win14, "WIN.14",brazRes14_Win_11,brazRes14_Win_11_2set,brazRes14_Win_12,brazRes14_Win_12_2set);
+        setResult(win11, "WIN.11", win12, "WIN.12", win14, "WIN.14",brazRes14_Win_11,brazRes14_Win_11_2set,brazRes14_Win_11_3set,brazRes14_Win_12,brazRes14_Win_12_2set,brazRes14_Win_12_3set);
         return view;
     }
 
 
     //Method to set results to next Buttons with loser and check
-    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button resultButton, final String undoResultString, final Button resultButton2, final String undoResultString2, final EditText pointsFor1In1Set,final EditText pointsFor1In2Set, final EditText pointsFor2In1Set,final EditText pointsFor2In2Set) {
+    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button resultButton, final String undoResultString, final Button resultButton2, final String undoResultString2, final EditText pointsFor1In1Set,final EditText pointsFor1In2Set,final EditText pointsFor1In3Set, final EditText pointsFor2In1Set,final EditText pointsFor2In2Set,final EditText pointsFor2In3Set) {
         firstPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -275,7 +330,7 @@ public class FragmentTabBraz8_1 extends Fragment {
                 } else {
                     resultButton.setText(firstPlayer.getText());
                     resultButton2.setText(secundPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set,pointsFor2In1Set,pointsFor2In2Set);
+                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
                 }
 
             }
@@ -289,7 +344,7 @@ public class FragmentTabBraz8_1 extends Fragment {
                 } else {
                     resultButton.setText(secundPlayer.getText());
                     resultButton2.setText(firstPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set,pointsFor1In1Set,pointsFor1In2Set);
+                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set,pointsFor2In3Set,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set);
                 }
 
             }
@@ -312,10 +367,12 @@ public class FragmentTabBraz8_1 extends Fragment {
                 return true;
             }
         });
+
+
     }
 
     //Method to set results to next Buttons without loser and check
-    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button resultButton, final String undoResultString, final EditText pointsFor1In1Set,final EditText pointsFor1In2Set, final EditText pointsFor2In1Set,final EditText pointsFor2In2Set) {
+    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button resultButton, final String undoResultString, final EditText pointsFor1In1Set,final EditText pointsFor1In2Set,final EditText pointsFor1In3Set, final EditText pointsFor2In1Set,final EditText pointsFor2In2Set,final EditText pointsFor2In3Set) {
         firstPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -323,7 +380,7 @@ public class FragmentTabBraz8_1 extends Fragment {
                     toast.show();
                 } else {
                     resultButton.setText(firstPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set,pointsFor2In1Set,pointsFor2In2Set);
+                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
                 }
 
             }
@@ -336,7 +393,7 @@ public class FragmentTabBraz8_1 extends Fragment {
                     toast.show();
                 } else {
                     resultButton.setText(secundPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set,pointsFor1In1Set,pointsFor1In2Set);
+                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set,pointsFor2In3Set,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set);
                 }
 
             }
@@ -351,13 +408,13 @@ public class FragmentTabBraz8_1 extends Fragment {
         });
     }
     // Method to set results to next Buttons with loser without check
-    void setResult (final Button firstPlayer, final Button secundPlayer, final Button resultButton, final String undoResultString, final Button resultButton2, final String undoResultString2, final EditText pointsFor1In1Set,final EditText pointsFor1In2Set, final EditText pointsFor2In1Set,final EditText pointsFor2In2Set) {
+    void setResult (final Button firstPlayer, final Button secundPlayer, final Button resultButton, final String undoResultString, final Button resultButton2, final String undoResultString2, final EditText pointsFor1In1Set,final EditText pointsFor1In2Set,final EditText pointsFor1In3Set, final EditText pointsFor2In1Set,final EditText pointsFor2In2Set,final EditText pointsFor2In3Set) {
         firstPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 resultButton.setText(firstPlayer.getText());
                 resultButton2.setText(secundPlayer.getText());
-                setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set,pointsFor2In1Set,pointsFor2In2Set);
+                setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
             }
         });
 
@@ -367,7 +424,7 @@ public class FragmentTabBraz8_1 extends Fragment {
             public void onClick(View v) {
                 resultButton.setText(secundPlayer.getText());
                 resultButton2.setText(firstPlayer.getText());
-                setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set,pointsFor1In1Set,pointsFor1In2Set);
+                setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set,pointsFor2In3Set,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set);
             }
         });
 
@@ -393,7 +450,7 @@ public class FragmentTabBraz8_1 extends Fragment {
 
     // Method to add points of Sets
 
-    void setDetailedResultFor2Sets(final EditText team1Set1,final EditText team1Set2, final EditText team2Set1, final EditText team2Set2) {
+    void setDetailedResultFor2Sets(final EditText team1Set1,final EditText team1Set2,final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3) {
 
         team1Set1.setVisibility(View.VISIBLE);
         team2Set1.setVisibility(View.VISIBLE);
@@ -454,12 +511,20 @@ public class FragmentTabBraz8_1 extends Fragment {
             }
 
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (team2Set2.getText().toString().length() == 2) {
-                    team1Set1.setVisibility(View.INVISIBLE);
-                    team2Set1.setVisibility(View.INVISIBLE);
-                    team1Set2.setVisibility(View.INVISIBLE);
-                    team2Set2.setVisibility(View.INVISIBLE);
-                    imm.hideSoftInputFromWindow(team2Set2.getWindowToken(), 0);
+                //check tie break
+                if((Integer.parseInt(team1Set1.getText().toString())>Integer.parseInt(team2Set1.getText().toString())&&Integer.parseInt(team1Set2.getText().toString())<Integer.parseInt(team2Set2.getText().toString()))||(Integer.parseInt(team1Set1.getText().toString())<Integer.parseInt(team2Set1.getText().toString())&&Integer.parseInt(team1Set2.getText().toString())>Integer.parseInt(team2Set2.getText().toString()))){
+                    team1Set3.setVisibility(View.VISIBLE);
+                    team2Set3.setVisibility(View.VISIBLE);
+                    team1Set3.requestFocus();
+                }else {
+                    if (team2Set2.getText().toString().length() == 2) {
+                        team1Set1.setVisibility(View.INVISIBLE);
+                        team2Set1.setVisibility(View.INVISIBLE);
+                        team1Set2.setVisibility(View.INVISIBLE);
+                        team2Set2.setVisibility(View.INVISIBLE);
+                        imm.hideSoftInputFromWindow(team2Set2.getWindowToken(), 0);
+
+                    }
                 }
             }
 
@@ -467,6 +532,52 @@ public class FragmentTabBraz8_1 extends Fragment {
 
             }
         });
+
+        team1Set3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (team1Set3.getText().toString().length() == 2) {
+                    team2Set3.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        team2Set3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (team2Set3.getText().toString().length() == 2) {
+                    team1Set1.setVisibility(View.INVISIBLE);
+                    team2Set1.setVisibility(View.INVISIBLE);
+                    team1Set2.setVisibility(View.INVISIBLE);
+                    team2Set2.setVisibility(View.INVISIBLE);
+                    team1Set3.setVisibility(View.INVISIBLE);
+                    team2Set3.setVisibility(View.INVISIBLE);
+                    imm.hideSoftInputFromWindow(team2Set3.getWindowToken(), 0);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+
     }
 
 }

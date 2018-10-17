@@ -124,6 +124,16 @@
                 android:layout_toEndOf="@+id/brazRes1_1"
                 android:layout_marginTop="4dp"
                 />
+            <EditText
+                android:id="@+id/brazRes1_1_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/brazRes1_1_2set"
+                android:layout_marginTop="4dp"
+                />
 
 
             <EditText
@@ -144,6 +154,16 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/brazRes1_8"
+                android:layout_below="@+id/WIN_1"
+                />
+            <EditText
+                android:id="@+id/brazRes1_8_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/brazRes1_8_2set"
                 android:layout_below="@+id/WIN_1"
                 />
 
@@ -172,6 +192,18 @@
                 android:layout_toEndOf="@+id/brazRes2_6"
                 />
 
+            <EditText
+                android:id="@+id/brazRes2_6_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/brazRes1_1"
+                android:layout_marginTop="84dp"
+                android:layout_toEndOf="@+id/brazRes2_6_2set"
+                />
+
 
             <EditText
                 android:id="@+id/brazRes2_3"
@@ -191,6 +223,16 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/brazRes2_3"
+                android:layout_below="@+id/WIN_2"/>
+
+            <EditText
+                android:id="@+id/brazRes2_3_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/brazRes2_3_2set"
                 android:layout_below="@+id/WIN_2"/>
 
 
@@ -217,6 +259,17 @@
                 android:layout_marginBottom="38dp"/>
 
             <EditText
+                android:id="@+id/brazRes3_4_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/brazRes3_4_2set"
+                android:layout_above="@+id/brazRes3_5"
+                android:layout_marginBottom="38dp"/>
+
+            <EditText
                 android:id="@+id/brazRes3_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -235,6 +288,17 @@
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/brazRes3_5"
                 android:layout_below="@+id/WIN_3"/>
+
+            <EditText
+                android:id="@+id/brazRes3_5_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/brazRes3_5_2set"
+                android:layout_below="@+id/WIN_3"/>
+
 
             <EditText
                 android:id="@+id/brazRes4_2"
@@ -257,6 +321,16 @@
                 android:layout_marginBottom="38dp" />
 
             <EditText
+                android:id="@+id/brazRes4_2_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/brazRes4_2_2set"
+                android:layout_above="@+id/brazRes4_7"
+                android:layout_marginBottom="38dp" />
+
+            <EditText
                 android:id="@+id/brazRes4_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -274,6 +348,16 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_toEndOf="@+id/brazRes4_7"
+                android:layout_below="@+id/WIN_4"/>
+
+            <EditText
+                android:id="@+id/brazRes4_7_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/brazRes4_7_2set"
                 android:layout_below="@+id/WIN_4"/>
 
             <EditText
@@ -299,6 +383,17 @@
                 />
 
             <EditText
+                android:id="@+id/brazRes5_Win_1_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/Team01"
+                android:layout_toEndOf="@+id/brazRes5_Win_1_2set"
+                />
+
+            <EditText
                 android:id="@+id/brazRes5_Win_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -318,6 +413,17 @@
                 android:textSize="12dp"
                 android:layout_below="@+id/Win_5"
                 android:layout_toEndOf="@+id/brazRes5_Win_2"
+                />
+
+            <EditText
+                android:id="@+id/brazRes5_Win_2_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/Win_5"
+                android:layout_toEndOf="@+id/brazRes5_Win_2_2set"
                 />
 
             <EditText
@@ -343,6 +449,17 @@
                 />
 
             <EditText
+                android:id="@+id/brazRes6_Win_3_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/Team04"
+                android:layout_toEndOf="@+id/brazRes6_Win_3_2set"
+                />
+
+            <EditText
                 android:id="@+id/brazRes6_Win_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -365,6 +482,17 @@
                 />
 
             <EditText
+                android:id="@+id/brazRes6_Win_4_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/Win_6"
+                android:layout_toEndOf="@+id/brazRes6_Win_4_2set"
+                />
+
+            <EditText
                 android:id="@+id/brazRes7_Lost_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -383,9 +511,19 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_below="@+id/WIN_7"
-                android:layout_toStartOf="@+id/LOST_2"
+                android:layout_toStartOf="@+id/brazRes7_Lost_1_3set"
                 />
 
+            <EditText
+                android:id="@+id/brazRes7_Lost_1_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/WIN_7"
+                android:layout_toStartOf="@+id/LOST_2"
+                />
 
 
             <EditText
@@ -409,9 +547,20 @@
                 android:textSize="12dp"
                 android:layout_below="@+id/LOST_6"
                 android:layout_marginTop="44dp"
-                android:layout_toStartOf="@+id/LOST_1"
+                android:layout_toStartOf="@+id/brazRes7_Lost_2_3set"
                 />
 
+            <EditText
+                android:id="@+id/brazRes7_Lost_2_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/LOST_6"
+                android:layout_marginTop="44dp"
+                android:layout_toStartOf="@+id/LOST_1"
+                />
 
 
             <EditText
@@ -435,9 +584,20 @@
                 android:textSize="12dp"
                 android:layout_below="@+id/WIN_13"
                 android:layout_marginTop="50dp"
-                android:layout_toStartOf="@+id/LOST_3"
+                android:layout_toStartOf="@+id/brazRes8_Lost_3_3set"
                 />
 
+            <EditText
+                android:id="@+id/brazRes8_Lost_3_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/WIN_13"
+                android:layout_marginTop="50dp"
+                android:layout_toStartOf="@+id/LOST_3"
+                />
 
 
             <EditText
@@ -459,10 +619,19 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_below="@+id/WIN_8"
-                android:layout_toStartOf="@+id/LOST_4"
+                android:layout_toStartOf="@+id/brazRes8_Lost_4_3set"
                 />
 
-
+            <EditText
+                android:id="@+id/brazRes8_Lost_4_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/WIN_8"
+                android:layout_toStartOf="@+id/LOST_4"
+                />
 
 
 
@@ -475,11 +644,23 @@
                 android:textSize="12dp"
                 android:layout_below="@+id/Team01"
                 android:layout_toEndOf="@+id/brazRes5_Win_1_2set"
-                android:layout_marginStart="165dp"
+                android:layout_marginStart="145dp"
                 />
 
             <EditText
                 android:id="@+id/brazRes9_Lost_6_2set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/Team01"
+                android:layout_toEndOf="@+id/brazRes5_Win_1_2set"
+                android:layout_marginStart="165dp"
+                />
+
+            <EditText
+                android:id="@+id/brazRes9_Lost_6_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
@@ -499,11 +680,23 @@
                 android:textSize="12dp"
                 android:layout_below="@+id/Win_5"
                 android:layout_toEndOf="@+id/brazRes5_Win_2_2set"
-                android:layout_marginStart="165dp"
+                android:layout_marginStart="145dp"
                 />
 
             <EditText
                 android:id="@+id/brazRes9_Win_7_2set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/Win_5"
+                android:layout_toEndOf="@+id/brazRes5_Win_2_2set"
+                android:layout_marginStart="165dp"
+                />
+
+            <EditText
+                android:id="@+id/brazRes9_Win_7_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
@@ -525,11 +718,23 @@
                 android:textSize="12dp"
                 android:layout_below="@+id/Team04"
                 android:layout_toEndOf="@+id/brazRes5_Win_1_2set"
-                android:layout_marginStart="165dp"
+                android:layout_marginStart="145dp"
                 />
 
             <EditText
                 android:id="@+id/brazRes10_Win_8_2set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/Team04"
+                android:layout_toEndOf="@+id/brazRes5_Win_1_2set"
+                android:layout_marginStart="165dp"
+                />
+
+            <EditText
+                android:id="@+id/brazRes10_Win_8_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
@@ -543,9 +748,20 @@
 
 
 
-
             <EditText
                 android:id="@+id/brazRes10_Lost_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/WIN_10"
+                android:layout_toEndOf="@+id/brazRes5_Win_2_2set"
+                android:layout_marginStart="145dp"
+                />
+
+            <EditText
+                android:id="@+id/brazRes10_Lost_5_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
@@ -557,7 +773,7 @@
                 />
 
             <EditText
-                android:id="@+id/brazRes10_Lost_5_2set"
+                android:id="@+id/brazRes10_Lost_5_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
@@ -592,6 +808,17 @@
                 android:layout_toEndOf="@+id/brazRes5_Win_1"
                 android:layout_marginStart="65dp"
                 />
+            <EditText
+                android:id="@+id/brazRes11_Win_5_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/brazRes11_Win_5_2set"
+                android:layout_toEndOf="@+id/brazRes5_Win_1"
+                android:layout_marginStart="65dp"
+                />
 
             <EditText
                 android:id="@+id/brazRes11_Win_9"
@@ -613,6 +840,18 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_below="@+id/Win_5"
+                android:layout_toEndOf="@+id/brazRes5_Win_1"
+                android:layout_marginStart="125dp"
+                />
+
+            <EditText
+                android:id="@+id/brazRes11_Win_9_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/brazRes11_Win_9_2set"
                 android:layout_toEndOf="@+id/brazRes5_Win_1"
                 android:layout_marginStart="125dp"
                 />
@@ -643,6 +882,18 @@
                 />
 
             <EditText
+                android:id="@+id/brazRes12_Win_6_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/brazRes12_Win_6_2set"
+                android:layout_toEndOf="@+id/brazRes5_Win_1"
+                android:layout_marginStart="65dp"
+                />
+
+            <EditText
                 android:id="@+id/brazRes12_Win_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -662,6 +913,17 @@
                 android:inputType="number"
                 android:textSize="12dp"
                 android:layout_below="@+id/Win_6"
+                android:layout_toEndOf="@+id/brazRes5_Win_1"
+                android:layout_marginStart="125dp"
+                />
+            <EditText
+                android:id="@+id/brazRes12_Win_10_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/brazRes12_Win_10_2set"
                 android:layout_toEndOf="@+id/brazRes5_Win_1"
                 android:layout_marginStart="125dp"
                 />
@@ -692,6 +954,19 @@
                 />
 
             <EditText
+                android:id="@+id/brazRes13_Lost_11_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/WIN_7"
+                android:layout_marginTop="45dp"
+                android:layout_toEndOf="@+id/brazRes13_Lost_11_2set"
+
+                />
+
+            <EditText
                 android:id="@+id/brazRes13_Lost_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -713,6 +988,16 @@
                 android:layout_toEndOf="@+id/brazRes13_Lost_12"
                 />
 
+            <EditText
+                android:id="@+id/brazRes13_Lost_12_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/WIN_13"
+                android:layout_toEndOf="@+id/brazRes13_Lost_12_2set"
+                />
 
 
             <EditText
@@ -730,6 +1015,19 @@
 
             <EditText
                 android:id="@+id/brazRes14_Win_11_2set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/WIN_7"
+                android:layout_marginTop="45dp"
+                android:layout_toStartOf="@+id/brazRes14_Win_11_3set"
+
+                />
+
+            <EditText
+                android:id="@+id/brazRes14_Win_11_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
@@ -753,6 +1051,17 @@
 
             <EditText
                 android:id="@+id/brazRes14_Win_12_2set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/WIN_13"
+                android:layout_toStartOf="@+id/brazRes14_Win_12_3set"
+                />
+
+            <EditText
+                android:id="@+id/brazRes14_Win_12_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
