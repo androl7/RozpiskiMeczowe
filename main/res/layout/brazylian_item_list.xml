@@ -31,7 +31,6 @@
             android:layout_marginTop="5dp"
             android:maxLength="15"
             android:singleLine="true"
-            android:nextFocusDown="@+id/brazItemListEditTextName2"
             android:textStyle="bold"
             android:textCursorDrawable="@null"
             android:gravity="center"

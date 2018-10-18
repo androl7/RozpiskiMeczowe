@@ -23,7 +23,7 @@ import com.example.adam.rozpiskimeczowe.R;
 public class FragmentTabBraz8_2 extends Fragment {
     View view;
     CustomAdapter customAdapter;
-    TreeMap<String, Values> resultsOfMatches;
+    TreeMap<Integer, Values> resultsOfMatches;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -169,47 +169,47 @@ public class FragmentTabBraz8_2 extends Fragment {
 
 
         // 1
-        setResult("1", team1, team8, res1_1, res1_1_2set,res1_1_3set, res1_8, res1_8_2set, res1_8_3set);
+        setResult(1, team1, team8, res1_1, res1_1_2set,res1_1_3set, res1_8, res1_8_2set, res1_8_3set);
 
         // 2
-        setResult("2", team6, team3, res2_6, res2_6_2set,res2_6_3set,  res2_3, res2_3_2set, res2_3_3set);
+        setResult(2, team6, team3, res2_6, res2_6_2set,res2_6_3set,  res2_3, res2_3_2set, res2_3_3set);
 
         // 3
-        setResult("3", team4, team5, res3_4, res3_4_2set, res3_4_3set, res3_5, res3_5_2set, res3_5_3set);
+        setResult(3, team4, team5, res3_4, res3_4_2set, res3_4_3set, res3_5, res3_5_2set, res3_5_3set);
 
         // 4
-        setResult("4", team7, team2, res4_2, res4_2_2set,res4_2_3set, res4_7, res4_7_2set, res4_7_3set);
+        setResult(4, team7, team2, res4_2, res4_2_2set,res4_2_3set, res4_7, res4_7_2set, res4_7_3set);
 
         // 5
 
-        setResult("5", win1, win2, brazRes5_Win_1, brazRes5_Win_1_2set,brazRes5_Win_1_3set, brazRes5_Win_2, brazRes5_Win_2_2set, brazRes5_Win_2_3set);
+        setResult(5, win1, win2, brazRes5_Win_1, brazRes5_Win_1_2set,brazRes5_Win_1_3set, brazRes5_Win_2, brazRes5_Win_2_2set, brazRes5_Win_2_3set);
 
         // 6
-        setResult("6", win3, win4, brazRes6_Win_3, brazRes6_Win_3_2set,brazRes6_Win_3_3set, brazRes6_Win_4, brazRes6_Win_4_2set, brazRes6_Win_4_3set);
+        setResult(6, win3, win4, brazRes6_Win_3, brazRes6_Win_3_2set,brazRes6_Win_3_3set, brazRes6_Win_4, brazRes6_Win_4_2set, brazRes6_Win_4_3set);
 
         //7
-        setResult("7", lost1, lost2, brazRes7_Lost_1, brazRes7_Lost_1_2set,brazRes7_Lost_1_3set, brazRes7_Lost_2, brazRes7_Lost_2_2set, brazRes7_Lost_2_3set);
+        setResult(7, lost1, lost2, brazRes7_Lost_1, brazRes7_Lost_1_2set,brazRes7_Lost_1_3set, brazRes7_Lost_2, brazRes7_Lost_2_2set, brazRes7_Lost_2_3set);
 
         //8
-        setResult("8", lost3, lost4, brazRes8_Lost_3, brazRes8_Lost_3_2set, brazRes8_Lost_3_3set, brazRes8_Lost_4, brazRes8_Lost_4_2set, brazRes8_Lost_4_3set);
+        setResult(8, lost3, lost4, brazRes8_Lost_3, brazRes8_Lost_3_2set, brazRes8_Lost_3_3set, brazRes8_Lost_4, brazRes8_Lost_4_2set, brazRes8_Lost_4_3set);
 
         //9
-        setResult("9", lost6, win7, brazRes9_Lost_6, brazRes9_Lost_6_2set, brazRes9_Lost_6_3set, brazRes9_Win_7, brazRes9_Win_7_2set, brazRes9_Win_7_3set);
+        setResult(9, lost6, win7, brazRes9_Lost_6, brazRes9_Lost_6_2set, brazRes9_Lost_6_3set, brazRes9_Win_7, brazRes9_Win_7_2set, brazRes9_Win_7_3set);
 
         //10
-        setResult("10", win8, lost5, brazRes10_Lost_5, brazRes10_Lost_5_2set, brazRes10_Lost_5_3set, brazRes10_Win_8, brazRes10_Win_8_2set, brazRes10_Win_8_3set);
+        setResult(10, win8, lost5, brazRes10_Lost_5, brazRes10_Lost_5_2set, brazRes10_Lost_5_3set, brazRes10_Win_8, brazRes10_Win_8_2set, brazRes10_Win_8_3set);
 
         //11
-        setResult("11", win5, win9, brazRes11_Win_5, brazRes11_Win_5_2set, brazRes11_Win_5_3set, brazRes11_Win_9, brazRes11_Win_9_2set,brazRes11_Win_9_3set);
+        setResult(11, win5, win9, brazRes11_Win_5, brazRes11_Win_5_2set, brazRes11_Win_5_3set, brazRes11_Win_9, brazRes11_Win_9_2set,brazRes11_Win_9_3set);
 
         //12
-        setResult("12", win6, win10, brazRes12_Win_6, brazRes12_Win_6_2set, brazRes12_Win_6_3set, brazRes12_Win_10, brazRes12_Win_10_2set, brazRes12_Win_10_3set);
+        setResult(12, win6, win10, brazRes12_Win_6, brazRes12_Win_6_2set, brazRes12_Win_6_3set, brazRes12_Win_10, brazRes12_Win_10_2set, brazRes12_Win_10_3set);
 
         //13
-        setResult("13", lost11, lost12, brazRes13_Lost_11, brazRes13_Lost_11_2set,brazRes13_Lost_11_3set, brazRes13_Lost_12, brazRes13_Lost_12_2set, brazRes13_Lost_12_3set);
+        setResult(13, lost11, lost12, brazRes13_Lost_11, brazRes13_Lost_11_2set,brazRes13_Lost_11_3set, brazRes13_Lost_12, brazRes13_Lost_12_2set, brazRes13_Lost_12_3set);
 
         //14 FINAL
-        setResult("14", win11, win12, brazRes14_Win_11, brazRes14_Win_11_2set, brazRes14_Win_11_3set, brazRes14_Win_12, brazRes14_Win_12_2set, brazRes14_Win_12_3set);
+        setResult(14, win11, win12, brazRes14_Win_11, brazRes14_Win_11_2set, brazRes14_Win_11_3set, brazRes14_Win_12, brazRes14_Win_12_2set, brazRes14_Win_12_3set);
 
 
         return view;
@@ -221,11 +221,12 @@ public class FragmentTabBraz8_2 extends Fragment {
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser) {
             assert getFragmentManager() != null;
+            resultsOfMatches.clear();
             getFragmentManager().beginTransaction().detach(this).attach(this).commit();
         }
     }
 
-    void setResult(String numberOfMatch, Button team1, Button team2, EditText res1, EditText res1_2set,EditText res1_3set, EditText res2, EditText res2_2set, EditText res2_3set) {
+    void setResult(Integer numberOfMatch, Button team1, Button team2, EditText res1, EditText res1_2set,EditText res1_3set, EditText res2, EditText res2_2set, EditText res2_3set) {
         if (!res1.getText().toString().equals("")) {
             Values value = new Values(numberOfMatch,team1.getText().toString(),team2.getText().toString(),res1.getText().toString(),res1_2set.getText().toString(),res1_3set.getText().toString(),res2.getText().toString(),res2_2set.getText().toString(),res2_3set.getText().toString());
             resultsOfMatches.put(numberOfMatch,value);
@@ -261,7 +262,7 @@ public class FragmentTabBraz8_2 extends Fragment {
         public View getView(int position, View convertView, ViewGroup parent) {
             final ViewHolder holder;
 
-            if (convertView == null) {
+
                 holder = new ViewHolder();
                 LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 convertView = inflater.inflate(R.layout.brazylian_fragment2_item_list, null, true);
@@ -281,14 +282,12 @@ public class FragmentTabBraz8_2 extends Fragment {
 
 
                 convertView.setTag(holder);
-            } else {
-                // the getTag returns the viewHolder object set as a tag to the view
-                holder = (ViewHolder) convertView.getTag();
-            }
 
-            String key = resultsOfMatches.keySet().toArray()[position].toString();
 
-            holder.textViewWithNumber.setText(resultsOfMatches.get(key).numberOfMatch);
+            Integer key = Integer.parseInt(resultsOfMatches.keySet().toArray()[position].toString());
+
+            String numberOfMatch = resultsOfMatches.get(key).numberOfMatch.toString();
+            holder.textViewWithNumber.setText(numberOfMatch);
             StringBuilder team1 = new StringBuilder(resultsOfMatches.get(key).team1);
             team1.setCharAt(team1.indexOf("\n"),'/');
             StringBuilder team2 = new StringBuilder(resultsOfMatches.get(key).team2);
@@ -351,8 +350,8 @@ public class FragmentTabBraz8_2 extends Fragment {
 
     }
 
-    private class Values {
-        String numberOfMatch;
+    class Values {
+        Integer numberOfMatch;
         String team1;
         String team2;
         String res1;
@@ -363,7 +362,7 @@ public class FragmentTabBraz8_2 extends Fragment {
         String res2_3set;
 
 
-        Values(String numberOfMatch, String team1, String team2, String res1, String res1_2set,String res1_3set, String res2, String res2_2set, String res2_3set) {
+        Values(Integer numberOfMatch, String team1, String team2, String res1, String res1_2set,String res1_3set, String res2, String res2_2set, String res2_3set) {
             this.numberOfMatch = numberOfMatch;
             this.team1 = team1;
             this.team2 = team2;
@@ -376,4 +375,5 @@ public class FragmentTabBraz8_2 extends Fragment {
         }
 
     }
+
 }

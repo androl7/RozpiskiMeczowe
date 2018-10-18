@@ -186,10 +186,8 @@ public class EFEactiv3 extends AppCompatActivity {
             @Override
             public void onFocusChange(View view, boolean b) {
                 if(!b){
-                    String res1 = firstPkt.getText().toString();
-                    String res2 = secondPkt.getText().toString();
-                    if((Math.abs(Integer.parseInt(res1)-Integer.parseInt(res2))>2&&(Integer.parseInt(pktInSet) == Integer.parseInt(res1)&&Integer.parseInt(res2)<Integer.parseInt(pktInSet))||(Integer.parseInt(pktInSet) == Integer.parseInt(res2)&&Integer.parseInt(res1)<Integer.parseInt(pktInSet)))||(Math.abs(Integer.parseInt(res1)-Integer.parseInt(res2))==2)){
-                        if (res1.matches("") && res2.matches("")) {
+                    if(checkPointsInSet(firstPkt,secondPkt,pktInSet)){
+                        if (firstPkt.getText().toString().matches("") && secondPkt.getText().toString().matches("")) {
                             matchNumber.setPaintFlags(matchNumber.getPaintFlags() | ~Paint.STRIKE_THRU_TEXT_FLAG);
                         } else {
                             matchNumber.setPaintFlags(matchNumber.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
@@ -257,6 +255,12 @@ public class EFEactiv3 extends AppCompatActivity {
                 return porownane;
             }
         }
+    }
+
+    boolean checkPointsInSet(EditText team1, EditText team2, String pktInSet) {
+        String res1 = team1.getText().toString();
+        String res2 = team2.getText().toString();
+        return (Math.abs(Integer.parseInt(res1) - Integer.parseInt(res2)) > 2 && (Integer.parseInt(pktInSet) == Integer.parseInt(res1) && Integer.parseInt(res2) < Integer.parseInt(pktInSet)) || (Integer.parseInt(pktInSet) == Integer.parseInt(res2) && Integer.parseInt(res1) < Integer.parseInt(pktInSet))) || (Math.abs(Integer.parseInt(res1) - Integer.parseInt(res2)) == 2 && ((Integer.parseInt(res1) >= Integer.parseInt(pktInSet)) || Integer.parseInt(res2) >= Integer.parseInt(pktInSet)));
     }
 
 }
