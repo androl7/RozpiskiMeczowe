@@ -101,7 +101,7 @@ public class BRAZactiv extends AppCompatActivity {
 
 
 
-
+        //Start with check
         Button EFE = findViewById(R.id.start);
         EFE.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,6 +139,7 @@ public class BRAZactiv extends AppCompatActivity {
 
     }
 
+    //zobacz czy potrzebne
     @Override
     protected void onPause() {
         View current = getCurrentFocus();
@@ -149,7 +150,7 @@ public class BRAZactiv extends AppCompatActivity {
 
     class CustomAdapter extends BaseAdapter {
         private Context context;
-        private String[] rValues = {"R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10", "R11", "R12", "R13", "R14", "R15", "R16", "R17", "R18", "R19", "R20", "R21", "R22", "R23", "R24"};
+        private String[] rValues = new String[quantityOfTeam];
 
         CustomAdapter(Context context) {
             this.context = context;
@@ -184,9 +185,12 @@ public class BRAZactiv extends AppCompatActivity {
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             final ViewHolder holder;
-
+            for(int i =0;i<quantityOfTeam;i++){
+                rValues[i]="R"+i;
+            }
             if (convertView == null) {
                 holder = new ViewHolder();
+
                 LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 convertView = inflater.inflate(R.layout.brazylian_item_list, null, true);
 
