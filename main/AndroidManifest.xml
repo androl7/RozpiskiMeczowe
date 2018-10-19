@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.adam.rozpiskimeczowe">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_tag_faces_black_24dp"
@@ -26,6 +28,7 @@
         <activity android:name=".brazylian.brazylian8.BRAZactiv8" />
         <activity android:name=".everyoneForEveryone.Results" />
         <activity android:name=".everyoneForEveryone.EFEactiv4" />
+        <activity android:name=".offical.GetDataFromBeachPzps"></activity>
     </application>
 
 </manifest>
