@@ -8,15 +8,6 @@
     android:focusableInTouchMode="true"
     android:id="@+id/brazMainLayout">
 
-    <Button
-        android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="START"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button_shape"
-        android:layout_marginBottom="10dp"/>
 
     <RadioGroup
     android:layout_width="wrap_content"
@@ -92,7 +83,6 @@
         android:divider="@null"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textPkt"
-        android:layout_above="@+id/start"
         android:layout_marginTop="20dp"
         android:descendantFocusability="afterDescendants"/>
 

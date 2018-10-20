@@ -11,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.adam.rozpiskimeczowe.R;
@@ -30,15 +31,16 @@ import dmax.dialog.SpotsDialog;
 public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
 
     private Document doc;
-    private String teams;
     private int quantityOfTeam = 0;
     private ArrayList<String> names;
     private CustomAdapter customAdapter;
     private ListView list;
     private AlertDialog alertDialog;
     private Context context;
+    private String idOfTour;
 
-    GetDataFromBeachPzps(ListView list, Context context) {
+    GetDataFromBeachPzps(ListView list, Context context,String idOfTour) {
+        this.idOfTour = idOfTour;
         this.list = list;
         this.context = context;
         list.setItemsCanFocus(true);
@@ -47,7 +49,8 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPreExecute() {
-        alertDialog = new SpotsDialog.Builder().setContext(context).build();
+        alertDialog = new SpotsDialog.Builder().setContext(context).setTheme(R.style.Custom).build();
+
         alertDialog.show();
     }
 
@@ -58,13 +61,13 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
         try {
             names = new ArrayList<>();
             Connection.Response res = Jsoup.connect("http://beach.pzps.pl/pl/site/login")
-                    .data("LoginForm[email]", "adamandrys7@gmail.com", "LoginForm[password]", "66romek6")
+                    .data("LoginForm[email]", "aleknicpon@wp.pl", "LoginForm[password]", "aleknicpon")
                     .method(Connection.Method.POST)
                     .execute();
 
             Map<String, String> loginCookies = res.cookies();
-
-            doc = Jsoup.connect("http://beach.pzps.pl/pl/tournament/793")
+            String urlToTour = "http://beach.pzps.pl/pl/tournament/"+idOfTour;
+            doc = Jsoup.connect(urlToTour)
                     .cookies(loginCookies)
                     .get();
 
@@ -72,13 +75,14 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
             Elements rows = innerTable.select("tr");
 
             for (Element row : rows) {
-                Elements cells = row.select("td:eq(4)");
-                //MOŻLIWA ZMIANA W UWAGI NA TROCHE INNA TABELE CZY TURNIEJ NIE JEST ZAKONCZONY !!!!!!!!!!
-                teams = cells.text();
+                Elements namesOFTeams = row.select("td:eq(4)");
+                Elements withdrawn = row.select("td:eq(5)");
+                //MOŻLIWA ZMIANA Z UWAGI NA TROCHE INNA TABELE CZY TURNIEJ NIE JEST ZAKONCZONY !!!!!!!!!!!!!!!!!!!!!!!!!!!^^^^^^^
+                if(!withdrawn.text().equals("wycofana")) {
 
-                quantityOfTeam++;
-
-                names.add(teams);
+                    quantityOfTeam++;
+                    names.add(namesOFTeams.text());
+                }
 
             }
 
@@ -94,8 +98,12 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
     protected void onPostExecute(Void result) {
         alertDialog.dismiss();
 
+        try{
         customAdapter = new CustomAdapter(context);
         list.setAdapter(customAdapter);
+    }catch (IllegalArgumentException e){
+        Toast.makeText(context,"Nie istnieje turniej o takim ID",Toast.LENGTH_SHORT).show();
+    }
     }
 
 
@@ -203,6 +211,8 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
 
         }
 
+
+
     }
 
     private int indexOfFirstCapitalLetter(String str) {
@@ -210,5 +220,9 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
             if (Character.isUpperCase(str.charAt(i))) return i;
         }
         return -1;
+    }
+
+    public int getQuantityOfTeam() {
+        return quantityOfTeam;
     }
 }

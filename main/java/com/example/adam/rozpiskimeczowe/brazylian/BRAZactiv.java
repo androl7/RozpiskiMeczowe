@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
@@ -99,44 +101,6 @@ public class BRAZactiv extends AppCompatActivity {
             }
         });
 
-
-
-        //Start with check
-        Button EFE = findViewById(R.id.start);
-        EFE.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(quantityOfTeam!=0) {
-                boolean checkNull=true;
-                for(int i =0;i<names.length;i++){
-                    if(names[i]==null||names[i].equals("")){
-                        //TU MA BYĆ FALSE !!!
-                        checkNull=true;
-                        break;
-                    }
-                }
-                if(checkNull) {
-                    Intent intent = null;
-                    switch (quantityOfTeam) {
-                        case 8:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
-                        case 16:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
-                        case 24:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
-                    }
-
-                        for (int i = 0; i < names.length / 2; i++) {
-                            intent.putExtra("NameOfTeam" + (i+1), customAdapter.getItem(i));
-                        }
-                        startActivity(intent);
-
-                    }else {
-                    Toast.makeText(getApplicationContext(),"Podaj nazwiska wszystkich graczy",Toast.LENGTH_SHORT).show();
-                }
-                }else {
-                    Toast.makeText(getApplicationContext(),"Wybierz ilość drużyn.",Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
     }
 
     //zobacz czy potrzebne
@@ -186,7 +150,7 @@ public class BRAZactiv extends AppCompatActivity {
         public View getView(final int position, View convertView, ViewGroup parent) {
             final ViewHolder holder;
             for(int i =0;i<quantityOfTeam;i++){
-                rValues[i]="R"+i;
+                rValues[i]="R"+(i+1);
             }
             if (convertView == null) {
                 holder = new ViewHolder();
@@ -239,5 +203,48 @@ public class BRAZactiv extends AppCompatActivity {
 
         }
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.action_bar_with_start_button,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            //START WITH CHECK
+            case R.id.menuStartButton:
+                if(quantityOfTeam!=0) {
+                    boolean checkNull=true;
+                    for(int i =0;i<names.length;i++){
+                        if(names[i]==null||names[i].equals("")){
+                            //TU MA BYĆ FALSE !!!
+                            checkNull=true;
+                            break;
+                        }
+                    }
+                    if(checkNull) {
+                        Intent intent = null;
+                        switch (quantityOfTeam) {
+                            case 8:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
+                            case 16:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
+                            case 24:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
+                        }
+
+                        for (int i = 0; i < names.length / 2; i++) {
+                            intent.putExtra("NameOfTeam" + (i+1), customAdapter.getItem(i));
+                        }
+                        startActivity(intent);
+
+                    }else {
+                        Toast.makeText(getApplicationContext(),"Podaj nazwiska wszystkich graczy",Toast.LENGTH_SHORT).show();
+                    }
+                }else {
+                    Toast.makeText(getApplicationContext(),"Wybierz ilość drużyn.",Toast.LENGTH_SHORT).show();
+                }
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
