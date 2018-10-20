@@ -1,20 +1,19 @@
 package com.example.adam.rozpiskimeczowe.offical;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.StrictMode;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.adam.rozpiskimeczowe.R;
 
+import com.example.adam.rozpiskimeczowe.R;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -26,82 +25,79 @@ import org.jsoup.select.Elements;
 import java.util.ArrayList;
 import java.util.Map;
 
+import dmax.dialog.SpotsDialog;
 
-public class GetDataFromBeachPzps extends AppCompatActivity {
+public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
 
-    Button btnGetData;
-    Document doc;
-    String teams;
+    private Document doc;
+    private String teams;
+    private int quantityOfTeam = 0;
+    private ArrayList<String> names;
+    private CustomAdapter customAdapter;
+    private ListView list;
+    private AlertDialog alertDialog;
+    private Context context;
 
-    //add
-    int quantityOfTeam = 0;
-    ArrayList<String> names;
-    CustomAdapter customAdapter;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_get_data_from_beach_pzps);
-
-        //ADD LIST
-        final ListView list = findViewById(R.id.getDataListView);
+    GetDataFromBeachPzps(ListView list, Context context) {
+        this.list = list;
+        this.context = context;
         list.setItemsCanFocus(true);
 
+    }
 
-        //GET DATA FROM WEBSITE
-        names = new ArrayList<>();
+    @Override
+    protected void onPreExecute() {
+        alertDialog = new SpotsDialog.Builder().setContext(context).build();
+        alertDialog.show();
+    }
+
+    @Override
+    protected Void doInBackground(Void... arg0) {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+        try {
+            names = new ArrayList<>();
+            Connection.Response res = Jsoup.connect("http://beach.pzps.pl/pl/site/login")
+                    .data("LoginForm[email]", "adamandrys7@gmail.com", "LoginForm[password]", "66romek6")
+                    .method(Connection.Method.POST)
+                    .execute();
 
+            Map<String, String> loginCookies = res.cookies();
 
-        btnGetData = findViewById(R.id.getDataBtn);
+            doc = Jsoup.connect("http://beach.pzps.pl/pl/tournament/793")
+                    .cookies(loginCookies)
+                    .get();
 
+            Element innerTable = doc.select(".items tbody").first();
+            Elements rows = innerTable.select("tr");
 
-        btnGetData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            for (Element row : rows) {
+                Elements cells = row.select("td:eq(4)");
+                //MOŻLIWA ZMIANA W UWAGI NA TROCHE INNA TABELE CZY TURNIEJ NIE JEST ZAKONCZONY !!!!!!!!!!
+                teams = cells.text();
 
-                //Selecja turnieju za pomocą numeru na końcu URL
-                try {
+                quantityOfTeam++;
 
-                    Connection.Response res = Jsoup.connect("http://beach.pzps.pl/pl/site/login")
-                            .data("LoginForm[email]", "adamandrys7@gmail.com", "LoginForm[password]", "66romek6")
-                            .method(Connection.Method.POST)
-                            .execute();
-
-                    Map<String, String> loginCookies = res.cookies();
-
-                    doc = Jsoup.connect("http://beach.pzps.pl/pl/tournament/793")
-                            .cookies(loginCookies)
-                            .get();
-
-                    Element innerTable = doc.select(".items tbody").first();
-                    Elements rows = innerTable.select("tr");
-
-                    for (Element row : rows) {
-                        Elements cells = row.select("td:eq(4)");
-                        //MOŻLIWA ZMIANA DO TURNIEJU TO JEST ZROBIONE PO ZAKOŃCZENIU TURNIEJU !!!!!!!!!!
-                        teams = cells.text();
-
-                        quantityOfTeam++;
-
-                        names.add(teams);
-
-                    }
-
-                    customAdapter = new CustomAdapter(getApplicationContext());
-                    list.setAdapter(customAdapter);
-
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                names.add(teams);
 
             }
-        });
 
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
+
+
+    @Override
+    protected void onPostExecute(Void result) {
+        alertDialog.dismiss();
+
+        customAdapter = new CustomAdapter(context);
+        list.setAdapter(customAdapter);
+    }
+
 
     class CustomAdapter extends BaseAdapter {
         private Context context;
@@ -209,12 +205,10 @@ public class GetDataFromBeachPzps extends AppCompatActivity {
 
     }
 
-    int indexOfFirstCapitalLetter(String str) {
+    private int indexOfFirstCapitalLetter(String str) {
         for (int i = 0; i < str.length(); i++) {
             if (Character.isUpperCase(str.charAt(i))) return i;
         }
         return -1;
     }
-
 }
-

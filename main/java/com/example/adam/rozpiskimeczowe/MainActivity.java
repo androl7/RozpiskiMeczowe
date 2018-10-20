@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.adam.rozpiskimeczowe.offical.GetDataFromBeachPzps;
+import com.example.adam.rozpiskimeczowe.offical.OfficalListWihTeams;
 import com.example.adam.rozpiskimeczowe.everyoneForEveryone.EFEactiv;
 import com.example.adam.rozpiskimeczowe.brazylian.BRAZactiv;
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final Intent intent3 = new Intent (this, GetDataFromBeachPzps.class);
+        final Intent intent3 = new Intent (this, OfficalListWihTeams.class);
         Button Get = findViewById(R.id.EveryOneWithEveryOne);
         Get.setOnClickListener(new View.OnClickListener() {
             @Override
