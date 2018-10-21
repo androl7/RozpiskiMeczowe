@@ -28,10 +28,9 @@
         <activity android:name=".brazylian.brazylian8.BRAZactiv8" />
         <activity android:name=".everyoneForEveryone.Results" />
         <activity android:name=".everyoneForEveryone.EFEactiv4" />
-        <activity android:name=".offical.OfficalListWihTeams"/>
-        <activity android:name=".cup.cup32.CUPactiv32"/>
-
-
+        <activity android:name=".offical.OfficalListWihTeams" />
+        <activity android:name=".cup.cup32.CUPactiv32" />
+        <activity android:name=".cup.CUPactiv"></activity>
     </application>
 
 </manifest>

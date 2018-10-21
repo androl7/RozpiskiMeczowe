@@ -28,7 +28,7 @@ public class EFEactiv extends AppCompatActivity {
         final EditText name4 =  findViewById(R.id.Name4);
         final EditText name5 =  findViewById(R.id.Name5);
         final EditText name6 =  findViewById(R.id.Name6);
-        final EditText pktInSet = findViewById(R.id.editTextPkt);
+        final EditText pktInSet = findViewById(R.id.brazEditTextPkt);
 
         name1.setVisibility(View.INVISIBLE);
         name2.setVisibility(View.INVISIBLE);

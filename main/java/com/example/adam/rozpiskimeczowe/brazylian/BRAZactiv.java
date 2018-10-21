@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RadioButton;
@@ -23,7 +22,6 @@ import android.widget.Toast;
 
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian8.BRAZactiv8;
-import com.example.adam.rozpiskimeczowe.cup.cup32.CUPactiv32;
 
 import java.util.Objects;
 
@@ -43,7 +41,7 @@ public class BRAZactiv extends AppCompatActivity {
         list.setItemsCanFocus(true);
 
         // lost focus after set points in set
-        final EditText editTextPkt = findViewById(R.id.editTextPkt);
+        final EditText editTextPkt = findViewById(R.id.brazEditTextPkt);
         final RelativeLayout relativeLayout = findViewById(R.id.brazMainLayout);
         final InputMethodManager imm = (InputMethodManager) Objects.requireNonNull(getApplicationContext()).getSystemService(Context.INPUT_METHOD_SERVICE);
 
