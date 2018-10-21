@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian8.BRAZactiv8;
+import com.example.adam.rozpiskimeczowe.cup.cup32.CUPactiv32;
 
 import java.util.Objects;
 
@@ -225,8 +226,9 @@ public class BRAZactiv extends AppCompatActivity {
                         }
                     }
                     if(checkNull) {
-                        Intent intent = null;
+                        Intent intent=null;
                         switch (quantityOfTeam) {
+                            //DO POPRAWY INTENT SIĘ NIE ZMIENIA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                             case 8:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
                             case 16:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
                             case 24:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
