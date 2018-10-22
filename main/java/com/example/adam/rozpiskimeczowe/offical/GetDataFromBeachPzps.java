@@ -21,6 +21,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.w3c.dom.Text;
 
 
 import java.util.ArrayList;
@@ -32,7 +33,8 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
 
     private Document doc;
     private int quantityOfTeam = 0;
-    private ArrayList<String> names;
+    private ArrayList<String> nameOfFirstPlayers;
+    private ArrayList<String> nameOfSecondPlayers;
     private CustomAdapter customAdapter;
     private ListView list;
     private AlertDialog alertDialog;
@@ -59,7 +61,8 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         try {
-            names = new ArrayList<>();
+            nameOfFirstPlayers = new ArrayList<>();
+            nameOfSecondPlayers = new ArrayList<>();
             Connection.Response res = Jsoup.connect("http://beach.pzps.pl/pl/site/login")
                     .data("LoginForm[email]", "aleknicpon@wp.pl", "LoginForm[password]", "aleknicpon")
                     .method(Connection.Method.POST)
@@ -81,11 +84,25 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
                 if(!withdrawn.text().equals("wycofana")) {
 
                     quantityOfTeam++;
-                    names.add(namesOFTeams.text());
+
+                    //convert and Add to arrays
+                    String namesOfPlayers = namesOFTeams.text().replaceAll("\\(.*?\\)", "");
+
+                    String firstPlayer = namesOfPlayers.split("/")[0];
+                    String secondPlayer = namesOfPlayers.split("/")[1];
+
+                    firstPlayer = firstPlayer.substring(indexOfFirstCapitalLetter(firstPlayer));
+                    secondPlayer = secondPlayer.substring(indexOfFirstCapitalLetter(secondPlayer));
+
+                    firstPlayer = firstPlayer.split(" ")[0];
+                    secondPlayer = secondPlayer.split(" ")[0];
+
+                    nameOfFirstPlayers.add(firstPlayer);
+                    nameOfSecondPlayers.add(secondPlayer);
+
                 }
 
             }
-
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -98,13 +115,12 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
     protected void onPostExecute(Void result) {
         alertDialog.dismiss();
 
-        try{
-        customAdapter = new CustomAdapter(context);
-        list.setAdapter(customAdapter);
-    }catch (IllegalArgumentException e){
+        if(nameOfFirstPlayers.size()!=0) {
+            customAdapter = new CustomAdapter(context);
+            list.setAdapter(customAdapter);
+        } else {
         Toast.makeText(context,"Nie istnieje turniej o takim ID",Toast.LENGTH_SHORT).show();
-    }
-    }
+    }}
 
 
     class CustomAdapter extends BaseAdapter {
@@ -132,7 +148,7 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
 
         @Override
         public String getItem(int position) {
-            return names.get(position) + "\n" + names.get(position + quantityOfTeam);
+            return nameOfFirstPlayers.get(position) + "\n" + nameOfSecondPlayers.get(position);
         }
 
 
@@ -151,26 +167,18 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
                 holder = new ViewHolder();
 
                 LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = inflater.inflate(R.layout.brazylian_item_list, null, true);
+                convertView = inflater.inflate(R.layout.cup_item_list, null, true);
 
 
-                holder.editText = convertView.findViewById(R.id.brazItemListEditTextName1);
-                holder.editText2 = convertView.findViewById(R.id.brazItemListEditTextName2);
-                holder.textView = convertView.findViewById(R.id.brazItemListtextViewR);
+                holder.editText = convertView.findViewById(R.id.OfficalListEditTextName1);
+                holder.editText2 = convertView.findViewById(R.id.OfficalListEditTextName2);
+                holder.textView = convertView.findViewById(R.id.OfficalItemListtextViewR);
 
-                //convert
-                names.set(position, names.get(position).replaceAll("\\(.*?\\)", ""));
-                String team1 = names.get(position).split("/")[0];
-                String team2 = names.get(position).split("/")[1];
 
-                team1 = team1.substring(indexOfFirstCapitalLetter(team1));
-                team2 = team2.substring(indexOfFirstCapitalLetter(team2));
 
-                team1 = team1.split(" ")[0];
-                team2 = team2.split(" ")[0];
+                    holder.editText.setText(nameOfFirstPlayers.get(position));
+                    holder.editText2.setText(nameOfSecondPlayers.get(position));
 
-                holder.editText.setText(team1);
-                holder.editText2.setText(team2);
 
 
                 convertView.setTag(holder);
@@ -181,32 +189,15 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
 
             holder.textView.setText(rValues[position]);
 
-            holder.editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                @Override
-                public void onFocusChange(View view, boolean b) {
-                    if (!b) {
-                        names.set(position, holder.editText.getText().toString());
 
-                    }
-                }
-            });
-
-            holder.editText2.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                @Override
-                public void onFocusChange(View view, boolean b) {
-                    if (!b) {
-                        names.set(position + quantityOfTeam, holder.editText2.getText().toString());
-                    }
-                }
-            });
 
             return convertView;
         }
 
         private class ViewHolder {
 
-            protected EditText editText;
-            protected EditText editText2;
+            protected TextView editText;
+            protected TextView editText2;
             protected TextView textView;
 
         }
@@ -222,7 +213,11 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
         return -1;
     }
 
-    public int getQuantityOfTeam() {
-        return quantityOfTeam;
+    public ArrayList<String> getNameOfFirstPlayers() {
+        return nameOfFirstPlayers;
+    }
+
+    public ArrayList<String> getNameOfSecondPlayers() {
+        return nameOfSecondPlayers;
     }
 }
