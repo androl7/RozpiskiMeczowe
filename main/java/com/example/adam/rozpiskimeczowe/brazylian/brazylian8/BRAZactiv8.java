@@ -1,6 +1,8 @@
 package com.example.adam.rozpiskimeczowe.brazylian.brazylian8;
 
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -24,6 +26,7 @@ public class BRAZactiv8 extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
         getSupportActionBar().setTitle("System brazylijski dla 8 zespołów");
+        tabLayout.setTabTextColors(ColorStateList.valueOf(Color.WHITE));
 
     }
 
