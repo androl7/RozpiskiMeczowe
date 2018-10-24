@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.adam.rozpiskimeczowe.cup.cup32.CUPactiv32"
+    android:background="@drawable/brazwybor2"
+    android:focusableInTouchMode="true"
+    android:id="@+id/cupMainLayout">
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/textHowMuchTeams"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/cupRadioButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:layout_marginStart="5dp"
+            android:buttonTint="#66310c"/>
+
+        <RadioButton
+            android:id="@+id/cupRadioButton16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16"
+            android:layout_marginStart="15dp"
+            android:buttonTint="#66310c"/>
+
+        <RadioButton
+            android:id="@+id/cupRadioButton24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24"
+            android:layout_marginStart="15dp"
+            android:buttonTint="#66310c"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textHowMuchTeams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Ilość drużyn: "
+        android:textSize="23sp"
+        android:layout_alignParentStart="true"
+        android:textColor="#000000"/>
+
+
+    <TextView
+        android:id="@+id/textPkt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textHowMuchTeams"
+        android:text="Pkt:"
+        android:textSize="23sp"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/cupEditTextPkt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="2dp"
+        android:layout_toEndOf="@+id/textPkt"
+        android:ems="2"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:maxLength="2"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center"
+        />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textPkt"
+        android:layout_marginTop="20dp"
+        android:descendantFocusability="afterDescendants"/>
+
+
+</RelativeLayout>

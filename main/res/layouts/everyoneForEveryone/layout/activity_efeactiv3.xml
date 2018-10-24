@@ -1,0 +1,485 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutEfe3"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:shrinkColumns="*"  android:stretchColumns="*" android:background="#ffffff">
+    <!-- NAZWA -->
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="18dp" android:text="Każdy na każdego:"  android:layout_span="4"
+            android:padding="18dip" android:background="#b0b0b0"
+            android:textColor="#000"/>
+    </TableRow>
+
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/TextView05"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="X"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/TextView04"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="15dip"
+            android:textColor="#000000"
+            android:text="1"/>
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="15dip"
+            android:textColor="#000000"
+            android:text="2"/>
+
+        <TextView
+            android:id="@+id/TextView08"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="15dip"
+            android:textColor="#000000"
+            android:text="3"/>
+    </TableRow>
+
+
+
+    <!-- 2 WIERSZ -->
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="1"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="15dip"
+            android:textColor="#000000"
+            android:text="X"/>
+<!--
+        WYNIK 1-2
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/res12_1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:numeric="integer"/>
+
+            <TextView
+                android:layout_weight="0.36"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/res12_2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:numeric="integer"/>
+
+        </LinearLayout>
+<!--
+        WYNIK 1-3
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/res13_1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:numeric="integer"/>
+
+            <TextView
+                android:layout_weight="0.37"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/res13_3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:numeric="integer"/>
+
+        </LinearLayout>
+    </TableRow>
+
+
+    <!-- 3 WIERSZ -->
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/TextView06"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="2"
+            android:textColor="#000000" />
+<!--
+        WYNIK 2-1 TEXTVIEW
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/res21_2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_weight="0.44"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/res21_1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TextView09"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="X"
+            android:textColor="#000000" />
+<!--
+        WYNIK 2-3
+-->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/res23_2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:numeric="integer"/>
+
+        <TextView
+            android:layout_weight="0.36"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:text=":"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/res23_3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:numeric="integer"/>
+
+    </LinearLayout> />
+    </TableRow>
+
+
+    <!-- 4 WIERSZ -->
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/TextView07"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="3"
+            android:textColor="#000000" />
+<!--
+        WYNIK 3-1 TEXTVIEW
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/res31_3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_weight="0.44"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/res31_1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+<!--
+        WYNIK 3-2 TEXTVIEW
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/res32_3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_weight="0.47"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/res32_2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TextView10"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="X"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <!--Rozpiska meczy-->
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/TextMatches01"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="1:2"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/TextMatches02"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="1:3"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/TextMatches03"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="2:3"
+            android:textColor="#000000" />
+
+    </TableRow>
+
+    <!--Wiersze z nazwami-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#4aaacfa0"
+            android:gravity="bottom"
+            android:padding="10dip"
+            android:textColor="#000000"
+            android:text="1."/>
+
+        <TextView
+            android:id="@+id/TeamName01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4aaacfa0"
+            android:gravity="bottom"
+            android:padding="10dip"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#4aaacfa0"
+            android:gravity="bottom"
+            android:padding="10dip"
+            android:textColor="#000000"
+            android:text="2."/>
+
+        <TextView
+            android:id="@+id/TeamName02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4aaacfa0"
+            android:gravity="bottom"
+            android:padding="10dip"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#4aaacfa0"
+            android:gravity="bottom"
+            android:padding="10dip"
+            android:textColor="#000000"
+            android:text="3."/>
+
+        <TextView
+            android:id="@+id/TeamName03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4aaacfa0"
+            android:gravity="bottom"
+            android:padding="10dip"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/buttonResults"
+            android:gravity="center"
+            android:text="Przejdz do Wyników" />
+
+</TableLayout>
