@@ -40,381 +40,381 @@ public class FragmentTabCup32_1 extends Fragment {
         this.vg = container;
 
 
-        final EditText res_9_1 = view.findViewById(R.id.cup32Res1_1);
-        final EditText res_9_1_2set = view.findViewById(R.id.cup32Res1_1_2set);
-        final EditText res_9_1_3set = view.findViewById(R.id.cup32Res1_1_3set);
-        final EditText res9_32 = view.findViewById(R.id.cup32Res1_64);
-        final EditText res9_32_2set = view.findViewById(R.id.cup32Res1_64_2set);
-        final EditText res9_32_3set = view.findViewById(R.id.cup32Res1_64_3set);
+        final EditText res1_1 = view.findViewById(R.id.cup32Res1_1);
+        final EditText res1_1_2set = view.findViewById(R.id.cup32Res1_1_2set);
+        final EditText res1_1_3set = view.findViewById(R.id.cup32Res1_1_3set);
+        final EditText res1_32 = view.findViewById(R.id.cup32Res1_32);
+        final EditText res1_32_2set = view.findViewById(R.id.cup32Res1_32_2set);
+        final EditText res1_32_3set = view.findViewById(R.id.cup32Res1_32_3set);
 
-        res_9_1.setVisibility(View.INVISIBLE);
-        res_9_1_2set.setVisibility(View.INVISIBLE);
-        res_9_1_3set.setVisibility(View.INVISIBLE);
-        res9_32.setVisibility(View.INVISIBLE);
-        res9_32_2set.setVisibility(View.INVISIBLE);
-        res9_32_3set.setVisibility(View.INVISIBLE);
-
-
-        final EditText res10_17 = view.findViewById(R.id.cup32Res2_33);
-        final EditText res10_17_2set = view.findViewById(R.id.cup32Res2_33_2set);
-        final EditText res10_17_3set = view.findViewById(R.id.cup32Res2_33_3set);
-        final EditText res10_16 = view.findViewById(R.id.cup32Res2_32);
-        final EditText res10_16_2set = view.findViewById(R.id.cup32Res2_32_2set);
-        final EditText res10_16_3set = view.findViewById(R.id.cup32Res2_32_3set);
-
-        res10_17.setVisibility(View.INVISIBLE);
-        res10_17_2set.setVisibility(View.INVISIBLE);
-        res10_17_3set.setVisibility(View.INVISIBLE);
-        res10_16.setVisibility(View.INVISIBLE);
-        res10_16_2set.setVisibility(View.INVISIBLE);
-        res10_16_3set.setVisibility(View.INVISIBLE);
-
-        final EditText res11_9 = view.findViewById(R.id.cup32Res11_9);
-        final EditText res11_9_2set = view.findViewById(R.id.cup32Res11_9_2set);
-        final EditText res11_9_3set = view.findViewById(R.id.cup32Res11_9_3set);
-        final EditText res11_24 = view.findViewById(R.id.cup32Res11_24);
-        final EditText res11_24_2set = view.findViewById(R.id.cup32Res11_24_2set);
-        final EditText res11_24_3set = view.findViewById(R.id.cup32Res11_24_3set);
-
-        res11_9.setVisibility(View.INVISIBLE);
-        res11_9_2set.setVisibility(View.INVISIBLE);
-        res11_9_3set.setVisibility(View.INVISIBLE);
-        res11_24.setVisibility(View.INVISIBLE);
-        res11_24_2set.setVisibility(View.INVISIBLE);
-        res11_24_3set.setVisibility(View.INVISIBLE);
-
-        final EditText res12_25 = view.findViewById(R.id.cup32Res12_25);
-        final EditText res12_25_2set = view.findViewById(R.id.cup32Res12_25_2set);
-        final EditText res12_25_3set = view.findViewById(R.id.cup32Res12_25_3set);
-        final EditText res8_24 = view.findViewById(R.id.cup32Res12_8);
-        final EditText res8_24_2set = view.findViewById(R.id.cup32Res12_8_2set);
-        final EditText res8_24_3set = view.findViewById(R.id.cup32Res12_8_3set);
-
-        res12_25.setVisibility(View.INVISIBLE);
-        res12_25_2set.setVisibility(View.INVISIBLE);
-        res12_25_3set.setVisibility(View.INVISIBLE);
-        res8_24.setVisibility(View.INVISIBLE);
-        res8_24_2set.setVisibility(View.INVISIBLE);
-        res8_24_3set.setVisibility(View.INVISIBLE);
-
-        final EditText res13_5 = view.findViewById(R.id.cup32Res13_5);
-        final EditText res13_5_2set = view.findViewById(R.id.cup32Res13_5_2set);
-        final EditText res13_5_3set = view.findViewById(R.id.cup32Res13_5_3set);
-        final EditText res13_28 = view.findViewById(R.id.cup32Res13_28);
-        final EditText res13_28_2set = view.findViewById(R.id.cup32Res13_28_2set);
-        final EditText res13_28_3set = view.findViewById(R.id.cup32Res13_28_3set);
-
-        res13_5.setVisibility(View.INVISIBLE);
-        res13_5_2set.setVisibility(View.INVISIBLE);
-        res13_5_3set.setVisibility(View.INVISIBLE);
-        res13_28.setVisibility(View.INVISIBLE);
-        res13_28_2set.setVisibility(View.INVISIBLE);
-        res13_28_3set.setVisibility(View.INVISIBLE);
-
-        final EditText res14_21 = view.findViewById(R.id.cup32Res14_21);
-        final EditText res14_21_2set = view.findViewById(R.id.cup32Res14_21_2set);
-        final EditText res14_21_3set = view.findViewById(R.id.cup32Res14_21_3set);
-        final EditText res14_12 = view.findViewById(R.id.cup32Res14_12);
-        final EditText res14_12_2set = view.findViewById(R.id.cup32Res14_12_2set);
-        final EditText res14_12_3set = view.findViewById(R.id.cup32Res14_12_3set);
+        res1_1.setVisibility(View.INVISIBLE);
+        res1_1_2set.setVisibility(View.INVISIBLE);
+        res1_1_3set.setVisibility(View.INVISIBLE);
+        res1_32.setVisibility(View.INVISIBLE);
+        res1_32_2set.setVisibility(View.INVISIBLE);
+        res1_32_3set.setVisibility(View.INVISIBLE);
 
 
-        res14_21.setVisibility(View.INVISIBLE);
-        res14_21_2set.setVisibility(View.INVISIBLE);
-        res14_21_3set.setVisibility(View.INVISIBLE);
-        res14_12.setVisibility(View.INVISIBLE);
-        res14_12_2set.setVisibility(View.INVISIBLE);
-        res14_12_3set.setVisibility(View.INVISIBLE);
+        final EditText res2_17 = view.findViewById(R.id.cup32Res2_17);
+        final EditText res2_17_2set = view.findViewById(R.id.cup32Res2_17_2set);
+        final EditText res2_17_3set = view.findViewById(R.id.cup32Res2_17_3set);
+        final EditText res2_16 = view.findViewById(R.id.cup32Res2_16);
+        final EditText res2_16_2set = view.findViewById(R.id.cup32Res2_16_2set);
+        final EditText res2_16_3set = view.findViewById(R.id.cup32Res2_16_3set);
+
+        res2_17.setVisibility(View.INVISIBLE);
+        res2_17_2set.setVisibility(View.INVISIBLE);
+        res2_17_3set.setVisibility(View.INVISIBLE);
+        res2_16.setVisibility(View.INVISIBLE);
+        res2_16_2set.setVisibility(View.INVISIBLE);
+        res2_16_3set.setVisibility(View.INVISIBLE);
+
+        final EditText res3_9 = view.findViewById(R.id.cup32Res3_9);
+        final EditText res3_9_2set = view.findViewById(R.id.cup32Res3_9_2set);
+        final EditText res3_9_3set = view.findViewById(R.id.cup32Res3_9_3set);
+        final EditText res3_24 = view.findViewById(R.id.cup32Res3_24);
+        final EditText res3_24_2set = view.findViewById(R.id.cup32Res3_24_2set);
+        final EditText res3_24_3set = view.findViewById(R.id.cup32Res3_24_3set);
+
+        res3_9.setVisibility(View.INVISIBLE);
+        res3_9_2set.setVisibility(View.INVISIBLE);
+        res3_9_3set.setVisibility(View.INVISIBLE);
+        res3_24.setVisibility(View.INVISIBLE);
+        res3_24_2set.setVisibility(View.INVISIBLE);
+        res3_24_3set.setVisibility(View.INVISIBLE);
+
+        final EditText res4_25 = view.findViewById(R.id.cup32Res4_25);
+        final EditText res4_25_2set = view.findViewById(R.id.cup32Res4_25_2set);
+        final EditText res4_25_3set = view.findViewById(R.id.cup32Res4_25_3set);
+        final EditText res4_8 = view.findViewById(R.id.cup32Res4_8 );
+        final EditText res4_8_2set = view.findViewById(R.id.cup32Res4_8_2set);
+        final EditText res4_8_3set = view.findViewById(R.id.cup32Res4_8_3set);
+
+        res4_25.setVisibility(View.INVISIBLE);
+        res4_25_2set.setVisibility(View.INVISIBLE);
+        res4_25_3set.setVisibility(View.INVISIBLE);
+        res4_8.setVisibility(View.INVISIBLE);
+        res4_8_2set.setVisibility(View.INVISIBLE);
+        res4_8_3set.setVisibility(View.INVISIBLE);
+
+        final EditText res5_5 = view.findViewById(R.id.cup32Res5_5);
+        final EditText res5_5_2set = view.findViewById(R.id.cup32Res5_5_2set);
+        final EditText res5_5_3set = view.findViewById(R.id.cup32Res5_5_3set);
+        final EditText res5_28 = view.findViewById(R.id.cup32Res5_28);
+        final EditText res5_28_2set = view.findViewById(R.id.cup32Res5_28_2set);
+        final EditText res5_28_3set = view.findViewById(R.id.cup32Res5_28_3set);
+
+        res5_5.setVisibility(View.INVISIBLE);
+        res5_5_2set.setVisibility(View.INVISIBLE);
+        res5_5_3set.setVisibility(View.INVISIBLE);
+        res5_28.setVisibility(View.INVISIBLE);
+        res5_28_2set.setVisibility(View.INVISIBLE);
+        res5_28_3set.setVisibility(View.INVISIBLE);
+
+        final EditText res6_21 = view.findViewById(R.id.cup32Res6_21);
+        final EditText res6_21_2set = view.findViewById(R.id.cup32Res6_21_2set);
+        final EditText res6_21_3set = view.findViewById(R.id.cup32Res6_21_3set);
+        final EditText res6_12 = view.findViewById(R.id.cup32Res6_12);
+        final EditText res6_12_2set = view.findViewById(R.id.cup32Res6_12_2set);
+        final EditText res6_12_3set = view.findViewById(R.id.cup32Res6_12_3set);
 
 
-        final EditText res15_13 = view.findViewById(R.id.cup32Res15_13);
-        final EditText res15_13_2set = view.findViewById(R.id.cup32Res15_13_2set);
-        final EditText res15_13_3set = view.findViewById(R.id.cup32Res15_13_3set);
-        final EditText res15_20 = view.findViewById(R.id.cup32Res15_20);
-        final EditText res15_20_2set = view.findViewById(R.id.cup32Res15_20_2set);
-        final EditText res15_20_3set = view.findViewById(R.id.cup32Res15_20_3set);
+        res6_21.setVisibility(View.INVISIBLE);
+        res6_21_2set.setVisibility(View.INVISIBLE);
+        res6_21_3set.setVisibility(View.INVISIBLE);
+        res6_12.setVisibility(View.INVISIBLE);
+        res6_12_2set.setVisibility(View.INVISIBLE);
+        res6_12_3set.setVisibility(View.INVISIBLE);
 
-        res15_13.setVisibility(View.INVISIBLE);
-        res15_13_2set.setVisibility(View.INVISIBLE);
-        res15_13_3set.setVisibility(View.INVISIBLE);
-        res15_20.setVisibility(View.INVISIBLE);
-        res15_20_2set.setVisibility(View.INVISIBLE);
-        res15_20_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res16_29 = view.findViewById(R.id.cup32Res16_29);
-        final EditText res16_29_2set = view.findViewById(R.id.cup32Res16_29_2set);
-        final EditText res16_29_3set = view.findViewById(R.id.cup32Res16_29_3set);
-        final EditText res16_4 = view.findViewById(R.id.cup32Res16_4);
-        final EditText res16_4_2set = view.findViewById(R.id.cup32Res16_4_2set);
-        final EditText res16_4_3set = view.findViewById(R.id.cup32Res16_4_3set);
+        final EditText res7_13 = view.findViewById(R.id.cup32Res7_13);
+        final EditText res7_13_2set = view.findViewById(R.id.cup32Res7_13_2set);
+        final EditText res7_13_3set = view.findViewById(R.id.cup32Res7_13_3set);
+        final EditText res7_20 = view.findViewById(R.id.cup32Res7_20);
+        final EditText res7_20_2set = view.findViewById(R.id.cup32Res7_20_2set);
+        final EditText res7_20_3set = view.findViewById(R.id.cup32Res7_20_3set);
 
-        res16_29.setVisibility(View.INVISIBLE);
-        res16_29_2set.setVisibility(View.INVISIBLE);
-        res16_29_3set.setVisibility(View.INVISIBLE);
-        res16_4.setVisibility(View.INVISIBLE);
-        res16_4_2set.setVisibility(View.INVISIBLE);
-        res16_4_3set.setVisibility(View.INVISIBLE);
+        res7_13.setVisibility(View.INVISIBLE);
+        res7_13_2set.setVisibility(View.INVISIBLE);
+        res7_13_3set.setVisibility(View.INVISIBLE);
+        res7_20.setVisibility(View.INVISIBLE);
+        res7_20_2set.setVisibility(View.INVISIBLE);
+        res7_20_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res17_3 = view.findViewById(R.id.cup32Res17_3);
-        final EditText res17_3_2set = view.findViewById(R.id.cup32Res17_3_2set);
-        final EditText res17_3_3set = view.findViewById(R.id.cup32Res17_3_3set);
-        final EditText res17_30 = view.findViewById(R.id.cup32Res17_30);
-        final EditText res17_30_2set = view.findViewById(R.id.cup32Res17_30_2set);
-        final EditText res17_30_3set = view.findViewById(R.id.cup32Res17_30_3set);
+        final EditText res8_29 = view.findViewById(R.id.cup32Res8_29);
+        final EditText res8_29_2set = view.findViewById(R.id.cup32Res8_29_2set);
+        final EditText res8_29_3set = view.findViewById(R.id.cup32Res8_29_3set);
+        final EditText res8_4 = view.findViewById(R.id.cup32Res8_4);
+        final EditText res8_4_2set = view.findViewById(R.id.cup32Res8_4_2set);
+        final EditText res8_4_3set = view.findViewById(R.id.cup32Res8_4_3set);
 
-        res17_3.setVisibility(View.INVISIBLE);
-        res17_3_2set.setVisibility(View.INVISIBLE);
-        res17_3_3set.setVisibility(View.INVISIBLE);
-        res17_30.setVisibility(View.INVISIBLE);
-        res17_30_2set.setVisibility(View.INVISIBLE);
-        res17_30_3set.setVisibility(View.INVISIBLE);
+        res8_29.setVisibility(View.INVISIBLE);
+        res8_29_2set.setVisibility(View.INVISIBLE);
+        res8_29_3set.setVisibility(View.INVISIBLE);
+        res8_4.setVisibility(View.INVISIBLE);
+        res8_4_2set.setVisibility(View.INVISIBLE);
+        res8_4_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res18_19 = view.findViewById(R.id.cup32Res18_19);
-        final EditText res18_19_2set = view.findViewById(R.id.cup32Res18_19_2set);
-        final EditText res18_19_3set = view.findViewById(R.id.cup32Res18_19_3set);
-        final EditText res18_14 = view.findViewById(R.id.cup32Res18_14);
-        final EditText res18_14_2set = view.findViewById(R.id.cup32Res18_14_2set);
-        final EditText res18_14_3set = view.findViewById(R.id.cup32Res18_14_3set);
+        final EditText res9_3 = view.findViewById(R.id.cup32Res9_3);
+        final EditText res9_3_2set = view.findViewById(R.id.cup32Res9_3_2set);
+        final EditText res9_3_3set = view.findViewById(R.id.cup32Res9_3_3set);
+        final EditText res9_30 = view.findViewById(R.id.cup32Res9_30);
+        final EditText res9_30_2set = view.findViewById(R.id.cup32Res9_30_2set);
+        final EditText res9_30_3set = view.findViewById(R.id.cup32Res9_30_3set);
 
-        res18_19.setVisibility(View.INVISIBLE);
-        res18_19_2set.setVisibility(View.INVISIBLE);
-        res18_19_3set.setVisibility(View.INVISIBLE);
-        res18_14.setVisibility(View.INVISIBLE);
-        res18_14_2set.setVisibility(View.INVISIBLE);
-        res18_14_3set.setVisibility(View.INVISIBLE);
+        res9_3.setVisibility(View.INVISIBLE);
+        res9_3_2set.setVisibility(View.INVISIBLE);
+        res9_3_3set.setVisibility(View.INVISIBLE);
+        res9_30.setVisibility(View.INVISIBLE);
+        res9_30_2set.setVisibility(View.INVISIBLE);
+        res9_30_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res19_11 = view.findViewById(R.id.cup32Res19_11);
-        final EditText res19_11_2set = view.findViewById(R.id.cup32Res19_11_2set);
-        final EditText res19_11_3set = view.findViewById(R.id.cup32Res19_11_3set);
-        final EditText res19_22 = view.findViewById(R.id.cup32Res19_22);
-        final EditText res19_22_2set = view.findViewById(R.id.cup32Res19_22_2set);
-        final EditText res19_22_3set = view.findViewById(R.id.cup32Res19_22_3set);
+        final EditText res10_19 = view.findViewById(R.id.cup32Res10_19);
+        final EditText res10_19_2set = view.findViewById(R.id.cup32Res10_19_2set);
+        final EditText res10_19_3set = view.findViewById(R.id.cup32Res10_19_3set);
+        final EditText res10_14 = view.findViewById(R.id.cup32Res10_14);
+        final EditText res10_14_2set = view.findViewById(R.id.cup32Res10_14_2set);
+        final EditText res10_14_3set = view.findViewById(R.id.cup32Res10_14_3set);
 
-        res19_11.setVisibility(View.INVISIBLE);
-        res19_11_2set.setVisibility(View.INVISIBLE);
-        res19_11_3set.setVisibility(View.INVISIBLE);
-        res19_22.setVisibility(View.INVISIBLE);
-        res19_22_2set.setVisibility(View.INVISIBLE);
-        res19_22_3set.setVisibility(View.INVISIBLE);
+        res10_19.setVisibility(View.INVISIBLE);
+        res10_19_2set.setVisibility(View.INVISIBLE);
+        res10_19_3set.setVisibility(View.INVISIBLE);
+        res10_14.setVisibility(View.INVISIBLE);
+        res10_14_2set.setVisibility(View.INVISIBLE);
+        res10_14_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res20_27 = view.findViewById(R.id.cup32Res20_27);
-        final EditText res20_27_2set = view.findViewById(R.id.cup32Res20_27_2set);
-        final EditText res20_27_3set = view.findViewById(R.id.cup32Res20_27_3set);
-        final EditText res20_6 = view.findViewById(R.id.cup32Res20_6);
-        final EditText res20_6_2set = view.findViewById(R.id.cup32Res20_6_2set);
-        final EditText res20_6_3set = view.findViewById(R.id.cup32Res20_6_3set);
+        final EditText res11_11 = view.findViewById(R.id.cup32Res11_11);
+        final EditText res11_11_2set = view.findViewById(R.id.cup32Res11_11_2set);
+        final EditText res11_11_3set = view.findViewById(R.id.cup32Res11_11_3set);
+        final EditText res11_22 = view.findViewById(R.id.cup32Res11_22);
+        final EditText res11_22_2set = view.findViewById(R.id.cup32Res11_22_2set);
+        final EditText res11_22_3set = view.findViewById(R.id.cup32Res11_22_3set);
 
-        res20_27.setVisibility(View.INVISIBLE);
-        res20_27_2set.setVisibility(View.INVISIBLE);
-        res20_27_3set.setVisibility(View.INVISIBLE);
-        res20_6.setVisibility(View.INVISIBLE);
-        res20_6_2set.setVisibility(View.INVISIBLE);
-        res20_6_3set.setVisibility(View.INVISIBLE);
+        res11_11.setVisibility(View.INVISIBLE);
+        res11_11_2set.setVisibility(View.INVISIBLE);
+        res11_11_3set.setVisibility(View.INVISIBLE);
+        res11_22.setVisibility(View.INVISIBLE);
+        res11_22_2set.setVisibility(View.INVISIBLE);
+        res11_22_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res21_7 = view.findViewById(R.id.cup32Res21_7);
-        final EditText res21_7_2set = view.findViewById(R.id.cup32Res21_7_2set);
-        final EditText res21_7_3set = view.findViewById(R.id.cup32Res21_7_3set);
-        final EditText res21_26 = view.findViewById(R.id.cup32Res21_26);
-        final EditText res21_26_2set = view.findViewById(R.id.cup32Res21_26_2set);
-        final EditText res21_26_3set = view.findViewById(R.id.cup32Res21_26_3set);
+        final EditText res12_27 = view.findViewById(R.id.cup32Res12_27);
+        final EditText res12_27_2set = view.findViewById(R.id.cup32Res12_27_2set);
+        final EditText res12_27_3set = view.findViewById(R.id.cup32Res12_27_3set);
+        final EditText res12_6 = view.findViewById(R.id.cup32Res12_6);
+        final EditText res12_6_2set = view.findViewById(R.id.cup32Res12_6_2set);
+        final EditText res12_6_3set = view.findViewById(R.id.cup32Res12_6_3set);
 
-        res21_7.setVisibility(View.INVISIBLE);
-        res21_7_2set.setVisibility(View.INVISIBLE);
-        res21_7_3set.setVisibility(View.INVISIBLE);
-        res21_26.setVisibility(View.INVISIBLE);
-        res21_26_2set.setVisibility(View.INVISIBLE);
-        res21_26_3set.setVisibility(View.INVISIBLE);
+        res12_27.setVisibility(View.INVISIBLE);
+        res12_27_2set.setVisibility(View.INVISIBLE);
+        res12_27_3set.setVisibility(View.INVISIBLE);
+        res12_6.setVisibility(View.INVISIBLE);
+        res12_6_2set.setVisibility(View.INVISIBLE);
+        res12_6_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res22_23 = view.findViewById(R.id.cup32Res22_23);
-        final EditText res22_23_2set = view.findViewById(R.id.cup32Res22_23_2set);
-        final EditText res22_23_3set = view.findViewById(R.id.cup32Res22_23_3set);
-        final EditText res22_10 = view.findViewById(R.id.cup32Res22_10);
-        final EditText res22_10_2set = view.findViewById(R.id.cup32Res22_10_2set);
-        final EditText res22_10_3set = view.findViewById(R.id.cup32Res22_10_3set);
+        final EditText res13_7 = view.findViewById(R.id.cup32Res13_7);
+        final EditText res13_7_2set = view.findViewById(R.id.cup32Res13_7_2set);
+        final EditText res13_7_3set = view.findViewById(R.id.cup32Res13_7_3set);
+        final EditText res13_26 = view.findViewById(R.id.cup32Res13_26);
+        final EditText res13_26_2set = view.findViewById(R.id.cup32Res13_26_2set);
+        final EditText res13_26_3set = view.findViewById(R.id.cup32Res13_26_3set);
 
-        res22_23.setVisibility(View.INVISIBLE);
-        res22_23_2set.setVisibility(View.INVISIBLE);
-        res22_23_3set.setVisibility(View.INVISIBLE);
-        res22_10.setVisibility(View.INVISIBLE);
-        res22_10_2set.setVisibility(View.INVISIBLE);
-        res22_10_3set.setVisibility(View.INVISIBLE);
+        res13_7.setVisibility(View.INVISIBLE);
+        res13_7_2set.setVisibility(View.INVISIBLE);
+        res13_7_3set.setVisibility(View.INVISIBLE);
+        res13_26.setVisibility(View.INVISIBLE);
+        res13_26_2set.setVisibility(View.INVISIBLE);
+        res13_26_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res23_15 = view.findViewById(R.id.cup32Res23_15);
-        final EditText res23_15_2set = view.findViewById(R.id.cup32Res23_15_2set);
-        final EditText res23_15_3set = view.findViewById(R.id.cup32Res23_15_3set);
-        final EditText res23_18 = view.findViewById(R.id.cup32Res23_18);
-        final EditText res23_18_2set = view.findViewById(R.id.cup32Res23_18_2set);
-        final EditText res23_18_3set = view.findViewById(R.id.cup32Res23_18_3set);
+        final EditText res14_23 = view.findViewById(R.id.cup32Res14_23);
+        final EditText res14_23_2set = view.findViewById(R.id.cup32Res14_23_2set);
+        final EditText res14_23_3set = view.findViewById(R.id.cup32Res14_23_3set);
+        final EditText res14_10 = view.findViewById(R.id.cup32Res14_10);
+        final EditText res14_10_2set = view.findViewById(R.id.cup32Res14_10_2set);
+        final EditText res14_10_3set = view.findViewById(R.id.cup32Res14_10_3set);
 
-        res23_15.setVisibility(View.INVISIBLE);
-        res23_15_2set.setVisibility(View.INVISIBLE);
-        res23_15_3set.setVisibility(View.INVISIBLE);
-        res23_18.setVisibility(View.INVISIBLE);
-        res23_18_2set.setVisibility(View.INVISIBLE);
-        res23_18_3set.setVisibility(View.INVISIBLE);
+        res14_23.setVisibility(View.INVISIBLE);
+        res14_23_2set.setVisibility(View.INVISIBLE);
+        res14_23_3set.setVisibility(View.INVISIBLE);
+        res14_10.setVisibility(View.INVISIBLE);
+        res14_10_2set.setVisibility(View.INVISIBLE);
+        res14_10_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res24_31 = view.findViewById(R.id.cup32Res24_31);
-        final EditText res24_31_2set = view.findViewById(R.id.cup32Res24_31_2set);
-        final EditText res24_31_3set = view.findViewById(R.id.cup32Res24_31_3set);
-        final EditText res24_2 = view.findViewById(R.id.cup32Res24_2);
-        final EditText res24_2_2set = view.findViewById(R.id.cup32Res24_2_2set);
-        final EditText res24_2_3set = view.findViewById(R.id.cup32Res24_2_3set);
+        final EditText res15_15 = view.findViewById(R.id.cup32Res15_15);
+        final EditText res15_15_2set = view.findViewById(R.id.cup32Res15_15_2set);
+        final EditText res15_15_3set = view.findViewById(R.id.cup32Res15_15_3set);
+        final EditText res15_18 = view.findViewById(R.id.cup32Res15_18);
+        final EditText res15_18_2set = view.findViewById(R.id.cup32Res15_18_2set);
+        final EditText res15_18_3set = view.findViewById(R.id.cup32Res15_18_3set);
 
-        res24_31.setVisibility(View.INVISIBLE);
-        res24_31_2set.setVisibility(View.INVISIBLE);
-        res24_31_3set.setVisibility(View.INVISIBLE);
-        res24_2.setVisibility(View.INVISIBLE);
-        res24_2_2set.setVisibility(View.INVISIBLE);
-        res24_2_3set.setVisibility(View.INVISIBLE);
+        res15_15.setVisibility(View.INVISIBLE);
+        res15_15_2set.setVisibility(View.INVISIBLE);
+        res15_15_3set.setVisibility(View.INVISIBLE);
+        res15_18.setVisibility(View.INVISIBLE);
+        res15_18_2set.setVisibility(View.INVISIBLE);
+        res15_18_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res25_Win_9 = view.findViewById(R.id.cup32Res25_Win_9);
-        final EditText res25_Win_9_2set = view.findViewById(R.id.cup32Res25_Win_9_2set);
-        final EditText res25_Win_9_3set = view.findViewById(R.id.cup32Res25_Win_9_3set);
-        final EditText res25_Win_10 = view.findViewById(R.id.cup32Res25_Win_10);
-        final EditText res25_Win_10_2set = view.findViewById(R.id.cup32Res25_Win_10_2set);
-        final EditText res25_Win_10_3set = view.findViewById(R.id.cup32Res25_Win_10_3set);
+        final EditText res16_31 = view.findViewById(R.id.cup32Res16_31);
+        final EditText res16_31_2set = view.findViewById(R.id.cup32Res16_31_2set);
+        final EditText res16_31_3set = view.findViewById(R.id.cup32Res16_31_3set);
+        final EditText res16_2 = view.findViewById(R.id.cup32Res16_2);
+        final EditText res16_2_2set = view.findViewById(R.id.cup32Res16_2_2set);
+        final EditText res16_2_3set = view.findViewById(R.id.cup32Res16_2_3set);
 
-        res25_Win_9.setVisibility(View.INVISIBLE);
-        res25_Win_9_2set.setVisibility(View.INVISIBLE);
-        res25_Win_9_3set.setVisibility(View.INVISIBLE);
-        res25_Win_10.setVisibility(View.INVISIBLE);
-        res25_Win_10_2set.setVisibility(View.INVISIBLE);
-        res25_Win_10_3set.setVisibility(View.INVISIBLE);
+        res16_31.setVisibility(View.INVISIBLE);
+        res16_31_2set.setVisibility(View.INVISIBLE);
+        res16_31_3set.setVisibility(View.INVISIBLE);
+        res16_2.setVisibility(View.INVISIBLE);
+        res16_2_2set.setVisibility(View.INVISIBLE);
+        res16_2_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res26_Win_11 = view.findViewById(R.id.cup32Res26_Win_11);
-        final EditText res26_Win_11_2set = view.findViewById(R.id.cup32Res26_Win_11_2set);
-        final EditText res26_Win_11_3set = view.findViewById(R.id.cup32Res26_Win_11_3set);
-        final EditText res26_Win_12 = view.findViewById(R.id.cup32Res26_Win_12);
-        final EditText res26_Win_12_2set = view.findViewById(R.id.cup32Res26_Win_12_2set);
-        final EditText res26_Win_12_3set = view.findViewById(R.id.cup32Res26_Win_12_3set);
+        final EditText res17_Win_1 = view.findViewById(R.id.cup32Res17_Win_1);
+        final EditText res17_Win_1_2set = view.findViewById(R.id.cup32Res17_Win_1_2set);
+        final EditText res17_Win_1_3set = view.findViewById(R.id.cup32Res17_Win_1_3set);
+        final EditText res17_Win_2 = view.findViewById(R.id.cup32Res17_Win_2);
+        final EditText res17_Win_2_2set = view.findViewById(R.id.cup32Res17_Win_2_2set);
+        final EditText res17_Win_2_3set = view.findViewById(R.id.cup32Res17_Win_2_3set);
 
-        res26_Win_11.setVisibility(View.INVISIBLE);
-        res26_Win_11_2set.setVisibility(View.INVISIBLE);
-        res26_Win_11_3set.setVisibility(View.INVISIBLE);
-        res26_Win_12.setVisibility(View.INVISIBLE);
-        res26_Win_12_2set.setVisibility(View.INVISIBLE);
-        res26_Win_12_3set.setVisibility(View.INVISIBLE);
+        res17_Win_1.setVisibility(View.INVISIBLE);
+        res17_Win_1_2set.setVisibility(View.INVISIBLE);
+        res17_Win_1_3set.setVisibility(View.INVISIBLE);
+        res17_Win_2.setVisibility(View.INVISIBLE);
+        res17_Win_2_2set.setVisibility(View.INVISIBLE);
+        res17_Win_2_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res27_Win_13 = view.findViewById(R.id.cup32Res27_Win_13);
-        final EditText res27_Win_13_2set = view.findViewById(R.id.cup32Res27_Win_13_2set);
-        final EditText res27_Win_13_3set = view.findViewById(R.id.cup32Res27_Win_13_3set);
-        final EditText res27_Win_14 = view.findViewById(R.id.cup32Res27_Win_14);
-        final EditText res27_Win_14_2set = view.findViewById(R.id.cup32Res27_Win_14_2set);
-        final EditText res27_Win_14_3set = view.findViewById(R.id.cup32Res27_Win_14_3set);
+        final EditText res18_Win_3 = view.findViewById(R.id.cup32Res18_Win_3);
+        final EditText res18_Win_3_2set = view.findViewById(R.id.cup32Res18_Win_3_2set);
+        final EditText res18_Win_3_3set = view.findViewById(R.id.cup32Res18_Win_3_3set);
+        final EditText res18_Win_4 = view.findViewById(R.id.cup32Res18_Win_4);
+        final EditText res18_Win_4_2set = view.findViewById(R.id.cup32Res18_Win_4_2set);
+        final EditText res18_Win_4_3set = view.findViewById(R.id.cup32Res18_Win_4_3set);
 
-        res27_Win_13.setVisibility(View.INVISIBLE);
-        res27_Win_13_2set.setVisibility(View.INVISIBLE);
-        res27_Win_13_3set.setVisibility(View.INVISIBLE);
-        res27_Win_14.setVisibility(View.INVISIBLE);
-        res27_Win_14_2set.setVisibility(View.INVISIBLE);
-        res27_Win_14_3set.setVisibility(View.INVISIBLE);
+        res18_Win_3.setVisibility(View.INVISIBLE);
+        res18_Win_3_2set.setVisibility(View.INVISIBLE);
+        res18_Win_3_3set.setVisibility(View.INVISIBLE);
+        res18_Win_4.setVisibility(View.INVISIBLE);
+        res18_Win_4_2set.setVisibility(View.INVISIBLE);
+        res18_Win_4_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res28_Win_15 = view.findViewById(R.id.cup32Res28_Win_15);
-        final EditText res28_Win_15_2set = view.findViewById(R.id.cup32Res28_Win_15_2set);
-        final EditText res28_Win_15_3set = view.findViewById(R.id.cup32Res28_Win_15_3set);
-        final EditText res28_Win_16 = view.findViewById(R.id.cup32Res28_Win_16);
-        final EditText res28_Win_16_2set = view.findViewById(R.id.cup32Res28_Win_16_2set);
-        final EditText res28_Win_16_3set = view.findViewById(R.id.cup32Res28_Win_16_3set);
+        final EditText res19_Win_5 = view.findViewById(R.id.cup32Res19_Win_5);
+        final EditText res19_Win_5_2set = view.findViewById(R.id.cup32Res19_Win_5_2set);
+        final EditText res19_Win_5_3set = view.findViewById(R.id.cup32Res19_Win_5_3set);
+        final EditText res19_Win_6 = view.findViewById(R.id.cup32Res19_Win_6);
+        final EditText res19_Win_6_2set = view.findViewById(R.id.cup32Res19_Win_6_2set);
+        final EditText res19_Win_6_3set = view.findViewById(R.id.cup32Res19_Win_6_3set);
 
-        res28_Win_15.setVisibility(View.INVISIBLE);
-        res28_Win_15_2set.setVisibility(View.INVISIBLE);
-        res28_Win_15_3set.setVisibility(View.INVISIBLE);
-        res28_Win_16.setVisibility(View.INVISIBLE);
-        res28_Win_16_2set.setVisibility(View.INVISIBLE);
-        res28_Win_16_3set.setVisibility(View.INVISIBLE);
+        res19_Win_5.setVisibility(View.INVISIBLE);
+        res19_Win_5_2set.setVisibility(View.INVISIBLE);
+        res19_Win_5_3set.setVisibility(View.INVISIBLE);
+        res19_Win_6.setVisibility(View.INVISIBLE);
+        res19_Win_6_2set.setVisibility(View.INVISIBLE);
+        res19_Win_6_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res29_Win_17 = view.findViewById(R.id.cup32Res29_Win_17);
-        final EditText res29_Win_17_2set = view.findViewById(R.id.cup32Res29_Win_17_2set);
-        final EditText res29_Win_17_3set = view.findViewById(R.id.cup32Res29_Win_17_3set);
-        final EditText res29_Win_18 = view.findViewById(R.id.cup32Res29_Win_18);
-        final EditText res29_Win_18_2set = view.findViewById(R.id.cup32Res29_Win_18_2set);
-        final EditText res29_Win_18_3set = view.findViewById(R.id.cup32Res29_Win_18_3set);
+        final EditText res20_Win_7 = view.findViewById(R.id.cup32Res20_Win_7);
+        final EditText res20_Win_7_2set = view.findViewById(R.id.cup32Res20_Win_7_2set);
+        final EditText res20_Win_7_3set = view.findViewById(R.id.cup32Res20_Win_7_3set);
+        final EditText res20_Win_8 = view.findViewById(R.id.cup32Res20_Win_8);
+        final EditText res20_Win_8_2set = view.findViewById(R.id.cup32Res20_Win_8_2set);
+        final EditText res20_Win_8_3set = view.findViewById(R.id.cup32Res20_Win_8_3set);
 
-        res29_Win_17.setVisibility(View.INVISIBLE);
-        res29_Win_17_2set.setVisibility(View.INVISIBLE);
-        res29_Win_17_3set.setVisibility(View.INVISIBLE);
-        res29_Win_18.setVisibility(View.INVISIBLE);
-        res29_Win_18_2set.setVisibility(View.INVISIBLE);
-        res29_Win_18_3set.setVisibility(View.INVISIBLE);
+        res20_Win_7.setVisibility(View.INVISIBLE);
+        res20_Win_7_2set.setVisibility(View.INVISIBLE);
+        res20_Win_7_3set.setVisibility(View.INVISIBLE);
+        res20_Win_8.setVisibility(View.INVISIBLE);
+        res20_Win_8_2set.setVisibility(View.INVISIBLE);
+        res20_Win_8_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res30_Win_19 = view.findViewById(R.id.cup32Res30_Win_19);
-        final EditText res30_Win_19_2set = view.findViewById(R.id.cup32Res30_Win_19_2set);
-        final EditText res30_Win_19_3set = view.findViewById(R.id.cup32Res30_Win_19_3set);
-        final EditText res30_Win_20 = view.findViewById(R.id.cup32Res30_Win_20);
-        final EditText res30_Win_20_2set = view.findViewById(R.id.cup32Res30_Win_20_2set);
-        final EditText res30_Win_20_3set = view.findViewById(R.id.cup32Res30_Win_20_3set);
+        final EditText res21_Win_9 = view.findViewById(R.id.cup32Res21_Win_9);
+        final EditText res21_Win_9_2set = view.findViewById(R.id.cup32Res21_Win_9_2set);
+        final EditText res21_Win_9_3set = view.findViewById(R.id.cup32Res21_Win_9_3set);
+        final EditText res21_Win_10 = view.findViewById(R.id.cup32Res21_Win_10);
+        final EditText res21_Win_10_2set = view.findViewById(R.id.cup32Res21_Win_10_2set);
+        final EditText res21_Win_10_3set = view.findViewById(R.id.cup32Res21_Win_10_3set);
 
-        res30_Win_19.setVisibility(View.INVISIBLE);
-        res30_Win_19_2set.setVisibility(View.INVISIBLE);
-        res30_Win_19_3set.setVisibility(View.INVISIBLE);
-        res30_Win_20.setVisibility(View.INVISIBLE);
-        res30_Win_20_2set.setVisibility(View.INVISIBLE);
-        res30_Win_20_3set.setVisibility(View.INVISIBLE);
+        res21_Win_9.setVisibility(View.INVISIBLE);
+        res21_Win_9_2set.setVisibility(View.INVISIBLE);
+        res21_Win_9_3set.setVisibility(View.INVISIBLE);
+        res21_Win_10.setVisibility(View.INVISIBLE);
+        res21_Win_10_2set.setVisibility(View.INVISIBLE);
+        res21_Win_10_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res31_Win_21 = view.findViewById(R.id.cup32Res31_Win_21);
-        final EditText res31_Win_21_2set = view.findViewById(R.id.cup32Res31_Win_21_2set);
-        final EditText res31_Win_21_3set = view.findViewById(R.id.cup32Res31_Win_21_3set);
-        final EditText res31_Win_22 = view.findViewById(R.id.cup32Res31_Win_22);
-        final EditText res31_Win_22_2set = view.findViewById(R.id.cup32Res31_Win_22_2set);
-        final EditText res31_Win_22_3set = view.findViewById(R.id.cup32Res31_Win_22_3set);
+        final EditText res22_Win_11 = view.findViewById(R.id.cup32Res22_Win_11);
+        final EditText res22_Win_11_2set = view.findViewById(R.id.cup32Res22_Win_11_2set);
+        final EditText res22_Win_11_3set = view.findViewById(R.id.cup32Res22_Win_11_3set);
+        final EditText res22_Win_12 = view.findViewById(R.id.cup32Res22_Win_12);
+        final EditText res22_Win_12_2set = view.findViewById(R.id.cup32Res22_Win_12_2set);
+        final EditText res22_Win_12_3set = view.findViewById(R.id.cup32Res22_Win_12_3set);
 
-        res31_Win_21.setVisibility(View.INVISIBLE);
-        res31_Win_21_2set.setVisibility(View.INVISIBLE);
-        res31_Win_21_3set.setVisibility(View.INVISIBLE);
-        res31_Win_22.setVisibility(View.INVISIBLE);
-        res31_Win_22_2set.setVisibility(View.INVISIBLE);
-        res31_Win_22_3set.setVisibility(View.INVISIBLE);
+        res22_Win_11.setVisibility(View.INVISIBLE);
+        res22_Win_11_2set.setVisibility(View.INVISIBLE);
+        res22_Win_11_3set.setVisibility(View.INVISIBLE);
+        res22_Win_12.setVisibility(View.INVISIBLE);
+        res22_Win_12_2set.setVisibility(View.INVISIBLE);
+        res22_Win_12_3set.setVisibility(View.INVISIBLE);
 
-        final EditText res32_Win_23 = view.findViewById(R.id.cup32Res32_Win_23);
-        final EditText res32_Win_23_2set = view.findViewById(R.id.cup32Res32_Win_23_2set);
-        final EditText res32_Win_23_3set = view.findViewById(R.id.cup32Res32_Win_23_3set);
-        final EditText res32_Win_24 = view.findViewById(R.id.cup32Res32_Win_24);
-        final EditText res32_Win_24_2set = view.findViewById(R.id.cup32Res32_Win_24_2set);
-        final EditText res32_Win_24_3set = view.findViewById(R.id.cup32Res32_Win_24_3set);
+        final EditText res23_Win_13 = view.findViewById(R.id.cup32Res23_Win_13);
+        final EditText res23_Win_13_2set = view.findViewById(R.id.cup32Res23_Win_13_2set);
+        final EditText res23_Win_13_3set = view.findViewById(R.id.cup32Res23_Win_13_3set);
+        final EditText res23_Win_14 = view.findViewById(R.id.cup32Res23_Win_14);
+        final EditText res23_Win_14_2set = view.findViewById(R.id.cup32Res23_Win_14_2set);
+        final EditText res23_Win_14_3set = view.findViewById(R.id.cup32Res23_Win_14_3set);
 
-        res32_Win_23.setVisibility(View.INVISIBLE);
-        res32_Win_23_2set.setVisibility(View.INVISIBLE);
-        res32_Win_23_3set.setVisibility(View.INVISIBLE);
-        res32_Win_24.setVisibility(View.INVISIBLE);
-        res32_Win_24_2set.setVisibility(View.INVISIBLE);
-        res32_Win_24_3set.setVisibility(View.INVISIBLE);
+        res23_Win_13.setVisibility(View.INVISIBLE);
+        res23_Win_13_2set.setVisibility(View.INVISIBLE);
+        res23_Win_13_3set.setVisibility(View.INVISIBLE);
+        res23_Win_14.setVisibility(View.INVISIBLE);
+        res23_Win_14_2set.setVisibility(View.INVISIBLE);
+        res23_Win_14_3set.setVisibility(View.INVISIBLE);
+
+        final EditText res24_Win_15 = view.findViewById(R.id.cup32Res24_Win_15);
+        final EditText res24_Win_15_2set = view.findViewById(R.id.cup32Res24_Win_15_2set);
+        final EditText res24_Win_15_3set = view.findViewById(R.id.cup32Res24_Win_15_3set);
+        final EditText res24_Win_16 = view.findViewById(R.id.cup32Res24_Win_16);
+        final EditText res24_Win_16_2set = view.findViewById(R.id.cup32Res24_Win_16_2set);
+        final EditText res24_Win_16_3set = view.findViewById(R.id.cup32Res24_Win_16_3set);
+
+        res24_Win_15.setVisibility(View.INVISIBLE);
+        res24_Win_15_2set.setVisibility(View.INVISIBLE);
+        res24_Win_15_3set.setVisibility(View.INVISIBLE);
+        res24_Win_16.setVisibility(View.INVISIBLE);
+        res24_Win_16_2set.setVisibility(View.INVISIBLE);
+        res24_Win_16_3set.setVisibility(View.INVISIBLE);
 
 
 
 
 
         final Button team1 = view.findViewById(R.id.cup32Team01);
-        final Button team2 = view.findViewById(R.id.cup32Team6);
+        final Button team2 = view.findViewById(R.id.cup32Team2);
         final Button team3 = view.findViewById(R.id.cup32Team3);
-        final Button team4 = view.findViewById(R.id.cup32Team8);
-        final Button team5 = view.findViewById(R.id.cup32Team09);
-        final Button team6 = view.findViewById(R.id.cup32Team14);
-        final Button team7 = view.findViewById(R.id.cup32Team11);
-        final Button team8 = view.findViewById(R.id.cup32Team16);
-        final Button team9 = view.findViewById(R.id.cup32Team17);
-        final Button team10 = view.findViewById(R.id.cup32Team22);
-        final Button team11 = view.findViewById(R.id.cup32Team19);
-        final Button team12 = view.findViewById(R.id.cup32Team24);
-        final Button team13 = view.findViewById(R.id.cup32Team25);
-        final Button team14 = view.findViewById(R.id.cup32Team30);
-        final Button team15 = view.findViewById(R.id.cup32Team27);
-        final Button team16 = view.findViewById(R.id.cup32Team32);
-        final Button team17 = view.findViewById(R.id.cup32Team33);
-        final Button team18 = view.findViewById(R.id.cup32Team38);
-        final Button team19 = view.findViewById(R.id.cup32Team35);
-        final Button team20 = view.findViewById(R.id.cup32Team40);
-        final Button team21 = view.findViewById(R.id.cup32Team41);
-        final Button team22 = view.findViewById(R.id.cup32Team46);
-        final Button team23 = view.findViewById(R.id.cup32Team43);
-        final Button team24 = view.findViewById(R.id.cup32Team48);
-        final Button team25 = view.findViewById(R.id.cup32Team49);
-        final Button team26 = view.findViewById(R.id.cup32Team54);
-        final Button team27 = view.findViewById(R.id.cup32Team51);
-        final Button team28 = view.findViewById(R.id.cup32Team56);
-        final Button team29 = view.findViewById(R.id.cup32Team57);
-        final Button team30 = view.findViewById(R.id.cup32Team62);
-        final Button team31 = view.findViewById(R.id.cup32Team59);
-        final Button team32 = view.findViewById(R.id.cup32Team64);
+        final Button team4 = view.findViewById(R.id.cup32Team4);
+        final Button team5 = view.findViewById(R.id.cup32Team5);
+        final Button team6 = view.findViewById(R.id.cup32Team6);
+        final Button team7 = view.findViewById(R.id.cup32Team7);
+        final Button team8 = view.findViewById(R.id.cup32Team8);
+        final Button team9 = view.findViewById(R.id.cup32Team9);
+        final Button team10 = view.findViewById(R.id.cup32Team10);
+        final Button team11 = view.findViewById(R.id.cup32Team11);
+        final Button team12 = view.findViewById(R.id.cup32Team12);
+        final Button team13 = view.findViewById(R.id.cup32Team13);
+        final Button team14 = view.findViewById(R.id.cup32Team14);
+        final Button team15 = view.findViewById(R.id.cup32Team15);
+        final Button team16 = view.findViewById(R.id.cup32Team16);
+        final Button team17 = view.findViewById(R.id.cup32Team17);
+        final Button team18 = view.findViewById(R.id.cup32Team18);
+        final Button team19 = view.findViewById(R.id.cup32Team19);
+        final Button team20 = view.findViewById(R.id.cup32Team20);
+        final Button team21 = view.findViewById(R.id.cup32Team21);
+        final Button team22 = view.findViewById(R.id.cup32Team22);
+        final Button team23 = view.findViewById(R.id.cup32Team23);
+        final Button team24 = view.findViewById(R.id.cup32Team24);
+        final Button team25 = view.findViewById(R.id.cup32Team25);
+        final Button team26 = view.findViewById(R.id.cup32Team26);
+        final Button team27 = view.findViewById(R.id.cup32Team27);
+        final Button team28 = view.findViewById(R.id.cup32Team28);
+        final Button team29 = view.findViewById(R.id.cup32Team29);
+        final Button team30 = view.findViewById(R.id.cup32Team30);
+        final Button team31 = view.findViewById(R.id.cup32Team31);
+        final Button team32 = view.findViewById(R.id.cup32Team32);
 
 
         team1.setText(getActivity().getIntent().getStringExtra("NameOfTeam9"));
@@ -460,22 +460,22 @@ public class FragmentTabCup32_1 extends Fragment {
         final Button win14 = view.findViewById(R.id.cup32WIN_7);
         final Button win15 = view.findViewById(R.id.cup32WIN_7);
         final Button win16 = view.findViewById(R.id.cup32WIN_8);
-        final Button win17 = view.findViewById(R.id.cup32WIN_17);
-        final Button win18 = view.findViewById(R.id.cup32WIN_18);
-        final Button win19 = view.findViewById(R.id.cup32WIN_19);
-        final Button win20 = view.findViewById(R.id.cup32WIN_20);
-        final Button win21 = view.findViewById(R.id.cup32WIN_21);
-        final Button win22 = view.findViewById(R.id.cup32WIN_22);
-        final Button win23 = view.findViewById(R.id.cup32WIN_23);
-        final Button win24 = view.findViewById(R.id.cup32WIN_24);
-        final Button win25 = view.findViewById(R.id.cup32WIN_33);
-        final Button win26 = view.findViewById(R.id.cup32WIN_34);
-        final Button win27 = view.findViewById(R.id.cup32WIN_35);
-        final Button win28 = view.findViewById(R.id.cup32WIN_36);
-        final Button win29 = view.findViewById(R.id.cup32WIN_41);
-        final Button win30 = view.findViewById(R.id.cup32WIN_42);
-        final Button win31 = view.findViewById(R.id.cup32WIN_43);
-        final Button win32 = view.findViewById(R.id.cup32WIN_44);
+        final Button win17 = view.findViewById(R.id.cup32WIN_9);
+        final Button win18 = view.findViewById(R.id.cup32WIN_10);
+        final Button win19 = view.findViewById(R.id.cup32WIN_11);
+        final Button win20 = view.findViewById(R.id.cup32WIN_12);
+        final Button win21 = view.findViewById(R.id.cup32WIN_13);
+        final Button win22 = view.findViewById(R.id.cup32WIN_14);
+        final Button win23 = view.findViewById(R.id.cup32WIN_15);
+        final Button win24 = view.findViewById(R.id.cup32WIN_16);
+        final Button win25 = view.findViewById(R.id.cup32WIN_17);
+        final Button win26 = view.findViewById(R.id.cup32WIN_18);
+        final Button win27 = view.findViewById(R.id.cup32WIN_19);
+        final Button win28 = view.findViewById(R.id.cup32WIN_20);
+        final Button win29 = view.findViewById(R.id.cup32WIN_21);
+        final Button win30 = view.findViewById(R.id.cup32WIN_22);
+        final Button win31 = view.findViewById(R.id.cup32WIN_23);
+        final Button win32 = view.findViewById(R.id.cup32WIN_24);
 
 
 

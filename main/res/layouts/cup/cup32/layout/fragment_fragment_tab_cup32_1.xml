@@ -29,7 +29,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@android:color/holo_orange_dark"
+                android:layout_below="@id/cup32Team8"
+                android:layout_marginTop="25dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_orange_dark"
                 android:layout_below="@id/cup32Team16"
+                android:layout_marginTop="25dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_orange_dark"
+                android:layout_below="@id/cup32Team12"
                 android:layout_marginTop="25dp"/>
 
             <View
@@ -49,8 +63,8 @@
                 android:text="R9"
                 android:textColor="#000"
                 android:textSize="20sp"
-                android:layout_alignBaseline="@+id/cup32numberOfMatch33"
-                android:layout_toEndOf="@+id/cup32WIN_33"/>
+                android:layout_alignBaseline="@+id/cup32numberOfMatch17"
+                android:layout_toEndOf="@+id/cup32WIN_17"/>
             <TextView
                 android:id="@+id/cup32E1"
                 android:layout_width="wrap_content"
@@ -73,7 +87,7 @@
                 android:textSize="11dp" />
 
             <TextView
-                android:id="@+id/cup32E64"
+                android:id="@+id/cup32E32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32E1"
@@ -83,7 +97,7 @@
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/cup32Team64"
+                android:id="@+id/cup32Team32"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_below="@+id/cup32Team01"
@@ -103,7 +117,7 @@
                 android:layout_toEndOf="@+id/cup32Team01"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.9"
+                android:text="WIN.1"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
@@ -113,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="135dp"
                 android:layout_marginTop="49dp"
-                android:text="9"
+                android:text="1"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
@@ -127,7 +141,7 @@
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
-                android:nextFocusDown="@+id/cup32Res1_64"
+                android:nextFocusDown="@+id/cup32Res1_32"
                 android:singleLine="true"
                 android:textSize="12dp" />
 
@@ -160,11 +174,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res1_64"
+                android:id="@+id/cup32Res1_32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_1"
-                android:layout_toEndOf="@+id/cup32Team64"
+                android:layout_toEndOf="@+id/cup32Team32"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -172,11 +186,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res1_64_2set"
+                android:id="@+id/cup32Res1_32_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_1"
-                android:layout_toEndOf="@+id/cup32Res1_64"
+                android:layout_toEndOf="@+id/cup32Res1_32"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -184,11 +198,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res1_64_3set"
+                android:id="@+id/cup32Res1_32_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_1"
-                android:layout_toEndOf="@+id/cup32Res1_64_2set"
+                android:layout_toEndOf="@+id/cup32Res1_32_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -197,20 +211,20 @@
 
 
             <TextView
-                android:id="@+id/cup32E33"
+                android:id="@+id/cup32E17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E64"
+                android:layout_below="@+id/cup32E32"
                 android:layout_marginTop="50dp"
                 android:text="E17"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <TextView
-                android:id="@+id/cup32E32"
+                android:id="@+id/cup32E16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E33"
+                android:layout_below="@+id/cup32E17"
                 android:layout_marginTop="28dp"
                 android:text="E16"
                 android:textColor="#000000"
@@ -218,7 +232,7 @@
 
 
             <Button
-                android:id="@+id/cup32Team33"
+                android:id="@+id/cup32Team17"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_below="@+id/cup32Team01"
@@ -230,10 +244,10 @@
                 android:textSize="11dp" />
 
             <Button
-                android:id="@+id/cup32Team32"
+                android:id="@+id/cup32Team16"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team33"
+                android:layout_below="@+id/cup32Team17"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
@@ -249,10 +263,10 @@
                 android:layout_below="@+id/cup32WIN_1"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32Team33"
+                android:layout_toEndOf="@+id/cup32Team17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.10"
+                android:text="WIN.2"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
@@ -261,32 +275,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32numberOfMatch1"
-                android:layout_marginStart="129dp"
+                android:layout_marginStart="135dp"
                 android:layout_marginTop="102dp"
-                android:text="10"
+                android:text="2"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch33"
+                android:id="@+id/cup32numberOfMatch17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_1"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="28dp"
-                android:layout_toEndOf="@+id/cup32Team32"
-                android:text="25"
+                android:layout_toEndOf="@+id/cup32Team16"
+                android:text="17"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res2_33"
+                android:id="@+id/cup32Res2_17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32Res1_1"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Team32"
+                android:layout_toEndOf="@+id/cup32Team16"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -295,12 +309,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res2_33_2set"
+                android:id="@+id/cup32Res2_17_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32Res1_1"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res2_33"
+                android:layout_toEndOf="@+id/cup32Res2_17"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -309,12 +323,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res2_33_3set"
+                android:id="@+id/cup32Res2_17_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32Res1_1"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res2_33_2set"
+                android:layout_toEndOf="@+id/cup32Res2_17_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -324,11 +338,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res2_32"
+                android:id="@+id/cup32Res2_16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_2"
-                android:layout_toEndOf="@+id/cup32Team32"
+                android:layout_toEndOf="@+id/cup32Team16"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -337,11 +351,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res2_32_2set"
+                android:id="@+id/cup32Res2_16_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_2"
-                android:layout_toEndOf="@+id/cup32Res2_32"
+                android:layout_toEndOf="@+id/cup32Res2_16"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -350,11 +364,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res2_32_3set"
+                android:id="@+id/cup32Res2_16_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_2"
-                android:layout_toEndOf="@+id/cup32Res2_32_2set"
+                android:layout_toEndOf="@+id/cup32Res2_16_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -363,7 +377,7 @@
 
 
             <Button
-                android:id="@+id/cup32WIN_33"
+                android:id="@+id/cup32WIN_17"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_below="@+id/cup32WIN_1"
@@ -371,12 +385,12 @@
                 android:layout_toEndOf="@+id/cup32WIN_1"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.25"
+                android:text="WIN.17"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <EditText
-                android:id="@+id/cup32Res25_Win_9"
+                android:id="@+id/cup32Res17_Win_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32Team01"
@@ -388,11 +402,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res25_Win_9_2set"
+                android:id="@+id/cup32Res17_Win_1_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32Team01"
-                android:layout_toEndOf="@+id/cup32Res25_Win_9"
+                android:layout_toEndOf="@+id/cup32Res17_Win_1"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -401,11 +415,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res25_Win_9_3set"
+                android:id="@+id/cup32Res17_Win_1_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32Team01"
-                android:layout_toEndOf="@+id/cup32Res25_Win_9_2set"
+                android:layout_toEndOf="@+id/cup32Res17_Win_1_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -413,10 +427,10 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res25_Win_10"
+                android:id="@+id/cup32Res17_Win_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_33"
+                android:layout_below="@+id/cup32WIN_17"
                 android:layout_toEndOf="@+id/cup32WIN_1"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -425,11 +439,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res25_Win_10_2set"
+                android:id="@+id/cup32Res17_Win_2_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_33"
-                android:layout_toEndOf="@+id/cup32Res25_Win_10"
+                android:layout_below="@+id/cup32WIN_17"
+                android:layout_toEndOf="@+id/cup32Res17_Win_2"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -438,11 +452,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res25_Win_10_3set"
+                android:id="@+id/cup32Res17_Win_2_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_33"
-                android:layout_toEndOf="@+id/cup32Res25_Win_10_2set"
+                android:layout_below="@+id/cup32WIN_17"
+                android:layout_toEndOf="@+id/cup32Res17_Win_2_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -459,13 +473,13 @@
                 android:text="R16"
                 android:textColor="#000"
                 android:textSize="20sp"
-                android:layout_alignBaseline="@+id/cup32numberOfMatch34"
-                android:layout_toEndOf="@+id/cup32WIN_34"/>
+                android:layout_alignBaseline="@+id/cup32numberOfMatch18"
+                android:layout_toEndOf="@+id/cup32WIN_18"/>
             <TextView
-                android:id="@+id/cup32E17"
+                android:id="@+id/cup32E9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team32"
+                android:layout_below="@+id/cup32Team16"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="60dp"
                 android:text="E9"
@@ -473,10 +487,10 @@
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/cup32Team17"
+                android:id="@+id/cup32Team9"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@id/cup32Team32"
+                android:layout_below="@id/cup32Team16"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="50dp"
                 android:background="@drawable/button_shape"
@@ -485,20 +499,20 @@
                 android:textSize="11dp" />
 
             <TextView
-                android:id="@+id/cup32E48"
+                android:id="@+id/cup32E24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E17"
+                android:layout_below="@+id/cup32E9"
                 android:layout_marginTop="30dp"
                 android:text="E24"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/cup32Team48"
+                android:id="@+id/cup32Team24"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team17"
+                android:layout_below="@+id/cup32Team9"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
@@ -510,13 +524,13 @@
                 android:id="@+id/cup32WIN_3"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@id/cup32Team32"
+                android:layout_below="@id/cup32Team16"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="78dp"
-                android:layout_toEndOf="@+id/cup32Team17"
+                android:layout_toEndOf="@+id/cup32Team9"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.11"
+                android:text="WIN.3"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
@@ -524,64 +538,64 @@
                 android:id="@+id/cup32numberOfMatch3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team32"
-                android:layout_marginStart="129dp"
+                android:layout_below="@id/cup32Team16"
+                android:layout_marginStart="135dp"
                 android:layout_marginTop="90dp"
-                android:text="11"
+                android:text="3"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res11_9"
+                android:id="@+id/cup32Res3_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team32"
+                android:layout_below="@id/cup32Team16"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Team17"
+                android:layout_toEndOf="@+id/cup32Team9"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
-                android:nextFocusDown="@+id/cup32Res11_24"
+                android:nextFocusDown="@+id/cup32Res3_24"
                 android:singleLine="true"
                 android:textSize="12dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res11_9_2set"
+                android:id="@+id/cup32Res3_9_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team32"
+                android:layout_below="@id/cup32Team16"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Res11_9"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-
-                android:id="@+id/cup32Res11_9_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team32"
-                android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Res11_9_2set"
+                android:layout_toEndOf="@+id/cup32Res3_9"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
                 android:singleLine="true"
                 android:textSize="12dp" />
 
+            <EditText
+
+                android:id="@+id/cup32Res3_9_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cup32Team16"
+                android:layout_marginTop="45dp"
+                android:layout_toEndOf="@+id/cup32Res3_9_2set"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
 
             <EditText
 
-                android:id="@+id/cup32Res11_24"
+                android:id="@+id/cup32Res3_24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_3"
-                android:layout_toEndOf="@+id/cup32Team48"
+                android:layout_toEndOf="@+id/cup32Team24"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -589,11 +603,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res11_24_2set"
+                android:id="@+id/cup32Res3_24_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_3"
-                android:layout_toEndOf="@+id/cup32Res11_24"
+                android:layout_toEndOf="@+id/cup32Res3_24"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -601,11 +615,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res11_24_3set"
+                android:id="@+id/cup32Res3_24_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_3"
-                android:layout_toEndOf="@+id/cup32Res11_24_2set"
+                android:layout_toEndOf="@+id/cup32Res3_24_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -615,20 +629,20 @@
 
             <!--44444444444444444444444444444444444444444444-->
             <TextView
-                android:id="@+id/cup32E49"
+                android:id="@+id/cup32E25"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E48"
+                android:layout_below="@+id/cup32E24"
                 android:layout_marginTop="50dp"
                 android:text="E25"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <TextView
-                android:id="@+id/cup32E16"
+                android:id="@+id/cup32E8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E49"
+                android:layout_below="@+id/cup32E25"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="28dp"
                 android:text="E8"
@@ -637,10 +651,10 @@
 
 
             <Button
-                android:id="@+id/cup32Team49"
+                android:id="@+id/cup32Team25"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team17"
+                android:layout_below="@+id/cup32Team9"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="75dp"
                 android:background="@drawable/button_shape"
@@ -649,10 +663,10 @@
                 android:textSize="11dp" />
 
             <Button
-                android:id="@+id/cup32Team16"
+                android:id="@+id/cup32Team8"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team49"
+                android:layout_below="@+id/cup32Team25"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
@@ -668,10 +682,10 @@
                 android:layout_below="@+id/cup32WIN_3"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32Team49"
+                android:layout_toEndOf="@+id/cup32Team25"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.12"
+                android:text="WIN.4"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
@@ -680,32 +694,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32numberOfMatch3"
-                android:layout_marginStart="129dp"
+                android:layout_marginStart="135dp"
                 android:layout_marginTop="102dp"
-                android:text="12"
+                android:text="4"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch34"
+                android:id="@+id/cup32numberOfMatch18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_3"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="28dp"
-                android:layout_toEndOf="@+id/cup32Team16"
-                android:text="26"
+                android:layout_toEndOf="@+id/cup32Team8"
+                android:text="18"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res12_25"
+                android:id="@+id/cup32Res4_25"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res11_9"
+                android:layout_below="@+id/cup32Res3_9"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Team16"
+                android:layout_toEndOf="@+id/cup32Team8"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -714,12 +728,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res12_25_2set"
+                android:id="@+id/cup32Res4_25_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res11_9"
+                android:layout_below="@+id/cup32Res3_9"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res12_25"
+                android:layout_toEndOf="@+id/cup32Res4_25"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -728,12 +742,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res12_25_3set"
+                android:id="@+id/cup32Res4_25_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res11_9"
+                android:layout_below="@+id/cup32Res3_9"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res12_25_2set"
+                android:layout_toEndOf="@+id/cup32Res4_25_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -743,11 +757,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res12_8"
+                android:id="@+id/cup32Res4_8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_4"
-                android:layout_toEndOf="@+id/cup32Team16"
+                android:layout_toEndOf="@+id/cup32Team8"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -756,11 +770,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res12_8_2set"
+                android:id="@+id/cup32Res4_8_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_4"
-                android:layout_toEndOf="@+id/cup32Res12_8"
+                android:layout_toEndOf="@+id/cup32Res4_8"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -769,11 +783,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res12_8_3set"
+                android:id="@+id/cup32Res4_8_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_4"
-                android:layout_toEndOf="@+id/cup32Res12_8_2set"
+                android:layout_toEndOf="@+id/cup32Res4_8_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -782,7 +796,7 @@
 
 
             <Button
-                android:id="@+id/cup32WIN_34"
+                android:id="@+id/cup32WIN_18"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_below="@+id/cup32WIN_3"
@@ -790,15 +804,15 @@
                 android:layout_toEndOf="@+id/cup32WIN_3"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.26"
+                android:text="WIN.18"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <EditText
-                android:id="@+id/cup32Res26_Win_11"
+                android:id="@+id/cup32Res18_Win_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team17"
+                android:layout_below="@+id/cup32Team9"
                 android:layout_toEndOf="@+id/cup32WIN_3"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -807,11 +821,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res26_Win_11_2set"
+                android:id="@+id/cup32Res18_Win_3_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team17"
-                android:layout_toEndOf="@+id/cup32Res26_Win_11"
+                android:layout_below="@+id/cup32Team9"
+                android:layout_toEndOf="@+id/cup32Res18_Win_3"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -820,11 +834,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res26_Win_11_3set"
+                android:id="@+id/cup32Res18_Win_3_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team17"
-                android:layout_toEndOf="@+id/cup32Res26_Win_11_2set"
+                android:layout_below="@+id/cup32Team9"
+                android:layout_toEndOf="@+id/cup32Res18_Win_3_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -832,10 +846,10 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res26_Win_12"
+                android:id="@+id/cup32Res18_Win_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_34"
+                android:layout_below="@+id/cup32WIN_18"
                 android:layout_toEndOf="@+id/cup32WIN_3"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -844,11 +858,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res26_Win_12_2set"
+                android:id="@+id/cup32Res18_Win_4_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_34"
-                android:layout_toEndOf="@+id/cup32Res26_Win_12"
+                android:layout_below="@+id/cup32WIN_18"
+                android:layout_toEndOf="@+id/cup32Res18_Win_4"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -857,11 +871,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res26_Win_12_3set"
+                android:id="@+id/cup32Res18_Win_4_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_34"
-                android:layout_toEndOf="@+id/cup32Res26_Win_12_2set"
+                android:layout_below="@+id/cup32WIN_18"
+                android:layout_toEndOf="@+id/cup32Res18_Win_4_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -877,14 +891,14 @@
                 android:text="R13"
                 android:textColor="#000"
                 android:textSize="20sp"
-                android:layout_alignBaseline="@+id/cup32numberOfMatch35"
-                android:layout_toEndOf="@+id/cup32WIN_35"/>
+                android:layout_alignBaseline="@+id/cup32numberOfMatch19"
+                android:layout_toEndOf="@+id/cup32WIN_19"/>
 
             <TextView
-                android:id="@+id/cup32E9"
+                android:id="@+id/cup32E5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team16"
+                android:layout_below="@+id/cup32Team8"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="60dp"
                 android:text="E5"
@@ -892,10 +906,10 @@
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/cup32Team09"
+                android:id="@+id/cup32Team5"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@id/cup32Team16"
+                android:layout_below="@id/cup32Team8"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="50dp"
                 android:background="@drawable/button_shape"
@@ -904,20 +918,20 @@
                 android:textSize="11dp" />
 
             <TextView
-                android:id="@+id/cup32E56"
+                android:id="@+id/cup32E28"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E9"
+                android:layout_below="@+id/cup32E5"
                 android:layout_marginTop="30dp"
                 android:text="E28"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/cup32Team56"
+                android:id="@+id/cup32Team28"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team09"
+                android:layout_below="@+id/cup32Team5"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
@@ -929,13 +943,13 @@
                 android:id="@+id/cup32WIN_5"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@id/cup32Team16"
+                android:layout_below="@id/cup32Team8"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="78dp"
-                android:layout_toEndOf="@+id/cup32Team09"
+                android:layout_toEndOf="@+id/cup32Team5"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.13"
+                android:text="WIN.5"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
@@ -943,64 +957,64 @@
                 android:id="@+id/cup32numberOfMatch5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team16"
-                android:layout_marginStart="129dp"
+                android:layout_below="@id/cup32Team8"
+                android:layout_marginStart="135dp"
                 android:layout_marginTop="90dp"
-                android:text="13"
+                android:text="5"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res13_5"
+                android:id="@+id/cup32Res5_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team16"
+                android:layout_below="@id/cup32Team8"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Team09"
+                android:layout_toEndOf="@+id/cup32Team5"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
-                android:nextFocusDown="@+id/cup32Res13_28"
+                android:nextFocusDown="@+id/cup32Res5_28"
                 android:singleLine="true"
                 android:textSize="12dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res13_5_2set"
+                android:id="@+id/cup32Res5_5_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team16"
+                android:layout_below="@id/cup32Team8"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Res13_5"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-
-                android:id="@+id/cup32Res13_5_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team16"
-                android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Res13_5_2set"
+                android:layout_toEndOf="@+id/cup32Res5_5"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
                 android:singleLine="true"
                 android:textSize="12dp" />
 
+            <EditText
+
+                android:id="@+id/cup32Res5_5_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cup32Team8"
+                android:layout_marginTop="45dp"
+                android:layout_toEndOf="@+id/cup32Res5_5_2set"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
 
             <EditText
 
-                android:id="@+id/cup32Res13_28"
+                android:id="@+id/cup32Res5_28"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_5"
-                android:layout_toEndOf="@+id/cup32Team56"
+                android:layout_toEndOf="@+id/cup32Team28"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1008,11 +1022,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res13_28_2set"
+                android:id="@+id/cup32Res5_28_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_5"
-                android:layout_toEndOf="@+id/cup32Res13_28"
+                android:layout_toEndOf="@+id/cup32Res5_28"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1020,11 +1034,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res13_28_3set"
+                android:id="@+id/cup32Res5_28_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_5"
-                android:layout_toEndOf="@+id/cup32Res13_28_2set"
+                android:layout_toEndOf="@+id/cup32Res5_28_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1034,20 +1048,20 @@
             <!--66666666666666666666666666666666666666-->
 
             <TextView
-                android:id="@+id/cup32E41"
+                android:id="@+id/cup32E21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E56"
+                android:layout_below="@+id/cup32E28"
                 android:layout_marginTop="50dp"
                 android:text="E21"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <TextView
-                android:id="@+id/cup32E24"
+                android:id="@+id/cup32E12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E41"
+                android:layout_below="@+id/cup32E21"
                 android:layout_marginTop="28dp"
                 android:text="E12"
                 android:textColor="#000000"
@@ -1055,10 +1069,10 @@
 
 
             <Button
-                android:id="@+id/cup32Team41"
+                android:id="@+id/cup32Team21"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team09"
+                android:layout_below="@+id/cup32Team5"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="75dp"
                 android:background="@drawable/button_shape"
@@ -1067,10 +1081,10 @@
                 android:textSize="11dp" />
 
             <Button
-                android:id="@+id/cup32Team24"
+                android:id="@+id/cup32Team12"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team41"
+                android:layout_below="@+id/cup32Team21"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
@@ -1080,16 +1094,16 @@
 
 
             <Button
-                android:id="@+id/cup32WIN_7"
+                android:id="@+id/cup32WIN_6"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_below="@+id/cup32WIN_5"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32Team41"
+                android:layout_toEndOf="@+id/cup32Team21"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.14"
+                android:text="WIN.6"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
@@ -1098,32 +1112,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32numberOfMatch5"
-                android:layout_marginStart="129dp"
+                android:layout_marginStart="135dp"
                 android:layout_marginTop="102dp"
-                android:text="14"
+                android:text="6"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch35"
+                android:id="@+id/cup32numberOfMatch19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_5"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="28dp"
-                android:layout_toEndOf="@+id/cup32Team24"
-                android:text="27"
+                android:layout_toEndOf="@+id/cup32Team12"
+                android:text="19"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res14_21"
+                android:id="@+id/cup32Res6_21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res13_5"
+                android:layout_below="@+id/cup32Res5_5"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Team24"
+                android:layout_toEndOf="@+id/cup32Team12"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1132,12 +1146,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res14_21_2set"
+                android:id="@+id/cup32Res6_21_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res13_5"
+                android:layout_below="@+id/cup32Res5_5"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res14_21"
+                android:layout_toEndOf="@+id/cup32Res6_21"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1146,12 +1160,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res14_21_3set"
+                android:id="@+id/cup32Res6_21_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res13_5"
+                android:layout_below="@+id/cup32Res5_5"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res14_21_2set"
+                android:layout_toEndOf="@+id/cup32Res6_21_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1161,11 +1175,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res14_12"
+                android:id="@+id/cup32Res6_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_7"
-                android:layout_toEndOf="@+id/cup32Team24"
+                android:layout_below="@+id/cup32WIN_6"
+                android:layout_toEndOf="@+id/cup32Team12"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1174,11 +1188,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res14_12_2set"
+                android:id="@+id/cup32Res6_12_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_7"
-                android:layout_toEndOf="@+id/cup32Res14_12"
+                android:layout_below="@+id/cup32WIN_6"
+                android:layout_toEndOf="@+id/cup32Res6_12"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1187,11 +1201,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res14_12_3set"
+                android:id="@+id/cup32Res6_12_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_7"
-                android:layout_toEndOf="@+id/cup32Res14_12_2set"
+                android:layout_below="@+id/cup32WIN_6"
+                android:layout_toEndOf="@+id/cup32Res6_12_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1200,7 +1214,7 @@
 
 
             <Button
-                android:id="@+id/cup32WIN_35"
+                android:id="@+id/cup32WIN_19"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_below="@+id/cup32WIN_5"
@@ -1208,15 +1222,15 @@
                 android:layout_toEndOf="@+id/cup32WIN_5"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.27"
+                android:text="WIN.19"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <EditText
-                android:id="@+id/cup32Res27_Win_13"
+                android:id="@+id/cup32Res19_Win_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team09"
+                android:layout_below="@+id/cup32Team5"
                 android:layout_toEndOf="@+id/cup32WIN_5"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -1225,11 +1239,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res27_Win_13_2set"
+                android:id="@+id/cup32Res19_Win_5_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team09"
-                android:layout_toEndOf="@+id/cup32Res27_Win_13"
+                android:layout_below="@+id/cup32Team5"
+                android:layout_toEndOf="@+id/cup32Res19_Win_5"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1238,11 +1252,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res27_Win_13_3set"
+                android:id="@+id/cup32Res19_Win_5_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team09"
-                android:layout_toEndOf="@+id/cup32Res27_Win_13_2set"
+                android:layout_below="@+id/cup32Team5"
+                android:layout_toEndOf="@+id/cup32Res19_Win_5_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1250,10 +1264,10 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res27_Win_14"
+                android:id="@+id/cup32Res19_Win_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_35"
+                android:layout_below="@+id/cup32WIN_19"
                 android:layout_toEndOf="@+id/cup32WIN_5"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -1262,11 +1276,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res27_Win_14_2set"
+                android:id="@+id/cup32Res19_Win_6_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_35"
-                android:layout_toEndOf="@+id/cup32Res27_Win_14"
+                android:layout_below="@+id/cup32WIN_19"
+                android:layout_toEndOf="@+id/cup32Res19_Win_6"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1275,11 +1289,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res27_Win_14_3set"
+                android:id="@+id/cup32Res19_Win_6_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_35"
-                android:layout_toEndOf="@+id/cup32Res27_Win_14_2set"
+                android:layout_below="@+id/cup32WIN_19"
+                android:layout_toEndOf="@+id/cup32Res19_Win_6_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1294,24 +1308,24 @@
                 android:text="R12"
                 android:textColor="#000"
                 android:textSize="20sp"
-                android:layout_alignBaseline="@+id/cup32numberOfMatch36"
-                android:layout_toEndOf="@+id/cup32WIN_36"/>
+                android:layout_alignBaseline="@+id/cup32numberOfMatch20"
+                android:layout_toEndOf="@+id/cup32WIN_20"/>
 
             <TextView
-                android:id="@+id/cup32E25"
+                android:id="@+id/cup32E13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team24"
+                android:layout_below="@+id/cup32Team12"
                 android:layout_marginTop="60dp"
                 android:text="E13"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/cup32Team25"
+                android:id="@+id/cup32Team13"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@id/cup32Team24"
+                android:layout_below="@id/cup32Team12"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="50dp"
                 android:background="@drawable/button_shape"
@@ -1320,20 +1334,20 @@
                 android:textSize="11dp" />
 
             <TextView
-                android:id="@+id/cup32E40"
+                android:id="@+id/cup32E20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E25"
+                android:layout_below="@+id/cup32E13"
                 android:layout_marginTop="30dp"
                 android:text="E20"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/cup32Team40"
+                android:id="@+id/cup32Team20"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team25"
+                android:layout_below="@+id/cup32Team13"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
@@ -1345,13 +1359,13 @@
                 android:id="@+id/cup32WIN_7"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@id/cup32Team24"
+                android:layout_below="@id/cup32Team12"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="78dp"
-                android:layout_toEndOf="@+id/cup32Team25"
+                android:layout_toEndOf="@+id/cup32Team13"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.15"
+                android:text="WIN.7"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
@@ -1359,63 +1373,63 @@
                 android:id="@+id/cup32numberOfMatch7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team24"
-                android:layout_marginStart="129dp"
+                android:layout_below="@id/cup32Team12"
+                android:layout_marginStart="135dp"
                 android:layout_marginTop="90dp"
-                android:text="15"
+                android:text="7"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res15_13"
+                android:id="@+id/cup32Res7_13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team24"
+                android:layout_below="@id/cup32Team12"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Team25"
+                android:layout_toEndOf="@+id/cup32Team13"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
-                android:nextFocusDown="@+id/cup32Res15_20"
+                android:nextFocusDown="@+id/cup32Res7_20"
                 android:singleLine="true"
                 android:textSize="12dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res15_13_2set"
+                android:id="@+id/cup32Res7_13_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team24"
+                android:layout_below="@id/cup32Team12"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Res15_13"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-
-                android:id="@+id/cup32Res15_13_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team24"
-                android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Res15_13_2set"
+                android:layout_toEndOf="@+id/cup32Res7_13"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
                 android:singleLine="true"
                 android:textSize="12dp" />
 
+            <EditText
+
+                android:id="@+id/cup32Res7_13_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cup32Team12"
+                android:layout_marginTop="45dp"
+                android:layout_toEndOf="@+id/cup32Res7_13_2set"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
 
             <EditText
-                android:id="@+id/cup32Res15_20"
+                android:id="@+id/cup32Res7_20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_7"
-                android:layout_toEndOf="@+id/cup32Team40"
+                android:layout_toEndOf="@+id/cup32Team20"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1423,11 +1437,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res15_20_2set"
+                android:id="@+id/cup32Res7_20_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_7"
-                android:layout_toEndOf="@+id/cup32Res15_20"
+                android:layout_toEndOf="@+id/cup32Res7_20"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1435,11 +1449,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res15_20_3set"
+                android:id="@+id/cup32Res7_20_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_7"
-                android:layout_toEndOf="@+id/cup32Res15_20_2set"
+                android:layout_toEndOf="@+id/cup32Res7_20_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1448,20 +1462,20 @@
 
 
             <TextView
-                android:id="@+id/cup32E57"
+                android:id="@+id/cup32E29"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E40"
+                android:layout_below="@+id/cup32E20"
                 android:layout_marginTop="50dp"
                 android:text="E29"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <TextView
-                android:id="@+id/cup32E8"
+                android:id="@+id/cup32E4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E57"
+                android:layout_below="@+id/cup32E29"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="28dp"
                 android:text="E4"
@@ -1470,10 +1484,10 @@
 
 
             <Button
-                android:id="@+id/cup32Team57"
+                android:id="@+id/cup32Team29"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team25"
+                android:layout_below="@+id/cup32Team13"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="75dp"
                 android:background="@drawable/button_shape"
@@ -1482,10 +1496,10 @@
                 android:textSize="11dp" />
 
             <Button
-                android:id="@+id/cup32Team8"
+                android:id="@+id/cup32Team4"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team57"
+                android:layout_below="@+id/cup32Team29"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
@@ -1501,10 +1515,10 @@
                 android:layout_below="@+id/cup32WIN_7"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32Team57"
+                android:layout_toEndOf="@+id/cup32Team29"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.16"
+                android:text="WIN.8"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
@@ -1513,32 +1527,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32numberOfMatch7"
-                android:layout_marginStart="129dp"
+                android:layout_marginStart="135dp"
                 android:layout_marginTop="102dp"
-                android:text="16"
+                android:text="8"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch36"
+                android:id="@+id/cup32numberOfMatch20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_7"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="28dp"
-                android:layout_toEndOf="@+id/cup32Team8"
-                android:text="28"
+                android:layout_toEndOf="@+id/cup32Team4"
+                android:text="20"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res16_29"
+                android:id="@+id/cup32Res8_29"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res15_13"
+                android:layout_below="@+id/cup32Res7_13"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Team8"
+                android:layout_toEndOf="@+id/cup32Team4"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1547,12 +1561,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res16_29_2set"
+                android:id="@+id/cup32Res8_29_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res15_13"
+                android:layout_below="@+id/cup32Res7_13"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res16_29"
+                android:layout_toEndOf="@+id/cup32Res8_29"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1561,12 +1575,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res16_29_3set"
+                android:id="@+id/cup32Res8_29_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res15_13"
+                android:layout_below="@+id/cup32Res7_13"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res16_29_2set"
+                android:layout_toEndOf="@+id/cup32Res8_29_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1576,11 +1590,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res16_4"
+                android:id="@+id/cup32Res8_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_8"
-                android:layout_toEndOf="@+id/cup32Team8"
+                android:layout_toEndOf="@+id/cup32Team4"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1589,11 +1603,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res16_4_2set"
+                android:id="@+id/cup32Res8_4_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_8"
-                android:layout_toEndOf="@+id/cup32Res16_4"
+                android:layout_toEndOf="@+id/cup32Res8_4"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1602,11 +1616,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res16_4_3set"
+                android:id="@+id/cup32Res8_4_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_8"
-                android:layout_toEndOf="@+id/cup32Res16_4_2set"
+                android:layout_toEndOf="@+id/cup32Res8_4_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1615,7 +1629,7 @@
 
 
             <Button
-                android:id="@+id/cup32WIN_36"
+                android:id="@+id/cup32WIN_20"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_below="@+id/cup32WIN_7"
@@ -1623,15 +1637,15 @@
                 android:layout_toEndOf="@+id/cup32WIN_7"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.28"
+                android:text="WIN.20"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <EditText
-                android:id="@+id/cup32Res28_Win_15"
+                android:id="@+id/cup32Res20_Win_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team25"
+                android:layout_below="@+id/cup32Team13"
                 android:layout_toEndOf="@+id/cup32WIN_7"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -1640,11 +1654,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res28_Win_15_2set"
+                android:id="@+id/cup32Res20_Win_7_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team25"
-                android:layout_toEndOf="@+id/cup32Res28_Win_15"
+                android:layout_below="@+id/cup32Team13"
+                android:layout_toEndOf="@+id/cup32Res20_Win_7"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1653,11 +1667,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res28_Win_15_3set"
+                android:id="@+id/cup32Res20_Win_7_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team25"
-                android:layout_toEndOf="@+id/cup32Res28_Win_15_2set"
+                android:layout_below="@+id/cup32Team13"
+                android:layout_toEndOf="@+id/cup32Res20_Win_7_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1665,10 +1679,10 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res28_Win_16"
+                android:id="@+id/cup32Res20_Win_8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_36"
+                android:layout_below="@+id/cup32WIN_20"
                 android:layout_toEndOf="@+id/cup32WIN_7"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -1677,11 +1691,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res28_Win_16_2set"
+                android:id="@+id/cup32Res20_Win_8_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_36"
-                android:layout_toEndOf="@+id/cup32Res28_Win_16"
+                android:layout_below="@+id/cup32WIN_20"
+                android:layout_toEndOf="@+id/cup32Res20_Win_8"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1690,11 +1704,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res28_Win_16_3set"
+                android:id="@+id/cup32Res20_Win_8_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_36"
-                android:layout_toEndOf="@+id/cup32Res28_Win_16_2set"
+                android:layout_below="@+id/cup32WIN_20"
+                android:layout_toEndOf="@+id/cup32Res20_Win_8_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1710,8 +1724,8 @@
                 android:text="R11"
                 android:textColor="#000"
                 android:textSize="20sp"
-                android:layout_alignBaseline="@+id/cup32numberOfMatch41"
-                android:layout_toEndOf="@+id/cup32WIN_41"/>
+                android:layout_alignBaseline="@+id/cup32numberOfMatch21"
+                android:layout_toEndOf="@+id/cup32WIN_21"/>
 
             <TextView
                 android:id="@+id/cup32E3"
@@ -1719,7 +1733,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="310dp"
                 android:layout_marginTop="20dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E3"
                 android:textColor="#000000"
                 android:textSize="16dp" />
@@ -1729,7 +1743,7 @@
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="328dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
@@ -1737,7 +1751,7 @@
                 android:textSize="11dp" />
 
             <TextView
-                android:id="@+id/cup32E62"
+                android:id="@+id/cup32E30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32E3"
@@ -1746,10 +1760,10 @@
                 android:textColor="#000000"
                 android:textSize="16dp"
                 android:layout_marginStart="300dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"/>
+                android:layout_toEndOf="@+id/cup32WIN_17"/>
 
             <Button
-                android:id="@+id/cup32Team62"
+                android:id="@+id/cup32Team30"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_below="@+id/cup32Team3"
@@ -1759,10 +1773,10 @@
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"/>
+                android:layout_toEndOf="@+id/cup32WIN_17"/>
 
             <Button
-                android:id="@+id/cup32WIN_17"
+                android:id="@+id/cup32WIN_9"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="5dp"
@@ -1770,24 +1784,24 @@
                 android:layout_toEndOf="@+id/cup32Team3"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.17"
+                android:text="WIN.9"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch17"
+                android:id="@+id/cup32numberOfMatch9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="429dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_marginStart="435dp"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:layout_marginTop="49dp"
-                android:text="17"
+                android:text="9"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res17_3"
+                android:id="@+id/cup32Res9_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@+id/cup32Team3"
@@ -1795,16 +1809,16 @@
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
-                android:nextFocusDown="@+id/cup32Res17_30"
+                android:nextFocusDown="@+id/cup32Res9_30"
                 android:singleLine="true"
                 android:textSize="12dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res17_3_2set"
+                android:id="@+id/cup32Res9_3_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/cup32Res17_3"
+                android:layout_toEndOf="@+id/cup32Res9_3"
                 android:layout_marginTop="4dp"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -1814,10 +1828,10 @@
 
             <EditText
 
-                android:id="@+id/cup32Res17_3_3set"
+                android:id="@+id/cup32Res9_3_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/cup32Res17_3_2set"
+                android:layout_toEndOf="@+id/cup32Res9_3_2set"
                 android:layout_marginTop="4dp"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -1827,11 +1841,11 @@
 
 
             <EditText
-                android:id="@+id/cup32Res17_30"
+                android:id="@+id/cup32Res9_30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_17"
-                android:layout_toEndOf="@+id/cup32Team62"
+                android:layout_below="@+id/cup32WIN_9"
+                android:layout_toEndOf="@+id/cup32Team30"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1839,11 +1853,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res17_30_2set"
+                android:id="@+id/cup32Res9_30_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_17"
-                android:layout_toEndOf="@+id/cup32Res17_30"
+                android:layout_below="@+id/cup32WIN_9"
+                android:layout_toEndOf="@+id/cup32Res9_30"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1851,11 +1865,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res17_30_3set"
+                android:id="@+id/cup32Res9_30_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_17"
-                android:layout_toEndOf="@+id/cup32Res17_30_2set"
+                android:layout_below="@+id/cup32WIN_9"
+                android:layout_toEndOf="@+id/cup32Res9_30_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1864,104 +1878,104 @@
 
 
             <TextView
-                android:id="@+id/cup32E35"
+                android:id="@+id/cup32E19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E62"
+                android:layout_below="@+id/cup32E30"
                 android:layout_marginTop="50dp"
                 android:layout_marginStart="300dp"
                 android:text="E19"
                 android:textColor="#000000"
                 android:textSize="16dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 />
 
             <TextView
-                android:id="@+id/cup32E30"
+                android:id="@+id/cup32E14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E35"
+                android:layout_below="@+id/cup32E19"
                 android:layout_marginTop="28dp"
                 android:layout_marginStart="300dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E14"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
 
             <Button
-                android:id="@+id/cup32Team35"
+                android:id="@+id/cup32Team19"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_below="@+id/cup32Team3"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <Button
-                android:id="@+id/cup32Team30"
+                android:id="@+id/cup32Team14"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team35"
+                android:layout_below="@+id/cup32Team19"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
 
             <Button
-                android:id="@+id/cup32WIN_18"
+                android:id="@+id/cup32WIN_10"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32WIN_17"
+                android:layout_below="@+id/cup32WIN_9"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32Team35"
+                android:layout_toEndOf="@+id/cup32Team19"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.18"
+                android:text="WIN.10"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch18"
+                android:id="@+id/cup32numberOfMatch10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32numberOfMatch17"
+                android:layout_below="@+id/cup32numberOfMatch9"
                 android:layout_marginStart="429dp"
                 android:layout_marginTop="102dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
-                android:text="18"
+                android:layout_toEndOf="@+id/cup32WIN_17"
+                android:text="10"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch41"
+                android:id="@+id/cup32numberOfMatch21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_17"
+                android:layout_below="@+id/cup32WIN_9"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="28dp"
-                android:layout_toEndOf="@+id/cup32Team30"
-                android:text="29"
+                android:layout_toEndOf="@+id/cup32Team14"
+                android:text="21"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res18_19"
+                android:id="@+id/cup32Res10_19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res17_3"
+                android:layout_below="@+id/cup32Res9_3"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Team30"
+                android:layout_toEndOf="@+id/cup32Team14"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1970,12 +1984,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res18_19_2set"
+                android:id="@+id/cup32Res10_19_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res17_3"
+                android:layout_below="@+id/cup32Res9_3"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res18_19"
+                android:layout_toEndOf="@+id/cup32Res10_19"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1984,12 +1998,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res18_19_3set"
+                android:id="@+id/cup32Res10_19_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res17_3"
+                android:layout_below="@+id/cup32Res9_3"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res18_19_2set"
+                android:layout_toEndOf="@+id/cup32Res10_19_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1999,11 +2013,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res18_14"
+                android:id="@+id/cup32Res10_14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_18"
-                android:layout_toEndOf="@+id/cup32Team30"
+                android:layout_below="@+id/cup32WIN_10"
+                android:layout_toEndOf="@+id/cup32Team14"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2012,11 +2026,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res18_14_2set"
+                android:id="@+id/cup32Res10_14_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_18"
-                android:layout_toEndOf="@+id/cup32Res18_14"
+                android:layout_below="@+id/cup32WIN_10"
+                android:layout_toEndOf="@+id/cup32Res10_14"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2025,11 +2039,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res18_14_3set"
+                android:id="@+id/cup32Res10_14_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_18"
-                android:layout_toEndOf="@+id/cup32Res18_14_2set"
+                android:layout_below="@+id/cup32WIN_10"
+                android:layout_toEndOf="@+id/cup32Res10_14_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2038,25 +2052,25 @@
 
 
             <Button
-                android:id="@+id/cup32WIN_41"
+                android:id="@+id/cup32WIN_21"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32WIN_17"
+                android:layout_below="@+id/cup32WIN_9"
                 android:layout_marginTop="15dp"
-                android:layout_toEndOf="@+id/cup32WIN_17"
+                android:layout_toEndOf="@+id/cup32WIN_9"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.29"
+                android:text="WIN.21"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <EditText
-                android:id="@+id/cup32Res29_Win_17"
+                android:id="@+id/cup32Res21_Win_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32Team3"
 
-                android:layout_toEndOf="@+id/cup32WIN_17"
+                android:layout_toEndOf="@+id/cup32WIN_9"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2064,11 +2078,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res29_Win_17_2set"
+                android:id="@+id/cup32Res21_Win_9_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32Team3"
-                android:layout_toEndOf="@+id/cup32Res29_Win_17"
+                android:layout_toEndOf="@+id/cup32Res21_Win_9"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2077,11 +2091,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res29_Win_17_3set"
+                android:id="@+id/cup32Res21_Win_9_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32Team3"
-                android:layout_toEndOf="@+id/cup32Res29_Win_17_2set"
+                android:layout_toEndOf="@+id/cup32Res21_Win_9_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2089,11 +2103,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res29_Win_18"
+                android:id="@+id/cup32Res21_Win_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_41"
-                android:layout_toEndOf="@+id/cup32WIN_17"
+                android:layout_below="@+id/cup32WIN_21"
+                android:layout_toEndOf="@+id/cup32WIN_9"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2101,11 +2115,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res29_Win_18_2set"
+                android:id="@+id/cup32Res21_Win_10_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_41"
-                android:layout_toEndOf="@+id/cup32Res29_Win_18"
+                android:layout_below="@+id/cup32WIN_21"
+                android:layout_toEndOf="@+id/cup32Res21_Win_10"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2114,11 +2128,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res29_Win_18_3set"
+                android:id="@+id/cup32Res21_Win_10_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_41"
-                android:layout_toEndOf="@+id/cup32Res29_Win_18_2set"
+                android:layout_below="@+id/cup32WIN_21"
+                android:layout_toEndOf="@+id/cup32Res21_Win_10_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2132,108 +2146,108 @@
                 android:text="R14"
                 android:textColor="#000"
                 android:textSize="20sp"
-                android:layout_alignBaseline="@+id/cup32numberOfMatch42"
-                android:layout_toEndOf="@+id/cup32WIN_42"/>
+                android:layout_alignBaseline="@+id/cup32numberOfMatch22"
+                android:layout_toEndOf="@+id/cup32WIN_22"/>
 
             <TextView
-                android:id="@+id/cup32E19"
+                android:id="@+id/cup32E11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team30"
+                android:layout_below="@+id/cup32Team14"
                 android:layout_marginTop="60dp"
                 android:layout_marginStart="300dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E11"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/cup32Team19"
+                android:id="@+id/cup32Team11"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@id/cup32Team30"
+                android:layout_below="@id/cup32Team14"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="50dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <TextView
-                android:id="@+id/cup32E46"
+                android:id="@+id/cup32E22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E19"
+                android:layout_below="@+id/cup32E11"
                 android:layout_marginStart="300dp"
                 android:layout_marginTop="30dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E22"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/cup32Team46"
+                android:id="@+id/cup32Team22"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team19"
+                android:layout_below="@+id/cup32Team11"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <Button
-                android:id="@+id/cup32WIN_19"
+                android:id="@+id/cup32WIN_11"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@id/cup32Team30"
+                android:layout_below="@id/cup32Team14"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="78dp"
-                android:layout_toEndOf="@+id/cup32Team19"
+                android:layout_toEndOf="@+id/cup32Team11"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.19"
+                android:text="WIN.11"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch19"
+                android:id="@+id/cup32numberOfMatch11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team30"
+                android:layout_below="@id/cup32Team14"
                 android:layout_marginStart="429dp"
                 android:layout_marginTop="90dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
-                android:text="19"
+                android:layout_toEndOf="@+id/cup32WIN_17"
+                android:text="11"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res19_11"
+                android:id="@+id/cup32Res11_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team30"
+                android:layout_below="@id/cup32Team14"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Team19"
+                android:layout_toEndOf="@+id/cup32Team11"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
-                android:nextFocusDown="@+id/cup32Res19_22"
+                android:nextFocusDown="@+id/cup32Res11_22"
                 android:singleLine="true"
                 android:textSize="12dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res19_11_2set"
+                android:id="@+id/cup32Res11_11_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team30"
+                android:layout_below="@id/cup32Team14"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Res19_11"
+                android:layout_toEndOf="@+id/cup32Res11_11"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2242,12 +2256,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res19_11_3set"
+                android:id="@+id/cup32Res11_11_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cup32Team30"
+                android:layout_below="@id/cup32Team14"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup32Res19_11_2set"
+                android:layout_toEndOf="@+id/cup32Res11_11_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2256,11 +2270,11 @@
 
 
             <EditText
-                android:id="@+id/cup32Res19_22"
+                android:id="@+id/cup32Res11_22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_19"
-                android:layout_toEndOf="@+id/cup32Team46"
+                android:layout_below="@+id/cup32WIN_11"
+                android:layout_toEndOf="@+id/cup32Team22"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2268,11 +2282,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res19_22_2set"
+                android:id="@+id/cup32Res11_22_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_19"
-                android:layout_toEndOf="@+id/cup32Res19_22"
+                android:layout_below="@+id/cup32WIN_11"
+                android:layout_toEndOf="@+id/cup32Res11_22"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2280,11 +2294,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res19_22_3set"
+                android:id="@+id/cup32Res11_22_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_19"
-                android:layout_toEndOf="@+id/cup32Res19_22_2set"
+                android:layout_below="@+id/cup32WIN_11"
+                android:layout_toEndOf="@+id/cup32Res11_22_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2293,49 +2307,49 @@
 
 
             <TextView
-                android:id="@+id/cup32E51"
+                android:id="@+id/cup32E27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E46"
+                android:layout_below="@+id/cup32E22"
                 android:layout_marginTop="50dp"
                 android:layout_marginStart="300dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E27"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <TextView
-                android:id="@+id/cup32E14"
+                android:id="@+id/cup32E6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E51"
+                android:layout_below="@+id/cup32E27"
                 android:layout_marginStart="310dp"
                 android:layout_marginTop="28dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E6"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
 
             <Button
-                android:id="@+id/cup32Team51"
+                android:id="@+id/cup32Team27"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team19"
+                android:layout_below="@+id/cup32Team11"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <Button
-                android:id="@+id/cup32Team14"
+                android:id="@+id/cup32Team6"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team51"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_below="@+id/cup32Team27"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
@@ -2345,51 +2359,51 @@
 
 
             <Button
-                android:id="@+id/cup32WIN_20"
+                android:id="@+id/cup32WIN_12"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32WIN_19"
+                android:layout_below="@+id/cup32WIN_11"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32Team51"
+                android:layout_toEndOf="@+id/cup32Team27"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.20"
+                android:text="WIN.12"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch20"
+                android:id="@+id/cup32numberOfMatch12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32numberOfMatch19"
+                android:layout_below="@+id/cup32numberOfMatch11"
                 android:layout_marginStart="429dp"
                 android:layout_marginTop="102dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
-                android:text="20"
+                android:layout_toEndOf="@+id/cup32WIN_17"
+                android:text="12"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch42"
+                android:id="@+id/cup32numberOfMatch22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_19"
+                android:layout_below="@+id/cup32WIN_11"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="28dp"
-                android:layout_toEndOf="@+id/cup32Team14"
-                android:text="30"
+                android:layout_toEndOf="@+id/cup32Team6"
+                android:text="22"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res20_27"
+                android:id="@+id/cup32Res12_27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res19_11"
+                android:layout_below="@+id/cup32Res11_11"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Team14"
+                android:layout_toEndOf="@+id/cup32Team6"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2398,12 +2412,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res20_27_2set"
+                android:id="@+id/cup32Res12_27_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res19_11"
+                android:layout_below="@+id/cup32Res11_11"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res20_27"
+                android:layout_toEndOf="@+id/cup32Res12_27"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2412,12 +2426,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res20_27_3set"
+                android:id="@+id/cup32Res12_27_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res19_11"
+                android:layout_below="@+id/cup32Res11_11"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res20_27_2set"
+                android:layout_toEndOf="@+id/cup32Res12_27_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2427,11 +2441,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res20_6"
+                android:id="@+id/cup32Res12_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_20"
-                android:layout_toEndOf="@+id/cup32Team14"
+                android:layout_below="@+id/cup32WIN_12"
+                android:layout_toEndOf="@+id/cup32Team6"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2440,11 +2454,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res20_6_2set"
+                android:id="@+id/cup32Res12_6_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_20"
-                android:layout_toEndOf="@+id/cup32Res20_6"
+                android:layout_below="@+id/cup32WIN_12"
+                android:layout_toEndOf="@+id/cup32Res12_6"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2453,11 +2467,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res20_6_3set"
+                android:id="@+id/cup32Res12_6_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_20"
-                android:layout_toEndOf="@+id/cup32Res20_6_2set"
+                android:layout_below="@+id/cup32WIN_12"
+                android:layout_toEndOf="@+id/cup32Res12_6_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2466,24 +2480,24 @@
 
 
             <Button
-                android:id="@+id/cup32WIN_42"
+                android:id="@+id/cup32WIN_22"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32WIN_19"
+                android:layout_below="@+id/cup32WIN_11"
                 android:layout_marginTop="15dp"
-                android:layout_toEndOf="@+id/cup32WIN_19"
+                android:layout_toEndOf="@+id/cup32WIN_11"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.30"
+                android:text="WIN.22"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <EditText
-                android:id="@+id/cup32Res30_Win_19"
+                android:id="@+id/cup32Res22_Win_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team19"
-                android:layout_toEndOf="@+id/cup32WIN_19"
+                android:layout_below="@+id/cup32Team11"
+                android:layout_toEndOf="@+id/cup32WIN_11"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2491,48 +2505,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res30_Win_19_2set"
+                android:id="@+id/cup32Res22_Win_11_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team19"
-                android:layout_toEndOf="@+id/cup32Res30_Win_19"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-
-                android:id="@+id/cup32Res30_Win_19_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team19"
-                android:layout_toEndOf="@+id/cup32Res30_Win_19_2set"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-                android:id="@+id/cup32Res30_Win_20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_42"
-                android:layout_toEndOf="@+id/cup32WIN_19"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-                android:id="@+id/cup32Res30_Win_20_2set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_42"
-                android:layout_toEndOf="@+id/cup32Res30_Win_20"
+                android:layout_below="@+id/cup32Team11"
+                android:layout_toEndOf="@+id/cup32Res22_Win_11"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2541,11 +2518,48 @@
 
             <EditText
 
-                android:id="@+id/cup32Res30_Win_20_3set"
+                android:id="@+id/cup32Res22_Win_11_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_42"
-                android:layout_toEndOf="@+id/cup32Res30_Win_20_2set"
+                android:layout_below="@+id/cup32Team11"
+                android:layout_toEndOf="@+id/cup32Res22_Win_11_2set"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/cup32Res22_Win_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32WIN_22"
+                android:layout_toEndOf="@+id/cup32WIN_11"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/cup32Res22_Win_12_2set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32WIN_22"
+                android:layout_toEndOf="@+id/cup32Res22_Win_12"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <EditText
+
+                android:id="@+id/cup32Res22_Win_12_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32WIN_22"
+                android:layout_toEndOf="@+id/cup32Res22_Win_12_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2560,135 +2574,135 @@
                 android:text="R15"
                 android:textColor="#000"
                 android:textSize="20sp"
-                android:layout_toEndOf="@+id/cup32WIN_43"
-                android:layout_alignBaseline="@+id/cup32numberOfMatch43"/>
+                android:layout_toEndOf="@+id/cup32WIN_23"
+                android:layout_alignBaseline="@+id/cup32numberOfMatch23"/>
             <TextView
-                android:id="@+id/cup32E11"
+                android:id="@+id/cup32E7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
                 android:layout_marginStart="310dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E7"
                 android:textColor="#000000"
                 android:textSize="16dp"
-                android:layout_below="@+id/cup32Team14"
+                android:layout_below="@+id/cup32Team6"
                 />
 
             <Button
-                android:id="@+id/cup32Team11"
+                android:id="@+id/cup32Team7"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="50dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@id/cup32Team14"/>
+                android:layout_below="@id/cup32Team6"/>
 
             <TextView
-                android:id="@+id/cup32E54"
+                android:id="@+id/cup32E26"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E11"
+                android:layout_below="@+id/cup32E7"
                 android:layout_marginTop="30dp"
                 android:layout_marginStart="300dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E26"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/cup32Team54"
+                android:id="@+id/cup32Team26"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team11"
+                android:layout_below="@+id/cup32Team7"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <Button
-                android:id="@+id/cup32WIN_21"
+                android:id="@+id/cup32WIN_13"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="78dp"
-                android:layout_toEndOf="@+id/cup32Team11"
+                android:layout_toEndOf="@+id/cup32Team7"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.21"
+                android:text="WIN.13"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@id/cup32Team14"/>
+                android:layout_below="@id/cup32Team6"/>
 
             <TextView
-                android:id="@+id/cup32numberOfMatch21"
+                android:id="@+id/cup32numberOfMatch13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="429dp"
                 android:layout_marginTop="90dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
-                android:layout_below="@id/cup32Team14"
-                android:text="21"
+                android:layout_toEndOf="@+id/cup32WIN_17"
+                android:layout_below="@id/cup32Team6"
+                android:text="13"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res21_7"
+                android:id="@+id/cup32Res13_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/cup32Team11"
+                android:layout_toEndOf="@+id/cup32Team7"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
-                android:nextFocusDown="@+id/cup32Res21_26"
+                android:nextFocusDown="@+id/cup32Res13_26"
                 android:singleLine="true"
                 android:textSize="12dp"
-                android:layout_below="@id/cup32Team14"
+                android:layout_below="@id/cup32Team6"
                 android:layout_marginTop="45dp"/>
 
             <EditText
 
-                android:id="@+id/cup32Res21_7_2set"
+                android:id="@+id/cup32Res13_7_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/cup32Res21_7"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp"
-                android:layout_below="@id/cup32Team14"
-                android:layout_marginTop="45dp"/>
-
-            <EditText
-
-                android:id="@+id/cup32Res21_7_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/cup32Res21_7_2set"
+                android:layout_toEndOf="@+id/cup32Res13_7"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
                 android:singleLine="true"
                 android:textSize="12dp"
-                android:layout_below="@id/cup32Team14"
+                android:layout_below="@id/cup32Team6"
+                android:layout_marginTop="45dp"/>
+
+            <EditText
+
+                android:id="@+id/cup32Res13_7_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/cup32Res13_7_2set"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp"
+                android:layout_below="@id/cup32Team6"
                 android:layout_marginTop="45dp"/>
 
 
             <EditText
-                android:id="@+id/cup32Res21_26"
+                android:id="@+id/cup32Res13_26"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_21"
-                android:layout_toEndOf="@+id/cup32Team54"
+                android:layout_below="@+id/cup32WIN_13"
+                android:layout_toEndOf="@+id/cup32Team26"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2696,11 +2710,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res21_26_2set"
+                android:id="@+id/cup32Res13_26_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_21"
-                android:layout_toEndOf="@+id/cup32Res21_26"
+                android:layout_below="@+id/cup32WIN_13"
+                android:layout_toEndOf="@+id/cup32Res13_26"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2708,11 +2722,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res21_26_3set"
+                android:id="@+id/cup32Res13_26_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_21"
-                android:layout_toEndOf="@+id/cup32Res21_26_2set"
+                android:layout_below="@+id/cup32WIN_13"
+                android:layout_toEndOf="@+id/cup32Res13_26_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2721,51 +2735,51 @@
 
 
             <TextView
-                android:id="@+id/cup32E43"
+                android:id="@+id/cup32E23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E54"
+                android:layout_below="@+id/cup32E26"
                 android:layout_marginTop="50dp"
                 android:layout_marginStart="300dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E23"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <TextView
-                android:id="@+id/cup32E22"
+                android:id="@+id/cup32E10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E43"
+                android:layout_below="@+id/cup32E23"
                 android:layout_marginTop="28dp"
                 android:layout_marginStart="300dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E10"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
 
             <Button
-                android:id="@+id/cup32Team43"
+                android:id="@+id/cup32Team23"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team11"
+                android:layout_below="@+id/cup32Team7"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <Button
-                android:id="@+id/cup32Team22"
+                android:id="@+id/cup32Team10"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team43"
+                android:layout_below="@+id/cup32Team23"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
@@ -2773,51 +2787,51 @@
 
 
             <Button
-                android:id="@+id/cup32WIN_22"
+                android:id="@+id/cup32WIN_14"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32WIN_21"
+                android:layout_below="@+id/cup32WIN_13"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32Team43"
+                android:layout_toEndOf="@+id/cup32Team23"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.22"
+                android:text="WIN.14"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch22"
+                android:id="@+id/cup32numberOfMatch14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32numberOfMatch21"
+                android:layout_below="@+id/cup32numberOfMatch13"
                 android:layout_marginStart="429dp"
                 android:layout_marginTop="102dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
-                android:text="22"
+                android:layout_toEndOf="@+id/cup32WIN_17"
+                android:text="14"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <TextView
-                android:id="@+id/cup32numberOfMatch43"
+                android:id="@+id/cup32numberOfMatch23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_21"
+                android:layout_below="@+id/cup32WIN_13"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="28dp"
-                android:layout_toEndOf="@+id/cup32Team22"
-                android:text="31"
+                android:layout_toEndOf="@+id/cup32Team10"
+                android:text="23"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res22_23"
+                android:id="@+id/cup32Res14_23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res21_7"
+                android:layout_below="@+id/cup32Res13_7"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Team22"
+                android:layout_toEndOf="@+id/cup32Team10"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2826,12 +2840,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res22_23_2set"
+                android:id="@+id/cup32Res14_23_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res21_7"
+                android:layout_below="@+id/cup32Res13_7"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res22_23"
+                android:layout_toEndOf="@+id/cup32Res14_23"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2840,12 +2854,12 @@
 
             <EditText
 
-                android:id="@+id/cup32Res22_23_3set"
+                android:id="@+id/cup32Res14_23_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res21_7"
+                android:layout_below="@+id/cup32Res13_7"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res22_23_2set"
+                android:layout_toEndOf="@+id/cup32Res14_23_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2855,11 +2869,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res22_10"
+                android:id="@+id/cup32Res14_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_22"
-                android:layout_toEndOf="@+id/cup32Team22"
+                android:layout_below="@+id/cup32WIN_14"
+                android:layout_toEndOf="@+id/cup32Team10"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2868,11 +2882,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res22_10_2set"
+                android:id="@+id/cup32Res14_10_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_22"
-                android:layout_toEndOf="@+id/cup32Res22_10"
+                android:layout_below="@+id/cup32WIN_14"
+                android:layout_toEndOf="@+id/cup32Res14_10"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2881,11 +2895,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res22_10_3set"
+                android:id="@+id/cup32Res14_10_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_22"
-                android:layout_toEndOf="@+id/cup32Res22_10_2set"
+                android:layout_below="@+id/cup32WIN_14"
+                android:layout_toEndOf="@+id/cup32Res14_10_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2894,24 +2908,24 @@
 
 
             <Button
-                android:id="@+id/cup32WIN_43"
+                android:id="@+id/cup32WIN_23"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32WIN_21"
+                android:layout_below="@+id/cup32WIN_13"
                 android:layout_marginTop="15dp"
-                android:layout_toEndOf="@+id/cup32WIN_21"
+                android:layout_toEndOf="@+id/cup32WIN_13"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.31"
+                android:text="WIN.23"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <EditText
-                android:id="@+id/cup32Res31_Win_21"
+                android:id="@+id/cup32Res23_Win_13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team11"
-                android:layout_toEndOf="@+id/cup32WIN_21"
+                android:layout_below="@+id/cup32Team7"
+                android:layout_toEndOf="@+id/cup32WIN_13"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2919,48 +2933,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res31_Win_21_2set"
+                android:id="@+id/cup32Res23_Win_13_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team11"
-                android:layout_toEndOf="@+id/cup32Res31_Win_21"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-
-                android:id="@+id/cup32Res31_Win_21_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team11"
-                android:layout_toEndOf="@+id/cup32Res31_Win_21_2set"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-                android:id="@+id/cup32Res31_Win_22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_43"
-                android:layout_toEndOf="@+id/cup32WIN_21"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-                android:id="@+id/cup32Res31_Win_22_2set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_43"
-                android:layout_toEndOf="@+id/cup32Res31_Win_22"
+                android:layout_below="@+id/cup32Team7"
+                android:layout_toEndOf="@+id/cup32Res23_Win_13"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2969,11 +2946,48 @@
 
             <EditText
 
-                android:id="@+id/cup32Res31_Win_22_3set"
+                android:id="@+id/cup32Res23_Win_13_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_43"
-                android:layout_toEndOf="@+id/cup32Res31_Win_22_2set"
+                android:layout_below="@+id/cup32Team7"
+                android:layout_toEndOf="@+id/cup32Res23_Win_13_2set"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/cup32Res23_Win_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32WIN_23"
+                android:layout_toEndOf="@+id/cup32WIN_13"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/cup32Res23_Win_14_2set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32WIN_23"
+                android:layout_toEndOf="@+id/cup32Res23_Win_14"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <EditText
+
+                android:id="@+id/cup32Res23_Win_14_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32WIN_23"
+                android:layout_toEndOf="@+id/cup32Res23_Win_14_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -2988,137 +3002,137 @@
                 android:text="R10"
                 android:textColor="#000"
                 android:textSize="20sp"
-                android:layout_alignBaseline="@+id/cup32numberOfMatch44"
-                android:layout_toEndOf="@+id/cup32WIN_44"
+                android:layout_alignBaseline="@+id/cup32numberOfMatch24"
+                android:layout_toEndOf="@+id/cup32WIN_24"
                 />
 
             <TextView
-                android:id="@+id/cup32E27"
+                android:id="@+id/cup32E15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E15"
                 android:layout_marginStart="300dp"
                 android:textColor="#000000"
                 android:textSize="16dp"
-                android:layout_below="@+id/cup32Team22"
+                android:layout_below="@+id/cup32Team10"
                 />
 
             <Button
-                android:id="@+id/cup32Team27"
+                android:id="@+id/cup32Team15"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="50dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@id/cup32Team22"/>
+                android:layout_below="@id/cup32Team10"/>
 
             <TextView
-                android:id="@+id/cup32E38"
+                android:id="@+id/cup32E18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E27"
+                android:layout_below="@+id/cup32E15"
                 android:layout_marginTop="30dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E18"
                 android:layout_marginStart="300dp"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <Button
-                android:id="@+id/cup32Team38"
+                android:id="@+id/cup32Team18"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team27"
+                android:layout_below="@+id/cup32Team15"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <Button
-                android:id="@+id/cup32WIN_23"
+                android:id="@+id/cup32WIN_15"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="78dp"
-                android:layout_toEndOf="@+id/cup32Team27"
+                android:layout_toEndOf="@+id/cup32Team15"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
-                android:text="WIN.23"
+                android:text="WIN.15"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@id/cup32Team22"/>
+                android:layout_below="@id/cup32Team10"/>
 
             <TextView
-                android:id="@+id/cup32numberOfMatch23"
+                android:id="@+id/cup32numberOfMatch15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="429dp"
                 android:layout_marginTop="90dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
-                android:layout_below="@id/cup32Team22"
-                android:text="23"
+                android:layout_toEndOf="@+id/cup32WIN_17"
+                android:layout_below="@id/cup32Team10"
+                android:text="15"
                 android:textColor="#000000"
                 android:textSize="13dp" />
 
             <EditText
 
-                android:id="@+id/cup32Res23_15"
+                android:id="@+id/cup32Res15_15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/cup32Team27"
+                android:layout_toEndOf="@+id/cup32Team15"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
-                android:nextFocusDown="@+id/cup32Res23_18"
+                android:nextFocusDown="@+id/cup32Res15_18"
                 android:singleLine="true"
                 android:textSize="12dp"
-                android:layout_below="@id/cup32Team22"
+                android:layout_below="@id/cup32Team10"
                 android:layout_marginTop="45dp"/>
 
             <EditText
 
-                android:id="@+id/cup32Res23_15_2set"
+                android:id="@+id/cup32Res15_15_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/cup32Res23_15"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp"
-                android:layout_below="@id/cup32Team22"
-                android:layout_marginTop="45dp"/>
-
-            <EditText
-
-                android:id="@+id/cup32Res23_15_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/cup32Res23_15_2set"
+                android:layout_toEndOf="@+id/cup32Res15_15"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
                 android:singleLine="true"
                 android:textSize="12dp"
-                android:layout_below="@id/cup32Team22"
+                android:layout_below="@id/cup32Team10"
+                android:layout_marginTop="45dp"/>
+
+            <EditText
+
+                android:id="@+id/cup32Res15_15_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/cup32Res15_15_2set"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp"
+                android:layout_below="@id/cup32Team10"
                 android:layout_marginTop="45dp"/>
 
 
             <EditText
-                android:id="@+id/cup32Res23_18"
+                android:id="@+id/cup32Res15_18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_23"
-                android:layout_toEndOf="@+id/cup32Team38"
+                android:layout_below="@+id/cup32WIN_15"
+                android:layout_toEndOf="@+id/cup32Team18"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -3126,11 +3140,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res23_18_2set"
+                android:id="@+id/cup32Res15_18_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_23"
-                android:layout_toEndOf="@+id/cup32Res23_18"
+                android:layout_below="@+id/cup32WIN_15"
+                android:layout_toEndOf="@+id/cup32Res15_18"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -3138,11 +3152,11 @@
                 android:textSize="12dp" />
 
             <EditText
-                android:id="@+id/cup32Res23_18_3set"
+                android:id="@+id/cup32Res15_18_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_23"
-                android:layout_toEndOf="@+id/cup32Res23_18_2set"
+                android:layout_below="@+id/cup32WIN_15"
+                android:layout_toEndOf="@+id/cup32Res15_18_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -3151,24 +3165,24 @@
 
 
             <TextView
-                android:id="@+id/cup32E59"
+                android:id="@+id/cup32E31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E38"
+                android:layout_below="@+id/cup32E18"
                 android:layout_marginTop="50dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:text="E31"
                 android:layout_marginStart="300dp"
                 android:textColor="#000000"
                 android:textSize="16dp" />
 
             <TextView
-                android:id="@+id/cup32E6"
+                android:id="@+id/cup32E2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32E59"
+                android:layout_below="@+id/cup32E31"
                 android:layout_marginTop="28dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:layout_marginStart="310dp"
                 android:text="E2"
                 android:textColor="#000000"
@@ -3176,78 +3190,184 @@
 
 
             <Button
-                android:id="@+id/cup32Team59"
+                android:id="@+id/cup32Team31"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team27"
+                android:layout_below="@+id/cup32Team15"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
             <Button
-                android:id="@+id/cup32Team6"
+                android:id="@+id/cup32Team2"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32Team59"
+                android:layout_below="@+id/cup32Team31"
                 android:layout_marginStart="328dp"
                 android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/cup32WIN_33"
+                android:layout_toEndOf="@+id/cup32WIN_17"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp" />
+
+
+            <Button
+                android:id="@+id/cup32WIN_16"
+                android:layout_width="110dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/cup32WIN_15"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="75dp"
+                android:layout_toEndOf="@+id/cup32Team31"
+                android:background="@drawable/button_shape"
+                android:maxLength="30"
+                android:text="WIN.16"
+                android:textColor="#000000"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/cup32numberOfMatch16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32numberOfMatch15"
+                android:layout_toEndOf="@+id/cup32WIN_17"
+                android:layout_marginStart="429dp"
+                android:layout_marginTop="102dp"
+                android:text="16"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/cup32numberOfMatch24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32WIN_15"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="28dp"
+                android:layout_toEndOf="@+id/cup32Team2"
+                android:text="24"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+
+            <EditText
+
+                android:id="@+id/cup32Res16_31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32Res15_15"
+                android:layout_marginTop="84dp"
+                android:layout_toEndOf="@+id/cup32Team2"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <EditText
+
+                android:id="@+id/cup32Res16_31_2set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32Res15_15"
+                android:layout_marginTop="84dp"
+                android:layout_toEndOf="@+id/cup32Res16_31"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <EditText
+
+                android:id="@+id/cup32Res16_31_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32Res15_15"
+                android:layout_marginTop="84dp"
+                android:layout_toEndOf="@+id/cup32Res16_31_2set"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+
+            <EditText
+
+                android:id="@+id/cup32Res16_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32WIN_16"
+                android:layout_toEndOf="@+id/cup32Team2"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <EditText
+
+                android:id="@+id/cup32Res16_2_2set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32WIN_16"
+                android:layout_toEndOf="@+id/cup32Res16_2"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
+
+            <EditText
+
+                android:id="@+id/cup32Res16_2_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cup32WIN_16"
+                android:layout_toEndOf="@+id/cup32Res16_2_2set"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
 
 
             <Button
                 android:id="@+id/cup32WIN_24"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup32WIN_23"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="75dp"
-                android:layout_toEndOf="@+id/cup32Team59"
+                android:layout_below="@+id/cup32WIN_15"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/cup32WIN_15"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:text="WIN.24"
                 android:textColor="#000000"
                 android:textSize="11dp" />
 
-            <TextView
-                android:id="@+id/cup32numberOfMatch24"
+            <EditText
+                android:id="@+id/cup32Res24_Win_15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32numberOfMatch23"
-                android:layout_toEndOf="@+id/cup32WIN_33"
-                android:layout_marginStart="429dp"
-                android:layout_marginTop="102dp"
-                android:text="24"
-                android:textColor="#000000"
-                android:textSize="13dp" />
-
-            <TextView
-                android:id="@+id/cup32numberOfMatch44"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_23"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="28dp"
-                android:layout_toEndOf="@+id/cup32Team6"
-                android:text="32"
-                android:textColor="#000000"
-                android:textSize="13dp" />
+                android:layout_below="@+id/cup32Team15"
+                android:layout_toEndOf="@+id/cup32WIN_15"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textSize="12dp" />
 
             <EditText
-
-                android:id="@+id/cup32Res24_31"
+                android:id="@+id/cup32Res24_Win_15_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res23_15"
-                android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Team6"
+                android:layout_below="@+id/cup32Team15"
+                android:layout_toEndOf="@+id/cup32Res24_Win_15"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -3256,12 +3376,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res24_31_2set"
+                android:id="@+id/cup32Res24_Win_15_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res23_15"
-                android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res24_31"
+                android:layout_below="@+id/cup32Team15"
+                android:layout_toEndOf="@+id/cup32Res24_Win_15_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -3269,27 +3388,11 @@
                 android:textSize="12dp" />
 
             <EditText
-
-                android:id="@+id/cup32Res24_31_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Res23_15"
-                android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/cup32Res24_31_2set"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-
-            <EditText
-
-                android:id="@+id/cup32Res24_2"
+                android:id="@+id/cup32Res24_Win_16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_24"
-                android:layout_toEndOf="@+id/cup32Team6"
+                android:layout_toEndOf="@+id/cup32WIN_15"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -3297,12 +3400,11 @@
                 android:textSize="12dp" />
 
             <EditText
-
-                android:id="@+id/cup32Res24_2_2set"
+                android:id="@+id/cup32Res24_Win_16_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_24"
-                android:layout_toEndOf="@+id/cup32Res24_2"
+                android:layout_toEndOf="@+id/cup32Res24_Win_16"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -3311,99 +3413,11 @@
 
             <EditText
 
-                android:id="@+id/cup32Res24_2_3set"
+                android:id="@+id/cup32Res24_Win_16_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup32WIN_24"
-                android:layout_toEndOf="@+id/cup32Res24_2_2set"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-
-            <Button
-                android:id="@+id/cup32WIN_44"
-                android:layout_width="110dp"
-                android:layout_height="45dp"
-                android:layout_below="@+id/cup32WIN_23"
-                android:layout_marginTop="15dp"
-                android:layout_toEndOf="@+id/cup32WIN_23"
-                android:background="@drawable/button_shape"
-                android:maxLength="30"
-                android:text="WIN.32"
-                android:textColor="#000000"
-                android:textSize="11dp" />
-
-            <EditText
-                android:id="@+id/cup32Res32_Win_23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team27"
-                android:layout_toEndOf="@+id/cup32WIN_23"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-                android:id="@+id/cup32Res32_Win_23_2set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team27"
-                android:layout_toEndOf="@+id/cup32Res32_Win_23"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-
-                android:id="@+id/cup32Res32_Win_23_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32Team27"
-                android:layout_toEndOf="@+id/cup32Res32_Win_23_2set"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-                android:id="@+id/cup32Res32_Win_24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_44"
-                android:layout_toEndOf="@+id/cup32WIN_23"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-                android:id="@+id/cup32Res32_Win_24_2set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_44"
-                android:layout_toEndOf="@+id/cup32Res32_Win_24"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textSize="12dp" />
-
-            <EditText
-
-                android:id="@+id/cup32Res32_Win_24_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/cup32WIN_44"
-                android:layout_toEndOf="@+id/cup32Res32_Win_24_2set"
+                android:layout_toEndOf="@+id/cup32Res24_Win_16_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
