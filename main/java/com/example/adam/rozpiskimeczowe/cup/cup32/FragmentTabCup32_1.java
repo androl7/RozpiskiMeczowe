@@ -452,30 +452,79 @@ public class FragmentTabCup32_1 extends Fragment {
 
 
 
-        final Button win9 = view.findViewById(R.id.cup32WIN_1);
-        final Button win10 = view.findViewById(R.id.cup32WIN_2);
-        final Button win11 = view.findViewById(R.id.cup32WIN_3);
-        final Button win12 = view.findViewById(R.id.cup32WIN_4);
-        final Button win13 = view.findViewById(R.id.cup32WIN_5);
-        final Button win14 = view.findViewById(R.id.cup32WIN_7);
-        final Button win15 = view.findViewById(R.id.cup32WIN_7);
-        final Button win16 = view.findViewById(R.id.cup32WIN_8);
-        final Button win17 = view.findViewById(R.id.cup32WIN_9);
-        final Button win18 = view.findViewById(R.id.cup32WIN_10);
-        final Button win19 = view.findViewById(R.id.cup32WIN_11);
-        final Button win20 = view.findViewById(R.id.cup32WIN_12);
-        final Button win21 = view.findViewById(R.id.cup32WIN_13);
-        final Button win22 = view.findViewById(R.id.cup32WIN_14);
-        final Button win23 = view.findViewById(R.id.cup32WIN_15);
-        final Button win24 = view.findViewById(R.id.cup32WIN_16);
-        final Button win25 = view.findViewById(R.id.cup32WIN_17);
-        final Button win26 = view.findViewById(R.id.cup32WIN_18);
-        final Button win27 = view.findViewById(R.id.cup32WIN_19);
-        final Button win28 = view.findViewById(R.id.cup32WIN_20);
-        final Button win29 = view.findViewById(R.id.cup32WIN_21);
-        final Button win30 = view.findViewById(R.id.cup32WIN_22);
-        final Button win31 = view.findViewById(R.id.cup32WIN_23);
-        final Button win32 = view.findViewById(R.id.cup32WIN_24);
+        final Button win1 = view.findViewById(R.id.cup32WIN_1);
+        final Button win2 = view.findViewById(R.id.cup32WIN_2);
+        final Button win3 = view.findViewById(R.id.cup32WIN_3);
+        final Button win4 = view.findViewById(R.id.cup32WIN_4);
+        final Button win5 = view.findViewById(R.id.cup32WIN_5);
+        final Button win6 = view.findViewById(R.id.cup32WIN_6);
+        final Button win7 = view.findViewById(R.id.cup32WIN_7);
+        final Button win8 = view.findViewById(R.id.cup32WIN_8);
+        final Button win9 = view.findViewById(R.id.cup32WIN_9);
+        final Button win10 = view.findViewById(R.id.cup32WIN_10);
+        final Button win11 = view.findViewById(R.id.cup32WIN_11);
+        final Button win12 = view.findViewById(R.id.cup32WIN_12);
+        final Button win13 = view.findViewById(R.id.cup32WIN_13);
+        final Button win14 = view.findViewById(R.id.cup32WIN_14);
+        final Button win15 = view.findViewById(R.id.cup32WIN_15);
+        final Button win16 = view.findViewById(R.id.cup32WIN_16);
+        final Button win17 = view.findViewById(R.id.cup32WIN_17);
+        final Button win18 = view.findViewById(R.id.cup32WIN_18);
+        final Button win19 = view.findViewById(R.id.cup32WIN_19);
+        final Button win20 = view.findViewById(R.id.cup32WIN_20);
+        final Button win21 = view.findViewById(R.id.cup32WIN_21);
+        final Button win22 = view.findViewById(R.id.cup32WIN_22);
+        final Button win23 = view.findViewById(R.id.cup32WIN_23);
+        final Button win24 = view.findViewById(R.id.cup32WIN_24);
+
+        setResult(team1,team32,win1,"WIN.1",res1_1,res1_1_2set,res1_1_3set,res1_32,res1_32_2set,res1_32_3set);
+
+        setResult(team17,team16,win2,"WIN.2",res2_17,res2_17_2set,res2_17_3set,res2_16,res2_16_2set,res2_16_3set);
+
+        setResult(team9,team24,win3,"WIN.3",res3_9,res3_9_2set,res3_9_3set,res3_24,res3_24_2set,res3_24_3set);
+
+        setResult(team25,team8,win4,"WIN.4",res4_25,res4_25_2set,res4_25_3set,res4_8,res4_8_2set,res4_8_3set);
+
+        setResult(team5,team28,win5,"WIN.5",res5_5,res5_5_2set,res5_5_3set,res5_28,res5_28_2set,res5_28_3set);
+
+        setResult(team21,team12,win6,"WIN.6",res6_21,res6_21_2set,res6_21_3set,res6_12,res6_12_2set,res6_12_3set);
+
+        setResult(team13,team20,win7,"WIN.7",res7_13,res7_13_2set,res7_13_3set,res7_20,res7_20_2set,res7_20_3set);
+
+        setResult(team29,team4,win8,"WIN.8",res8_29,res8_29_2set,res8_29_3set,res8_4,res8_4_2set,res8_4_3set);
+
+        setResult(team3,team30,win9,"WIN.9",res9_3,res9_3_2set,res9_3_3set,res9_30,res9_30_2set,res9_30_3set);
+
+        setResult(team19,team14,win10,"WIN.10",res10_19,res10_19_2set,res10_19_3set,res10_14,res10_14_2set,res10_14_3set);
+
+        setResult(team11,team22,win11,"WIN.11",res11_11,res11_11_2set,res11_11_3set,res11_22,res11_22_2set,res11_22_3set);
+
+        setResult(team27,team6,win12,"WIN.12",res12_27,res12_27_2set,res12_27_3set,res12_6,res12_6_2set,res12_6_3set);
+
+        setResult(team7,team26,win13,"WIN.13",res13_7,res13_7_2set,res13_7_3set,res13_26,res13_26_2set,res13_26_3set);
+
+        setResult(team23,team10,win14,"WIN.14",res14_23,res14_23_2set,res14_23_3set,res14_10,res14_10_2set,res14_10_3set);
+
+        setResult(team15,team18,win15,"WIN.15",res15_15,res15_15_2set,res15_15_3set,res15_18,res15_18_2set,res15_18_3set);
+
+        setResult(team31,team2,win16,"WIN.16",res16_31,res16_31_2set,res16_31_3set,res16_2,res16_2_2set,res16_2_3set);
+
+
+        setResult(win1,"WIN.1",win2,"WIN.2",win17,"WIN.17",res17_Win_1,res17_Win_1_2set,res17_Win_1_3set,res17_Win_2,res17_Win_2_2set,res17_Win_2_3set);
+
+        setResult(win3,"WIN.3",win4,"WIN.4",win18,"WIN.18",res18_Win_3,res18_Win_3_2set,res18_Win_3_3set,res18_Win_4,res18_Win_4_2set,res18_Win_4_3set);
+
+        setResult(win5,"WIN.5",win6,"WIN.6",win19,"WIN.19",res19_Win_5,res19_Win_5_2set,res19_Win_5_3set,res19_Win_6,res19_Win_6_2set,res19_Win_6_3set);
+
+        setResult(win7,"WIN.7",win8,"WIN.8",win20,"WIN.20",res20_Win_7,res20_Win_7_2set,res20_Win_7_3set,res20_Win_8,res20_Win_8_2set,res20_Win_8_3set);
+
+        setResult(win9,"WIN.9",win10,"WIN.10",win21,"WIN.21",res21_Win_9,res21_Win_9_2set,res21_Win_9_3set,res21_Win_10,res21_Win_10_2set,res21_Win_10_3set);
+
+        setResult(win11,"WIN.11",win12,"WIN.12",win22,"WIN.22",res22_Win_11,res22_Win_11_2set,res22_Win_11_3set,res22_Win_12,res22_Win_12_2set,res22_Win_12_3set);
+
+        setResult(win13,"WIN.13",win14,"WIN.14",win23,"WIN.23",res23_Win_13,res23_Win_13_2set,res23_Win_13_3set,res23_Win_14,res23_Win_14_2set,res23_Win_14_3set);
+
+        setResult(win15,"WIN.15",win16,"WIN.16",win24,"WIN.24",res24_Win_15,res24_Win_15_2set,res24_Win_15_3set,res24_Win_16,res24_Win_16_2set,res24_Win_16_3set);
 
 
 
@@ -647,6 +696,41 @@ public class FragmentTabCup32_1 extends Fragment {
                 return true;
             }
         });
+    }
+
+    void setResult(final Button firstPlayer, final Button secundPlayer, final Button resultButton, final String undoResultString, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+        firstPlayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resultButton.setText(firstPlayer.getText());
+                setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+            }
+        });
+
+
+        secundPlayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resultButton.setText(secundPlayer.getText());
+                setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+            }
+        });
+
+
+        resultButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                resultButton.setText(undoResultString);
+                pointsFor1In1Set.setText("");
+                pointsFor1In2Set.setText("");
+                pointsFor1In3Set.setText("");
+                pointsFor2In1Set.setText("");
+                pointsFor2In2Set.setText("");
+                pointsFor2In3Set.setText("");
+                return true;
+            }
+        });
+
     }
 
 
