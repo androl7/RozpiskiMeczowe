@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian8.BRAZactiv8;
 import com.example.adam.rozpiskimeczowe.cup.cup32.CUPactiv32;
+import com.example.adam.rozpiskimeczowe.cup.cup64.CUPactiv64;
 
 import java.util.ArrayList;
 
@@ -63,12 +64,20 @@ public class OfficalListWihTeams extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent = new Intent(this,CUPactiv32.class);
+
         switch (item.getItemId()){
             case R.id.menuStartButton:
                 //ZABEZPIECZENIE !!!
                 if(getDataFromBeachPzps!=null) {
                     if(getDataFromBeachPzps.getNameOfFirstPlayers().size()!=0) {
+
+                        Intent intent;
+                        if(getDataFromBeachPzps.getNameOfFirstPlayers().size()<=40) {
+                            intent = new Intent(this, CUPactiv32.class);
+                        }else {
+                            intent = new Intent(this, CUPactiv64.class);
+                        }
+
                         for (int i = 0; i < getDataFromBeachPzps.getNameOfFirstPlayers().size(); i++) {
                             intent.putExtra("NameOfTeam" + (i + 1), getDataFromBeachPzps.getNameOfFirstPlayers().get(i) + "\n" + getDataFromBeachPzps.getNameOfSecondPlayers().get(i));
                         }

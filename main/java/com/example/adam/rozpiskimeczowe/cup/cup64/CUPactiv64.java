@@ -20,10 +20,10 @@ public class CUPactiv64 extends AppCompatActivity {
         setContentView(R.layout.cup64);
 
 
-        NonSwipeableViewPagerCup mViewPager = findViewById(R.id.containerCup);
+        NonSwipeableViewPagerCup64 mViewPager = findViewById(R.id.containerCup64);
         setupViewPager(mViewPager);
 
-        TabLayout tabLayout = findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs64);
         tabLayout.setupWithViewPager(mViewPager);
         getSupportActionBar().setTitle("System pucharowy: Eliminacje");
 

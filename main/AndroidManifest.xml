@@ -32,6 +32,7 @@
         <activity android:name=".offical.OfficalListWihTeams" />
 
         <activity android:name=".cup.cup32.CUPactiv32" />
+        <activity android:name=".cup.cup64.CUPactiv64" />
         <activity android:name=".cup.CUPactiv"/>
     </application>
 

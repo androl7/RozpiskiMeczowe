@@ -994,7 +994,7 @@
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/cup64Team09"
+                android:id="@+id/cup64Team9"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_below="@id/cup64Team16"
@@ -1019,7 +1019,7 @@
                 android:id="@+id/cup64Team56"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup64Team09"
+                android:layout_below="@+id/cup64Team9"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
@@ -1034,7 +1034,7 @@
                 android:layout_below="@id/cup64Team16"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="78dp"
-                android:layout_toEndOf="@+id/cup64Team09"
+                android:layout_toEndOf="@+id/cup64Team9"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:text="WIN.5"
@@ -1059,7 +1059,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cup64Team16"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/cup64Team09"
+                android:layout_toEndOf="@+id/cup64Team9"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -1160,7 +1160,7 @@
                 android:id="@+id/cup64Team41"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup64Team09"
+                android:layout_below="@+id/cup64Team9"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="75dp"
                 android:background="@drawable/button_shape"
@@ -1263,7 +1263,7 @@
 
             <EditText
 
-                android:id="@+id/cup64Res5_24"
+                android:id="@+id/cup64Res6_24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup64WIN_6"
@@ -1276,7 +1276,7 @@
 
             <EditText
 
-                android:id="@+id/cup64Res5_24_2set"
+                android:id="@+id/cup64Res6_24_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup64WIN_6"
@@ -1289,7 +1289,7 @@
 
             <EditText
 
-                android:id="@+id/cup64Res5_24_3set"
+                android:id="@+id/cup64Res6_24_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup64WIN_6"
@@ -1318,7 +1318,7 @@
                 android:id="@+id/cup64Res35_Win_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup64Team09"
+                android:layout_below="@+id/cup64Team9"
                 android:layout_toEndOf="@+id/cup64WIN_5"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -1330,7 +1330,7 @@
                 android:id="@+id/cup64Res35_Win_5_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup64Team09"
+                android:layout_below="@+id/cup64Team9"
                 android:layout_toEndOf="@+id/cup64Res35_Win_5"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -1343,7 +1343,7 @@
                 android:id="@+id/cup64Res35_Win_5_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup64Team09"
+                android:layout_below="@+id/cup64Team9"
                 android:layout_toEndOf="@+id/cup64Res35_Win_5_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -3930,7 +3930,7 @@
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/cup64Team05"
+                android:id="@+id/cup64Team5"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="28dp"
@@ -3955,7 +3955,7 @@
                 android:id="@+id/cup64Team60"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup64Team05"
+                android:layout_below="@+id/cup64Team5"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
@@ -3970,7 +3970,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_below="@id/cup64Team8"
                 android:layout_marginTop="78dp"
-                android:layout_toEndOf="@+id/cup64Team05"
+                android:layout_toEndOf="@+id/cup64Team5"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:text="WIN.9"
@@ -3994,7 +3994,7 @@
                 android:id="@+id/cup64Res9_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/cup64Team05"
+                android:layout_toEndOf="@+id/cup64Team5"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -4094,7 +4094,7 @@
                 android:id="@+id/cup64Team37"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
-                android:layout_below="@+id/cup64Team05"
+                android:layout_below="@+id/cup64Team5"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="75dp"
                 android:background="@drawable/button_shape"
@@ -4252,7 +4252,7 @@
                 android:id="@+id/cup64Res37_Win_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup64Team05"
+                android:layout_below="@+id/cup64Team5"
                 android:layout_toEndOf="@+id/cup64WIN_9"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -4264,7 +4264,7 @@
                 android:id="@+id/cup64Res37_Win_9_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup64Team05"
+                android:layout_below="@+id/cup64Team5"
                 android:layout_toEndOf="@+id/cup64Res37_Win_9"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -4277,7 +4277,7 @@
                 android:id="@+id/cup64Res37_Win_9_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cup64Team05"
+                android:layout_below="@+id/cup64Team5"
                 android:layout_toEndOf="@+id/cup64Res37_Win_9_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
@@ -7411,7 +7411,7 @@
                 android:textSize="12sp" />
 
             <EditText
-                android:id="@+id/cup64Res48_Win_48"
+                android:id="@+id/cup64Res48_Win_32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup64WIN_48"
@@ -7423,11 +7423,11 @@
                 android:textSize="12sp" />
 
             <EditText
-                android:id="@+id/cup64Res48_Win_48_2set"
+                android:id="@+id/cup64Res48_Win_32_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup64WIN_48"
-                android:layout_toEndOf="@+id/cup64Res48_Win_48"
+                android:layout_toEndOf="@+id/cup64Res48_Win_32"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"
@@ -7436,11 +7436,11 @@
 
             <EditText
 
-                android:id="@+id/cup64Res48_Win_48_3set"
+                android:id="@+id/cup64Res48_Win_32_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup64WIN_48"
-                android:layout_toEndOf="@+id/cup64Res48_Win_48_2set"
+                android:layout_toEndOf="@+id/cup64Res48_Win_32_2set"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLength="2"

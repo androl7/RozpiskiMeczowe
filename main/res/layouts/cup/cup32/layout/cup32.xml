@@ -16,14 +16,14 @@
         >
 
         <android.support.design.widget.TabLayout
-            android:id="@+id/tabs"
+            android:id="@+id/tabs32"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     </android.support.design.widget.AppBarLayout>
 
-    <com.example.adam.rozpiskimeczowe.cup.cup32.NonSwipeableViewPagerCup
-        android:id="@+id/containerCup"
+    <com.example.adam.rozpiskimeczowe.cup.cup32.NonSwipeableViewPagerCup32
+        android:id="@+id/containerCup32"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
