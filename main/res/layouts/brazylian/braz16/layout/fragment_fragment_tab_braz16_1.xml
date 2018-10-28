@@ -28,7 +28,7 @@
 
 
             <TextView
-                android:id="@+id/braz8R1"
+                android:id="@+id/braz16R1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
@@ -36,699 +36,699 @@
                 android:text="R1"
                 android:layout_marginTop="20dp"/>
             <TextView
-                android:id="@+id/braz8R8"
+                android:id="@+id/braz16R8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:textSize="16dp"
                 android:text="R8"
-                android:layout_below="@+id/braz8R1"
+                android:layout_below="@+id/braz16R1"
                 android:layout_marginTop="30dp"/>
             <TextView
-                android:id="@+id/braz8R6"
+                android:id="@+id/braz16R6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:textSize="16dp"
                 android:text="R6"
-                android:layout_below="@+id/braz8R8"
+                android:layout_below="@+id/braz16R8"
                 android:layout_marginTop="50dp"/>
             <TextView
-                android:id="@+id/braz8R3"
+                android:id="@+id/braz16R3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:textSize="16dp"
                 android:text="R3"
-                android:layout_below="@+id/braz8R6"
+                android:layout_below="@+id/braz16R6"
                 android:layout_marginTop="28dp"/>
             <TextView
-                android:id="@+id/braz8R4"
+                android:id="@+id/braz16R4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:textSize="16dp"
                 android:text="R4"
-                android:layout_below="@+id/braz8R3"
+                android:layout_below="@+id/braz16R3"
                 android:layout_marginTop="173dp"/>
 
             <TextView
-                android:id="@+id/braz8R5"
+                android:id="@+id/braz16R5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:textSize="16dp"
                 android:text="R5"
-                android:layout_below="@+id/braz8R4"
+                android:layout_below="@+id/braz16R4"
                 android:layout_marginTop="28dp"/>
 
             <TextView
-                android:id="@+id/braz8R7"
+                android:id="@+id/braz16R7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:textSize="16dp"
                 android:text="R7"
-                android:layout_below="@+id/braz8R5"
+                android:layout_below="@+id/braz16R5"
                 android:layout_marginTop="48dp"/>
 
             <TextView
-                android:id="@+id/braz8R2"
+                android:id="@+id/braz16R2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:textSize="16dp"
                 android:text="R2"
-                android:layout_below="@+id/braz8R7"
+                android:layout_below="@+id/braz16R7"
                 android:layout_marginTop="30dp"/>
 
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res1_1"
+                android:id="@+id/braz16Res1_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Team01"
+                android:layout_toEndOf="@+id/braz16Team01"
                 android:layout_marginTop="4dp"
-                android:nextFocusDown="@+id/braz8Res1_8"
+                android:nextFocusDown="@+id/braz16Res1_8"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res1_1_2set"
+                android:id="@+id/braz16Res1_1_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res1_1"
-                android:layout_marginTop="4dp"
-                />
-            <EditText
-                android:imeOptions="actionNext"
-                android:singleLine="true"
-                android:id="@+id/braz8Res1_1_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLength="2"
-                android:inputType="number"
-                android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res1_1_2set"
+                android:layout_toEndOf="@+id/braz16Res1_1"
                 android:layout_marginTop="4dp"
                 />
-
-
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res1_8"
+                android:id="@+id/braz16Res1_1_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Team08"
-                android:layout_below="@+id/braz8WIN_1"
-
-                />
-            <EditText
-                android:imeOptions="actionNext"
-                android:singleLine="true"
-                android:id="@+id/braz8Res1_8_2set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLength="2"
-                android:inputType="number"
-                android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res1_8"
-                android:layout_below="@+id/braz8WIN_1"
-                />
-            <EditText
-                android:imeOptions="actionNext"
-                android:singleLine="true"
-                android:id="@+id/braz8Res1_8_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLength="2"
-                android:inputType="number"
-                android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res1_8_2set"
-                android:layout_below="@+id/braz8WIN_1"
+                android:layout_toEndOf="@+id/braz16Res1_1_2set"
+                android:layout_marginTop="4dp"
                 />
 
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res2_6"
+                android:id="@+id/braz16Res1_8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Res1_1"
+                android:layout_toEndOf="@+id/braz16Team08"
+                android:layout_below="@+id/braz16WIN_1"
+
+                />
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/braz16Res1_8_2set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/braz16Res1_8"
+                android:layout_below="@+id/braz16WIN_1"
+                />
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/braz16Res1_8_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/braz16Res1_8_2set"
+                android:layout_below="@+id/braz16WIN_1"
+                />
+
+
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/braz16Res2_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/braz16Res1_1"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/braz8Team03"
+                android:layout_toEndOf="@+id/braz16Team03"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res2_6_2set"
+                android:id="@+id/braz16Res2_6_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Res1_1"
+                android:layout_below="@+id/braz16Res1_1"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/braz8Res2_6"
+                android:layout_toEndOf="@+id/braz16Res2_6"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res2_6_3set"
+                android:id="@+id/braz16Res2_6_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Res1_1"
+                android:layout_below="@+id/braz16Res1_1"
                 android:layout_marginTop="84dp"
-                android:layout_toEndOf="@+id/braz8Res2_6_2set"
+                android:layout_toEndOf="@+id/braz16Res2_6_2set"
                 />
 
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res2_3"
+                android:id="@+id/braz16Res2_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Team03"
-                android:layout_below="@+id/braz8WIN_2"/>
+                android:layout_toEndOf="@+id/braz16Team03"
+                android:layout_below="@+id/braz16WIN_2"/>
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res2_3_2set"
+                android:id="@+id/braz16Res2_3_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res2_3"
-                android:layout_below="@+id/braz8WIN_2"/>
+                android:layout_toEndOf="@+id/braz16Res2_3"
+                android:layout_below="@+id/braz16WIN_2"/>
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res2_3_3set"
+                android:id="@+id/braz16Res2_3_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res2_3_2set"
-                android:layout_below="@+id/braz8WIN_2"/>
+                android:layout_toEndOf="@+id/braz16Res2_3_2set"
+                android:layout_below="@+id/braz16WIN_2"/>
 
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res3_4"
+                android:id="@+id/braz16Res3_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Team04"
-                android:layout_above="@+id/braz8Res3_5"
+                android:layout_toEndOf="@+id/braz16Team04"
+                android:layout_above="@+id/braz16Res3_5"
                 android:layout_marginBottom="38dp"/>
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res3_4_2set"
+                android:id="@+id/braz16Res3_4_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res3_4"
-                android:layout_above="@+id/braz8Res3_5"
+                android:layout_toEndOf="@+id/braz16Res3_4"
+                android:layout_above="@+id/braz16Res3_5"
                 android:layout_marginBottom="38dp"/>
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res3_4_3set"
+                android:id="@+id/braz16Res3_4_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res3_4_2set"
-                android:layout_above="@+id/braz8Res3_5"
+                android:layout_toEndOf="@+id/braz16Res3_4_2set"
+                android:layout_above="@+id/braz16Res3_5"
                 android:layout_marginBottom="38dp"/>
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res3_5"
+                android:id="@+id/braz16Res3_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Team05"
-                android:layout_below="@+id/braz8WIN_3"/>
+                android:layout_toEndOf="@+id/braz16Team05"
+                android:layout_below="@+id/braz16WIN_3"/>
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res3_5_2set"
+                android:id="@+id/braz16Res3_5_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res3_5"
-                android:layout_below="@+id/braz8WIN_3"/>
+                android:layout_toEndOf="@+id/braz16Res3_5"
+                android:layout_below="@+id/braz16WIN_3"/>
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res3_5_3set"
+                android:id="@+id/braz16Res3_5_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res3_5_2set"
-                android:layout_below="@+id/braz8WIN_3"/>
+                android:layout_toEndOf="@+id/braz16Res3_5_2set"
+                android:layout_below="@+id/braz16WIN_3"/>
 
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res4_2"
+                android:id="@+id/braz16Res4_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Team07"
-                android:layout_above="@+id/braz8Res4_7"
+                android:layout_toEndOf="@+id/braz16Team07"
+                android:layout_above="@+id/braz16Res4_7"
                 android:layout_marginBottom="38dp" />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res4_2_2set"
+                android:id="@+id/braz16Res4_2_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res4_2"
-                android:layout_above="@+id/braz8Res4_7"
+                android:layout_toEndOf="@+id/braz16Res4_2"
+                android:layout_above="@+id/braz16Res4_7"
                 android:layout_marginBottom="38dp" />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res4_2_3set"
+                android:id="@+id/braz16Res4_2_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res4_2_2set"
-                android:layout_above="@+id/braz8Res4_7"
+                android:layout_toEndOf="@+id/braz16Res4_2_2set"
+                android:layout_above="@+id/braz16Res4_7"
                 android:layout_marginBottom="38dp" />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res4_7"
+                android:id="@+id/braz16Res4_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Team02"
-                android:layout_below="@+id/braz8WIN_4"/>
+                android:layout_toEndOf="@+id/braz16Team02"
+                android:layout_below="@+id/braz16WIN_4"/>
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res4_7_2set"
+                android:id="@+id/braz16Res4_7_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res4_7"
-                android:layout_below="@+id/braz8WIN_4"/>
+                android:layout_toEndOf="@+id/braz16Res4_7"
+                android:layout_below="@+id/braz16WIN_4"/>
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res4_7_3set"
+                android:id="@+id/braz16Res4_7_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_toEndOf="@+id/braz8Res4_7_2set"
-                android:layout_below="@+id/braz8WIN_4"/>
+                android:layout_toEndOf="@+id/braz16Res4_7_2set"
+                android:layout_below="@+id/braz16WIN_4"/>
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res5_Win_1"
+                android:id="@+id/braz16Res5_Win_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team01"
-                android:layout_toEndOf="@+id/braz8WIN_1"
+                android:layout_below="@+id/braz16Team01"
+                android:layout_toEndOf="@+id/braz16WIN_1"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res5_Win_1_2set"
+                android:id="@+id/braz16Res5_Win_1_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team01"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
+                android:layout_below="@+id/braz16Team01"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res5_Win_1_3set"
+                android:id="@+id/braz16Res5_Win_1_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team01"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1_2set"
+                android:layout_below="@+id/braz16Team01"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1_2set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res5_Win_2"
+                android:id="@+id/braz16Res5_Win_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_5"
-                android:layout_toEndOf="@+id/braz8WIN_1"
+                android:layout_below="@+id/braz16WIN_5"
+                android:layout_toEndOf="@+id/braz16WIN_1"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res5_Win_2_2set"
+                android:id="@+id/braz16Res5_Win_2_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_5"
-                android:layout_toEndOf="@+id/braz8Res5_Win_2"
+                android:layout_below="@+id/braz16WIN_5"
+                android:layout_toEndOf="@+id/braz16Res5_Win_2"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res5_Win_2_3set"
+                android:id="@+id/braz16Res5_Win_2_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_5"
-                android:layout_toEndOf="@+id/braz8Res5_Win_2_2set"
+                android:layout_below="@+id/braz16WIN_5"
+                android:layout_toEndOf="@+id/braz16Res5_Win_2_2set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res6_Win_3"
+                android:id="@+id/braz16Res6_Win_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team04"
-                android:layout_toEndOf="@+id/braz8WIN_3"
+                android:layout_below="@+id/braz16Team04"
+                android:layout_toEndOf="@+id/braz16WIN_3"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res6_Win_3_2set"
+                android:id="@+id/braz16Res6_Win_3_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team04"
-                android:layout_toEndOf="@+id/braz8Res6_Win_3"
+                android:layout_below="@+id/braz16Team04"
+                android:layout_toEndOf="@+id/braz16Res6_Win_3"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res6_Win_3_3set"
+                android:id="@+id/braz16Res6_Win_3_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team04"
-                android:layout_toEndOf="@+id/braz8Res6_Win_3_2set"
+                android:layout_below="@+id/braz16Team04"
+                android:layout_toEndOf="@+id/braz16Res6_Win_3_2set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res6_Win_4"
+                android:id="@+id/braz16Res6_Win_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_6"
-                android:layout_toEndOf="@+id/braz8WIN_4"
+                android:layout_below="@+id/braz16WIN_6"
+                android:layout_toEndOf="@+id/braz16WIN_4"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res6_Win_4_2set"
+                android:id="@+id/braz16Res6_Win_4_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_6"
-                android:layout_toEndOf="@+id/braz8Res6_Win_4"
+                android:layout_below="@+id/braz16WIN_6"
+                android:layout_toEndOf="@+id/braz16Res6_Win_4"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res6_Win_4_3set"
+                android:id="@+id/braz16Res6_Win_4_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_6"
-                android:layout_toEndOf="@+id/braz8Res6_Win_4_2set"
+                android:layout_below="@+id/braz16WIN_6"
+                android:layout_toEndOf="@+id/braz16Res6_Win_4_2set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res7_Lost_1"
+                android:id="@+id/braz16Res7_Lost_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_7"
-                android:layout_toStartOf="@+id/braz8Res7_Lost_1_2set"
+                android:layout_below="@+id/braz16WIN_7"
+                android:layout_toStartOf="@+id/braz16Res7_Lost_1_2set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res7_Lost_1_2set"
+                android:id="@+id/braz16Res7_Lost_1_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_7"
-                android:layout_toStartOf="@+id/braz8Res7_Lost_1_3set"
+                android:layout_below="@+id/braz16WIN_7"
+                android:layout_toStartOf="@+id/braz16Res7_Lost_1_3set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res7_Lost_1_3set"
+                android:id="@+id/braz16Res7_Lost_1_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_7"
-                android:layout_toStartOf="@+id/braz8LOST_2"
+                android:layout_below="@+id/braz16WIN_7"
+                android:layout_toStartOf="@+id/braz16LOST_2"
                 />
 
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res7_Lost_2"
+                android:id="@+id/braz16Res7_Lost_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8LOST_6"
+                android:layout_below="@+id/braz16LOST_6"
                 android:layout_marginTop="44dp"
-                android:layout_toStartOf="@+id/braz8Res7_Lost_2_2set"
+                android:layout_toStartOf="@+id/braz16Res7_Lost_2_2set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res7_Lost_2_2set"
+                android:id="@+id/braz16Res7_Lost_2_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8LOST_6"
+                android:layout_below="@+id/braz16LOST_6"
                 android:layout_marginTop="44dp"
-                android:layout_toStartOf="@+id/braz8Res7_Lost_2_3set"
+                android:layout_toStartOf="@+id/braz16Res7_Lost_2_3set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res7_Lost_2_3set"
+                android:id="@+id/braz16Res7_Lost_2_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8LOST_6"
+                android:layout_below="@+id/braz16LOST_6"
                 android:layout_marginTop="44dp"
-                android:layout_toStartOf="@+id/braz8LOST_1"
+                android:layout_toStartOf="@+id/braz16LOST_1"
                 />
 
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res8_Lost_3"
+                android:id="@+id/braz16Res8_Lost_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_13"
+                android:layout_below="@+id/braz16WIN_13"
                 android:layout_marginTop="50dp"
-                android:layout_toStartOf="@+id/braz8Res8_Lost_3_2set"
+                android:layout_toStartOf="@+id/braz16Res8_Lost_3_2set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res8_Lost_3_2set"
+                android:id="@+id/braz16Res8_Lost_3_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_13"
+                android:layout_below="@+id/braz16WIN_13"
                 android:layout_marginTop="50dp"
-                android:layout_toStartOf="@+id/braz8Res8_Lost_3_3set"
+                android:layout_toStartOf="@+id/braz16Res8_Lost_3_3set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res8_Lost_3_3set"
+                android:id="@+id/braz16Res8_Lost_3_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_13"
+                android:layout_below="@+id/braz16WIN_13"
                 android:layout_marginTop="50dp"
-                android:layout_toStartOf="@+id/braz8LOST_3"
+                android:layout_toStartOf="@+id/braz16LOST_3"
                 />
 
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res8_Lost_4"
+                android:id="@+id/braz16Res8_Lost_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_8"
-                android:layout_toStartOf="@+id/braz8Res8_Lost_4_2set"
+                android:layout_below="@+id/braz16WIN_8"
+                android:layout_toStartOf="@+id/braz16Res8_Lost_4_2set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res8_Lost_4_2set"
+                android:id="@+id/braz16Res8_Lost_4_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_8"
-                android:layout_toStartOf="@+id/braz8Res8_Lost_4_3set"
+                android:layout_below="@+id/braz16WIN_8"
+                android:layout_toStartOf="@+id/braz16Res8_Lost_4_3set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res8_Lost_4_3set"
+                android:id="@+id/braz16Res8_Lost_4_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_8"
-                android:layout_toStartOf="@+id/braz8LOST_4"
+                android:layout_below="@+id/braz16WIN_8"
+                android:layout_toStartOf="@+id/braz16LOST_4"
                 />
 
 
@@ -736,84 +736,84 @@
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res9_Lost_6"
+                android:id="@+id/braz16Res9_Lost_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team01"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1_2set"
+                android:layout_below="@+id/braz16Team01"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1_2set"
                 android:layout_marginStart="145dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res9_Lost_6_2set"
+                android:id="@+id/braz16Res9_Lost_6_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team01"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1_2set"
+                android:layout_below="@+id/braz16Team01"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1_2set"
                 android:layout_marginStart="165dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res9_Lost_6_3set"
+                android:id="@+id/braz16Res9_Lost_6_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team01"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1_2set"
+                android:layout_below="@+id/braz16Team01"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1_2set"
                 android:layout_marginStart="185dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res9_Win_7"
+                android:id="@+id/braz16Res9_Win_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_5"
-                android:layout_toEndOf="@+id/braz8Res5_Win_2_2set"
+                android:layout_below="@+id/braz16WIN_5"
+                android:layout_toEndOf="@+id/braz16Res5_Win_2_2set"
                 android:layout_marginStart="145dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res9_Win_7_2set"
+                android:id="@+id/braz16Res9_Win_7_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_5"
-                android:layout_toEndOf="@+id/braz8Res5_Win_2_2set"
+                android:layout_below="@+id/braz16WIN_5"
+                android:layout_toEndOf="@+id/braz16Res5_Win_2_2set"
                 android:layout_marginStart="165dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res9_Win_7_3set"
+                android:id="@+id/braz16Res9_Win_7_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_5"
-                android:layout_toEndOf="@+id/braz8Res5_Win_2_2set"
+                android:layout_below="@+id/braz16WIN_5"
+                android:layout_toEndOf="@+id/braz16Res5_Win_2_2set"
                 android:layout_marginStart="185dp"
                 />
 
@@ -822,42 +822,42 @@
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res10_Win_8"
+                android:id="@+id/braz16Res10_Win_8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team04"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1_2set"
+                android:layout_below="@+id/braz16Team04"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1_2set"
                 android:layout_marginStart="145dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res10_Win_8_2set"
+                android:id="@+id/braz16Res10_Win_8_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team04"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1_2set"
+                android:layout_below="@+id/braz16Team04"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1_2set"
                 android:layout_marginStart="165dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res10_Win_8_3set"
+                android:id="@+id/braz16Res10_Win_8_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team04"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1_2set"
+                android:layout_below="@+id/braz16Team04"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1_2set"
                 android:layout_marginStart="185dp"
                 />
 
@@ -867,56 +867,56 @@
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res10_Lost_5"
+                android:id="@+id/braz16Res10_Lost_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_10"
-                android:layout_toEndOf="@+id/braz8Res5_Win_2_2set"
+                android:layout_below="@+id/braz16WIN_10"
+                android:layout_toEndOf="@+id/braz16Res5_Win_2_2set"
                 android:layout_marginStart="145dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res10_Lost_5_2set"
+                android:id="@+id/braz16Res10_Lost_5_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_10"
-                android:layout_toEndOf="@+id/braz8Res5_Win_2_2set"
+                android:layout_below="@+id/braz16WIN_10"
+                android:layout_toEndOf="@+id/braz16Res5_Win_2_2set"
                 android:layout_marginStart="165dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res10_Lost_5_3set"
+                android:id="@+id/braz16Res10_Lost_5_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_10"
-                android:layout_toEndOf="@+id/braz8Res5_Win_2_2set"
+                android:layout_below="@+id/braz16WIN_10"
+                android:layout_toEndOf="@+id/braz16Res5_Win_2_2set"
                 android:layout_marginStart="185dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res11_Win_5"
+                android:id="@+id/braz16Res11_Win_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team01"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
+                android:layout_below="@+id/braz16Team01"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
                 android:layout_marginStart="65dp"
                 />
 
@@ -924,328 +924,328 @@
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res11_Win_5_2set"
+                android:id="@+id/braz16Res11_Win_5_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_5"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
+                android:layout_below="@+id/braz16WIN_5"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
                 android:layout_marginStart="65dp"
                 />
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res11_Win_5_3set"
+                android:id="@+id/braz16Res11_Win_5_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Res11_Win_5_2set"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
-                android:layout_marginStart="65dp"
-                />
-
-            <EditText
-                android:imeOptions="actionNext"
-                android:singleLine="true"
-                android:id="@+id/braz8Res11_Win_9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLength="2"
-                android:inputType="number"
-                android:textSize="12dp"
-                android:layout_below="@+id/braz8Team01"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
-                android:layout_marginStart="125dp"
-                />
-
-            <EditText
-                android:imeOptions="actionNext"
-                android:singleLine="true"
-                android:id="@+id/braz8Res11_Win_9_2set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLength="2"
-                android:inputType="number"
-                android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_5"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
-                android:layout_marginStart="125dp"
-                />
-
-            <EditText
-                android:imeOptions="actionNext"
-                android:singleLine="true"
-                android:id="@+id/braz8Res11_Win_9_3set"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLength="2"
-                android:inputType="number"
-                android:textSize="12dp"
-                android:layout_below="@+id/braz8Res11_Win_9_2set"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
-                android:layout_marginStart="125dp"
-                />
-
-
-            <EditText
-                android:imeOptions="actionNext"
-                android:singleLine="true"
-                android:id="@+id/braz8Res12_Win_6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLength="2"
-                android:inputType="number"
-                android:textSize="12dp"
-                android:layout_below="@+id/braz8Team04"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
+                android:layout_below="@+id/braz16Res11_Win_5_2set"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
                 android:layout_marginStart="65dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res12_Win_6_2set"
+                android:id="@+id/braz16Res11_Win_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_6"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
+                android:layout_below="@+id/braz16Team01"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
+                android:layout_marginStart="125dp"
+                />
+
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/braz16Res11_Win_9_2set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/braz16WIN_5"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
+                android:layout_marginStart="125dp"
+                />
+
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/braz16Res11_Win_9_3set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/braz16Res11_Win_9_2set"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
+                android:layout_marginStart="125dp"
+                />
+
+
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/braz16Res12_Win_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/braz16Team04"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
                 android:layout_marginStart="65dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res12_Win_6_3set"
+                android:id="@+id/braz16Res12_Win_6_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Res12_Win_6_2set"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
+                android:layout_below="@+id/braz16WIN_6"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
                 android:layout_marginStart="65dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res12_Win_10"
+                android:id="@+id/braz16Res12_Win_6_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Team04"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
+                android:layout_below="@+id/braz16Res12_Win_6_2set"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
+                android:layout_marginStart="65dp"
+                />
+
+            <EditText
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:id="@+id/braz16Res12_Win_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:layout_below="@+id/braz16Team04"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
                 android:layout_marginStart="125dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res12_Win_10_2set"
+                android:id="@+id/braz16Res12_Win_10_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_6"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
+                android:layout_below="@+id/braz16WIN_6"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
                 android:layout_marginStart="125dp"
                 />
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res12_Win_10_3set"
+                android:id="@+id/braz16Res12_Win_10_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8Res12_Win_10_2set"
-                android:layout_toEndOf="@+id/braz8Res5_Win_1"
+                android:layout_below="@+id/braz16Res12_Win_10_2set"
+                android:layout_toEndOf="@+id/braz16Res5_Win_1"
                 android:layout_marginStart="125dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res13_Lost_11"
+                android:id="@+id/braz16Res13_Lost_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_7"
-                android:layout_toEndOf="@+id/braz8LOST_11"
+                android:layout_below="@+id/braz16WIN_7"
+                android:layout_toEndOf="@+id/braz16LOST_11"
                 android:layout_marginTop="45dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res13_Lost_11_2set"
+                android:id="@+id/braz16Res13_Lost_11_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_7"
+                android:layout_below="@+id/braz16WIN_7"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/braz8Res13_Lost_11"
+                android:layout_toEndOf="@+id/braz16Res13_Lost_11"
 
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res13_Lost_11_3set"
+                android:id="@+id/braz16Res13_Lost_11_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_7"
+                android:layout_below="@+id/braz16WIN_7"
                 android:layout_marginTop="45dp"
-                android:layout_toEndOf="@+id/braz8Res13_Lost_11_2set"
+                android:layout_toEndOf="@+id/braz16Res13_Lost_11_2set"
 
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res13_Lost_12"
+                android:id="@+id/braz16Res13_Lost_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_13"
-                android:layout_toEndOf="@+id/braz8LOST_11"
+                android:layout_below="@+id/braz16WIN_13"
+                android:layout_toEndOf="@+id/braz16LOST_11"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res13_Lost_12_2set"
+                android:id="@+id/braz16Res13_Lost_12_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_13"
-                android:layout_toEndOf="@+id/braz8Res13_Lost_12"
+                android:layout_below="@+id/braz16WIN_13"
+                android:layout_toEndOf="@+id/braz16Res13_Lost_12"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res13_Lost_12_3set"
+                android:id="@+id/braz16Res13_Lost_12_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_13"
-                android:layout_toEndOf="@+id/braz8Res13_Lost_12_2set"
+                android:layout_below="@+id/braz16WIN_13"
+                android:layout_toEndOf="@+id/braz16Res13_Lost_12_2set"
                 />
 
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res14_Win_11"
+                android:id="@+id/braz16Res14_Win_11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_7"
+                android:layout_below="@+id/braz16WIN_7"
                 android:layout_marginTop="45dp"
-                android:layout_toStartOf="@+id/braz8Res14_Win_11_2set"
+                android:layout_toStartOf="@+id/braz16Res14_Win_11_2set"
 
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res14_Win_11_2set"
+                android:id="@+id/braz16Res14_Win_11_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_7"
+                android:layout_below="@+id/braz16WIN_7"
                 android:layout_marginTop="45dp"
-                android:layout_toStartOf="@+id/braz8Res14_Win_11_3set"
+                android:layout_toStartOf="@+id/braz16Res14_Win_11_3set"
 
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res14_Win_11_3set"
+                android:id="@+id/braz16Res14_Win_11_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_2"
-                android:layout_toStartOf="@+id/braz8WIN_11"
+                android:layout_below="@+id/braz16WIN_2"
+                android:layout_toStartOf="@+id/braz16WIN_11"
                 android:layout_marginTop="45dp"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res14_Win_12"
+                android:id="@+id/braz16Res14_Win_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_13"
-                android:layout_toStartOf="@+id/braz8Res14_Win_12_2set"
+                android:layout_below="@+id/braz16WIN_13"
+                android:layout_toStartOf="@+id/braz16Res14_Win_12_2set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res14_Win_12_2set"
+                android:id="@+id/braz16Res14_Win_12_2set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_13"
-                android:layout_toStartOf="@+id/braz8Res14_Win_12_3set"
+                android:layout_below="@+id/braz16WIN_13"
+                android:layout_toStartOf="@+id/braz16Res14_Win_12_3set"
                 />
 
             <EditText
                 android:imeOptions="actionNext"
                 android:singleLine="true"
-                android:id="@+id/braz8Res14_Win_12_3set"
+                android:id="@+id/braz16Res14_Win_12_3set"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
                 android:inputType="number"
                 android:textSize="12dp"
-                android:layout_below="@+id/braz8WIN_14"
-                android:layout_toStartOf="@+id/braz8WIN_12"
+                android:layout_below="@+id/braz16WIN_14"
+                android:layout_toStartOf="@+id/braz16WIN_12"
                 />
 
 
 
 
             <Button
-                android:id="@+id/braz8Team01"
+                android:id="@+id/braz16Team01"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1256,92 +1256,92 @@
                 android:layout_marginStart="20dp"/>
 
             <Button
-                android:id="@+id/braz8Team02"
+                android:id="@+id/braz16Team02"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8Team07"
+                android:layout_below="@+id/braz16Team07"
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="20dp"/>
 
             <Button
-                android:id="@+id/braz8Team03"
+                android:id="@+id/braz16Team03"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8Team06"
+                android:layout_below="@+id/braz16Team06"
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="20dp"/>
 
             <Button
-                android:id="@+id/braz8Team04"
+                android:id="@+id/braz16Team04"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8Team03"
+                android:layout_below="@+id/braz16Team03"
                 android:layout_marginTop="150dp"
                 android:layout_marginStart="20dp"/>
 
             <Button
-                android:id="@+id/braz8Team05"
+                android:id="@+id/braz16Team05"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8Team04"
+                android:layout_below="@+id/braz16Team04"
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="20dp"/>
 
             <Button
-                android:id="@+id/braz8Team06"
+                android:id="@+id/braz16Team06"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8Team01"
+                android:layout_below="@+id/braz16Team01"
                 android:layout_marginTop="75dp"
                 android:layout_marginStart="20dp"
                 />
 
             <Button
-                android:id="@+id/braz8Team07"
+                android:id="@+id/braz16Team07"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8Team04"
+                android:layout_below="@+id/braz16Team04"
                 android:layout_marginTop="75dp"
                 android:layout_marginStart="20dp"/>
 
             <Button
-                android:id="@+id/braz8Team08"
+                android:id="@+id/braz16Team08"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
                 android:maxLength="30"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8Team01"
+                android:layout_below="@+id/braz16Team01"
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="20dp"/>
 
             <Button
-                android:id="@+id/braz8WIN_1"
+                android:id="@+id/braz16WIN_1"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1349,12 +1349,12 @@
                 android:text="WIN.1"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8Team01"
+                android:layout_toEndOf="@+id/braz16Team01"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="35dp"/>
 
             <Button
-                android:id="@+id/braz8WIN_2"
+                android:id="@+id/braz16WIN_2"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1362,13 +1362,13 @@
                 android:text="WIN.2"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8Team06"
+                android:layout_toEndOf="@+id/braz16Team06"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/braz8WIN_1"/>
+                android:layout_below="@+id/braz16WIN_1"/>
 
             <Button
-                android:id="@+id/braz8WIN_3"
+                android:id="@+id/braz16WIN_3"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1376,13 +1376,13 @@
                 android:text="WIN.3"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8Team04"
+                android:layout_toEndOf="@+id/braz16Team04"
                 android:layout_marginStart="5dp"
-                android:layout_below="@+id/braz8WIN_2"
+                android:layout_below="@+id/braz16WIN_2"
                 android:layout_marginTop="200dp"/>
 
             <Button
-                android:id="@+id/braz8WIN_4"
+                android:id="@+id/braz16WIN_4"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1390,13 +1390,13 @@
                 android:text="WIN.4"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8Team07"
+                android:layout_toEndOf="@+id/braz16Team07"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/braz8WIN_3"/>
+                android:layout_below="@+id/braz16WIN_3"/>
 
             <Button
-                android:id="@+id/braz8LOST_4"
+                android:id="@+id/braz16LOST_4"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1404,13 +1404,13 @@
                 android:text="LOST.4"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8LOST_3"
+                android:layout_below="@+id/braz16LOST_3"
                 android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/braz8WIN_8"
+                android:layout_toEndOf="@+id/braz16WIN_8"
                 android:layout_marginStart="5dp"/>
 
             <Button
-                android:id="@+id/braz8LOST_5"
+                android:id="@+id/braz16LOST_5"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1418,13 +1418,13 @@
                 android:text="LOST.5"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8WIN_4"
+                android:layout_toEndOf="@+id/braz16WIN_4"
                 android:layout_marginStart="250dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/braz8WIN_3"/>
+                android:layout_below="@+id/braz16WIN_3"/>
 
             <Button
-                android:id="@+id/braz8WIN_5"
+                android:id="@+id/braz16WIN_5"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1432,13 +1432,13 @@
                 android:text="WIN.5"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8WIN_1"
-                android:layout_below="@+id/braz8WIN_1"
+                android:layout_toEndOf="@+id/braz16WIN_1"
+                android:layout_below="@+id/braz16WIN_1"
                 android:layout_marginTop="15dp"
                 />
 
             <Button
-                android:id="@+id/braz8WIN_6"
+                android:id="@+id/braz16WIN_6"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1446,12 +1446,12 @@
                 android:text="WIN.6"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8WIN_3"
-                android:layout_below="@+id/braz8WIN_3"
+                android:layout_toEndOf="@+id/braz16WIN_3"
+                android:layout_below="@+id/braz16WIN_3"
                 android:layout_marginTop="15dp"/>
 
             <Button
-                android:id="@+id/braz8LOST_2"
+                android:id="@+id/braz16LOST_2"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1459,13 +1459,13 @@
                 android:text="LOST.2"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8Team06"
+                android:layout_below="@+id/braz16Team06"
                 android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/braz8WIN_7"
+                android:layout_toEndOf="@+id/braz16WIN_7"
                 android:layout_marginStart="5dp"/>
 
             <Button
-                android:id="@+id/braz8LOST_1"
+                android:id="@+id/braz16LOST_1"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:layout_marginBottom="19dp"
@@ -1474,13 +1474,13 @@
                 android:text="LOST.1"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8WIN_7"
+                android:layout_toEndOf="@+id/braz16WIN_7"
                 android:layout_marginStart="5dp"
-                android:layout_below="@+id/braz8Team01"
+                android:layout_below="@+id/braz16Team01"
                 android:layout_marginTop="75dp"/>
 
             <Button
-                android:id="@+id/braz8WIN_7"
+                android:id="@+id/braz16WIN_7"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1488,14 +1488,14 @@
                 android:text="WIN.7"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8WIN_2"
+                android:layout_toEndOf="@+id/braz16WIN_2"
                 android:layout_marginStart="250dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/braz8WIN_1"
+                android:layout_below="@+id/braz16WIN_1"
                 />
 
             <Button
-                android:id="@+id/braz8LOST_6"
+                android:id="@+id/braz16LOST_6"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1503,12 +1503,12 @@
                 android:text="LOST.6"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8WIN_1"
+                android:layout_toEndOf="@+id/braz16WIN_1"
                 android:layout_marginStart="250dp"
                 android:layout_marginTop="35dp"/>
 
             <Button
-                android:id="@+id/braz8WIN_9"
+                android:id="@+id/braz16WIN_9"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1516,13 +1516,13 @@
                 android:text="WIN.9"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8WIN_5"
-                android:layout_below="@+id/braz8WIN_1"
+                android:layout_toEndOf="@+id/braz16WIN_5"
+                android:layout_below="@+id/braz16WIN_1"
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="30dp"/>
 
             <Button
-                android:id="@+id/braz8WIN_11"
+                android:id="@+id/braz16WIN_11"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1530,12 +1530,12 @@
                 android:text="WIN.11"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8Team03"
-                android:layout_toEndOf="@+id/braz8WIN_2"
+                android:layout_below="@+id/braz16Team03"
+                android:layout_toEndOf="@+id/braz16WIN_2"
                 android:layout_marginTop="25.5dp"/>
 
             <Button
-                android:id="@+id/braz8WIN_12"
+                android:id="@+id/braz16WIN_12"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1543,12 +1543,12 @@
                 android:text="WIN.12"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8WIN_11"
-                android:layout_toEndOf="@+id/braz8WIN_2"
+                android:layout_below="@+id/braz16WIN_11"
+                android:layout_toEndOf="@+id/braz16WIN_2"
                 android:layout_marginTop="9dp"/>
 
             <Button
-                android:id="@+id/braz8WIN_14"
+                android:id="@+id/braz16WIN_14"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1558,10 +1558,10 @@
                 android:textSize="11dp"
                 android:layout_marginStart="125dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/braz8WIN_2"/>
+                android:layout_below="@+id/braz16WIN_2"/>
 
             <Button
-                android:id="@+id/braz8LOST_11"
+                android:id="@+id/braz16LOST_11"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1569,13 +1569,13 @@
                 android:text="LOST.11"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8WIN_5"
-                android:layout_below="@+id/braz8WIN_9"
+                android:layout_toEndOf="@+id/braz16WIN_5"
+                android:layout_below="@+id/braz16WIN_9"
                 android:layout_marginTop="111dp"
                 android:layout_marginStart="30dp"/>
 
             <Button
-                android:id="@+id/braz8LOST_12"
+                android:id="@+id/braz16LOST_12"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1583,13 +1583,13 @@
                 android:text="LOST.12"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_below="@+id/braz8LOST_11"
-                android:layout_toEndOf="@+id/braz8WIN_12"
+                android:layout_below="@+id/braz16LOST_11"
+                android:layout_toEndOf="@+id/braz16WIN_12"
                 android:layout_marginTop="9dp"
                 android:layout_marginStart="30dp"/>
 
             <Button
-                android:id="@+id/braz8WIN_13"
+                android:id="@+id/braz16WIN_13"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1597,13 +1597,13 @@
                 android:text="WIN.13"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8LOST_11"
+                android:layout_toEndOf="@+id/braz16LOST_11"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="75dp"
-                android:layout_below="@+id/braz8WIN_7"/>
+                android:layout_below="@+id/braz16WIN_7"/>
 
             <Button
-                android:id="@+id/braz8LOST_3"
+                android:id="@+id/braz16LOST_3"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1611,13 +1611,13 @@
                 android:text="LOST.3"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8WIN_7"
-                android:layout_below="@+id/braz8LOST_2"
+                android:layout_toEndOf="@+id/braz16WIN_7"
+                android:layout_below="@+id/braz16LOST_2"
                 android:layout_marginTop="150dp"
                 android:layout_marginStart="5dp"/>
 
             <Button
-                android:id="@+id/braz8WIN_8"
+                android:id="@+id/braz16WIN_8"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1625,12 +1625,12 @@
                 android:text="WIN.8"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8WIN_10"
-                android:layout_above="@+id/braz8LOST_5"
+                android:layout_toEndOf="@+id/braz16WIN_10"
+                android:layout_above="@+id/braz16LOST_5"
                 />
 
             <Button
-                android:id="@+id/braz8WIN_10"
+                android:id="@+id/braz16WIN_10"
                 android:layout_width="110dp"
                 android:layout_height="45dp"
                 android:background="@drawable/button_shape"
@@ -1638,28 +1638,28 @@
                 android:text="WIN.10"
                 android:textColor="#000000"
                 android:textSize="11dp"
-                android:layout_toEndOf="@+id/braz8WIN_6"
-                android:layout_below="@+id/braz8WIN_3"
+                android:layout_toEndOf="@+id/braz16WIN_6"
+                android:layout_below="@+id/braz16WIN_3"
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="30dp"/>
 
             <TextView
-                android:id="@+id/braz8thirdPlace"
+                android:id="@+id/braz16thirdPlace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="serif"
                 android:text="III"
                 android:textSize="30dp"
                 android:textStyle="bold"
-                android:layout_toEndOf="@+id/braz8WIN_13"
+                android:layout_toEndOf="@+id/braz16WIN_13"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="52dp"
-                android:layout_below="@+id/braz8Team03"
+                android:layout_below="@+id/braz16Team03"
                 android:textColor="#000000"
                 />
 
             <TextView
-                android:id="@+id/braz8firstPlace"
+                android:id="@+id/braz16firstPlace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="serif"
@@ -1669,10 +1669,10 @@
                 android:textStyle="bold"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="52dp"
-                android:layout_below="@+id/braz8Team03"/>
+                android:layout_below="@+id/braz16Team03"/>
 
             <TextView
-                android:id="@+id/braz8numberOfMatch1"
+                android:id="@+id/braz16numberOfMatch1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
@@ -1682,65 +1682,65 @@
                 android:layout_marginTop="49dp"/>
 
             <TextView
-                android:id="@+id/braz8numberOfMatch2"
+                android:id="@+id/braz16numberOfMatch2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:textSize="13dp"
                 android:text="2"
                 android:layout_marginStart="127dp"
-                android:layout_below="@+id/braz8numberOfMatch1"
+                android:layout_below="@+id/braz16numberOfMatch1"
                 android:layout_marginTop="102dp"/>
 
             <TextView
-                android:id="@+id/braz8numberOfMatch3"
+                android:id="@+id/braz16numberOfMatch3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3"
                 android:textSize="13dp"
                 android:textColor="#000000"
                 android:layout_marginStart="127dp"
-                android:layout_below="@+id/braz8numberOfMatch2"
+                android:layout_below="@+id/braz16numberOfMatch2"
                 android:layout_marginTop="227dp"
                 />
 
             <TextView
-                android:id="@+id/braz8numberOfMatch4"
+                android:id="@+id/braz16numberOfMatch4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4"
                 android:textSize="13dp"
                 android:textColor="#000000"
                 android:layout_marginStart="127dp"
-                android:layout_below="@+id/braz8numberOfMatch3"
+                android:layout_below="@+id/braz16numberOfMatch3"
                 android:layout_marginTop="102dp" />
 
             <TextView
-                android:id="@+id/braz8numberOfMatch7"
+                android:id="@+id/braz16numberOfMatch7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/braz8WIN_7"
+                android:layout_toEndOf="@+id/braz16WIN_7"
                 android:layout_marginStart="2dp"
-                android:layout_below="@+id/braz8LOST_6"
+                android:layout_below="@+id/braz16LOST_6"
                 android:layout_marginTop="89dp"/>
 
             <TextView
-                android:id="@+id/braz8numberOfMatch8"
+                android:id="@+id/braz16numberOfMatch8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/braz8WIN_8"
+                android:layout_toEndOf="@+id/braz16WIN_8"
                 android:layout_marginStart="2dp"
-                android:layout_below="@+id/braz8numberOfMatch7"
+                android:layout_below="@+id/braz16numberOfMatch7"
                 android:layout_marginTop="226dp"/>
 
             <TextView
-                android:id="@+id/braz8numberOfMatch12"
+                android:id="@+id/braz16numberOfMatch12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/semiFinal2"
@@ -1748,14 +1748,14 @@
                 android:gravity="center"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/braz8WIN_2"
-                android:layout_below="@+id/braz8WIN_1"
+                android:layout_toEndOf="@+id/braz16WIN_2"
+                android:layout_below="@+id/braz16WIN_1"
                 android:layout_marginTop="11dp"
                 android:layout_marginStart="108dp"
                 />
 
             <TextView
-                android:id="@+id/braz8numberOfMatch11"
+                android:id="@+id/braz16numberOfMatch11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/semiFinal1"
@@ -1763,85 +1763,85 @@
                 android:gravity="center"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/braz8WIN_3"
-                android:layout_below="@+id/braz8numberOfMatch12"
+                android:layout_toEndOf="@+id/braz16WIN_3"
+                android:layout_below="@+id/braz16numberOfMatch12"
                 android:layout_marginTop="315dp"
                 android:layout_marginStart="108dp"
 
-                 />
+                />
 
             <TextView
-                android:id="@+id/braz8numberOfMatch6"
+                android:id="@+id/braz16numberOfMatch6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent= "true"
                 android:text="6"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/braz8Team03"
+                android:layout_toEndOf="@+id/braz16Team03"
                 android:layout_marginStart="105dp"
-                android:layout_below="@+id/braz8WIN_3"
+                android:layout_below="@+id/braz16WIN_3"
                 android:layout_marginTop="28dp" />
 
             <TextView
-                android:id="@+id/braz8numberOfMatch13"
+                android:id="@+id/braz16numberOfMatch13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="13"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/braz8WIN_5"
+                android:layout_toEndOf="@+id/braz16WIN_5"
                 android:layout_marginStart="135dp"
-                android:layout_below="@+id/braz8numberOfMatch9"
+                android:layout_below="@+id/braz16numberOfMatch9"
                 android:layout_marginTop="164dp"
                 />
 
             <TextView
-                android:id="@+id/braz8numberOfMatch14"
+                android:id="@+id/braz16numberOfMatch14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="14"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/braz8WIN_14"
+                android:layout_toEndOf="@+id/braz16WIN_14"
                 android:layout_marginStart="1dp"
-                android:layout_below="@+id/braz8WIN_2"
+                android:layout_below="@+id/braz16WIN_2"
                 android:layout_marginTop="90dp"/>
 
             <TextView
-                android:id="@+id/braz8numberOfMatch10"
+                android:id="@+id/braz16numberOfMatch10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/braz8WIN_9"
+                android:layout_toEndOf="@+id/braz16WIN_9"
                 android:layout_marginStart="2dp"
-                android:layout_below="@+id/braz8WIN_8"
+                android:layout_below="@+id/braz16WIN_8"
                 android:layout_marginTop="28dp" />
 
             <TextView
-                android:id="@+id/braz8numberOfMatch9"
+                android:id="@+id/braz16numberOfMatch9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/braz8WIN_9"
+                android:layout_toEndOf="@+id/braz16WIN_9"
                 android:layout_marginStart="2dp"
-                android:layout_below="@+id/braz8LOST_6"
+                android:layout_below="@+id/braz16LOST_6"
                 android:layout_marginTop="28dp" />
 
             <TextView
-                android:id="@+id/braz8numberOfMatch5"
+                android:id="@+id/braz16numberOfMatch5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5"
                 android:textSize="13dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/braz8Team03"
+                android:layout_toEndOf="@+id/braz16Team03"
                 android:layout_marginStart="105dp"
-                android:layout_below="@+id/braz8WIN_1"
+                android:layout_below="@+id/braz16WIN_1"
                 android:layout_marginTop="28dp" />
         </RelativeLayout>
     </com.otaliastudios.zoom.ZoomLayout>

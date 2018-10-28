@@ -1,5 +1,6 @@
 package com.example.adam.rozpiskimeczowe.offical;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -18,6 +20,7 @@ import com.example.adam.rozpiskimeczowe.cup.cup32.CUPactiv32;
 import com.example.adam.rozpiskimeczowe.cup.cup64.CUPactiv64;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class OfficalListWihTeams extends AppCompatActivity {
@@ -32,6 +35,7 @@ public class OfficalListWihTeams extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offical_list_with_teams);
 
+        final InputMethodManager imm = (InputMethodManager) Objects.requireNonNull(getSystemService(Context.INPUT_METHOD_SERVICE));
         namesToExport = new ArrayList<>();
 
         //ADD LIST
@@ -47,9 +51,10 @@ public class OfficalListWihTeams extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Get Data From Website and add to ListView
-
+                        imm.hideSoftInputFromWindow(btnGetData.getWindowToken(), 0);
                         getDataFromBeachPzps = new GetDataFromBeachPzps(list, OfficalListWihTeams.this,ed.getText().toString());
                         getDataFromBeachPzps.execute();
+
 
             }
         });

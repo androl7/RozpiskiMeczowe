@@ -1,6 +1,7 @@
 package com.example.adam.rozpiskimeczowe.cup.cup32;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +30,10 @@ public class FragmentTabCup32_1 extends Fragment {
     String pktInTieBreak = "15";
     View view;
     ViewGroup vg;
+    int numberOfMatches = 0;
+    int actualMatch = 0;
+    RelativeLayout relativeLayout;
+    TextView[]numbersOfMatchesArray;
 
 
     @Override
@@ -36,7 +42,7 @@ public class FragmentTabCup32_1 extends Fragment {
 
         imm = (InputMethodManager) Objects.requireNonNull(getActivity()).getSystemService(Context.INPUT_METHOD_SERVICE);
 
-
+        relativeLayout = view.findViewById(R.id.cup32relLayout);
         this.vg = container;
 
 
@@ -477,37 +483,45 @@ public class FragmentTabCup32_1 extends Fragment {
         final Button win23 = view.findViewById(R.id.cup32WIN_23);
         final Button win24 = view.findViewById(R.id.cup32WIN_24);
 
-        setResult(team1,team32,win1,"WIN.1",res1_1,res1_1_2set,res1_1_3set,res1_32,res1_32_2set,res1_32_3set);
+        //Add NumberOfMatches
+        numbersOfMatchesArray = new TextView[24];
+        for(int i=0; i<numbersOfMatchesArray.length; i++) {
+            String buttonID = "cup32numberOfMatch" + (i+1) ;
+            int resID = getResources().getIdentifier(buttonID, "id", getActivity().getPackageName());
+            numbersOfMatchesArray[i] = view.findViewById(resID);
+        }
 
-        setResult(team17,team16,win2,"WIN.2",res2_17,res2_17_2set,res2_17_3set,res2_16,res2_16_2set,res2_16_3set);
+        setResult("E1","E32",team1,team32,win1,"WIN.1",res1_1,res1_1_2set,res1_1_3set,res1_32,res1_32_2set,res1_32_3set);
 
-        setResult(team9,team24,win3,"WIN.3",res3_9,res3_9_2set,res3_9_3set,res3_24,res3_24_2set,res3_24_3set);
+        setResult("E17","E16",team17,team16,win2,"WIN.2",res2_17,res2_17_2set,res2_17_3set,res2_16,res2_16_2set,res2_16_3set);
 
-        setResult(team25,team8,win4,"WIN.4",res4_25,res4_25_2set,res4_25_3set,res4_8,res4_8_2set,res4_8_3set);
+        setResult("E9","E24",team9,team24,win3,"WIN.3",res3_9,res3_9_2set,res3_9_3set,res3_24,res3_24_2set,res3_24_3set);
 
-        setResult(team5,team28,win5,"WIN.5",res5_5,res5_5_2set,res5_5_3set,res5_28,res5_28_2set,res5_28_3set);
+        setResult("E25","E8",team25,team8,win4,"WIN.4",res4_25,res4_25_2set,res4_25_3set,res4_8,res4_8_2set,res4_8_3set);
 
-        setResult(team21,team12,win6,"WIN.6",res6_21,res6_21_2set,res6_21_3set,res6_12,res6_12_2set,res6_12_3set);
+        setResult("E5","E28",team5,team28,win5,"WIN.5",res5_5,res5_5_2set,res5_5_3set,res5_28,res5_28_2set,res5_28_3set);
 
-        setResult(team13,team20,win7,"WIN.7",res7_13,res7_13_2set,res7_13_3set,res7_20,res7_20_2set,res7_20_3set);
+        setResult("E21","E12",team21,team12,win6,"WIN.6",res6_21,res6_21_2set,res6_21_3set,res6_12,res6_12_2set,res6_12_3set);
 
-        setResult(team29,team4,win8,"WIN.8",res8_29,res8_29_2set,res8_29_3set,res8_4,res8_4_2set,res8_4_3set);
+        setResult("E13","E20",team13,team20,win7,"WIN.7",res7_13,res7_13_2set,res7_13_3set,res7_20,res7_20_2set,res7_20_3set);
 
-        setResult(team3,team30,win9,"WIN.9",res9_3,res9_3_2set,res9_3_3set,res9_30,res9_30_2set,res9_30_3set);
+        setResult("E29","E4",team29,team4,win8,"WIN.8",res8_29,res8_29_2set,res8_29_3set,res8_4,res8_4_2set,res8_4_3set);
 
-        setResult(team19,team14,win10,"WIN.10",res10_19,res10_19_2set,res10_19_3set,res10_14,res10_14_2set,res10_14_3set);
+        setResult("E3","E30",team3,team30,win9,"WIN.9",res9_3,res9_3_2set,res9_3_3set,res9_30,res9_30_2set,res9_30_3set);
 
-        setResult(team11,team22,win11,"WIN.11",res11_11,res11_11_2set,res11_11_3set,res11_22,res11_22_2set,res11_22_3set);
+        setResult("E19","E14",team19,team14,win10,"WIN.10",res10_19,res10_19_2set,res10_19_3set,res10_14,res10_14_2set,res10_14_3set);
 
-        setResult(team27,team6,win12,"WIN.12",res12_27,res12_27_2set,res12_27_3set,res12_6,res12_6_2set,res12_6_3set);
+        setResult("E11","E22",team11,team22,win11,"WIN.11",res11_11,res11_11_2set,res11_11_3set,res11_22,res11_22_2set,res11_22_3set);
 
-        setResult(team7,team26,win13,"WIN.13",res13_7,res13_7_2set,res13_7_3set,res13_26,res13_26_2set,res13_26_3set);
+        setResult("E27","E6",team27,team6,win12,"WIN.12",res12_27,res12_27_2set,res12_27_3set,res12_6,res12_6_2set,res12_6_3set);
 
-        setResult(team23,team10,win14,"WIN.14",res14_23,res14_23_2set,res14_23_3set,res14_10,res14_10_2set,res14_10_3set);
+        setResult("E7","E26",team7,team26,win13,"WIN.13",res13_7,res13_7_2set,res13_7_3set,res13_26,res13_26_2set,res13_26_3set);
 
-        setResult(team15,team18,win15,"WIN.15",res15_15,res15_15_2set,res15_15_3set,res15_18,res15_18_2set,res15_18_3set);
+        setResult("E23","E10",team23,team10,win14,"WIN.14",res14_23,res14_23_2set,res14_23_3set,res14_10,res14_10_2set,res14_10_3set);
 
-        setResult(team31,team2,win16,"WIN.16",res16_31,res16_31_2set,res16_31_3set,res16_2,res16_2_2set,res16_2_3set);
+        setResult("E15","E18",team15,team18,win15,"WIN.15",res15_15,res15_15_2set,res15_15_3set,res15_18,res15_18_2set,res15_18_3set);
+
+        setResult("E31","E2",team31,team2,win16,"WIN.16",res16_31,res16_31_2set,res16_31_3set,res16_2,res16_2_2set,res16_2_3set);
 
 
         setResult(win1,"WIN.1",win2,"WIN.2",win17,"WIN.17",res17_Win_1,res17_Win_1_2set,res17_Win_1_3set,res17_Win_2,res17_Win_2_2set,res17_Win_2_3set);
@@ -537,80 +551,28 @@ public class FragmentTabCup32_1 extends Fragment {
     }
 
 
-    //Method to set results to next Buttons with loser and check
-    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button resultButton, final String undoResultString, final Button resultButton2, final String undoResultString2, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
-        firstPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (firstPlayer.getText().equals(firstPlayerString) || secundPlayer.getText().equals(secundPlayerString)) {
-                    toast.show();
-                } else {
-                    resultButton.setText(firstPlayer.getText());
-                    resultButton2.setText(secundPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
-                }
-
-            }
-        });
-
-        secundPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (secundPlayer.getText().equals(secundPlayerString) || firstPlayer.getText().equals(firstPlayerString)) {
-                    toast.show();
-                } else {
-                    resultButton.setText(secundPlayer.getText());
-                    resultButton2.setText(firstPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
-                }
-
-            }
-        });
-
-        resultButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                resultButton.setText(undoResultString);
-                resultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-                return true;
-            }
-        });
-
-        resultButton2.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                resultButton.setText(undoResultString);
-                resultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-                return true;
-            }
-        });
-
-
-    }
 
 
     //Method to set results to next Buttons without loser and check
-    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button resultButton, final String undoResultString, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+    //Method to set Results to next Buttons without loser and check
+    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button ResultButton, final String undoResultString, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+        //Add NumberOfMatches
+        numberOfMatches++;
+        numbersOfMatchesArray[actualMatch].setText(String.valueOf(numberOfMatches));
+        actualMatch++;
+
         firstPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (firstPlayer.getText().equals(firstPlayerString) || secundPlayer.getText().equals(secundPlayerString)) {
                     toast.show();
                 } else {
-                    resultButton.setText(firstPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                    if (!pointsFor1In1Set.getText().toString().equals("")) {
+                        Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
+                    }else {
+                        ResultButton.setText(firstPlayer.getText());
+                        setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                    }
                 }
 
             }
@@ -622,17 +584,21 @@ public class FragmentTabCup32_1 extends Fragment {
                 if (secundPlayer.getText().equals(secundPlayerString) || firstPlayer.getText().equals(firstPlayerString)) {
                     toast.show();
                 } else {
-                    resultButton.setText(secundPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                    if (!pointsFor1In1Set.getText().toString().equals("")) {
+                        Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
+                    }else {
+                        ResultButton.setText(secundPlayer.getText());
+                        setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                    }
                 }
 
             }
         });
 
-        resultButton.setOnLongClickListener(new View.OnLongClickListener() {
+        ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                resultButton.setText(undoResultString);
+                ResultButton.setText(undoResultString);
                 pointsFor1In1Set.setText("");
                 pointsFor1In2Set.setText("");
                 pointsFor1In3Set.setText("");
@@ -644,14 +610,106 @@ public class FragmentTabCup32_1 extends Fragment {
         });
     }
 
-    // Method to set results to next Buttons with loser without check
-    void setResult(final Button firstPlayer, final Button secundPlayer, final Button resultButton, final String undoResultString, final Button resultButton2, final String undoResultString2, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+
+    void setResult(String EofFirstPlayer,String EofSecondPlayer,final Button firstPlayer, final Button secundPlayer, final Button ResultButton, final String undoResultString, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+
+        //ADD E of Players
+        if(firstPlayer.getText()==""){
+            firstPlayer.setVisibility(View.INVISIBLE);
+            secundPlayer.setVisibility(View.INVISIBLE);
+            ResultButton.setText(secundPlayer.getText());
+
+
+            //set the properties for textView
+            TextView tv = new TextView(getActivity().getApplicationContext());
+
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            lp.addRule(RelativeLayout.START_OF,ResultButton.getId());
+            lp.addRule(RelativeLayout.ALIGN_BASELINE,ResultButton.getId());
+
+
+            tv.setLayoutParams(lp);
+
+            tv.setText(EofSecondPlayer);
+            tv.setTextSize(16);
+            tv.setTextColor(Color.BLACK);
+
+
+            //add button to the layout
+            relativeLayout.addView(tv);
+
+            int resID = getResources().getIdentifier("cup32"+EofFirstPlayer, "id", getActivity().getPackageName());
+            TextView tvE = view.findViewById(resID);
+            tvE.setVisibility(View.INVISIBLE);
+
+            int resID2 = getResources().getIdentifier("cup32"+EofSecondPlayer, "id", getActivity().getPackageName());
+            TextView tvE2 = view.findViewById(resID2);
+            tvE2.setVisibility(View.INVISIBLE);
+            //Add NumberOfMatches
+            actualMatch++;
+
+
+        }else if(secundPlayer.getText()==""){
+            firstPlayer.setVisibility(View.INVISIBLE);
+            secundPlayer.setVisibility(View.INVISIBLE);
+            ResultButton.setText(firstPlayer.getText());
+
+
+
+            //set the properties for textView
+            TextView tv = new TextView(getActivity().getApplicationContext());
+
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            lp.addRule(RelativeLayout.START_OF,ResultButton.getId());
+            lp.addRule(RelativeLayout.ALIGN_BASELINE,ResultButton.getId());
+
+            tv.setLayoutParams(lp);
+
+            tv.setText(EofFirstPlayer);
+            tv.setTextSize(16);
+            tv.setTextColor(Color.BLACK);
+
+
+            int resID = getResources().getIdentifier("cup32"+EofFirstPlayer, "id", getActivity().getPackageName());
+            TextView tvE = view.findViewById(resID);
+            tvE.setVisibility(View.INVISIBLE);
+
+            int resID2 = getResources().getIdentifier("cup32"+EofSecondPlayer, "id", getActivity().getPackageName());
+            TextView tvE2 = view.findViewById(resID2);
+            tvE2.setVisibility(View.INVISIBLE);
+
+
+
+            //add button to the layout
+            relativeLayout.addView(tv);
+
+            //Add NumberOfMatches
+            if(!(firstPlayer.getText()=="")) {
+                actualMatch++;
+            }
+
+        }else {
+            //Add NumberOfMatches
+            numberOfMatches++;
+            numbersOfMatchesArray[actualMatch].setText(String.valueOf(numberOfMatches));
+            actualMatch++;
+        }
+
+
+
+
+
+
+
         firstPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                resultButton.setText(firstPlayer.getText());
-                resultButton2.setText(secundPlayer.getText());
-                setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                if (!pointsFor1In1Set.getText().toString().equals("")) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
+                }else {
+                    ResultButton.setText(firstPlayer.getText());
+                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                }
             }
         });
 
@@ -659,33 +717,20 @@ public class FragmentTabCup32_1 extends Fragment {
         secundPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                resultButton.setText(secundPlayer.getText());
-                resultButton2.setText(firstPlayer.getText());
-                setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                if (!pointsFor1In1Set.getText().toString().equals("")) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
+                }else {
+                    ResultButton.setText(secundPlayer.getText());
+                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                }
             }
         });
 
 
-        resultButton.setOnLongClickListener(new View.OnLongClickListener() {
+        ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                resultButton.setText(undoResultString);
-                resultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-                return true;
-            }
-        });
-
-        resultButton2.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                resultButton.setText(undoResultString);
-                resultButton2.setText(undoResultString2);
+                ResultButton.setText(undoResultString);
                 pointsFor1In1Set.setText("");
                 pointsFor1In2Set.setText("");
                 pointsFor1In3Set.setText("");
@@ -693,40 +738,6 @@ public class FragmentTabCup32_1 extends Fragment {
                 pointsFor2In2Set.setText("");
                 pointsFor2In3Set.setText("");
 
-                return true;
-            }
-        });
-    }
-
-    void setResult(final Button firstPlayer, final Button secundPlayer, final Button resultButton, final String undoResultString, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
-        firstPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resultButton.setText(firstPlayer.getText());
-                setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
-            }
-        });
-
-
-        secundPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resultButton.setText(secundPlayer.getText());
-                setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
-            }
-        });
-
-
-        resultButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                resultButton.setText(undoResultString);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
                 return true;
             }
         });
@@ -737,10 +748,10 @@ public class FragmentTabCup32_1 extends Fragment {
     // Method to add points of Sets
     void setDetailedResultFor2Sets(final EditText team1Set1, final EditText team1Set2, final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3) {
 
-        if (!team1Set1.getText().toString().equals("")) {
-            Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-            return;
-        }
+
+        team1Set1.setFocusableInTouchMode(true);
+        team2Set1.setFocusableInTouchMode(true);
+
         disableEnableControls(false, vg);
         team1Set2.setFocusableInTouchMode(false);
         team1Set3.setFocusableInTouchMode(false);
@@ -831,6 +842,8 @@ public class FragmentTabCup32_1 extends Fragment {
         });
 
 
+
+
         team1Set2.addTextChangedListener(new TextWatcher() {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 team2Set2.setFocusableInTouchMode(true);
@@ -904,6 +917,7 @@ public class FragmentTabCup32_1 extends Fragment {
             }
         });
 
+
         //AFTER CLICK ACTION NEXT CHECK EVERYTHINK
         team2Set2.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -913,6 +927,7 @@ public class FragmentTabCup32_1 extends Fragment {
                         if (checkTieBreak(team1Set1, team1Set2, team2Set1, team2Set2)) {
                             team1Set3.setFocusableInTouchMode(true);
                             team1Set3.requestFocus();
+                            imm.showSoftInput(team1Set3, InputMethodManager.SHOW_IMPLICIT);
                         } else {
 
                             disableEnableControls(true, vg);
@@ -924,6 +939,16 @@ public class FragmentTabCup32_1 extends Fragment {
                             team2Set2.setVisibility(View.INVISIBLE);
                             team1Set3.setVisibility(View.INVISIBLE);
                             team2Set3.setVisibility(View.INVISIBLE);
+
+                            //Reset all
+                            team1Set1.setOnEditorActionListener(null);
+                            team2Set1.setOnEditorActionListener(null);
+                            team1Set2.setOnEditorActionListener(null);
+                            team2Set2.setOnEditorActionListener(null);
+                            team1Set3.setOnEditorActionListener(null);
+                            team2Set3.setOnEditorActionListener(null);
+
+
 
 
                         }
@@ -1026,6 +1051,15 @@ public class FragmentTabCup32_1 extends Fragment {
                         team1Set3.setVisibility(View.INVISIBLE);
                         team2Set3.setVisibility(View.INVISIBLE);
 
+                        //Reset all
+                        team1Set1.setOnEditorActionListener(null);
+                        team2Set1.setOnEditorActionListener(null);
+                        team1Set2.setOnEditorActionListener(null);
+                        team2Set2.setOnEditorActionListener(null);
+                        team1Set3.setOnEditorActionListener(null);
+                        team2Set3.setOnEditorActionListener(null);
+
+
 
                     } else {
                         Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
@@ -1058,9 +1092,9 @@ public class FragmentTabCup32_1 extends Fragment {
 
 
     boolean checkPointsInSet(EditText team1, EditText team2, String pktInSet) {
-        String res1 = team1.getText().toString();
-        String res2 = team2.getText().toString();
-        return !res1.equals("") && !res2.equals("") && ((Math.abs(Integer.parseInt(res1) - Integer.parseInt(res2)) > 2 && (Integer.parseInt(pktInSet) == Integer.parseInt(res1) && Integer.parseInt(res2) < Integer.parseInt(pktInSet)) || (Integer.parseInt(pktInSet) == Integer.parseInt(res2) && Integer.parseInt(res1) < Integer.parseInt(pktInSet))) || (Math.abs(Integer.parseInt(res1) - Integer.parseInt(res2)) == 2 && ((Integer.parseInt(res1) >= Integer.parseInt(pktInSet)) || Integer.parseInt(res2) >= Integer.parseInt(pktInSet))));
+        String Res1 = team1.getText().toString();
+        String Res2 = team2.getText().toString();
+        return !Res1.equals("") && !Res2.equals("") && ((Math.abs(Integer.parseInt(Res1) - Integer.parseInt(Res2)) > 2 && (Integer.parseInt(pktInSet) == Integer.parseInt(Res1) && Integer.parseInt(Res2) < Integer.parseInt(pktInSet)) || (Integer.parseInt(pktInSet) == Integer.parseInt(Res2) && Integer.parseInt(Res1) < Integer.parseInt(pktInSet))) || (Math.abs(Integer.parseInt(Res1) - Integer.parseInt(Res2)) == 2 && ((Integer.parseInt(Res1) >= Integer.parseInt(pktInSet)) || Integer.parseInt(Res2) >= Integer.parseInt(pktInSet))));
     }
 
     boolean checkTieBreak(EditText team1Set1, EditText team1Set2, EditText team2Set1, EditText team2Set2) {

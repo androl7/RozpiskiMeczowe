@@ -1,6 +1,7 @@
 package com.example.adam.rozpiskimeczowe.cup.cup64;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,8 +28,14 @@ public class FragmentTabCup64_1 extends Fragment {
     InputMethodManager imm;
     String pktInSet = "21";
     String pktInTieBreak = "15";
+    int numberOfMatches = 0;
+    int actualMatch = 0;
     View view;
     ViewGroup vg;
+    RelativeLayout relativeLayout;
+    TextView[]numbersOfMatchesArray;
+
+
 
 
     @Override
@@ -39,6 +47,7 @@ public class FragmentTabCup64_1 extends Fragment {
 
         this.vg = container;
 
+        relativeLayout = view.findViewById(R.id.cup64relLayout);
 
         final EditText Res1_1 = view.findViewById(R.id.cup64Res1_1);
         final EditText Res1_1_2set = view.findViewById(R.id.cup64Res1_1_2set);
@@ -835,6 +844,7 @@ public class FragmentTabCup64_1 extends Fragment {
         Res56_Win_48_3set.setVisibility(View.INVISIBLE);
 
 
+
         final Button team1 = view.findViewById(R.id.cup64Team01);
         final Button team2 = view.findViewById(R.id.cup64Team2);
         final Button team3 = view.findViewById(R.id.cup64Team3);
@@ -1027,71 +1037,84 @@ public class FragmentTabCup64_1 extends Fragment {
         final Button win55 = view.findViewById(R.id.cup64WIN_55);
         final Button win56 = view.findViewById(R.id.cup64WIN_56);
 
+//Add NumberOfMatches
+        numbersOfMatchesArray = new TextView[56];
+        for(int i=0; i<numbersOfMatchesArray.length; i++) {
+                String buttonID = "cup64numberOfMatch" + (i+1) ;
+                int resID = getResources().getIdentifier(buttonID, "id", getActivity().getPackageName());
+                numbersOfMatchesArray[i] = view.findViewById(resID);
+        }
 
 
-        setResult(team1,team32,win1,"WIN.1",Res1_1,Res1_1_2set,Res1_1_3set,Res1_64,Res1_64_2set,Res1_64_3set);
 
-        setResult(team17,team16,win2,"WIN.2",Res2_33,Res2_33_2set,Res2_33_3set,Res2_32,Res2_32_2set,Res2_32_3set);
 
-        setResult(team9,team24,win3,"WIN.3",Res3_17,Res3_17_2set,Res3_17_3set,Res3_48,Res3_48_2set,Res3_48_3set);
 
-        setResult(team25,team8,win4,"WIN.4",Res4_49,Res4_49_2set,Res4_49_3set,Res4_16,Res4_16_2set,Res4_16_3set);
 
-        setResult(team5,team28,win5,"WIN.5",Res5_9,Res5_9_2set,Res5_9_3set,Res5_56,Res5_56_2set,Res5_56_3set);
 
-        setResult(team21,team12,win6,"WIN.6",Res6_41,Res6_41_2set,Res6_41_3set,Res6_24,Res6_24_2set,Res6_24_3set);
 
-        setResult(team13,team20,win7,"WIN.7",Res7_25,Res7_25_2set,Res7_25_3set,Res7_40,Res7_40_2set,Res7_40_3set);
+        setResult("E1","E64",team1,team64,win1,"WIN.1",Res1_1,Res1_1_2set,Res1_1_3set,Res1_64,Res1_64_2set,Res1_64_3set);
 
-        setResult(team29,team4,win8,"WIN.8",Res8_57,Res8_57_2set,Res8_57_3set,Res8_8,Res8_8_2set,Res8_8_3set);
+        setResult("E33","E32",team33,team32,win2,"WIN.2",Res2_33,Res2_33_2set,Res2_33_3set,Res2_32,Res2_32_2set,Res2_32_3set);
 
-        setResult(team3,team30,win9,"WIN.9",Res9_5,Res9_5_2set,Res9_5_3set,Res9_60,Res9_60_2set,Res9_60_3set);
+        setResult("E17","E48",team17,team48,win3,"WIN.3",Res3_17,Res3_17_2set,Res3_17_3set,Res3_48,Res3_48_2set,Res3_48_3set);
 
-        setResult(team19,team14,win10,"WIN.10",Res10_37,Res10_37_2set,Res10_37_3set,Res10_28,Res10_28_2set,Res10_28_3set);
+        setResult("E49","E16",team49,team16,win4,"WIN.4",Res4_49,Res4_49_2set,Res4_49_3set,Res4_16,Res4_16_2set,Res4_16_3set);
 
-        setResult(team11,team22,win11,"WIN.11",Res11_21,Res21_11_2set,Res11_21_3set,Res11_44,Res11_44_2set,Res11_44_3set);
+        setResult("E9","E56",team9,team56,win5,"WIN.5",Res5_9,Res5_9_2set,Res5_9_3set,Res5_56,Res5_56_2set,Res5_56_3set);
 
-        setResult(team27,team6,win12,"WIN.12",Res12_53,Res12_53_2set,Res12_53_3set,Res12_12,Res12_12_2set,Res12_12_3set);
+        setResult("E41","E24",team41,team24,win6,"WIN.6",Res6_41,Res6_41_2set,Res6_41_3set,Res6_24,Res6_24_2set,Res6_24_3set);
 
-        setResult(team7,team26,win13,"WIN.13",Res13_13,Res13_13_2set,Res13_13_3set,Res13_52,Res13_52_2set,Res13_52_3set);
+        setResult("E25","E40",team25,team40,win7,"WIN.7",Res7_25,Res7_25_2set,Res7_25_3set,Res7_40,Res7_40_2set,Res7_40_3set);
 
-        setResult(team23,team10,win14,"WIN.14",Res14_45,Res14_45_2set,Res14_45_3set,Res14_20,Res14_20_2set,Res14_20_3set);
+        setResult("E57","E8",team57,team8,win8,"WIN.8",Res8_57,Res8_57_2set,Res8_57_3set,Res8_8,Res8_8_2set,Res8_8_3set);
 
-        setResult(team15,team18,win15,"WIN.15",Res15_29,Res15_29_2set,Res15_29_3set,Res15_36,Res15_36_2set,Res15_36_3set);
+        setResult("E5","E60",team5,team60,win9,"WIN.9",Res9_5,Res9_5_2set,Res9_5_3set,Res9_60,Res9_60_2set,Res9_60_3set);
 
-        setResult(team31,team2,win16,"WIN.16",Res16_61,Res16_61_2set,Res16_61_3set,Res16_4,Res16_4_2set,Res16_4_3set);
+        setResult("E37","E28",team37,team28,win10,"WIN.10",Res10_37,Res10_37_2set,Res10_37_3set,Res10_28,Res10_28_2set,Res10_28_3set);
 
-        setResult(team3,team62,win17,"WIN.17",Res17_3,Res17_3_2set,Res17_3_3set,Res17_62,Res17_62_2set,Res17_62_3set);
+        setResult("E21","E44",team21,team44,win11,"WIN.11",Res11_21,Res11_21_2set,Res11_21_3set,Res11_44,Res11_44_2set,Res11_44_3set);
 
-        setResult(team35,team30,win18,"WIN.18",Res18_35,Res18_35_2set,Res18_35_3set,Res18_30,Res18_30_2set,Res18_30_3set);
+        setResult("E53","E12",team53,team12,win12,"WIN.12",Res12_53,Res12_53_2set,Res12_53_3set,Res12_12,Res12_12_2set,Res12_12_3set);
 
-        setResult(team19,team46,win19,"WIN.19",Res19_19,Res19_19_2set,Res19_19_3set,Res19_46,Res19_46_2set,Res19_46_3set);
+        setResult("E13","E52",team13,team52,win13,"WIN.13",Res13_13,Res13_13_2set,Res13_13_3set,Res13_52,Res13_52_2set,Res13_52_3set);
 
-        setResult(team51,team14,win20,"WIN.20",Res20_51,Res20_51_2set,Res20_51_3set,Res20_14,Res20_14_2set,Res20_14_3set);
+        setResult("E45","E20",team45,team20,win14,"WIN.14",Res14_45,Res14_45_2set,Res14_45_3set,Res14_20,Res14_20_2set,Res14_20_3set);
 
-        setResult(team11,team54,win21,"WIN.21",Res21_11,Res21_11_2set,Res21_11_3set,Res21_54,Res21_54_2set,Res21_54_3set);
+        setResult("E29","E36",team29,team36,win15,"WIN.15",Res15_29,Res15_29_2set,Res15_29_3set,Res15_36,Res15_36_2set,Res15_36_3set);
 
-        setResult(team43,team22,win22,"WIN.22",Res22_43,Res22_43_2set,Res22_43_3set,Res22_22,Res22_22_2set,Res22_22_3set);
+        setResult("E61","E4",team61,team4,win16,"WIN.16",Res16_61,Res16_61_2set,Res16_61_3set,Res16_4,Res16_4_2set,Res16_4_3set);
 
-        setResult(team27,team38,win23,"WIN.23",Res23_27,Res23_27_2set,Res23_27_3set,Res23_38,Res23_38_2set,Res23_38_3set);
+        setResult("E3","E62",team3,team62,win17,"WIN.17",Res17_3,Res17_3_2set,Res17_3_3set,Res17_62,Res17_62_2set,Res17_62_3set);
 
-        setResult(team59,team6,win24,"WIN.24",Res24_59,Res24_59_2set,Res24_59_3set,Res24_6,Res24_6_2set,Res24_6_3set);
+        setResult("E35","E30",team35,team30,win18,"WIN.18",Res18_35,Res18_35_2set,Res18_35_3set,Res18_30,Res18_30_2set,Res18_30_3set);
 
-        setResult(team7,team58,win25,"WIN.25",Res25_7,Res25_7_2set,Res25_7_3set,Res25_58,Res25_58_2set,Res25_58_3set);
+        setResult("E19","E46",team19,team46,win19,"WIN.19",Res19_19,Res19_19_2set,Res19_19_3set,Res19_46,Res19_46_2set,Res19_46_3set);
 
-        setResult(team39,team26,win26,"WIN.26",Res26_39,Res26_39_2set,Res26_39_3set,Res26_26,Res26_26_2set,Res26_26_3set);
+        setResult("E51","E14",team51,team14,win20,"WIN.20",Res20_51,Res20_51_2set,Res20_51_3set,Res20_14,Res20_14_2set,Res20_14_3set);
 
-        setResult(team23,team42,win27,"WIN.27",Res27_23,Res27_23_2set,Res27_23_3set,Res27_42,Res27_42_2set,Res27_42_3set);
+        setResult("E11","E54",team11,team54,win21,"WIN.21",Res21_11,Res21_11_2set,Res21_11_3set,Res21_54,Res21_54_2set,Res21_54_3set);
 
-        setResult(team55,team10,win28,"WIN.28",Res28_55,Res28_55_2set,Res28_55_3set,Res28_10,Res28_10_2set,Res28_10_3set);
+        setResult("E43","E22",team43,team22,win22,"WIN.22",Res22_43,Res22_43_2set,Res22_43_3set,Res22_22,Res22_22_2set,Res22_22_3set);
 
-        setResult(team15,team50,win29,"WIN.29",Res29_15,Res29_15_2set,Res29_15_3set,Res29_50,Res29_50_2set,Res29_50_3set);
+        setResult("E27","E38",team27,team38,win23,"WIN.23",Res23_27,Res23_27_2set,Res23_27_3set,Res23_38,Res23_38_2set,Res23_38_3set);
 
-        setResult(team47,team18,win30,"WIN.30",Res30_47,Res30_47_2set,Res30_47_3set,Res30_18,Res30_18_2set,Res30_18_3set);
+        setResult("E59","E6",team59,team6,win24,"WIN.24",Res24_59,Res24_59_2set,Res24_59_3set,Res24_6,Res24_6_2set,Res24_6_3set);
 
-        setResult(team31,team34,win31,"WIN.31",Res31_31,Res31_31_2set,Res31_31_3set,Res31_34,Res31_34_2set,Res31_34_3set);
+        setResult("E7","E58",team7,team58,win25,"WIN.25",Res25_7,Res25_7_2set,Res25_7_3set,Res25_58,Res25_58_2set,Res25_58_3set);
 
-        setResult(team63,team2,win32,"WIN.32",Res32_63,Res32_63_2set,Res32_63_3set,Res32_2,Res32_2_2set,Res32_2_3set);
+        setResult("E39","E26",team39,team26,win26,"WIN.26",Res26_39,Res26_39_2set,Res26_39_3set,Res26_26,Res26_26_2set,Res26_26_3set);
+
+        setResult("E23","E42",team23,team42,win27,"WIN.27",Res27_23,Res27_23_2set,Res27_23_3set,Res27_42,Res27_42_2set,Res27_42_3set);
+
+        setResult("E55","E10",team55,team10,win28,"WIN.28",Res28_55,Res28_55_2set,Res28_55_3set,Res28_10,Res28_10_2set,Res28_10_3set);
+
+        setResult("E15","E50",team15,team50,win29,"WIN.29",Res29_15,Res29_15_2set,Res29_15_3set,Res29_50,Res29_50_2set,Res29_50_3set);
+
+        setResult("E47","E18",team47,team18,win30,"WIN.30",Res30_47,Res30_47_2set,Res30_47_3set,Res30_18,Res30_18_2set,Res30_18_3set);
+
+        setResult("E31","E34",team31,team34,win31,"WIN.31",Res31_31,Res31_31_2set,Res31_31_3set,Res31_34,Res31_34_2set,Res31_34_3set);
+
+        setResult("E63","E2",team63,team2,win32,"WIN.32",Res32_63,Res32_63_2set,Res32_63_3set,Res32_2,Res32_2_2set,Res32_2_3set);
 
 
         setResult(win1,"WIN.1",win2,"WIN.2",win33,"WIN.33",Res33_Win_1,Res33_Win_1_2set,Res33_Win_1_3set,Res33_Win_2,Res33_Win_2_2set,Res33_Win_2_3set);
@@ -1110,37 +1133,37 @@ public class FragmentTabCup64_1 extends Fragment {
 
         setResult(win15,"WIN.15",win16,"WIN.16",win40,"WIN.40",Res40_Win_15,Res40_Win_15_2set,Res40_Win_15_3set,Res40_Win_16,Res40_Win_16_2set,Res40_Win_16_3set);
 
-        setResult(win1,"WIN.17",win2,"WIN.18",win41,"WIN.41",Res41_Win_17,Res41_Win_17_2set,Res41_Win_17_3set,Res41_Win_18,Res41_Win_18_2set,Res41_Win_18_3set);
+        setResult(win17,"WIN.17",win18,"WIN.18",win41,"WIN.41",Res41_Win_17,Res41_Win_17_2set,Res41_Win_17_3set,Res41_Win_18,Res41_Win_18_2set,Res41_Win_18_3set);
 
-        setResult(win3,"WIN.19",win4,"WIN.20",win42,"WIN.42",Res42_Win_19,Res42_Win_19_2set,Res42_Win_19_3set,Res42_Win_20,Res42_Win_20_2set,Res42_Win_20_3set);
+        setResult(win19,"WIN.19",win20,"WIN.20",win42,"WIN.42",Res42_Win_19,Res42_Win_19_2set,Res42_Win_19_3set,Res42_Win_20,Res42_Win_20_2set,Res42_Win_20_3set);
 
-        setResult(win5,"WIN.21",win6,"WIN.22",win43,"WIN.43",Res43_Win_21,Res43_Win_21_2set,Res43_Win_21_3set,Res43_Win_22,Res43_Win_22_2set,Res43_Win_22_3set);
+        setResult(win21,"WIN.21",win22,"WIN.22",win43,"WIN.43",Res43_Win_21,Res43_Win_21_2set,Res43_Win_21_3set,Res43_Win_22,Res43_Win_22_2set,Res43_Win_22_3set);
 
-        setResult(win7,"WIN.23",win8,"WIN.24",win44,"WIN.44",Res44_Win_23,Res44_Win_23_2set,Res44_Win_23_3set,Res44_Win_24,Res44_Win_24_2set,Res44_Win_24_3set);
+        setResult(win23,"WIN.23",win24,"WIN.24",win44,"WIN.44",Res44_Win_23,Res44_Win_23_2set,Res44_Win_23_3set,Res44_Win_24,Res44_Win_24_2set,Res44_Win_24_3set);
 
-        setResult(win9,"WIN.25",win10,"WIN.26",win45,"WIN.45",Res45_Win_25,Res45_Win_25_2set,Res45_Win_25_3set,Res45_Win_26,Res45_Win_26_2set,Res45_Win_26_3set);
+        setResult(win25,"WIN.25",win26,"WIN.26",win45,"WIN.45",Res45_Win_25,Res45_Win_25_2set,Res45_Win_25_3set,Res45_Win_26,Res45_Win_26_2set,Res45_Win_26_3set);
 
-        setResult(win11,"WIN.27",win12,"WIN.28",win46,"WIN.46",Res46_Win_27,Res46_Win_27_2set,Res46_Win_27_3set,Res46_Win_28,Res46_Win_28_2set,Res46_Win_28_3set);
+        setResult(win27,"WIN.27",win28,"WIN.28",win46,"WIN.46",Res46_Win_27,Res46_Win_27_2set,Res46_Win_27_3set,Res46_Win_28,Res46_Win_28_2set,Res46_Win_28_3set);
 
-        setResult(win13,"WIN.29",win14,"WIN.30",win47,"WIN.47",Res47_Win_29,Res47_Win_29_2set,Res47_Win_29_3set,Res47_Win_30,Res47_Win_30_2set,Res47_Win_30_3set);
+        setResult(win29,"WIN.29",win30,"WIN.30",win47,"WIN.47",Res47_Win_29,Res47_Win_29_2set,Res47_Win_29_3set,Res47_Win_30,Res47_Win_30_2set,Res47_Win_30_3set);
 
-        setResult(win15,"WIN.31",win16,"WIN.32",win48,"WIN.48",Res48_Win_31,Res48_Win_31_2set,Res48_Win_31_3set,Res48_Win_32,Res48_Win_32_2set,Res48_Win_32_3set);
+        setResult(win31,"WIN.31",win32,"WIN.32",win48,"WIN.48",Res48_Win_31,Res48_Win_31_2set,Res48_Win_31_3set,Res48_Win_32,Res48_Win_32_2set,Res48_Win_32_3set);
 
-        setResult(win1,"WIN.33",win2,"WIN.34",win49,"WIN.49",Res49_Win_33,Res49_Win_33_2set,Res49_Win_33_3set,Res49_Win_34,Res49_Win_34_2set,Res49_Win_34_3set);
+        setResult(win33,"WIN.33",win34,"WIN.34",win49,"WIN.49",Res49_Win_33,Res49_Win_33_2set,Res49_Win_33_3set,Res49_Win_34,Res49_Win_34_2set,Res49_Win_34_3set);
 
-        setResult(win3,"WIN.35",win4,"WIN.36",win50,"WIN.50",Res50_Win_35,Res50_Win_35_2set,Res50_Win_35_3set,Res50_Win_36,Res50_Win_36_2set,Res50_Win_36_3set);
+        setResult(win35,"WIN.35",win36,"WIN.36",win50,"WIN.50",Res50_Win_35,Res50_Win_35_2set,Res50_Win_35_3set,Res50_Win_36,Res50_Win_36_2set,Res50_Win_36_3set);
 
-        setResult(win5,"WIN.37",win6,"WIN.38",win51,"WIN.51",Res51_Win_37,Res51_Win_37_2set,Res51_Win_37_3set,Res51_Win_38,Res51_Win_38_2set,Res51_Win_38_3set);
+        setResult(win37,"WIN.37",win38,"WIN.38",win51,"WIN.51",Res51_Win_37,Res51_Win_37_2set,Res51_Win_37_3set,Res51_Win_38,Res51_Win_38_2set,Res51_Win_38_3set);
 
-        setResult(win7,"WIN.39",win8,"WIN.40",win52,"WIN.52",Res52_Win_39,Res52_Win_39_2set,Res52_Win_39_3set,Res52_Win_40,Res52_Win_40_2set,Res52_Win_40_3set);
+        setResult(win39,"WIN.39",win40,"WIN.40",win52,"WIN.52",Res52_Win_39,Res52_Win_39_2set,Res52_Win_39_3set,Res52_Win_40,Res52_Win_40_2set,Res52_Win_40_3set);
 
-        setResult(win9,"WIN.41",win10,"WIN.42",win53,"WIN.53",Res53_Win_41,Res53_Win_41_2set,Res53_Win_41_3set,Res53_Win_42,Res53_Win_42_2set,Res53_Win_42_3set);
+        setResult(win41,"WIN.41",win42,"WIN.42",win53,"WIN.53",Res53_Win_41,Res53_Win_41_2set,Res53_Win_41_3set,Res53_Win_42,Res53_Win_42_2set,Res53_Win_42_3set);
 
-        setResult(win11,"WIN.43",win12,"WIN.44",win54,"WIN.54",Res54_Win_43,Res54_Win_43_2set,Res54_Win_43_3set,Res54_Win_44,Res54_Win_44_2set,Res54_Win_44_3set);
+        setResult(win43,"WIN.43",win44,"WIN.44",win54,"WIN.54",Res54_Win_43,Res54_Win_43_2set,Res54_Win_43_3set,Res54_Win_44,Res54_Win_44_2set,Res54_Win_44_3set);
 
-        setResult(win13,"WIN.45",win14,"WIN.46",win55,"WIN.55",Res55_Win_45,Res55_Win_45_2set,Res55_Win_45_3set,Res55_Win_46,Res55_Win_46_2set,Res55_Win_46_3set);
+        setResult(win45,"WIN.45",win46,"WIN.46",win55,"WIN.55",Res55_Win_45,Res55_Win_45_2set,Res55_Win_45_3set,Res55_Win_46,Res55_Win_46_2set,Res55_Win_46_3set);
 
-        setResult(win15,"WIN.47",win16,"WIN.48",win56,"WIN.56",Res56_Win_47,Res56_Win_47_2set,Res56_Win_47_3set,Res56_Win_48,Res56_Win_48_2set,Res56_Win_48_3set);
+        setResult(win47,"WIN.47",win48,"WIN.48",win56,"WIN.56",Res56_Win_47,Res56_Win_47_2set,Res56_Win_47_3set,Res56_Win_48,Res56_Win_48_2set,Res56_Win_48_3set);
 
 
 
@@ -1153,80 +1176,26 @@ public class FragmentTabCup64_1 extends Fragment {
     }
 
 
-    //Method to set Results to next Buttons with loser and check
-    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button ResultButton, final String undoResultString, final Button ResultButton2, final String undoResultString2, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
-        firstPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (firstPlayer.getText().equals(firstPlayerString) || secundPlayer.getText().equals(secundPlayerString)) {
-                    toast.show();
-                } else {
-                    ResultButton.setText(firstPlayer.getText());
-                    ResultButton2.setText(secundPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
-                }
-
-            }
-        });
-
-        secundPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (secundPlayer.getText().equals(secundPlayerString) || firstPlayer.getText().equals(firstPlayerString)) {
-                    toast.show();
-                } else {
-                    ResultButton.setText(secundPlayer.getText());
-                    ResultButton2.setText(firstPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
-                }
-
-            }
-        });
-
-        ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-                return true;
-            }
-        });
-
-        ResultButton2.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-                return true;
-            }
-        });
-
-
-    }
-
 
     //Method to set Results to next Buttons without loser and check
     void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button ResultButton, final String undoResultString, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+        //Add NumberOfMatches
+        numberOfMatches++;
+        numbersOfMatchesArray[actualMatch].setText(String.valueOf(numberOfMatches));
+        actualMatch++;
+
         firstPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (firstPlayer.getText().equals(firstPlayerString) || secundPlayer.getText().equals(secundPlayerString)) {
                     toast.show();
                 } else {
-                    ResultButton.setText(firstPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                    if (!pointsFor1In1Set.getText().toString().equals("")) {
+                        Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
+                    }else {
+                        ResultButton.setText(firstPlayer.getText());
+                        setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                    }
                 }
 
             }
@@ -1238,8 +1207,12 @@ public class FragmentTabCup64_1 extends Fragment {
                 if (secundPlayer.getText().equals(secundPlayerString) || firstPlayer.getText().equals(firstPlayerString)) {
                     toast.show();
                 } else {
-                    ResultButton.setText(secundPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                    if (!pointsFor1In1Set.getText().toString().equals("")) {
+                        Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
+                    }else {
+                        ResultButton.setText(secundPlayer.getText());
+                        setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                    }
                 }
 
             }
@@ -1260,14 +1233,106 @@ public class FragmentTabCup64_1 extends Fragment {
         });
     }
 
-    // Method to set Results to next Buttons with loser without check
-    void setResult(final Button firstPlayer, final Button secundPlayer, final Button ResultButton, final String undoResultString, final Button ResultButton2, final String undoResultString2, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+
+    void setResult(String EofFirstPlayer,String EofSecondPlayer,final Button firstPlayer, final Button secundPlayer, final Button ResultButton, final String undoResultString, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+
+        //ADD E of Players
+        if(firstPlayer.getText()==""){
+            firstPlayer.setVisibility(View.INVISIBLE);
+            secundPlayer.setVisibility(View.INVISIBLE);
+            ResultButton.setText(secundPlayer.getText());
+
+
+            //set the properties for textView
+            TextView tv = new TextView(getActivity().getApplicationContext());
+
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            lp.addRule(RelativeLayout.START_OF,ResultButton.getId());
+            lp.addRule(RelativeLayout.ALIGN_BASELINE,ResultButton.getId());
+
+
+            tv.setLayoutParams(lp);
+
+            tv.setText(EofSecondPlayer);
+            tv.setTextSize(16);
+            tv.setTextColor(Color.BLACK);
+
+
+            //add button to the layout
+            relativeLayout.addView(tv);
+
+            int resID = getResources().getIdentifier("cup64"+EofFirstPlayer, "id", getActivity().getPackageName());
+            TextView tvE = view.findViewById(resID);
+            tvE.setVisibility(View.INVISIBLE);
+
+            int resID2 = getResources().getIdentifier("cup64"+EofSecondPlayer, "id", getActivity().getPackageName());
+            TextView tvE2 = view.findViewById(resID2);
+            tvE2.setVisibility(View.INVISIBLE);
+            //Add NumberOfMatches
+            actualMatch++;
+
+
+        }else if(secundPlayer.getText()==""){
+            firstPlayer.setVisibility(View.INVISIBLE);
+            secundPlayer.setVisibility(View.INVISIBLE);
+            ResultButton.setText(firstPlayer.getText());
+
+
+
+            //set the properties for textView
+            TextView tv = new TextView(getActivity().getApplicationContext());
+
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            lp.addRule(RelativeLayout.START_OF,ResultButton.getId());
+            lp.addRule(RelativeLayout.ALIGN_BASELINE,ResultButton.getId());
+
+            tv.setLayoutParams(lp);
+
+            tv.setText(EofFirstPlayer);
+            tv.setTextSize(16);
+            tv.setTextColor(Color.BLACK);
+
+
+            int resID = getResources().getIdentifier("cup64"+EofFirstPlayer, "id", getActivity().getPackageName());
+            TextView tvE = view.findViewById(resID);
+            tvE.setVisibility(View.INVISIBLE);
+
+            int resID2 = getResources().getIdentifier("cup64"+EofSecondPlayer, "id", getActivity().getPackageName());
+            TextView tvE2 = view.findViewById(resID2);
+            tvE2.setVisibility(View.INVISIBLE);
+
+
+
+            //add button to the layout
+            relativeLayout.addView(tv);
+
+            //Add NumberOfMatches
+            if(!(firstPlayer.getText()=="")) {
+                actualMatch++;
+            }
+
+        }else {
+            //Add NumberOfMatches
+            numberOfMatches++;
+            numbersOfMatchesArray[actualMatch].setText(String.valueOf(numberOfMatches));
+            actualMatch++;
+        }
+
+
+
+
+
+
+
         firstPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ResultButton.setText(firstPlayer.getText());
-                ResultButton2.setText(secundPlayer.getText());
-                setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                if (!pointsFor1In1Set.getText().toString().equals("")) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
+                }else {
+                    ResultButton.setText(firstPlayer.getText());
+                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                }
             }
         });
 
@@ -1275,9 +1340,12 @@ public class FragmentTabCup64_1 extends Fragment {
         secundPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ResultButton.setText(secundPlayer.getText());
-                ResultButton2.setText(firstPlayer.getText());
-                setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                if (!pointsFor1In1Set.getText().toString().equals("")) {
+                    Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
+                }else {
+                    ResultButton.setText(secundPlayer.getText());
+                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                }
             }
         });
 
@@ -1286,22 +1354,6 @@ public class FragmentTabCup64_1 extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-                return true;
-            }
-        });
-
-        ResultButton2.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
                 pointsFor1In1Set.setText("");
                 pointsFor1In2Set.setText("");
                 pointsFor1In3Set.setText("");
@@ -1309,40 +1361,6 @@ public class FragmentTabCup64_1 extends Fragment {
                 pointsFor2In2Set.setText("");
                 pointsFor2In3Set.setText("");
 
-                return true;
-            }
-        });
-    }
-
-    void setResult(final Button firstPlayer, final Button secundPlayer, final Button ResultButton, final String undoResultString, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
-        firstPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ResultButton.setText(firstPlayer.getText());
-                setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
-            }
-        });
-
-
-        secundPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ResultButton.setText(secundPlayer.getText());
-                setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
-            }
-        });
-
-
-        ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
                 return true;
             }
         });
@@ -1353,10 +1371,10 @@ public class FragmentTabCup64_1 extends Fragment {
     // Method to add points of Sets
     void setDetailedResultFor2Sets(final EditText team1Set1, final EditText team1Set2, final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3) {
 
-        if (!team1Set1.getText().toString().equals("")) {
-            Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-            return;
-        }
+
+        team1Set1.setFocusableInTouchMode(true);
+        team2Set1.setFocusableInTouchMode(true);
+
         disableEnableControls(false, vg);
         team1Set2.setFocusableInTouchMode(false);
         team1Set3.setFocusableInTouchMode(false);
@@ -1447,6 +1465,8 @@ public class FragmentTabCup64_1 extends Fragment {
         });
 
 
+
+
         team1Set2.addTextChangedListener(new TextWatcher() {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 team2Set2.setFocusableInTouchMode(true);
@@ -1520,6 +1540,7 @@ public class FragmentTabCup64_1 extends Fragment {
             }
         });
 
+
         //AFTER CLICK ACTION NEXT CHECK EVERYTHINK
         team2Set2.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -1529,6 +1550,7 @@ public class FragmentTabCup64_1 extends Fragment {
                         if (checkTieBreak(team1Set1, team1Set2, team2Set1, team2Set2)) {
                             team1Set3.setFocusableInTouchMode(true);
                             team1Set3.requestFocus();
+                            imm.showSoftInput(team1Set3, InputMethodManager.SHOW_IMPLICIT);
                         } else {
 
                             disableEnableControls(true, vg);
@@ -1540,6 +1562,16 @@ public class FragmentTabCup64_1 extends Fragment {
                             team2Set2.setVisibility(View.INVISIBLE);
                             team1Set3.setVisibility(View.INVISIBLE);
                             team2Set3.setVisibility(View.INVISIBLE);
+
+                            //Reset all
+                            team1Set1.setOnEditorActionListener(null);
+                            team2Set1.setOnEditorActionListener(null);
+                            team1Set2.setOnEditorActionListener(null);
+                            team2Set2.setOnEditorActionListener(null);
+                            team1Set3.setOnEditorActionListener(null);
+                            team2Set3.setOnEditorActionListener(null);
+
+
 
 
                         }
@@ -1641,6 +1673,15 @@ public class FragmentTabCup64_1 extends Fragment {
                         team2Set2.setVisibility(View.INVISIBLE);
                         team1Set3.setVisibility(View.INVISIBLE);
                         team2Set3.setVisibility(View.INVISIBLE);
+
+                        //Reset all
+                        team1Set1.setOnEditorActionListener(null);
+                        team2Set1.setOnEditorActionListener(null);
+                        team1Set2.setOnEditorActionListener(null);
+                        team2Set2.setOnEditorActionListener(null);
+                        team1Set3.setOnEditorActionListener(null);
+                        team2Set3.setOnEditorActionListener(null);
+
 
 
                     } else {

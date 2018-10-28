@@ -21,7 +21,6 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher"
             android:background="@drawable/menu_button"/>
 
         <ImageButton
@@ -42,7 +41,7 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@drawable/menu_button"
-            android:src="@drawable/ic_launcher" />
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -83,7 +82,9 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher"
+            android:scaleType="fitCenter"
+            android:padding="4dp"
+            android:src="@drawable/group_menu"
             android:background="@drawable/menu_button"/>
     </LinearLayout>
 
@@ -99,15 +100,16 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher"
             android:background="@drawable/menu_button"/>
 
         <ImageButton
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher"
             android:background="@drawable/menu_button"
+            android:scaleType="fitCenter"
+            android:padding="4dp"
+            android:src="@drawable/wczytaj_menu"
             android:layout_marginStart="3dp"
             android:layout_marginEnd="3dp"/>
 
@@ -115,7 +117,6 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_launcher"
             android:background="@drawable/menu_button"/>
     </LinearLayout>
 
