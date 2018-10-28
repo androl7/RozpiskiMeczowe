@@ -1,16 +1,13 @@
 package com.example.adam.rozpiskimeczowe.brazylian.brazylian16;
 
 import android.content.Context;
-import android.inputmethodservice.Keyboard;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
@@ -23,7 +20,6 @@ import android.widget.Toast;
 import com.example.adam.rozpiskimeczowe.R;
 
 import java.util.Objects;
-import java.util.TreeMap;
 
 public class FragmentTabBraz16_1 extends Fragment {
     Toast toast;
@@ -242,13 +238,13 @@ public class FragmentTabBraz16_1 extends Fragment {
 
 
         final Button team1 = view.findViewById(R.id.braz16Team01);
-        final Button team2 = view.findViewById(R.id.braz16Team02);
-        final Button team3 = view.findViewById(R.id.braz16Team03);
-        final Button team4 = view.findViewById(R.id.braz16Team04);
-        final Button team5 = view.findViewById(R.id.braz16Team05);
-        final Button team6 = view.findViewById(R.id.braz16Team06);
-        final Button team7 = view.findViewById(R.id.braz16Team07);
-        final Button team8 = view.findViewById(R.id.braz16Team08);
+        final Button team2 = view.findViewById(R.id.braz16Team04);
+        final Button team3 = view.findViewById(R.id.braz16Team08);
+        final Button team4 = view.findViewById(R.id.braz16Team05);
+        final Button team5 = view.findViewById(R.id.braz16Team12);
+        final Button team6 = view.findViewById(R.id.braz16Team09);
+        final Button team7 = view.findViewById(R.id.braz16Team13);
+        final Button team8 = view.findViewById(R.id.braz16Team16);
 
         team1.setText(getActivity().getIntent().getStringExtra("NameOfTeam1"));
         team2.setText(getActivity().getIntent().getStringExtra("NameOfTeam2"));
@@ -264,8 +260,8 @@ public class FragmentTabBraz16_1 extends Fragment {
         final Button win2 = view.findViewById(R.id.braz16WIN_2);
         final Button win3 = view.findViewById(R.id.braz16WIN_3);
         final Button win4 = view.findViewById(R.id.braz16WIN_4);
-        final Button win5 = view.findViewById(R.id.braz16WIN_5);
-        final Button win6 = view.findViewById(R.id.braz16WIN_6);
+        final Button win5 = view.findViewById(R.id.braz16WIN_9);
+        final Button win6 = view.findViewById(R.id.braz16WIN_10);
         final Button win7 = view.findViewById(R.id.braz16WIN_7);
         final Button win8 = view.findViewById(R.id.braz16WIN_8);
         final Button win9 = view.findViewById(R.id.braz16WIN_9);
