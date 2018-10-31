@@ -51,9 +51,9 @@ public class OfficalListWihTeams extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Get Data From Website and add to ListView
-                        imm.hideSoftInputFromWindow(btnGetData.getWindowToken(), 0);
-                        getDataFromBeachPzps = new GetDataFromBeachPzps(list, OfficalListWihTeams.this,ed.getText().toString());
-                        getDataFromBeachPzps.execute();
+                imm.hideSoftInputFromWindow(btnGetData.getWindowToken(), 0);
+                getDataFromBeachPzps = new GetDataFromBeachPzps(list, OfficalListWihTeams.this, ed.getText().toString());
+                getDataFromBeachPzps.execute();
 
 
             }
@@ -63,36 +63,37 @@ public class OfficalListWihTeams extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.action_bar_with_start_button,menu);
+        getMenuInflater().inflate(R.menu.action_bar_with_start_button, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.menuStartButton:
                 //ZABEZPIECZENIE !!!
-                if(getDataFromBeachPzps!=null) {
-                    if(getDataFromBeachPzps.getNameOfFirstPlayers().size()!=0) {
+                if (getDataFromBeachPzps != null) {
+                    if (getDataFromBeachPzps.getNameOfFirstPlayers().size() != 0) {
 
                         Intent intent;
-                        if(getDataFromBeachPzps.getNameOfFirstPlayers().size()<=40) {
+                        if (getDataFromBeachPzps.getNameOfFirstPlayers().size() <= 40) {
                             intent = new Intent(this, CUPactiv32.class);
-                        }else {
+                        } else {
                             intent = new Intent(this, CUPactiv64.class);
                         }
 
                         for (int i = 0; i < getDataFromBeachPzps.getNameOfFirstPlayers().size(); i++) {
                             intent.putExtra("NameOfTeam" + (i + 1), getDataFromBeachPzps.getNameOfFirstPlayers().get(i) + "\n" + getDataFromBeachPzps.getNameOfSecondPlayers().get(i));
                         }
+                        intent.putExtra("quantityOfTeams",String.valueOf(getDataFromBeachPzps.getNameOfFirstPlayers().size()));
                         startActivity(intent);
 
-                    }else {
-                        Toast.makeText(this,"Najpierw pobierz listę zawodników",Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(this, "Najpierw pobierz listę zawodników", Toast.LENGTH_SHORT).show();
                     }
-                }else {
-                    Toast.makeText(this,"Najpierw pobierz listę zawodników",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Najpierw pobierz listę zawodników", Toast.LENGTH_SHORT).show();
                 }
         }
         return super.onOptionsItemSelected(item);

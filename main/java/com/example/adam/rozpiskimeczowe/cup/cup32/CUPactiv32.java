@@ -13,14 +13,14 @@ import com.example.adam.rozpiskimeczowe.cup.PagerAdapter;
 
 
 public class CUPactiv32 extends AppCompatActivity {
-
+    NonSwipeableViewPagerCup32 mViewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cup32);
 
 
-        NonSwipeableViewPagerCup32 mViewPager = findViewById(R.id.containerCup32);
+        mViewPager = findViewById(R.id.containerCup32);
         setupViewPager(mViewPager);
 
         TabLayout tabLayout = findViewById(R.id.tabs32);
@@ -37,6 +37,17 @@ public class CUPactiv32 extends AppCompatActivity {
         adapter.addFragment(new FragmentTabCup32_1(),"ROZPISKA");
         adapter.addFragment(new FragmentTabCup32_2(),"WYNIKI");
         adapter.addFragment(new FragmentTabCup32_3(),"MIEJSCA");
+        viewPager.setOffscreenPageLimit(2);
         viewPager.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mViewPager.getCurrentItem() == 0) {
+            super.onBackPressed();
+        }
+        else {
+            mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1);
+        }
     }
 }

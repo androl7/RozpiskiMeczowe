@@ -13,14 +13,14 @@ import com.example.adam.rozpiskimeczowe.R;
 
 
 public class BRAZactiv8 extends AppCompatActivity {
-
+    NonSwipeableViewPager mViewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brazactiv8);
 
 
-        NonSwipeableViewPager mViewPager = findViewById(R.id.container);
+        mViewPager = findViewById(R.id.container);
         setupViewPager(mViewPager);
 
         TabLayout tabLayout = findViewById(R.id.tabs);
@@ -35,6 +35,17 @@ public class BRAZactiv8 extends AppCompatActivity {
         adapter.addFragment(new FragmentTabBraz8_1(),"ROZPISKA");
         adapter.addFragment(new FragmentTabBraz8_2(),"WYNIKI");
         adapter.addFragment(new FragmentTabBraz8_3(),"MIEJSCA");
+        viewPager.setOffscreenPageLimit(2);
         viewPager.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mViewPager.getCurrentItem() == 0) {
+            super.onBackPressed();
+        }
+        else {
+            mViewPager.setCurrentItem(mViewPager.getCurrentItem() - 1);
+        }
     }
 }

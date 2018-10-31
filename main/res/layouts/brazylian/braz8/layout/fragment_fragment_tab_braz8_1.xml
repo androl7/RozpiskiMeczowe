@@ -22,7 +22,7 @@
         app:hasClickableChildren="true">
 
         <RelativeLayout
-            android:layout_width="700dp"
+            android:layout_width="750dp"
             android:layout_height="600dp"
             >
 

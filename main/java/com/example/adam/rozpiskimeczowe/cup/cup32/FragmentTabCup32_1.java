@@ -491,54 +491,54 @@ public class FragmentTabCup32_1 extends Fragment {
             numbersOfMatchesArray[i] = view.findViewById(resID);
         }
 
-        setResult("E1","E32",team1,team32,win1,"WIN.1",res1_1,res1_1_2set,res1_1_3set,res1_32,res1_32_2set,res1_32_3set);
+        setResult("E1","E32",team1,team32,win1,res1_1,res1_1_2set,res1_1_3set,res1_32,res1_32_2set,res1_32_3set);
 
-        setResult("E17","E16",team17,team16,win2,"WIN.2",res2_17,res2_17_2set,res2_17_3set,res2_16,res2_16_2set,res2_16_3set);
+        setResult("E17","E16",team17,team16,win2,res2_17,res2_17_2set,res2_17_3set,res2_16,res2_16_2set,res2_16_3set);
 
-        setResult("E9","E24",team9,team24,win3,"WIN.3",res3_9,res3_9_2set,res3_9_3set,res3_24,res3_24_2set,res3_24_3set);
+        setResult("E9","E24",team9,team24,win3,res3_9,res3_9_2set,res3_9_3set,res3_24,res3_24_2set,res3_24_3set);
 
-        setResult("E25","E8",team25,team8,win4,"WIN.4",res4_25,res4_25_2set,res4_25_3set,res4_8,res4_8_2set,res4_8_3set);
+        setResult("E25","E8",team25,team8,win4,res4_25,res4_25_2set,res4_25_3set,res4_8,res4_8_2set,res4_8_3set);
 
-        setResult("E5","E28",team5,team28,win5,"WIN.5",res5_5,res5_5_2set,res5_5_3set,res5_28,res5_28_2set,res5_28_3set);
+        setResult("E5","E28",team5,team28,win5,res5_5,res5_5_2set,res5_5_3set,res5_28,res5_28_2set,res5_28_3set);
 
-        setResult("E21","E12",team21,team12,win6,"WIN.6",res6_21,res6_21_2set,res6_21_3set,res6_12,res6_12_2set,res6_12_3set);
+        setResult("E21","E12",team21,team12,win6,res6_21,res6_21_2set,res6_21_3set,res6_12,res6_12_2set,res6_12_3set);
 
-        setResult("E13","E20",team13,team20,win7,"WIN.7",res7_13,res7_13_2set,res7_13_3set,res7_20,res7_20_2set,res7_20_3set);
+        setResult("E13","E20",team13,team20,win7,res7_13,res7_13_2set,res7_13_3set,res7_20,res7_20_2set,res7_20_3set);
 
-        setResult("E29","E4",team29,team4,win8,"WIN.8",res8_29,res8_29_2set,res8_29_3set,res8_4,res8_4_2set,res8_4_3set);
+        setResult("E29","E4",team29,team4,win8,res8_29,res8_29_2set,res8_29_3set,res8_4,res8_4_2set,res8_4_3set);
 
-        setResult("E3","E30",team3,team30,win9,"WIN.9",res9_3,res9_3_2set,res9_3_3set,res9_30,res9_30_2set,res9_30_3set);
+        setResult("E3","E30",team3,team30,win9,res9_3,res9_3_2set,res9_3_3set,res9_30,res9_30_2set,res9_30_3set);
 
-        setResult("E19","E14",team19,team14,win10,"WIN.10",res10_19,res10_19_2set,res10_19_3set,res10_14,res10_14_2set,res10_14_3set);
+        setResult("E19","E14",team19,team14,win10,res10_19,res10_19_2set,res10_19_3set,res10_14,res10_14_2set,res10_14_3set);
 
-        setResult("E11","E22",team11,team22,win11,"WIN.11",res11_11,res11_11_2set,res11_11_3set,res11_22,res11_22_2set,res11_22_3set);
+        setResult("E11","E22",team11,team22,win11,res11_11,res11_11_2set,res11_11_3set,res11_22,res11_22_2set,res11_22_3set);
 
-        setResult("E27","E6",team27,team6,win12,"WIN.12",res12_27,res12_27_2set,res12_27_3set,res12_6,res12_6_2set,res12_6_3set);
+        setResult("E27","E6",team27,team6,win12,res12_27,res12_27_2set,res12_27_3set,res12_6,res12_6_2set,res12_6_3set);
 
-        setResult("E7","E26",team7,team26,win13,"WIN.13",res13_7,res13_7_2set,res13_7_3set,res13_26,res13_26_2set,res13_26_3set);
+        setResult("E7","E26",team7,team26,win13,res13_7,res13_7_2set,res13_7_3set,res13_26,res13_26_2set,res13_26_3set);
 
-        setResult("E23","E10",team23,team10,win14,"WIN.14",res14_23,res14_23_2set,res14_23_3set,res14_10,res14_10_2set,res14_10_3set);
+        setResult("E23","E10",team23,team10,win14,res14_23,res14_23_2set,res14_23_3set,res14_10,res14_10_2set,res14_10_3set);
 
-        setResult("E15","E18",team15,team18,win15,"WIN.15",res15_15,res15_15_2set,res15_15_3set,res15_18,res15_18_2set,res15_18_3set);
+        setResult("E15","E18",team15,team18,win15,res15_15,res15_15_2set,res15_15_3set,res15_18,res15_18_2set,res15_18_3set);
 
-        setResult("E31","E2",team31,team2,win16,"WIN.16",res16_31,res16_31_2set,res16_31_3set,res16_2,res16_2_2set,res16_2_3set);
+        setResult("E31","E2",team31,team2,win16,res16_31,res16_31_2set,res16_31_3set,res16_2,res16_2_2set,res16_2_3set);
 
 
-        setResult(win1,"WIN.1",win2,"WIN.2",win17,"WIN.17",res17_Win_1,res17_Win_1_2set,res17_Win_1_3set,res17_Win_2,res17_Win_2_2set,res17_Win_2_3set);
+        setResult(win1,"WIN.1",win2,"WIN.2",win17,res17_Win_1,res17_Win_1_2set,res17_Win_1_3set,res17_Win_2,res17_Win_2_2set,res17_Win_2_3set);
 
-        setResult(win3,"WIN.3",win4,"WIN.4",win18,"WIN.18",res18_Win_3,res18_Win_3_2set,res18_Win_3_3set,res18_Win_4,res18_Win_4_2set,res18_Win_4_3set);
+        setResult(win3,"WIN.3",win4,"WIN.4",win18,res18_Win_3,res18_Win_3_2set,res18_Win_3_3set,res18_Win_4,res18_Win_4_2set,res18_Win_4_3set);
 
-        setResult(win5,"WIN.5",win6,"WIN.6",win19,"WIN.19",res19_Win_5,res19_Win_5_2set,res19_Win_5_3set,res19_Win_6,res19_Win_6_2set,res19_Win_6_3set);
+        setResult(win5,"WIN.5",win6,"WIN.6",win19,res19_Win_5,res19_Win_5_2set,res19_Win_5_3set,res19_Win_6,res19_Win_6_2set,res19_Win_6_3set);
 
-        setResult(win7,"WIN.7",win8,"WIN.8",win20,"WIN.20",res20_Win_7,res20_Win_7_2set,res20_Win_7_3set,res20_Win_8,res20_Win_8_2set,res20_Win_8_3set);
+        setResult(win7,"WIN.7",win8,"WIN.8",win20,res20_Win_7,res20_Win_7_2set,res20_Win_7_3set,res20_Win_8,res20_Win_8_2set,res20_Win_8_3set);
 
-        setResult(win9,"WIN.9",win10,"WIN.10",win21,"WIN.21",res21_Win_9,res21_Win_9_2set,res21_Win_9_3set,res21_Win_10,res21_Win_10_2set,res21_Win_10_3set);
+        setResult(win9,"WIN.9",win10,"WIN.10",win21,res21_Win_9,res21_Win_9_2set,res21_Win_9_3set,res21_Win_10,res21_Win_10_2set,res21_Win_10_3set);
 
-        setResult(win11,"WIN.11",win12,"WIN.12",win22,"WIN.22",res22_Win_11,res22_Win_11_2set,res22_Win_11_3set,res22_Win_12,res22_Win_12_2set,res22_Win_12_3set);
+        setResult(win11,"WIN.11",win12,"WIN.12",win22,res22_Win_11,res22_Win_11_2set,res22_Win_11_3set,res22_Win_12,res22_Win_12_2set,res22_Win_12_3set);
 
-        setResult(win13,"WIN.13",win14,"WIN.14",win23,"WIN.23",res23_Win_13,res23_Win_13_2set,res23_Win_13_3set,res23_Win_14,res23_Win_14_2set,res23_Win_14_3set);
+        setResult(win13,"WIN.13",win14,"WIN.14",win23,res23_Win_13,res23_Win_13_2set,res23_Win_13_3set,res23_Win_14,res23_Win_14_2set,res23_Win_14_3set);
 
-        setResult(win15,"WIN.15",win16,"WIN.16",win24,"WIN.24",res24_Win_15,res24_Win_15_2set,res24_Win_15_3set,res24_Win_16,res24_Win_16_2set,res24_Win_16_3set);
+        setResult(win15,"WIN.15",win16,"WIN.16",win24,res24_Win_15,res24_Win_15_2set,res24_Win_15_3set,res24_Win_16,res24_Win_16_2set,res24_Win_16_3set);
 
 
 
@@ -553,13 +553,15 @@ public class FragmentTabCup32_1 extends Fragment {
 
 
 
-    //Method to set results to next Buttons without loser and check
     //Method to set Results to next Buttons without loser and check
-    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button ResultButton, final String undoResultString, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button ResultButton, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+        final String undoResultString = "WIN."+(numberOfMatches+1);
         //Add NumberOfMatches
         numberOfMatches++;
         numbersOfMatchesArray[actualMatch].setText(String.valueOf(numberOfMatches));
         actualMatch++;
+        ResultButton.setText(undoResultString);
+
 
         firstPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -611,8 +613,8 @@ public class FragmentTabCup32_1 extends Fragment {
     }
 
 
-    void setResult(String EofFirstPlayer,String EofSecondPlayer,final Button firstPlayer, final Button secundPlayer, final Button ResultButton, final String undoResultString, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
-
+    void setResult(String EofFirstPlayer,String EofSecondPlayer,final Button firstPlayer, final Button secundPlayer, final Button ResultButton, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+        final String undoResultString = "WIN."+(numberOfMatches+1);
         //ADD E of Players
         if(firstPlayer.getText()==""){
             firstPlayer.setVisibility(View.INVISIBLE);
@@ -635,7 +637,7 @@ public class FragmentTabCup32_1 extends Fragment {
             tv.setTextColor(Color.BLACK);
 
 
-            //add button to the layout
+            //add textView to the layout
             relativeLayout.addView(tv);
 
             int resID = getResources().getIdentifier("cup32"+EofFirstPlayer, "id", getActivity().getPackageName());
@@ -683,15 +685,16 @@ public class FragmentTabCup32_1 extends Fragment {
             //add button to the layout
             relativeLayout.addView(tv);
 
-            //Add NumberOfMatches
             if(!(firstPlayer.getText()=="")) {
                 actualMatch++;
             }
 
         }else {
+
             //Add NumberOfMatches
             numberOfMatches++;
             numbersOfMatchesArray[actualMatch].setText(String.valueOf(numberOfMatches));
+            ResultButton.setText(undoResultString);
             actualMatch++;
         }
 

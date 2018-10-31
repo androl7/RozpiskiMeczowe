@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.adam.rozpiskimeczowe.R;
+import com.example.adam.rozpiskimeczowe.brazylian.brazylian16.BRAZactiv16;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian8.BRAZactiv8;
 
 import java.util.Objects;
@@ -214,6 +215,7 @@ public class BRAZactiv extends AppCompatActivity {
         switch (item.getItemId()){
             //START WITH CHECK
             case R.id.menuStartButton:
+
                 if(quantityOfTeam!=0) {
                     boolean checkNull=true;
                     for(int i =0;i<names.length;i++){
@@ -228,8 +230,8 @@ public class BRAZactiv extends AppCompatActivity {
                         switch (quantityOfTeam) {
                             //DO POPRAWY INTENT SIĘ NIE ZMIENIA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                             case 8:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
-                            case 16:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
-                            case 24:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
+                            case 16:intent = new Intent(BRAZactiv.this, BRAZactiv16.class);
+                            case 24:intent = new Intent(BRAZactiv.this, BRAZactiv16.class);
                         }
 
                         for (int i = 0; i < names.length / 2; i++) {

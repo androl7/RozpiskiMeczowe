@@ -36,7 +36,7 @@ public class FragmentTabCup32_2 extends Fragment {
         customAdapter = new CustomAdapter(Objects.requireNonNull(getActivity()).getApplicationContext());
         list.setAdapter(customAdapter);
 
-        //1 match
+
         final Button team1 = getActivity().findViewById(R.id.cup32Team01);
         final Button team2 = getActivity().findViewById(R.id.cup32Team2);
         final Button team3 = getActivity().findViewById(R.id.cup32Team3);

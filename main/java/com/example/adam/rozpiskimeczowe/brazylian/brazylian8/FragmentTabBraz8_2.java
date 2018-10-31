@@ -37,135 +37,135 @@ public class FragmentTabBraz8_2 extends Fragment {
         list.setAdapter(customAdapter);
 
         //1 match
-        final Button team1 = getActivity().findViewById(R.id.Team01);
-        final Button team2 = getActivity().findViewById(R.id.Team02);
-        final Button team3 = getActivity().findViewById(R.id.Team03);
-        final Button team4 = getActivity().findViewById(R.id.Team04);
-        final Button team5 = getActivity().findViewById(R.id.Team05);
-        final Button team6 = getActivity().findViewById(R.id.Team06);
-        final Button team7 = getActivity().findViewById(R.id.Team07);
-        final Button team8 = getActivity().findViewById(R.id.Team08);
+        final Button team1 = getActivity().findViewById(R.id.braz8Team01);
+        final Button team2 = getActivity().findViewById(R.id.braz8Team02);
+        final Button team3 = getActivity().findViewById(R.id.braz8Team03);
+        final Button team4 = getActivity().findViewById(R.id.braz8Team04);
+        final Button team5 = getActivity().findViewById(R.id.braz8Team05);
+        final Button team6 = getActivity().findViewById(R.id.braz8Team06);
+        final Button team7 = getActivity().findViewById(R.id.braz8Team07);
+        final Button team8 = getActivity().findViewById(R.id.braz8Team08);
 
-        final Button win1 = getActivity().findViewById(R.id.WIN_1);
-        final Button win2 = getActivity().findViewById(R.id.WIN_2);
-        final Button win3 = getActivity().findViewById(R.id.WIN_3);
-        final Button win4 = getActivity().findViewById(R.id.WIN_4);
-        final Button win5 = getActivity().findViewById(R.id.Win_5);
-        final Button win6 = getActivity().findViewById(R.id.Win_6);
-        final Button win7 = getActivity().findViewById(R.id.WIN_7);
-        final Button win8 = getActivity().findViewById(R.id.WIN_8);
-        final Button win9 = getActivity().findViewById(R.id.WIN_9);
-        final Button win10 = getActivity().findViewById(R.id.WIN_10);
-        final Button win11 = getActivity().findViewById(R.id.WIN_11);
-        final Button win12 = getActivity().findViewById(R.id.WIN_12);
+        final Button win1 = getActivity().findViewById(R.id.braz8WIN_1);
+        final Button win2 = getActivity().findViewById(R.id.braz8WIN_2);
+        final Button win3 = getActivity().findViewById(R.id.braz8WIN_3);
+        final Button win4 = getActivity().findViewById(R.id.braz8WIN_4);
+        final Button win5 = getActivity().findViewById(R.id.braz8WIN_5);
+        final Button win6 = getActivity().findViewById(R.id.braz8WIN_6);
+        final Button win7 = getActivity().findViewById(R.id.braz8WIN_7);
+        final Button win8 = getActivity().findViewById(R.id.braz8WIN_8);
+        final Button win9 = getActivity().findViewById(R.id.braz8WIN_9);
+        final Button win10 = getActivity().findViewById(R.id.braz8WIN_10);
+        final Button win11 = getActivity().findViewById(R.id.braz8WIN_11);
+        final Button win12 = getActivity().findViewById(R.id.braz8WIN_12);
 
-        final Button lost1 = getActivity().findViewById(R.id.LOST_1);
-        final Button lost2 = getActivity().findViewById(R.id.LOST_2);
-        final Button lost3 = getActivity().findViewById(R.id.LOST_3);
-        final Button lost4 = getActivity().findViewById(R.id.LOST_4);
-        final Button lost5 = getActivity().findViewById(R.id.LOST_5);
-        final Button lost6 = getActivity().findViewById(R.id.LOST_6);
-        final Button lost11 = getActivity().findViewById(R.id.LOST_11);
-        final Button lost12 = getActivity().findViewById(R.id.LOST_12);
+        final Button lost1 = getActivity().findViewById(R.id.braz8LOST_1);
+        final Button lost2 = getActivity().findViewById(R.id.braz8LOST_2);
+        final Button lost3 = getActivity().findViewById(R.id.braz8LOST_3);
+        final Button lost4 = getActivity().findViewById(R.id.braz8LOST_4);
+        final Button lost5 = getActivity().findViewById(R.id.braz8LOST_5);
+        final Button lost6 = getActivity().findViewById(R.id.braz8LOST_6);
+        final Button lost11 = getActivity().findViewById(R.id.braz8LOST_11);
+        final Button lost12 = getActivity().findViewById(R.id.braz8LOST_12);
 
 
-        final EditText res1_1 = getActivity().findViewById(R.id.brazRes1_1);
-        final EditText res1_1_2set = getActivity().findViewById(R.id.brazRes1_1_2set);
-        final EditText res1_1_3set = getActivity().findViewById(R.id.brazRes1_1_3set);
-        final EditText res1_8 = getActivity().findViewById(R.id.brazRes1_8);
-        final EditText res1_8_2set = getActivity().findViewById(R.id.brazRes1_8_2set);
-        final EditText res1_8_3set = getActivity().findViewById(R.id.brazRes1_8_3set);
+        final EditText res1_1 = getActivity().findViewById(R.id.braz8Res1_1);
+        final EditText res1_1_2set = getActivity().findViewById(R.id.braz8Res1_1_2set);
+        final EditText res1_1_3set = getActivity().findViewById(R.id.braz8Res1_1_3set);
+        final EditText res1_8 = getActivity().findViewById(R.id.braz8Res1_8);
+        final EditText res1_8_2set = getActivity().findViewById(R.id.braz8Res1_8_2set);
+        final EditText res1_8_3set = getActivity().findViewById(R.id.braz8Res1_8_3set);
 
-        final EditText res2_6 = getActivity().findViewById(R.id.brazRes2_6);
-        final EditText res2_6_2set = getActivity().findViewById(R.id.brazRes2_6_2set);
-        final EditText res2_6_3set = getActivity().findViewById(R.id.brazRes2_6_3set);
-        final EditText res2_3 = getActivity().findViewById(R.id.brazRes2_3);
-        final EditText res2_3_2set = getActivity().findViewById(R.id.brazRes2_3_2set);
-        final EditText res2_3_3set = getActivity().findViewById(R.id.brazRes2_3_3set);
+        final EditText res2_6 = getActivity().findViewById(R.id.braz8Res2_6);
+        final EditText res2_6_2set = getActivity().findViewById(R.id.braz8Res2_6_2set);
+        final EditText res2_6_3set = getActivity().findViewById(R.id.braz8Res2_6_3set);
+        final EditText res2_3 = getActivity().findViewById(R.id.braz8Res2_3);
+        final EditText res2_3_2set = getActivity().findViewById(R.id.braz8Res2_3_2set);
+        final EditText res2_3_3set = getActivity().findViewById(R.id.braz8Res2_3_3set);
 
-        final EditText res3_4 = getActivity().findViewById(R.id.brazRes3_4);
-        final EditText res3_4_2set = getActivity().findViewById(R.id.brazRes3_4_2set);
-        final EditText res3_4_3set = getActivity().findViewById(R.id.brazRes3_4_3set);
-        final EditText res3_5 = getActivity().findViewById(R.id.brazRes3_5);
-        final EditText res3_5_2set = getActivity().findViewById(R.id.brazRes3_5_2set);
-        final EditText res3_5_3set = getActivity().findViewById(R.id.brazRes3_5_3set);
+        final EditText res3_4 = getActivity().findViewById(R.id.braz8Res3_4);
+        final EditText res3_4_2set = getActivity().findViewById(R.id.braz8Res3_4_2set);
+        final EditText res3_4_3set = getActivity().findViewById(R.id.braz8Res3_4_3set);
+        final EditText res3_5 = getActivity().findViewById(R.id.braz8Res3_5);
+        final EditText res3_5_2set = getActivity().findViewById(R.id.braz8Res3_5_2set);
+        final EditText res3_5_3set = getActivity().findViewById(R.id.braz8Res3_5_3set);
 
-        final EditText res4_7 = getActivity().findViewById(R.id.brazRes4_7);
-        final EditText res4_7_2set = getActivity().findViewById(R.id.brazRes4_7_2set);
-        final EditText res4_7_3set = getActivity().findViewById(R.id.brazRes4_7_3set);
-        final EditText res4_2 = getActivity().findViewById(R.id.brazRes4_2);
-        final EditText res4_2_2set = getActivity().findViewById(R.id.brazRes4_2_2set);
-        final EditText res4_2_3set = getActivity().findViewById(R.id.brazRes4_2_3set);
+        final EditText res4_7 = getActivity().findViewById(R.id.braz8Res4_7);
+        final EditText res4_7_2set = getActivity().findViewById(R.id.braz8Res4_7_2set);
+        final EditText res4_7_3set = getActivity().findViewById(R.id.braz8Res4_7_3set);
+        final EditText res4_2 = getActivity().findViewById(R.id.braz8Res4_2);
+        final EditText res4_2_2set = getActivity().findViewById(R.id.braz8Res4_2_2set);
+        final EditText res4_2_3set = getActivity().findViewById(R.id.braz8Res4_2_3set);
 
-        final EditText brazRes5_Win_1 = getActivity().findViewById(R.id.brazRes5_Win_1);
-        final EditText brazRes5_Win_1_2set = getActivity().findViewById(R.id.brazRes5_Win_1_2set);
-        final EditText brazRes5_Win_1_3set = getActivity().findViewById(R.id.brazRes5_Win_1_3set);
-        final EditText brazRes5_Win_2 = getActivity().findViewById(R.id.brazRes5_Win_2);
-        final EditText brazRes5_Win_2_2set = getActivity().findViewById(R.id.brazRes5_Win_2_2set);
-        final EditText brazRes5_Win_2_3set = getActivity().findViewById(R.id.brazRes5_Win_2_3set);
+        final EditText braz8Res5_Win_1 = getActivity().findViewById(R.id.braz8Res5_Win_1);
+        final EditText braz8Res5_Win_1_2set = getActivity().findViewById(R.id.braz8Res5_Win_1_2set);
+        final EditText braz8Res5_Win_1_3set = getActivity().findViewById(R.id.braz8Res5_Win_1_3set);
+        final EditText braz8Res5_Win_2 = getActivity().findViewById(R.id.braz8Res5_Win_2);
+        final EditText braz8Res5_Win_2_2set = getActivity().findViewById(R.id.braz8Res5_Win_2_2set);
+        final EditText braz8Res5_Win_2_3set = getActivity().findViewById(R.id.braz8Res5_Win_2_3set);
 
-        final EditText brazRes6_Win_3 = getActivity().findViewById(R.id.brazRes6_Win_3);
-        final EditText brazRes6_Win_3_2set = getActivity().findViewById(R.id.brazRes6_Win_3_2set);
-        final EditText brazRes6_Win_3_3set = getActivity().findViewById(R.id.brazRes6_Win_3_3set);
-        final EditText brazRes6_Win_4 = getActivity().findViewById(R.id.brazRes6_Win_4);
-        final EditText brazRes6_Win_4_2set = getActivity().findViewById(R.id.brazRes6_Win_4_2set);
-        final EditText brazRes6_Win_4_3set = getActivity().findViewById(R.id.brazRes6_Win_4_3set);
+        final EditText braz8Res6_Win_3 = getActivity().findViewById(R.id.braz8Res6_Win_3);
+        final EditText braz8Res6_Win_3_2set = getActivity().findViewById(R.id.braz8Res6_Win_3_2set);
+        final EditText braz8Res6_Win_3_3set = getActivity().findViewById(R.id.braz8Res6_Win_3_3set);
+        final EditText braz8Res6_Win_4 = getActivity().findViewById(R.id.braz8Res6_Win_4);
+        final EditText braz8Res6_Win_4_2set = getActivity().findViewById(R.id.braz8Res6_Win_4_2set);
+        final EditText braz8Res6_Win_4_3set = getActivity().findViewById(R.id.braz8Res6_Win_4_3set);
 
-        final EditText brazRes7_Lost_1 = getActivity().findViewById(R.id.brazRes7_Lost_1);
-        final EditText brazRes7_Lost_1_2set = getActivity().findViewById(R.id.brazRes7_Lost_1_2set);
-        final EditText brazRes7_Lost_1_3set = getActivity().findViewById(R.id.brazRes7_Lost_1_3set);
-        final EditText brazRes7_Lost_2 = getActivity().findViewById(R.id.brazRes7_Lost_2);
-        final EditText brazRes7_Lost_2_2set = getActivity().findViewById(R.id.brazRes7_Lost_2_2set);
-        final EditText brazRes7_Lost_2_3set = getActivity().findViewById(R.id.brazRes7_Lost_2_3set);
+        final EditText braz8Res7_Lost_1 = getActivity().findViewById(R.id.braz8Res7_Lost_1);
+        final EditText braz8Res7_Lost_1_2set = getActivity().findViewById(R.id.braz8Res7_Lost_1_2set);
+        final EditText braz8Res7_Lost_1_3set = getActivity().findViewById(R.id.braz8Res7_Lost_1_3set);
+        final EditText braz8Res7_Lost_2 = getActivity().findViewById(R.id.braz8Res7_Lost_2);
+        final EditText braz8Res7_Lost_2_2set = getActivity().findViewById(R.id.braz8Res7_Lost_2_2set);
+        final EditText braz8Res7_Lost_2_3set = getActivity().findViewById(R.id.braz8Res7_Lost_2_3set);
 
-        final EditText brazRes8_Lost_3 = getActivity().findViewById(R.id.brazRes8_Lost_3);
-        final EditText brazRes8_Lost_3_2set = getActivity().findViewById(R.id.brazRes8_Lost_3_2set);
-        final EditText brazRes8_Lost_3_3set = getActivity().findViewById(R.id.brazRes8_Lost_3_3set);
-        final EditText brazRes8_Lost_4 = getActivity().findViewById(R.id.brazRes8_Lost_4);
-        final EditText brazRes8_Lost_4_2set = getActivity().findViewById(R.id.brazRes8_Lost_4_2set);
-        final EditText brazRes8_Lost_4_3set = getActivity().findViewById(R.id.brazRes8_Lost_4_3set);
+        final EditText braz8Res8_Lost_3 = getActivity().findViewById(R.id.braz8Res8_Lost_3);
+        final EditText braz8Res8_Lost_3_2set = getActivity().findViewById(R.id.braz8Res8_Lost_3_2set);
+        final EditText braz8Res8_Lost_3_3set = getActivity().findViewById(R.id.braz8Res8_Lost_3_3set);
+        final EditText braz8Res8_Lost_4 = getActivity().findViewById(R.id.braz8Res8_Lost_4);
+        final EditText braz8Res8_Lost_4_2set = getActivity().findViewById(R.id.braz8Res8_Lost_4_2set);
+        final EditText braz8Res8_Lost_4_3set = getActivity().findViewById(R.id.braz8Res8_Lost_4_3set);
 
-        final EditText brazRes9_Lost_6 = getActivity().findViewById(R.id.brazRes9_Lost_6);
-        final EditText brazRes9_Lost_6_2set = getActivity().findViewById(R.id.brazRes9_Lost_6_2set);
-        final EditText brazRes9_Lost_6_3set = getActivity().findViewById(R.id.brazRes9_Lost_6_3set);
-        final EditText brazRes9_Win_7 = getActivity().findViewById(R.id.brazRes9_Win_7);
-        final EditText brazRes9_Win_7_2set = getActivity().findViewById(R.id.brazRes9_Win_7_2set);
-        final EditText brazRes9_Win_7_3set = getActivity().findViewById(R.id.brazRes9_Win_7_3set);
+        final EditText braz8Res9_Lost_6 = getActivity().findViewById(R.id.braz8Res9_Lost_6);
+        final EditText braz8Res9_Lost_6_2set = getActivity().findViewById(R.id.braz8Res9_Lost_6_2set);
+        final EditText braz8Res9_Lost_6_3set = getActivity().findViewById(R.id.braz8Res9_Lost_6_3set);
+        final EditText braz8Res9_Win_7 = getActivity().findViewById(R.id.braz8Res9_Win_7);
+        final EditText braz8Res9_Win_7_2set = getActivity().findViewById(R.id.braz8Res9_Win_7_2set);
+        final EditText braz8Res9_Win_7_3set = getActivity().findViewById(R.id.braz8Res9_Win_7_3set);
 
-        final EditText brazRes10_Lost_5 = getActivity().findViewById(R.id.brazRes10_Lost_5);
-        final EditText brazRes10_Lost_5_2set = getActivity().findViewById(R.id.brazRes10_Lost_5_2set);
-        final EditText brazRes10_Lost_5_3set = getActivity().findViewById(R.id.brazRes10_Lost_5_3set);
-        final EditText brazRes10_Win_8 = getActivity().findViewById(R.id.brazRes10_Win_8);
-        final EditText brazRes10_Win_8_2set = getActivity().findViewById(R.id.brazRes10_Win_8_2set);
-        final EditText brazRes10_Win_8_3set = getActivity().findViewById(R.id.brazRes10_Win_8_3set);
+        final EditText braz8Res10_Lost_5 = getActivity().findViewById(R.id.braz8Res10_Lost_5);
+        final EditText braz8Res10_Lost_5_2set = getActivity().findViewById(R.id.braz8Res10_Lost_5_2set);
+        final EditText braz8Res10_Lost_5_3set = getActivity().findViewById(R.id.braz8Res10_Lost_5_3set);
+        final EditText braz8Res10_Win_8 = getActivity().findViewById(R.id.braz8Res10_Win_8);
+        final EditText braz8Res10_Win_8_2set = getActivity().findViewById(R.id.braz8Res10_Win_8_2set);
+        final EditText braz8Res10_Win_8_3set = getActivity().findViewById(R.id.braz8Res10_Win_8_3set);
 
-        final EditText brazRes11_Win_5 = getActivity().findViewById(R.id.brazRes11_Win_5);
-        final EditText brazRes11_Win_5_2set = getActivity().findViewById(R.id.brazRes11_Win_5_2set);
-        final EditText brazRes11_Win_5_3set = getActivity().findViewById(R.id.brazRes11_Win_5_3set);
-        final EditText brazRes11_Win_9 = getActivity().findViewById(R.id.brazRes11_Win_9);
-        final EditText brazRes11_Win_9_2set = getActivity().findViewById(R.id.brazRes11_Win_9_2set);
-        final EditText brazRes11_Win_9_3set = getActivity().findViewById(R.id.brazRes11_Win_9_3set);
+        final EditText braz8Res11_Win_5 = getActivity().findViewById(R.id.braz8Res11_Win_5);
+        final EditText braz8Res11_Win_5_2set = getActivity().findViewById(R.id.braz8Res11_Win_5_2set);
+        final EditText braz8Res11_Win_5_3set = getActivity().findViewById(R.id.braz8Res11_Win_5_3set);
+        final EditText braz8Res11_Win_9 = getActivity().findViewById(R.id.braz8Res11_Win_9);
+        final EditText braz8Res11_Win_9_2set = getActivity().findViewById(R.id.braz8Res11_Win_9_2set);
+        final EditText braz8Res11_Win_9_3set = getActivity().findViewById(R.id.braz8Res11_Win_9_3set);
 
-        final EditText brazRes12_Win_6 = getActivity().findViewById(R.id.brazRes12_Win_6);
-        final EditText brazRes12_Win_6_2set = getActivity().findViewById(R.id.brazRes12_Win_6_2set);
-        final EditText brazRes12_Win_6_3set = getActivity().findViewById(R.id.brazRes12_Win_6_3set);
-        final EditText brazRes12_Win_10 = getActivity().findViewById(R.id.brazRes12_Win_10);
-        final EditText brazRes12_Win_10_2set = getActivity().findViewById(R.id.brazRes12_Win_10_2set);
-        final EditText brazRes12_Win_10_3set = getActivity().findViewById(R.id.brazRes12_Win_10_3set);
+        final EditText braz8Res12_Win_6 = getActivity().findViewById(R.id.braz8Res12_Win_6);
+        final EditText braz8Res12_Win_6_2set = getActivity().findViewById(R.id.braz8Res12_Win_6_2set);
+        final EditText braz8Res12_Win_6_3set = getActivity().findViewById(R.id.braz8Res12_Win_6_3set);
+        final EditText braz8Res12_Win_10 = getActivity().findViewById(R.id.braz8Res12_Win_10);
+        final EditText braz8Res12_Win_10_2set = getActivity().findViewById(R.id.braz8Res12_Win_10_2set);
+        final EditText braz8Res12_Win_10_3set = getActivity().findViewById(R.id.braz8Res12_Win_10_3set);
 
-        final EditText brazRes13_Lost_11 = getActivity().findViewById(R.id.brazRes13_Lost_11);
-        final EditText brazRes13_Lost_11_2set = getActivity().findViewById(R.id.brazRes13_Lost_11_2set);
-        final EditText brazRes13_Lost_11_3set = getActivity().findViewById(R.id.brazRes13_Lost_11_3set);
-        final EditText brazRes13_Lost_12 = getActivity().findViewById(R.id.brazRes13_Lost_12);
-        final EditText brazRes13_Lost_12_2set = getActivity().findViewById(R.id.brazRes13_Lost_12_2set);
-        final EditText brazRes13_Lost_12_3set = getActivity().findViewById(R.id.brazRes13_Lost_12_3set);
+        final EditText braz8Res13_Lost_11 = getActivity().findViewById(R.id.braz8Res13_Lost_11);
+        final EditText braz8Res13_Lost_11_2set = getActivity().findViewById(R.id.braz8Res13_Lost_11_2set);
+        final EditText braz8Res13_Lost_11_3set = getActivity().findViewById(R.id.braz8Res13_Lost_11_3set);
+        final EditText braz8Res13_Lost_12 = getActivity().findViewById(R.id.braz8Res13_Lost_12);
+        final EditText braz8Res13_Lost_12_2set = getActivity().findViewById(R.id.braz8Res13_Lost_12_2set);
+        final EditText braz8Res13_Lost_12_3set = getActivity().findViewById(R.id.braz8Res13_Lost_12_3set);
 
-        final EditText brazRes14_Win_11 = getActivity().findViewById(R.id.brazRes14_Win_11);
-        final EditText brazRes14_Win_11_2set = getActivity().findViewById(R.id.brazRes14_Win_11_2set);
-        final EditText brazRes14_Win_11_3set = getActivity().findViewById(R.id.brazRes14_Win_11_3set);
-        final EditText brazRes14_Win_12 = getActivity().findViewById(R.id.brazRes14_Win_12);
-        final EditText brazRes14_Win_12_2set = getActivity().findViewById(R.id.brazRes14_Win_12_2set);
-        final EditText brazRes14_Win_12_3set = getActivity().findViewById(R.id.brazRes14_Win_12_3set);
+        final EditText braz8Res14_Win_11 = getActivity().findViewById(R.id.braz8Res14_Win_11);
+        final EditText braz8Res14_Win_11_2set = getActivity().findViewById(R.id.braz8Res14_Win_11_2set);
+        final EditText braz8Res14_Win_11_3set = getActivity().findViewById(R.id.braz8Res14_Win_11_3set);
+        final EditText braz8Res14_Win_12 = getActivity().findViewById(R.id.braz8Res14_Win_12);
+        final EditText braz8Res14_Win_12_2set = getActivity().findViewById(R.id.braz8Res14_Win_12_2set);
+        final EditText braz8Res14_Win_12_3set = getActivity().findViewById(R.id.braz8Res14_Win_12_3set);
 
 
         // 1
@@ -182,34 +182,34 @@ public class FragmentTabBraz8_2 extends Fragment {
 
         // 5
 
-        setResult(5, win1, win2, brazRes5_Win_1, brazRes5_Win_1_2set,brazRes5_Win_1_3set, brazRes5_Win_2, brazRes5_Win_2_2set, brazRes5_Win_2_3set);
+        setResult(5, win1, win2, braz8Res5_Win_1, braz8Res5_Win_1_2set,braz8Res5_Win_1_3set, braz8Res5_Win_2, braz8Res5_Win_2_2set, braz8Res5_Win_2_3set);
 
         // 6
-        setResult(6, win3, win4, brazRes6_Win_3, brazRes6_Win_3_2set,brazRes6_Win_3_3set, brazRes6_Win_4, brazRes6_Win_4_2set, brazRes6_Win_4_3set);
+        setResult(6, win3, win4, braz8Res6_Win_3, braz8Res6_Win_3_2set,braz8Res6_Win_3_3set, braz8Res6_Win_4, braz8Res6_Win_4_2set, braz8Res6_Win_4_3set);
 
         //7
-        setResult(7, lost1, lost2, brazRes7_Lost_1, brazRes7_Lost_1_2set,brazRes7_Lost_1_3set, brazRes7_Lost_2, brazRes7_Lost_2_2set, brazRes7_Lost_2_3set);
+        setResult(7, lost1, lost2, braz8Res7_Lost_1, braz8Res7_Lost_1_2set,braz8Res7_Lost_1_3set, braz8Res7_Lost_2, braz8Res7_Lost_2_2set, braz8Res7_Lost_2_3set);
 
         //8
-        setResult(8, lost3, lost4, brazRes8_Lost_3, brazRes8_Lost_3_2set, brazRes8_Lost_3_3set, brazRes8_Lost_4, brazRes8_Lost_4_2set, brazRes8_Lost_4_3set);
+        setResult(8, lost3, lost4, braz8Res8_Lost_3, braz8Res8_Lost_3_2set, braz8Res8_Lost_3_3set, braz8Res8_Lost_4, braz8Res8_Lost_4_2set, braz8Res8_Lost_4_3set);
 
         //9
-        setResult(9, lost6, win7, brazRes9_Lost_6, brazRes9_Lost_6_2set, brazRes9_Lost_6_3set, brazRes9_Win_7, brazRes9_Win_7_2set, brazRes9_Win_7_3set);
+        setResult(9, lost6, win7, braz8Res9_Lost_6, braz8Res9_Lost_6_2set, braz8Res9_Lost_6_3set, braz8Res9_Win_7, braz8Res9_Win_7_2set, braz8Res9_Win_7_3set);
 
         //10
-        setResult(10, win8, lost5, brazRes10_Lost_5, brazRes10_Lost_5_2set, brazRes10_Lost_5_3set, brazRes10_Win_8, brazRes10_Win_8_2set, brazRes10_Win_8_3set);
+        setResult(10, win8, lost5, braz8Res10_Lost_5, braz8Res10_Lost_5_2set, braz8Res10_Lost_5_3set, braz8Res10_Win_8, braz8Res10_Win_8_2set, braz8Res10_Win_8_3set);
 
         //11
-        setResult(11, win5, win9, brazRes11_Win_5, brazRes11_Win_5_2set, brazRes11_Win_5_3set, brazRes11_Win_9, brazRes11_Win_9_2set,brazRes11_Win_9_3set);
+        setResult(11, win5, win9, braz8Res11_Win_5, braz8Res11_Win_5_2set, braz8Res11_Win_5_3set, braz8Res11_Win_9, braz8Res11_Win_9_2set,braz8Res11_Win_9_3set);
 
         //12
-        setResult(12, win6, win10, brazRes12_Win_6, brazRes12_Win_6_2set, brazRes12_Win_6_3set, brazRes12_Win_10, brazRes12_Win_10_2set, brazRes12_Win_10_3set);
+        setResult(12, win6, win10, braz8Res12_Win_6, braz8Res12_Win_6_2set, braz8Res12_Win_6_3set, braz8Res12_Win_10, braz8Res12_Win_10_2set, braz8Res12_Win_10_3set);
 
         //13
-        setResult(13, lost11, lost12, brazRes13_Lost_11, brazRes13_Lost_11_2set,brazRes13_Lost_11_3set, brazRes13_Lost_12, brazRes13_Lost_12_2set, brazRes13_Lost_12_3set);
+        setResult(13, lost11, lost12, braz8Res13_Lost_11, braz8Res13_Lost_11_2set,braz8Res13_Lost_11_3set, braz8Res13_Lost_12, braz8Res13_Lost_12_2set, braz8Res13_Lost_12_3set);
 
         //14 FINAL
-        setResult(14, win11, win12, brazRes14_Win_11, brazRes14_Win_11_2set, brazRes14_Win_11_3set, brazRes14_Win_12, brazRes14_Win_12_2set, brazRes14_Win_12_3set);
+        setResult(14, win11, win12, braz8Res14_Win_11, braz8Res14_Win_11_2set, braz8Res14_Win_11_3set, braz8Res14_Win_12, braz8Res14_Win_12_2set, braz8Res14_Win_12_3set);
 
 
         return view;

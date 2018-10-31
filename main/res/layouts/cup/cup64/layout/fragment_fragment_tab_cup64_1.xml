@@ -2,7 +2,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <com.otaliastudios.zoom.ZoomLayout
         android:layout_width="match_parent"
@@ -18,13 +19,15 @@
         app:minZoom="1.0"
         app:minZoomType="zoom"
         app:maxZoom="2.0"
-        app:maxZoomType="zoom"
-        app:hasClickableChildren="true">
+        app:maxZoomType="realZoom"
+        app:hasClickableChildren="true"
+        >
 
         <RelativeLayout
             android:id="@+id/cup64relLayout"
             android:layout_width="1300dp"
-            android:layout_height="2100dp">
+            android:layout_height="2100dp"
+            >
 
             <View
                 android:layout_width="match_parent"
@@ -4106,7 +4109,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cup64numberOfMatch9"
                 android:layout_marginStart="129dp"
-                android:text="10"
                 android:layout_marginTop="102dp"
                 android:textColor="#000000"
                 android:textSize="13sp" />
