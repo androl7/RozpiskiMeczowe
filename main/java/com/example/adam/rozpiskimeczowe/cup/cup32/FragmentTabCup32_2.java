@@ -290,7 +290,6 @@ public class FragmentTabCup32_2 extends Fragment {
         final EditText res24_Win_16_3set = getActivity().findViewById(R.id.cup32Res24_Win_16_3set);
 
 
-
         setResult(team1,team32,res1_1,res1_1_2set,res1_1_3set,res1_32,res1_32_2set,res1_32_3set);
 
         setResult(team17,team16,res2_17,res2_17_2set,res2_17_3set,res2_16,res2_16_2set,res2_16_3set);

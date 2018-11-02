@@ -31,6 +31,7 @@ public class BRAZactiv extends AppCompatActivity {
     int quantityOfTeam=0;
     String[] names;
     CustomAdapter customAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -218,20 +219,22 @@ public class BRAZactiv extends AppCompatActivity {
 
                 if(quantityOfTeam!=0) {
                     boolean checkNull=true;
-                    for(int i =0;i<names.length;i++){
-                        if(names[i]==null||names[i].equals("")){
+                    for (String name : names) {
+                        if (name == null || name.equals("")) {
                             //TU MA BYĆ FALSE !!!
-                            checkNull=true;
+                            checkNull = false;
                             break;
                         }
                     }
+                    Intent intent;
                     if(checkNull) {
-                        Intent intent=null;
-                        switch (quantityOfTeam) {
-                            //DO POPRAWY INTENT SIĘ NIE ZMIENIA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                            case 8:intent = new Intent(BRAZactiv.this, BRAZactiv8.class);
-                            case 16:intent = new Intent(BRAZactiv.this, BRAZactiv16.class);
-                            case 24:intent = new Intent(BRAZactiv.this, BRAZactiv16.class);
+                        if(quantityOfTeam==8){
+                            intent = new Intent(this,BRAZactiv8.class);
+                        }else if(quantityOfTeam==16){
+                            intent = new Intent(this,BRAZactiv16.class);
+                        }else {
+                            Toast.makeText(this,"24 Coming soon",Toast.LENGTH_SHORT).show();
+                            return super.onOptionsItemSelected(item);
                         }
 
                         for (int i = 0; i < names.length / 2; i++) {

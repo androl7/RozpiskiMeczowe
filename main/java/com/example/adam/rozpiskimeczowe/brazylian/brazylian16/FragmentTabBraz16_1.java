@@ -4,40 +4,34 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.adam.rozpiskimeczowe.R;
+import com.example.adam.rozpiskimeczowe.SetResultsForBraz;
 
 import java.util.Objects;
 
 public class FragmentTabBraz16_1 extends Fragment {
     Toast toast;
-    InputMethodManager imm;
     String pktInSet = "21";
     String pktInTieBreak = "15";
     View view;
-    ViewGroup vg;
+    SetResultsForBraz setResultsForBraz;
 
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_fragment_tab_braz16_1, container, false);
 
-        imm = (InputMethodManager) Objects.requireNonNull(getActivity()).getSystemService(Context.INPUT_METHOD_SERVICE);
 
+        setResultsForBraz = new SetResultsForBraz(getActivity(),container,pktInSet,pktInTieBreak);
 
-        this.vg = container;
 
         final EditText Res1_1 = view.findViewById(R.id.braz16Res1_1);
         final EditText Res1_1_2set = view.findViewById(R.id.braz16Res1_1_2set);
@@ -561,650 +555,107 @@ public class FragmentTabBraz16_1 extends Fragment {
         toast = Toast.makeText(getActivity().getApplicationContext(), "Wprowadz wczesniejszy wynik !", Toast.LENGTH_SHORT);
 
         // 1 MECZ
-        setResult(team1, team16, win1, "WIN.1", lost1, "LOST.1", Res1_1, Res1_1_2set, Res1_1_3set, Res1_16, Res1_16_2set, Res1_16_3set);
+        setResultsForBraz.WithLoserWithoutCheck(team1, team16, win1, "WIN.1", lost1, "LOST.1", Res1_1, Res1_1_2set, Res1_1_3set, Res1_16, Res1_16_2set, Res1_16_3set);
 
         // 2 MECZ
-        setResult(team9, team8, win2, "WIN.2", lost2, "LOST.2", Res2_9, Res2_9_2set, Res2_9_3set, Res2_8, Res2_8_2set, Res2_8_3set);
+        setResultsForBraz.WithLoserWithoutCheck(team9, team8, win2, "WIN.2", lost2, "LOST.2", Res2_9, Res2_9_2set, Res2_9_3set, Res2_8, Res2_8_2set, Res2_8_3set);
 
         // 3 MECZ
-        setResult(team5, team12, win3, "WIN.3", lost3, "LOST.3", Res3_5, Res3_5_2set, Res3_5_3set, Res3_12, Res3_12_2set, Res3_12_3set);
+        setResultsForBraz.WithLoserWithoutCheck(team5, team12, win3, "WIN.3", lost3, "LOST.3", Res3_5, Res3_5_2set, Res3_5_3set, Res3_12, Res3_12_2set, Res3_12_3set);
 
         // 4 MECZ
-        setResult(team13, team4, win4, "WIN.4", lost4, "LOST.4", Res4_4, Res4_4_2set, Res4_4_3set, Res4_13, Res4_13_2set, Res4_13_3set);
+        setResultsForBraz.WithLoserWithoutCheck(team13, team4, win4, "WIN.4", lost4, "LOST.4", Res4_4, Res4_4_2set, Res4_4_3set, Res4_13, Res4_13_2set, Res4_13_3set);
 
         // 5 MECZ
 
-        setResult(team3, team14,win5, "WIN.5", lost5, "LOST.5", braz16Res5_3, braz16Res5_3_2set, braz16Res5_3_3set, braz16Res5_14, braz16Res5_14_2set, braz16Res5_14_3set);
+        setResultsForBraz.WithLoserWithoutCheck(team3, team14,win5, "WIN.5", lost5, "LOST.5", braz16Res5_3, braz16Res5_3_2set, braz16Res5_3_3set, braz16Res5_14, braz16Res5_14_2set, braz16Res5_14_3set);
 
 
         // 6 MECZ
-        setResult(team11,  team6, win6, "WIN.6", lost6, "LOST.6", braz16Res6_11, braz16Res6_11_2set, braz16Res6_11_3set, braz16Res6_6, braz16Res6_6_2set, braz16Res6_6_3set);
+        setResultsForBraz.WithLoserWithoutCheck(team11,  team6, win6, "WIN.6", lost6, "LOST.6", braz16Res6_11, braz16Res6_11_2set, braz16Res6_11_3set, braz16Res6_6, braz16Res6_6_2set, braz16Res6_6_3set);
 
         //7 MECZ
-        setResult(team7, team10, win7, "WIN.7",lost7,"LOST,7", braz16Res7_7, braz16Res7_7_2set, braz16Res7_7_3set, braz16Res7_10, braz16Res7_10_2set, braz16Res7_10_3set);
+        setResultsForBraz.WithLoserWithoutCheck(team7, team10, win7, "WIN.7",lost7,"LOST,7", braz16Res7_7, braz16Res7_7_2set, braz16Res7_7_3set, braz16Res7_10, braz16Res7_10_2set, braz16Res7_10_3set);
 
 
         //8 MECZ
-        setResult(team15,  team2, win8, "WIN.8",lost8,"LOST.8", braz16Res8_15, braz16Res8_15_2set, braz16Res8_15_3set, braz16Res8_2, braz16Res8_2_2set, braz16Res8_2_3set);
+        setResultsForBraz.WithLoserWithoutCheck(team15,  team2, win8, "WIN.8",lost8,"LOST.8", braz16Res8_15, braz16Res8_15_2set, braz16Res8_15_3set, braz16Res8_2, braz16Res8_2_2set, braz16Res8_2_3set);
 
 
 
         //9 MECZ
-        setResult(win1, "WIN.1", win2, "WIN.2", win9, "WIN.9",lost9,"LOST.9", braz16Res9_Win_1, braz16Res9_Win_1_2set, braz16Res9_Win_1_3set, braz16Res9_Win_2, braz16Res9_Win_2_2set, braz16Res9_Win_2_3set);
+        setResultsForBraz.WithLoserAndCheck(win1, "WIN.1", win2, "WIN.2", win9, "WIN.9",lost9,"LOST.9", braz16Res9_Win_1, braz16Res9_Win_1_2set, braz16Res9_Win_1_3set, braz16Res9_Win_2, braz16Res9_Win_2_2set, braz16Res9_Win_2_3set);
 
         //10 MECZ
-        setResult(win3, "WIN.3", win4, "WIN.4", win10, "WIN.10",lost10,"LOST.10", braz16Res10_Win_3, braz16Res10_Win_3_2set, braz16Res10_Win_3_3set, braz16Res10_Win_4, braz16Res10_Win_4_2set, braz16Res10_Win_4_3set);
+        setResultsForBraz.WithLoserAndCheck(win3, "WIN.3", win4, "WIN.4", win10, "WIN.10",lost10,"LOST.10", braz16Res10_Win_3, braz16Res10_Win_3_2set, braz16Res10_Win_3_3set, braz16Res10_Win_4, braz16Res10_Win_4_2set, braz16Res10_Win_4_3set);
 
         //11 MECZ
-        setResult(win5, "WIN.5", win6, "WIN.6", win11, "WIN.11",lost11,"LOST.11", braz16Res11_Win_5, braz16Res11_Win_5_2set, braz16Res11_Win_5_3set, braz16Res11_Win_6, braz16Res11_Win_6_2set, braz16Res11_Win_6_3set);
+        setResultsForBraz.WithLoserAndCheck(win5, "WIN.5", win6, "WIN.6", win11, "WIN.11",lost11,"LOST.11", braz16Res11_Win_5, braz16Res11_Win_5_2set, braz16Res11_Win_5_3set, braz16Res11_Win_6, braz16Res11_Win_6_2set, braz16Res11_Win_6_3set);
 
         //12 MECZ
-        setResult(win7, "WIN.7", win8, "WIN.8", win12, "WIN.12",lost12,"LOST.12", braz16Res12_Win_7, braz16Res12_Win_7_2set, braz16Res12_Win_7_3set, braz16Res12_Win_8, braz16Res12_Win_8_2set, braz16Res12_Win_8_3set);
+        setResultsForBraz.WithLoserAndCheck(win7, "WIN.7", win8, "WIN.8", win12, "WIN.12",lost12,"LOST.12", braz16Res12_Win_7, braz16Res12_Win_7_2set, braz16Res12_Win_7_3set, braz16Res12_Win_8, braz16Res12_Win_8_2set, braz16Res12_Win_8_3set);
 
 
         //13 MECZ
-        setResult(lost8, "LOST.8", lost7, "WIN.4", win13, "WIN.13", braz16Res13_Lost_8, braz16Res13_Lost_8_2set, braz16Res13_Lost_8_3set, braz16Res13_Lost_7, braz16Res13_Lost_7_2set, braz16Res13_Lost_7_3set);
+        setResultsForBraz.WithCheckWithoutLoser(lost8, "LOST.8", lost7, "WIN.4", win13, "WIN.13", braz16Res13_Lost_8, braz16Res13_Lost_8_2set, braz16Res13_Lost_8_3set, braz16Res13_Lost_7, braz16Res13_Lost_7_2set, braz16Res13_Lost_7_3set);
 
         //14 MECZ
-        setResult(lost6, "LOST.6", lost5, "WIN.4", win14, "WIN.14", braz16Res14_Lost_6, braz16Res14_Lost_6_2set, braz16Res14_Lost_6_3set, braz16Res14_Lost_5, braz16Res14_Lost_5_2set, braz16Res14_Lost_5_3set);
+        setResultsForBraz.WithCheckWithoutLoser(lost6, "LOST.6", lost5, "WIN.4", win14, "WIN.14", braz16Res14_Lost_6, braz16Res14_Lost_6_2set, braz16Res14_Lost_6_3set, braz16Res14_Lost_5, braz16Res14_Lost_5_2set, braz16Res14_Lost_5_3set);
 
         //15 MECZ
-        setResult(lost4, "LOST.4", lost3, "WIN.4", win15, "WIN.15", braz16Res15_Lost_4, braz16Res15_Lost_4_2set, braz16Res15_Lost_4_3set, braz16Res15_Lost_3, braz16Res15_Lost_3_2set, braz16Res15_Lost_3_3set);
+        setResultsForBraz.WithCheckWithoutLoser(lost4, "LOST.4", lost3, "WIN.4", win15, "WIN.15", braz16Res15_Lost_4, braz16Res15_Lost_4_2set, braz16Res15_Lost_4_3set, braz16Res15_Lost_3, braz16Res15_Lost_3_2set, braz16Res15_Lost_3_3set);
 
         //16 MECZ
-        setResult(lost2, "LOST.2", lost1, "LOST.1", win16, "WIN.16", braz16Res16_Lost_2, braz16Res16_Lost_2_2set, braz16Res16_Lost_2_3set, braz16Res16_Lost_1, braz16Res16_Lost_1_2set, braz16Res16_Lost_1_3set);
+        setResultsForBraz.WithCheckWithoutLoser(lost2, "LOST.2", lost1, "LOST.1", win16, "WIN.16", braz16Res16_Lost_2, braz16Res16_Lost_2_2set, braz16Res16_Lost_2_3set, braz16Res16_Lost_1, braz16Res16_Lost_1_2set, braz16Res16_Lost_1_3set);
 
         //17 MECZ
-        setResult(win13, "WIN.13", lost10, "LOST.10", win17, "WIN.17", braz16Res17_Win_13, braz16Res17_Win_13_2set, braz16Res17_Win_13_3set, braz16Res17_Lost_10, braz16Res17_Lost_10_2set, braz16Res17_Lost_10_3set);
+        setResultsForBraz.WithCheckWithoutLoser(win13, "WIN.13", lost10, "LOST.10", win17, "WIN.17", braz16Res17_Win_13, braz16Res17_Win_13_2set, braz16Res17_Win_13_3set, braz16Res17_Lost_10, braz16Res17_Lost_10_2set, braz16Res17_Lost_10_3set);
 
         //18 MECZ
-        setResult(win14, "WIN.14", lost9, "LOST.9", win18, "WIN.18", braz16Res18_Win_14, braz16Res18_Win_14_2set, braz16Res18_Win_14_3set, braz16Res18_Lost_9, braz16Res18_Lost_9_2set, braz16Res18_Lost_9_3set);
+        setResultsForBraz.WithCheckWithoutLoser(win14, "WIN.14", lost9, "LOST.9", win18, "WIN.18", braz16Res18_Win_14, braz16Res18_Win_14_2set, braz16Res18_Win_14_3set, braz16Res18_Lost_9, braz16Res18_Lost_9_2set, braz16Res18_Lost_9_3set);
 
         //19 MECZ
-        setResult(win15, "WIN.15", lost12, "LOST.12", win19, "WIN.19", braz16Res19_Win_15, braz16Res19_Win_15_2set, braz16Res19_Win_15_3set, braz16Res19_Lost_12, braz16Res19_Lost_12_2set, braz16Res19_Lost_12_3set);
+        setResultsForBraz.WithCheckWithoutLoser(win15, "WIN.15", lost12, "LOST.12", win19, "WIN.19", braz16Res19_Win_15, braz16Res19_Win_15_2set, braz16Res19_Win_15_3set, braz16Res19_Lost_12, braz16Res19_Lost_12_2set, braz16Res19_Lost_12_3set);
 
         //20 MECZ
-        setResult(win16, "WIN.16", lost11, "LOST.11", win20, "WIN.20", braz16Res20_Win_16, braz16Res20_Win_16_2set, braz16Res20_Win_16_3set, braz16Res20_Lost_11, braz16Res20_Lost_11_2set, braz16Res20_Lost_11_3set);
+        setResultsForBraz.WithCheckWithoutLoser(win16, "WIN.16", lost11, "LOST.11", win20, "WIN.20", braz16Res20_Win_16, braz16Res20_Win_16_2set, braz16Res20_Win_16_3set, braz16Res20_Lost_11, braz16Res20_Lost_11_2set, braz16Res20_Lost_11_3set);
 
 
         //21 MECZ
-        setResult(win9, "WIN.9", win10, "WIN.10", win21, "WIN.21",lost21,"LOST.21", braz16Res21_Win_9, braz16Res21_Win_9_2set, braz16Res21_Win_9_3set, braz16Res21_Win_10, braz16Res21_Win_10_2set, braz16Res21_Win_10_3set);
+        setResultsForBraz.WithLoserAndCheck(win9, "WIN.9", win10, "WIN.10", win21, "WIN.21",lost21,"LOST.21", braz16Res21_Win_9, braz16Res21_Win_9_2set, braz16Res21_Win_9_3set, braz16Res21_Win_10, braz16Res21_Win_10_2set, braz16Res21_Win_10_3set);
 
         //22 MECZ
-        setResult(win11, "WIN.11", win12, "WIN.12", win22, "WIN.22",lost22,"LOST.22", braz16Res22_Win_11, braz16Res22_Win_11_2set, braz16Res22_Win_11_3set, braz16Res22_Win_12, braz16Res22_Win_12_2set, braz16Res22_Win_12_3set);
+        setResultsForBraz.WithLoserAndCheck(win11, "WIN.11", win12, "WIN.12", win22, "WIN.22",lost22,"LOST.22", braz16Res22_Win_11, braz16Res22_Win_11_2set, braz16Res22_Win_11_3set, braz16Res22_Win_12, braz16Res22_Win_12_2set, braz16Res22_Win_12_3set);
 
 
         //23 MECZ
-        setResult(win17, "WIN.17", win18, "WIN.18", win23, "WIN.23", braz16Res23_Win_17, braz16Res23_Win_17_2set, braz16Res23_Win_17_3set, braz16Res23_Win_18, braz16Res23_Win_18_2set, braz16Res23_Win_18_3set);
+        setResultsForBraz.WithCheckWithoutLoser(win17, "WIN.17", win18, "WIN.18", win23, "WIN.23", braz16Res23_Win_17, braz16Res23_Win_17_2set, braz16Res23_Win_17_3set, braz16Res23_Win_18, braz16Res23_Win_18_2set, braz16Res23_Win_18_3set);
 
         //24 MECZ
-        setResult(win19, "WIN.19", win20, "WIN.20", win24, "WIN.24", braz16Res24_Win_19, braz16Res24_Win_19_2set, braz16Res24_Win_19_3set, braz16Res24_Win_20, braz16Res24_Win_20_2set, braz16Res24_Win_20_3set);
+        setResultsForBraz.WithCheckWithoutLoser(win19, "WIN.19", win20, "WIN.20", win24, "WIN.24", braz16Res24_Win_19, braz16Res24_Win_19_2set, braz16Res24_Win_19_3set, braz16Res24_Win_20, braz16Res24_Win_20_2set, braz16Res24_Win_20_3set);
 
         //25 MECZ
-        setResult(lost22, "LOST.22", win23, "WIN.23", win25, "WIN.25", braz16Res25_Lost_22, braz16Res25_Lost_22_2set, braz16Res25_Lost_22_3set, braz16Res25_Win_23, braz16Res25_Win_23_2set, braz16Res25_Win_23_3set);
+        setResultsForBraz.WithCheckWithoutLoser(lost22, "LOST.22", win23, "WIN.23", win25, "WIN.25", braz16Res25_Lost_22, braz16Res25_Lost_22_2set, braz16Res25_Lost_22_3set, braz16Res25_Win_23, braz16Res25_Win_23_2set, braz16Res25_Win_23_3set);
 
         //26 MECZ
-        setResult(lost21, "LOST.21", win24, "WIN.24", win26, "WIN.26", braz16Res26_Lost_21, braz16Res26_Lost_21_2set, braz16Res26_Lost_21_3set, braz16Res26_Win_24, braz16Res26_Win_24_2set, braz16Res26_Win_24_3set);
+        setResultsForBraz.WithCheckWithoutLoser(lost21, "LOST.21", win24, "WIN.24", win26, "WIN.26", braz16Res26_Lost_21, braz16Res26_Lost_21_2set, braz16Res26_Lost_21_3set, braz16Res26_Win_24, braz16Res26_Win_24_2set, braz16Res26_Win_24_3set);
 
 
         //27 MECZ
-        setResult(win21, "WIN.21", win25, "WIN.25", win27, "WIN.27",lost27,"LOST.27", braz16Res27_Win_21, braz16Res27_Win_21_2set, braz16Res27_Win_21_3set, braz16Res27_Win_25, braz16Res27_Win_25_2set, braz16Res27_Win_25_3set);
+        setResultsForBraz.WithLoserAndCheck(win21, "WIN.21", win25, "WIN.25", win27, "WIN.27",lost27,"LOST.27", braz16Res27_Win_21, braz16Res27_Win_21_2set, braz16Res27_Win_21_3set, braz16Res27_Win_25, braz16Res27_Win_25_2set, braz16Res27_Win_25_3set);
 
         //28 MECZ
-        setResult(win22, "WIN.22", win26, "WIN.26", win28, "WIN.28",lost28,"LOST.28", braz16Res28_Win_22, braz16Res28_Win_22_2set, braz16Res28_Win_22_3set, braz16Res28_Win_26, braz16Res28_Win_26_2set, braz16Res28_Win_26_3set);
+        setResultsForBraz.WithLoserAndCheck(win22, "WIN.22", win26, "WIN.26", win28, "WIN.28",lost28,"LOST.28", braz16Res28_Win_22, braz16Res28_Win_22_2set, braz16Res28_Win_22_3set, braz16Res28_Win_26, braz16Res28_Win_26_2set, braz16Res28_Win_26_3set);
 
 
         //29 MECZ
-        setResult(lost27, "LOST.27", lost28, "LOST.28", win29, "WIN.29", braz16Res29_Lost_27, braz16Res29_Lost_27_2set, braz16Res29_Lost_27_3set, braz16Res29_Lost_28, braz16Res29_Lost_28_2set, braz16Res29_Lost_28_3set);
+        setResultsForBraz.WithCheckWithoutLoser(lost27, "LOST.27", lost28, "LOST.28", win29, "WIN.29", braz16Res29_Lost_27, braz16Res29_Lost_27_2set, braz16Res29_Lost_27_3set, braz16Res29_Lost_28, braz16Res29_Lost_28_2set, braz16Res29_Lost_28_3set);
 
         //30 MECZ FINAL
-        setResult(win27, "WIN.27", win28, "WIN.28", win30, "WIN.30", braz16Res30_Win_27, braz16Res30_Win_27_2set, braz16Res30_Win_27_3set, braz16Res30_Win_28, braz16Res30_Win_28_2set, braz16Res30_Win_28_3set);
+        setResultsForBraz.WithCheckWithoutLoser(win27, "WIN.27", win28, "WIN.28", win30, "WIN.30", braz16Res30_Win_27, braz16Res30_Win_27_2set, braz16Res30_Win_27_3set, braz16Res30_Win_28, braz16Res30_Win_28_2set, braz16Res30_Win_28_3set);
 
 
         return view;
-    }
-
-
-    //Method to set Results to next Buttons with loser and check
-    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button ResultButton, final String undoResultString, final Button ResultButton2, final String undoResultString2, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
-        firstPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (firstPlayer.getText().equals(firstPlayerString) || secundPlayer.getText().equals(secundPlayerString)) {
-                    toast.show();
-                } else {
-                    if (!pointsFor1In1Set.getText().toString().equals("")) {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-                    }else {
-                        ResultButton.setText(firstPlayer.getText());
-                        ResultButton2.setText(secundPlayer.getText());
-                        setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
-                    }
-                }
-
-            }
-        });
-
-        secundPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (secundPlayer.getText().equals(secundPlayerString) || firstPlayer.getText().equals(firstPlayerString)) {
-                    toast.show();
-                } else {
-                    if (!pointsFor1In1Set.getText().toString().equals("")) {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-                    }else {
-                        ResultButton.setText(secundPlayer.getText());
-                        ResultButton2.setText(firstPlayer.getText());
-                        setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
-                    }
-                }
-
-            }
-        });
-
-        ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-                return true;
-            }
-        });
-
-        ResultButton2.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-                return true;
-            }
-        });
-
-
-    }
-
-
-    //Method to set Results to next Buttons without loser and check
-    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button ResultButton, final String undoResultString, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
-        firstPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (firstPlayer.getText().equals(firstPlayerString) || secundPlayer.getText().equals(secundPlayerString)) {
-                    toast.show();
-                } else {
-                    if (!pointsFor1In1Set.getText().toString().equals("")) {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-                    }else {
-                        ResultButton.setText(firstPlayer.getText());
-                        setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
-                    }
-                }
-
-            }
-        });
-
-        secundPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (secundPlayer.getText().equals(secundPlayerString) || firstPlayer.getText().equals(firstPlayerString)) {
-                    toast.show();
-                } else {
-                    if (!pointsFor1In1Set.getText().toString().equals("")) {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-                    }else {
-                        ResultButton.setText(secundPlayer.getText());
-                        setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
-                    }
-                }
-
-            }
-        });
-
-        ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-                return true;
-            }
-        });
-    }
-
-    // Method to set Results to next Buttons with loser without check
-    void setResult(final Button firstPlayer, final Button secundPlayer, final Button ResultButton, final String undoResultString, final Button ResultButton2, final String undoResultString2, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
-        firstPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!pointsFor1In1Set.getText().toString().equals("")) {
-                    Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-                }else {
-                    ResultButton.setText(firstPlayer.getText());
-                    ResultButton2.setText(secundPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
-                }
-            }
-        });
-
-
-        secundPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!pointsFor1In1Set.getText().toString().equals("")) {
-                    Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-                }else {
-                    ResultButton.setText(secundPlayer.getText());
-                    ResultButton2.setText(firstPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
-                }
-            }
-        });
-
-
-        ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-                return true;
-            }
-        });
-
-        ResultButton2.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-
-                return true;
-            }
-        });
-    }
-
-
-    // Method to add points of Sets
-    void setDetailedResultFor2Sets(final EditText team1Set1, final EditText team1Set2, final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3) {
-
-
-        team1Set1.setFocusableInTouchMode(true);
-        team2Set1.setFocusableInTouchMode(true);
-
-        disableEnableControls(false, vg);
-        team1Set2.setFocusableInTouchMode(false);
-        team1Set3.setFocusableInTouchMode(false);
-        team2Set2.setFocusableInTouchMode(false);
-        team2Set3.setFocusableInTouchMode(false);
-
-        team1Set1.setVisibility(View.VISIBLE);
-        team2Set1.setVisibility(View.VISIBLE);
-        team1Set2.setVisibility(View.VISIBLE);
-        team2Set2.setVisibility(View.VISIBLE);
-        team1Set3.setVisibility(View.VISIBLE);
-        team2Set3.setVisibility(View.VISIBLE);
-        team1Set1.requestFocus();
-        imm.showSoftInput(team1Set1, InputMethodManager.SHOW_IMPLICIT);
-
-        team1Set1.addTextChangedListener(new TextWatcher() {
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                team1Set1.setFocusableInTouchMode(true);
-            }
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                team1Set1.setFocusableInTouchMode(false);
-
-                /*if (team1Set1.getText().toString().length() == 2) {
-
-                    team2Set1.requestFocus();
-                    if (Integer.parseInt(team1Set1.getText().toString()) >= Integer.parseInt(pktInSet)) {
-                        team1Set2.setFocusableInTouchMode(true);
-                    }
-                }*/
-            }
-
-            public void afterTextChanged(Editable s) {
-            }
-        });
-
-        team2Set1.addTextChangedListener(new TextWatcher() {
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                team2Set1.setFocusableInTouchMode(false);
-
-                /*if (team2Set1.getText().toString().length() == 2) {
-                    team1Set2.setFocusableInTouchMode(true);
-                    if (checkPointsInSet(team1Set1, team2Set1, pktInSet)) {
-                        team1Set2.requestFocus();
-                        imm.showSoftInput(team1Set2, InputMethodManager.SHOW_IMPLICIT);
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set1.setText(null);
-                        team2Set1.setText(null);
-                        team1Set1.setFocusableInTouchMode(true);
-                        team2Set1.setFocusableInTouchMode(true);
-                        team1Set1.requestFocus();
-
-                    }
-                }*/
-            }
-
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        //AFTER CLICK ACTION NEXT CHECK EVERYTHINK
-        team2Set1.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_NEXT) {
-
-                    if (checkPointsInSet(team1Set1, team2Set1, pktInSet)) {
-                        team1Set2.setFocusableInTouchMode(true);
-                        team1Set2.requestFocus();
-                        imm.showSoftInput(team1Set2, InputMethodManager.SHOW_IMPLICIT);
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set1.setText(null);
-                        team2Set1.setText(null);
-                        team1Set1.setFocusableInTouchMode(true);
-                        team2Set1.setFocusableInTouchMode(true);
-                        team1Set1.requestFocus();
-
-                    }
-                }
-                return false;
-            }
-        });
-
-
-
-
-        team1Set2.addTextChangedListener(new TextWatcher() {
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                team2Set2.setFocusableInTouchMode(true);
-            }
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                team1Set2.setFocusableInTouchMode(false);
-
-                /*if (team1Set2.getText().toString().length() == 2) {
-
-                    team2Set2.requestFocus();
-                    if (Integer.parseInt(team1Set2.getText().toString()) >= Integer.parseInt(pktInSet)) {
-                        team1Set3.setFocusableInTouchMode(true);
-                    }
-
-                }*/
-            }
-
-            public void afterTextChanged(Editable s) {
-            }
-        });
-
-        team2Set2.addTextChangedListener(new TextWatcher() {
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                team2Set2.setFocusableInTouchMode(false);
-
-                /*if (team2Set2.getText().toString().length() == 2) {
-
-                    team1Set3.setFocusableInTouchMode(true);
-                    if (checkPointsInSet(team1Set2, team2Set2, pktInSet)) {
-                        if (checkTieBreak(team1Set1, team1Set2, team2Set1, team2Set2)) {
-                            team1Set3.requestFocus();
-                        } else {
-
-                            disableEnableControls(true, vg);
-                            Runnable delayedTask = new Runnable() {
-                                @Override
-                                public void run() {
-                                    imm.hideSoftInputFromWindow(team2Set2.getWindowToken(), 0);
-                                    team1Set1.setVisibility(View.INVISIBLE);
-                                    team2Set1.setVisibility(View.INVISIBLE);
-                                    team1Set2.setVisibility(View.INVISIBLE);
-                                    team2Set2.setVisibility(View.INVISIBLE);
-                                    team1Set3.setVisibility(View.INVISIBLE);
-                                    team2Set3.setVisibility(View.INVISIBLE);
-                                }
-                            };
-                            view.postDelayed(delayedTask, 500);
-
-                        }
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set2.setText(null);
-                        team2Set2.setText(null);
-
-                        team1Set2.setFocusableInTouchMode(true);
-                        team2Set2.setFocusableInTouchMode(true);
-                        team1Set2.requestFocus();
-
-                    }
-
-                }*/
-            }
-
-
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-
-        //AFTER CLICK ACTION NEXT CHECK EVERYTHINK
-        team2Set2.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_NEXT) {
-                    if (checkPointsInSet(team1Set2, team2Set2, pktInSet)) {
-                        if (checkTieBreak(team1Set1, team1Set2, team2Set1, team2Set2)) {
-                            team1Set3.setFocusableInTouchMode(true);
-                            team1Set3.requestFocus();
-                            imm.showSoftInput(team1Set3, InputMethodManager.SHOW_IMPLICIT);
-                        } else {
-
-                            disableEnableControls(true, vg);
-
-                            imm.hideSoftInputFromWindow(team2Set2.getWindowToken(), 0);
-                            team1Set1.setVisibility(View.INVISIBLE);
-                            team2Set1.setVisibility(View.INVISIBLE);
-                            team1Set2.setVisibility(View.INVISIBLE);
-                            team2Set2.setVisibility(View.INVISIBLE);
-                            team1Set3.setVisibility(View.INVISIBLE);
-                            team2Set3.setVisibility(View.INVISIBLE);
-
-                            //Reset all
-                            team1Set1.setOnEditorActionListener(null);
-                            team2Set1.setOnEditorActionListener(null);
-                            team1Set2.setOnEditorActionListener(null);
-                            team2Set2.setOnEditorActionListener(null);
-                            team1Set3.setOnEditorActionListener(null);
-                            team2Set3.setOnEditorActionListener(null);
-
-
-
-
-                        }
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set2.setText(null);
-                        team2Set2.setText(null);
-
-                        team1Set2.setFocusableInTouchMode(true);
-                        team2Set2.setFocusableInTouchMode(true);
-                        team1Set2.requestFocus();
-
-                    }
-                }
-                return false;
-            }
-        });
-
-        team1Set3.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                team2Set3.setFocusableInTouchMode(true);
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                team1Set3.setFocusableInTouchMode(false);
-
-                /*if (team1Set3.getText().toString().length() == 2) {
-
-                    team2Set3.requestFocus();
-
-                }*/
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-
-        team2Set3.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                team2Set3.setFocusableInTouchMode(false);
-                /*if (team2Set3.getText().toString().length() == 2) {
-                    if (checkPointsInSet(team1Set3, team2Set3, pktInTieBreak)) {
-                        disableEnableControls(true, vg);
-                        Runnable delayedTask = new Runnable() {
-                            @Override
-                            public void run() {
-                                imm.hideSoftInputFromWindow(team2Set3.getWindowToken(), 0);
-                                team1Set1.setVisibility(View.INVISIBLE);
-                                team2Set1.setVisibility(View.INVISIBLE);
-                                team1Set2.setVisibility(View.INVISIBLE);
-                                team2Set2.setVisibility(View.INVISIBLE);
-                                team1Set3.setVisibility(View.INVISIBLE);
-                                team2Set3.setVisibility(View.INVISIBLE);
-                            }
-                        };
-                        view.postDelayed(delayedTask, 500);
-
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set3.setText(null);
-                        team2Set3.setText(null);
-
-                        team1Set3.setFocusableInTouchMode(true);
-                        team2Set3.setFocusableInTouchMode(true);
-                        team1Set3.requestFocus();
-
-                    }
-
-                }*/
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-
-        team2Set3.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_NEXT) {
-                    if (checkPointsInSet(team1Set3, team2Set3, pktInTieBreak)) {
-                        disableEnableControls(true, vg);
-
-                        imm.hideSoftInputFromWindow(team2Set3.getWindowToken(), 0);
-                        team1Set1.setVisibility(View.INVISIBLE);
-                        team2Set1.setVisibility(View.INVISIBLE);
-                        team1Set2.setVisibility(View.INVISIBLE);
-                        team2Set2.setVisibility(View.INVISIBLE);
-                        team1Set3.setVisibility(View.INVISIBLE);
-                        team2Set3.setVisibility(View.INVISIBLE);
-
-                        //Reset all
-                        team1Set1.setOnEditorActionListener(null);
-                        team2Set1.setOnEditorActionListener(null);
-                        team1Set2.setOnEditorActionListener(null);
-                        team2Set2.setOnEditorActionListener(null);
-                        team1Set3.setOnEditorActionListener(null);
-                        team2Set3.setOnEditorActionListener(null);
-
-
-
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set3.setText(null);
-                        team2Set3.setText(null);
-
-                        team1Set3.setFocusableInTouchMode(true);
-                        team2Set3.setFocusableInTouchMode(true);
-                        team1Set3.requestFocus();
-
-                    }
-                }
-                return false;
-            }
-        });
-
-    }
-
-    private void disableEnableControls(boolean enable, ViewGroup vg) {
-        for (int i = 0; i < vg.getChildCount(); i++) {
-            View child = vg.getChildAt(i);
-            if (child instanceof Button) {
-                child.setEnabled(enable);
-
-            } else if (child instanceof ViewGroup) {
-                disableEnableControls(enable, (ViewGroup) child);
-            }
-        }
-    }
-
-
-    boolean checkPointsInSet(EditText team1, EditText team2, String pktInSet) {
-        String Res1 = team1.getText().toString();
-        String Res2 = team2.getText().toString();
-        return !Res1.equals("") && !Res2.equals("") && ((Math.abs(Integer.parseInt(Res1) - Integer.parseInt(Res2)) > 2 && (Integer.parseInt(pktInSet) == Integer.parseInt(Res1) && Integer.parseInt(Res2) < Integer.parseInt(pktInSet)) || (Integer.parseInt(pktInSet) == Integer.parseInt(Res2) && Integer.parseInt(Res1) < Integer.parseInt(pktInSet))) || (Math.abs(Integer.parseInt(Res1) - Integer.parseInt(Res2)) == 2 && ((Integer.parseInt(Res1) >= Integer.parseInt(pktInSet)) || Integer.parseInt(Res2) >= Integer.parseInt(pktInSet))));
-    }
-
-    boolean checkTieBreak(EditText team1Set1, EditText team1Set2, EditText team2Set1, EditText team2Set2) {
-        return (Integer.parseInt(team1Set1.getText().toString()) > Integer.parseInt(team2Set1.getText().toString()) && Integer.parseInt(team1Set2.getText().toString()) < Integer.parseInt(team2Set2.getText().toString())) || (Integer.parseInt(team1Set1.getText().toString()) < Integer.parseInt(team2Set1.getText().toString()) && Integer.parseInt(team1Set2.getText().toString()) > Integer.parseInt(team2Set2.getText().toString()));
     }
 }
 

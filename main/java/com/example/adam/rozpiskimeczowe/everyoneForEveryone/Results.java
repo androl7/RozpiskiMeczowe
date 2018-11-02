@@ -28,6 +28,11 @@ public class Results extends AppCompatActivity {
         TextView teamPoints5 = findViewById(R.id.teamPoints05);
         TextView teamPoints6 = findViewById(R.id.teamPoints06);
 
+        TextView teamSets1 = findViewById(R.id.teamSets1);
+        TextView teamSets2 = findViewById(R.id.teamSets2);
+        TextView teamSets3 = findViewById(R.id.teamSets3);
+        TextView teamSets4 = findViewById(R.id.teamSets4);
+
         TextView teamWins1 = findViewById(R.id.teamWins1);
         TextView teamWins2 = findViewById(R.id.teamWins2);
         TextView teamWins3 = findViewById(R.id.teamWins3);
@@ -47,16 +52,21 @@ public class Results extends AppCompatActivity {
 
 
 
-        teamPoints1.setText(getIntent().getStringExtra("teamPoints1"));
-        teamPoints2.setText(getIntent().getStringExtra("teamPoints2"));
-        teamPoints3.setText(getIntent().getStringExtra("teamPoints3"));
-        teamPoints4.setText(getIntent().getStringExtra("teamPoints4"));
+        teamPoints1.setText(getIntent().getStringExtra("team1Points"));
+        teamPoints2.setText(getIntent().getStringExtra("team2Points"));
+        teamPoints3.setText(getIntent().getStringExtra("team3Points"));
+        teamPoints4.setText(getIntent().getStringExtra("team4Points"));
+
+        teamSets1.setText(getIntent().getStringExtra("team1Sets"));
+        teamSets2.setText(getIntent().getStringExtra("team2Sets"));
+        teamSets3.setText(getIntent().getStringExtra("team3Sets"));
+        teamSets4.setText(getIntent().getStringExtra("team4Sets"));
 
 
-        teamWins1.setText(getIntent().getStringExtra("teamWins1"));
-        teamWins2.setText(getIntent().getStringExtra("teamWins2"));
-        teamWins3.setText(getIntent().getStringExtra("teamWins3"));
-        teamWins4.setText(getIntent().getStringExtra("teamWins4"));
+        teamWins1.setText(getIntent().getStringExtra("team1Wins"));
+        teamWins2.setText(getIntent().getStringExtra("team2Wins"));
+        teamWins3.setText(getIntent().getStringExtra("team3Wins"));
+        teamWins4.setText(getIntent().getStringExtra("team4Wins"));
 
 
 

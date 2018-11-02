@@ -1,18 +1,17 @@
 package com.example.adam.rozpiskimeczowe.cup.cup32;
 
-import android.content.Context;
-import android.graphics.Color;
+
+import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
@@ -20,30 +19,55 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.adam.rozpiskimeczowe.R;
+import com.example.adam.rozpiskimeczowe.SetResultsForCup;
+import com.example.adam.rozpiskimeczowe.brazylian.brazylian16.BRAZactiv16;
 
-import java.util.Objects;
 
 public class FragmentTabCup32_1 extends Fragment {
     Toast toast;
-    InputMethodManager imm;
     String pktInSet = "21";
     String pktInTieBreak = "15";
+    SetResultsForCup setResultsForCup;
     View view;
-    ViewGroup vg;
     int numberOfMatches = 0;
     int actualMatch = 0;
     RelativeLayout relativeLayout;
     TextView[]numbersOfMatchesArray;
+    String R1;
+    String R2;
+    String R3;
+    String R4;
+    String R5;
+    String R6;
+    String R7;
+    String R8;
+    Button win17;
+    Button win18;
+    Button win19;
+    Button win20;
+    Button win21;
+    Button win22;
+    Button win23;
+    Button win24;
 
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_fragment_tab_cup32_1, container, false);
 
-        imm = (InputMethodManager) Objects.requireNonNull(getActivity()).getSystemService(Context.INPUT_METHOD_SERVICE);
 
         relativeLayout = view.findViewById(R.id.cup32relLayout);
-        this.vg = container;
+        //Add NumberOfMatches
+        numbersOfMatchesArray = new TextView[24];
+        for(int i=0; i<numbersOfMatchesArray.length; i++) {
+            String buttonID = "cup32numberOfMatch" + (i+1) ;
+            int resID = getResources().getIdentifier(buttonID, "id", getActivity().getPackageName());
+            numbersOfMatchesArray[i] = view.findViewById(resID);
+        }
+
+        setResultsForCup = new SetResultsForCup(getActivity(),container,pktInSet,pktInTieBreak,numberOfMatches,actualMatch,relativeLayout,numbersOfMatchesArray,view,"cup32");
+
+
 
 
         final EditText res1_1 = view.findViewById(R.id.cup32Res1_1);
@@ -422,6 +446,14 @@ public class FragmentTabCup32_1 extends Fragment {
         final Button team31 = view.findViewById(R.id.cup32Team31);
         final Button team32 = view.findViewById(R.id.cup32Team32);
 
+        R1 = getActivity().getIntent().getStringExtra("NameOfTeam1");
+        R2 = getActivity().getIntent().getStringExtra("NameOfTeam2");
+        R3 = getActivity().getIntent().getStringExtra("NameOfTeam3");
+        R4 = getActivity().getIntent().getStringExtra("NameOfTeam4");
+        R5 = getActivity().getIntent().getStringExtra("NameOfTeam5");
+        R6 = getActivity().getIntent().getStringExtra("NameOfTeam6");
+        R7 = getActivity().getIntent().getStringExtra("NameOfTeam7");
+        R8 = getActivity().getIntent().getStringExtra("NameOfTeam8");
 
         team1.setText(getActivity().getIntent().getStringExtra("NameOfTeam9"));
         team2.setText(getActivity().getIntent().getStringExtra("NameOfTeam10"));
@@ -474,71 +506,64 @@ public class FragmentTabCup32_1 extends Fragment {
         final Button win14 = view.findViewById(R.id.cup32WIN_14);
         final Button win15 = view.findViewById(R.id.cup32WIN_15);
         final Button win16 = view.findViewById(R.id.cup32WIN_16);
-        final Button win17 = view.findViewById(R.id.cup32WIN_17);
-        final Button win18 = view.findViewById(R.id.cup32WIN_18);
-        final Button win19 = view.findViewById(R.id.cup32WIN_19);
-        final Button win20 = view.findViewById(R.id.cup32WIN_20);
-        final Button win21 = view.findViewById(R.id.cup32WIN_21);
-        final Button win22 = view.findViewById(R.id.cup32WIN_22);
-        final Button win23 = view.findViewById(R.id.cup32WIN_23);
-        final Button win24 = view.findViewById(R.id.cup32WIN_24);
-
-        //Add NumberOfMatches
-        numbersOfMatchesArray = new TextView[24];
-        for(int i=0; i<numbersOfMatchesArray.length; i++) {
-            String buttonID = "cup32numberOfMatch" + (i+1) ;
-            int resID = getResources().getIdentifier(buttonID, "id", getActivity().getPackageName());
-            numbersOfMatchesArray[i] = view.findViewById(resID);
-        }
-
-        setResult("E1","E32",team1,team32,win1,res1_1,res1_1_2set,res1_1_3set,res1_32,res1_32_2set,res1_32_3set);
-
-        setResult("E17","E16",team17,team16,win2,res2_17,res2_17_2set,res2_17_3set,res2_16,res2_16_2set,res2_16_3set);
-
-        setResult("E9","E24",team9,team24,win3,res3_9,res3_9_2set,res3_9_3set,res3_24,res3_24_2set,res3_24_3set);
-
-        setResult("E25","E8",team25,team8,win4,res4_25,res4_25_2set,res4_25_3set,res4_8,res4_8_2set,res4_8_3set);
-
-        setResult("E5","E28",team5,team28,win5,res5_5,res5_5_2set,res5_5_3set,res5_28,res5_28_2set,res5_28_3set);
-
-        setResult("E21","E12",team21,team12,win6,res6_21,res6_21_2set,res6_21_3set,res6_12,res6_12_2set,res6_12_3set);
-
-        setResult("E13","E20",team13,team20,win7,res7_13,res7_13_2set,res7_13_3set,res7_20,res7_20_2set,res7_20_3set);
-
-        setResult("E29","E4",team29,team4,win8,res8_29,res8_29_2set,res8_29_3set,res8_4,res8_4_2set,res8_4_3set);
-
-        setResult("E3","E30",team3,team30,win9,res9_3,res9_3_2set,res9_3_3set,res9_30,res9_30_2set,res9_30_3set);
-
-        setResult("E19","E14",team19,team14,win10,res10_19,res10_19_2set,res10_19_3set,res10_14,res10_14_2set,res10_14_3set);
-
-        setResult("E11","E22",team11,team22,win11,res11_11,res11_11_2set,res11_11_3set,res11_22,res11_22_2set,res11_22_3set);
-
-        setResult("E27","E6",team27,team6,win12,res12_27,res12_27_2set,res12_27_3set,res12_6,res12_6_2set,res12_6_3set);
-
-        setResult("E7","E26",team7,team26,win13,res13_7,res13_7_2set,res13_7_3set,res13_26,res13_26_2set,res13_26_3set);
-
-        setResult("E23","E10",team23,team10,win14,res14_23,res14_23_2set,res14_23_3set,res14_10,res14_10_2set,res14_10_3set);
-
-        setResult("E15","E18",team15,team18,win15,res15_15,res15_15_2set,res15_15_3set,res15_18,res15_18_2set,res15_18_3set);
-
-        setResult("E31","E2",team31,team2,win16,res16_31,res16_31_2set,res16_31_3set,res16_2,res16_2_2set,res16_2_3set);
+        win17 = view.findViewById(R.id.cup32WIN_17);
+        win18 = view.findViewById(R.id.cup32WIN_18);
+        win19 = view.findViewById(R.id.cup32WIN_19);
+        win20 = view.findViewById(R.id.cup32WIN_20);
+        win21 = view.findViewById(R.id.cup32WIN_21);
+        win22 = view.findViewById(R.id.cup32WIN_22);
+        win23 = view.findViewById(R.id.cup32WIN_23);
+        win24 = view.findViewById(R.id.cup32WIN_24);
 
 
-        setResult(win1,"WIN.1",win2,"WIN.2",win17,res17_Win_1,res17_Win_1_2set,res17_Win_1_3set,res17_Win_2,res17_Win_2_2set,res17_Win_2_3set);
+        setResultsForCup.withCheckWithoutLosser("E1", "E32", team1, team32, win1, res1_1, res1_1_2set, res1_1_3set, res1_32, res1_32_2set, res1_32_3set);
 
-        setResult(win3,"WIN.3",win4,"WIN.4",win18,res18_Win_3,res18_Win_3_2set,res18_Win_3_3set,res18_Win_4,res18_Win_4_2set,res18_Win_4_3set);
+        setResultsForCup.withCheckWithoutLosser("E17","E16",team17,team16,win2,res2_17,res2_17_2set,res2_17_3set,res2_16,res2_16_2set,res2_16_3set);
 
-        setResult(win5,"WIN.5",win6,"WIN.6",win19,res19_Win_5,res19_Win_5_2set,res19_Win_5_3set,res19_Win_6,res19_Win_6_2set,res19_Win_6_3set);
+        setResultsForCup.withCheckWithoutLosser("E9","E24",team9,team24,win3,res3_9,res3_9_2set,res3_9_3set,res3_24,res3_24_2set,res3_24_3set);
 
-        setResult(win7,"WIN.7",win8,"WIN.8",win20,res20_Win_7,res20_Win_7_2set,res20_Win_7_3set,res20_Win_8,res20_Win_8_2set,res20_Win_8_3set);
+        setResultsForCup.withCheckWithoutLosser("E25","E8",team25,team8,win4,res4_25,res4_25_2set,res4_25_3set,res4_8,res4_8_2set,res4_8_3set);
 
-        setResult(win9,"WIN.9",win10,"WIN.10",win21,res21_Win_9,res21_Win_9_2set,res21_Win_9_3set,res21_Win_10,res21_Win_10_2set,res21_Win_10_3set);
+        setResultsForCup.withCheckWithoutLosser("E5","E28",team5,team28,win5,res5_5,res5_5_2set,res5_5_3set,res5_28,res5_28_2set,res5_28_3set);
 
-        setResult(win11,"WIN.11",win12,"WIN.12",win22,res22_Win_11,res22_Win_11_2set,res22_Win_11_3set,res22_Win_12,res22_Win_12_2set,res22_Win_12_3set);
+        setResultsForCup.withCheckWithoutLosser("E21","E12",team21,team12,win6,res6_21,res6_21_2set,res6_21_3set,res6_12,res6_12_2set,res6_12_3set);
 
-        setResult(win13,"WIN.13",win14,"WIN.14",win23,res23_Win_13,res23_Win_13_2set,res23_Win_13_3set,res23_Win_14,res23_Win_14_2set,res23_Win_14_3set);
+        setResultsForCup.withCheckWithoutLosser("E13","E20",team13,team20,win7,res7_13,res7_13_2set,res7_13_3set,res7_20,res7_20_2set,res7_20_3set);
 
-        setResult(win15,"WIN.15",win16,"WIN.16",win24,res24_Win_15,res24_Win_15_2set,res24_Win_15_3set,res24_Win_16,res24_Win_16_2set,res24_Win_16_3set);
+        setResultsForCup.withCheckWithoutLosser("E29","E4",team29,team4,win8,res8_29,res8_29_2set,res8_29_3set,res8_4,res8_4_2set,res8_4_3set);
+
+        setResultsForCup.withCheckWithoutLosser("E3","E30",team3,team30,win9,res9_3,res9_3_2set,res9_3_3set,res9_30,res9_30_2set,res9_30_3set);
+
+        setResultsForCup.withCheckWithoutLosser("E19","E14",team19,team14,win10,res10_19,res10_19_2set,res10_19_3set,res10_14,res10_14_2set,res10_14_3set);
+
+        setResultsForCup.withCheckWithoutLosser("E11","E22",team11,team22,win11,res11_11,res11_11_2set,res11_11_3set,res11_22,res11_22_2set,res11_22_3set);
+
+        setResultsForCup.withCheckWithoutLosser("E27","E6",team27,team6,win12,res12_27,res12_27_2set,res12_27_3set,res12_6,res12_6_2set,res12_6_3set);
+
+        setResultsForCup.withCheckWithoutLosser("E7","E26",team7,team26,win13,res13_7,res13_7_2set,res13_7_3set,res13_26,res13_26_2set,res13_26_3set);
+
+        setResultsForCup.withCheckWithoutLosser("E23","E10",team23,team10,win14,res14_23,res14_23_2set,res14_23_3set,res14_10,res14_10_2set,res14_10_3set);
+
+        setResultsForCup.withCheckWithoutLosser("E15","E18",team15,team18,win15,res15_15,res15_15_2set,res15_15_3set,res15_18,res15_18_2set,res15_18_3set);
+
+        setResultsForCup.withCheckWithoutLosser("E31","E2",team31,team2,win16,res16_31,res16_31_2set,res16_31_3set,res16_2,res16_2_2set,res16_2_3set);
+
+
+        setResultsForCup.withoutLosserAndCheck(win1,"WIN.1",win2,"WIN.2",win17,res17_Win_1,res17_Win_1_2set,res17_Win_1_3set,res17_Win_2,res17_Win_2_2set,res17_Win_2_3set);
+
+        setResultsForCup.withoutLosserAndCheck(win3,"WIN.3",win4,"WIN.4",win18,res18_Win_3,res18_Win_3_2set,res18_Win_3_3set,res18_Win_4,res18_Win_4_2set,res18_Win_4_3set);
+
+        setResultsForCup.withoutLosserAndCheck(win5,"WIN.5",win6,"WIN.6",win19,res19_Win_5,res19_Win_5_2set,res19_Win_5_3set,res19_Win_6,res19_Win_6_2set,res19_Win_6_3set);
+
+        setResultsForCup.withoutLosserAndCheck(win7,"WIN.7",win8,"WIN.8",win20,res20_Win_7,res20_Win_7_2set,res20_Win_7_3set,res20_Win_8,res20_Win_8_2set,res20_Win_8_3set);
+
+        setResultsForCup.withoutLosserAndCheck(win9,"WIN.9",win10,"WIN.10",win21,res21_Win_9,res21_Win_9_2set,res21_Win_9_3set,res21_Win_10,res21_Win_10_2set,res21_Win_10_3set);
+
+        setResultsForCup.withoutLosserAndCheck(win11,"WIN.11",win12,"WIN.12",win22,res22_Win_11,res22_Win_11_2set,res22_Win_11_3set,res22_Win_12,res22_Win_12_2set,res22_Win_12_3set);
+
+        setResultsForCup.withoutLosserAndCheck(win13,"WIN.13",win14,"WIN.14",win23,res23_Win_13,res23_Win_13_2set,res23_Win_13_3set,res23_Win_14,res23_Win_14_2set,res23_Win_14_3set);
+
+        setResultsForCup.withoutLosserAndCheck(win15,"WIN.15",win16,"WIN.16",win24,res24_Win_15,res24_Win_15_2set,res24_Win_15_3set,res24_Win_16,res24_Win_16_2set,res24_Win_16_3set);
 
 
 
@@ -550,559 +575,40 @@ public class FragmentTabCup32_1 extends Fragment {
         return view;
     }
 
-
-
-
-    //Method to set Results to next Buttons without loser and check
-    void setResult(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button ResultButton, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
-        final String undoResultString = "WIN."+(numberOfMatches+1);
-        //Add NumberOfMatches
-        numberOfMatches++;
-        numbersOfMatchesArray[actualMatch].setText(String.valueOf(numberOfMatches));
-        actualMatch++;
-        ResultButton.setText(undoResultString);
-
-
-        firstPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (firstPlayer.getText().equals(firstPlayerString) || secundPlayer.getText().equals(secundPlayerString)) {
-                    toast.show();
-                } else {
-                    if (!pointsFor1In1Set.getText().toString().equals("")) {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-                    }else {
-                        ResultButton.setText(firstPlayer.getText());
-                        setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
-                    }
-                }
-
-            }
-        });
-
-        secundPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (secundPlayer.getText().equals(secundPlayerString) || firstPlayer.getText().equals(firstPlayerString)) {
-                    toast.show();
-                } else {
-                    if (!pointsFor1In1Set.getText().toString().equals("")) {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-                    }else {
-                        ResultButton.setText(secundPlayer.getText());
-                        setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
-                    }
-                }
-
-            }
-        });
-
-        ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-                return true;
-            }
-        });
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.action_bar_with_start_button, menu);
+        super.onCreateOptionsMenu(menu, inflater);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
 
-    void setResult(String EofFirstPlayer,String EofSecondPlayer,final Button firstPlayer, final Button secundPlayer, final Button ResultButton, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
-        final String undoResultString = "WIN."+(numberOfMatches+1);
-        //ADD E of Players
-        if(firstPlayer.getText()==""){
-            firstPlayer.setVisibility(View.INVISIBLE);
-            secundPlayer.setVisibility(View.INVISIBLE);
-            ResultButton.setText(secundPlayer.getText());
+        switch (item.getItemId()) {
+            case R.id.menuStartButton:
+                Intent braz16 = new Intent(getActivity(),BRAZactiv16.class);
 
-
-            //set the properties for textView
-            TextView tv = new TextView(getActivity().getApplicationContext());
-
-            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-            lp.addRule(RelativeLayout.START_OF,ResultButton.getId());
-            lp.addRule(RelativeLayout.ALIGN_BASELINE,ResultButton.getId());
-
-
-            tv.setLayoutParams(lp);
-
-            tv.setText(EofSecondPlayer);
-            tv.setTextSize(16);
-            tv.setTextColor(Color.BLACK);
-
-
-            //add textView to the layout
-            relativeLayout.addView(tv);
-
-            int resID = getResources().getIdentifier("cup32"+EofFirstPlayer, "id", getActivity().getPackageName());
-            TextView tvE = view.findViewById(resID);
-            tvE.setVisibility(View.INVISIBLE);
-
-            int resID2 = getResources().getIdentifier("cup32"+EofSecondPlayer, "id", getActivity().getPackageName());
-            TextView tvE2 = view.findViewById(resID2);
-            tvE2.setVisibility(View.INVISIBLE);
-            //Add NumberOfMatches
-            actualMatch++;
-
-
-        }else if(secundPlayer.getText()==""){
-            firstPlayer.setVisibility(View.INVISIBLE);
-            secundPlayer.setVisibility(View.INVISIBLE);
-            ResultButton.setText(firstPlayer.getText());
-
-
-
-            //set the properties for textView
-            TextView tv = new TextView(getActivity().getApplicationContext());
-
-            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-            lp.addRule(RelativeLayout.START_OF,ResultButton.getId());
-            lp.addRule(RelativeLayout.ALIGN_BASELINE,ResultButton.getId());
-
-            tv.setLayoutParams(lp);
-
-            tv.setText(EofFirstPlayer);
-            tv.setTextSize(16);
-            tv.setTextColor(Color.BLACK);
-
-
-            int resID = getResources().getIdentifier("cup32"+EofFirstPlayer, "id", getActivity().getPackageName());
-            TextView tvE = view.findViewById(resID);
-            tvE.setVisibility(View.INVISIBLE);
-
-            int resID2 = getResources().getIdentifier("cup32"+EofSecondPlayer, "id", getActivity().getPackageName());
-            TextView tvE2 = view.findViewById(resID2);
-            tvE2.setVisibility(View.INVISIBLE);
-
-
-
-            //add button to the layout
-            relativeLayout.addView(tv);
-
-            if(!(firstPlayer.getText()=="")) {
-                actualMatch++;
-            }
-
-        }else {
-
-            //Add NumberOfMatches
-            numberOfMatches++;
-            numbersOfMatchesArray[actualMatch].setText(String.valueOf(numberOfMatches));
-            ResultButton.setText(undoResultString);
-            actualMatch++;
+                braz16.putExtra("NameOfTeam1",R1);
+                braz16.putExtra("NameOfTeam2",R2);
+                braz16.putExtra("NameOfTeam3",R3);
+                braz16.putExtra("NameOfTeam4",R4);
+                braz16.putExtra("NameOfTeam5",R5);
+                braz16.putExtra("NameOfTeam6",R6);
+                braz16.putExtra("NameOfTeam7",R7);
+                braz16.putExtra("NameOfTeam8",R8);
+                braz16.putExtra("NameOfTeam9",win17.getText().toString());
+                braz16.putExtra("NameOfTeam10",win18.getText().toString());
+                braz16.putExtra("NameOfTeam11",win19.getText().toString());
+                braz16.putExtra("NameOfTeam12",win20.getText().toString());
+                braz16.putExtra("NameOfTeam13",win21.getText().toString());
+                braz16.putExtra("NameOfTeam14",win22.getText().toString());
+                braz16.putExtra("NameOfTeam15",win23.getText().toString());
+                braz16.putExtra("NameOfTeam16",win24.getText().toString());
+                startActivity(braz16);
         }
-
-
-
-
-
-
-
-        firstPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!pointsFor1In1Set.getText().toString().equals("")) {
-                    Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-                }else {
-                    ResultButton.setText(firstPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
-                }
-            }
-        });
-
-
-        secundPlayer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!pointsFor1In1Set.getText().toString().equals("")) {
-                    Toast.makeText(getActivity().getApplicationContext(), "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
-                }else {
-                    ResultButton.setText(secundPlayer.getText());
-                    setDetailedResultFor2Sets(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
-                }
-            }
-        });
-
-
-        ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-
-                return true;
-            }
-        });
-
+        return super.onOptionsItemSelected(item);
     }
 
-
-    // Method to add points of Sets
-    void setDetailedResultFor2Sets(final EditText team1Set1, final EditText team1Set2, final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3) {
-
-
-        team1Set1.setFocusableInTouchMode(true);
-        team2Set1.setFocusableInTouchMode(true);
-
-        disableEnableControls(false, vg);
-        team1Set2.setFocusableInTouchMode(false);
-        team1Set3.setFocusableInTouchMode(false);
-        team2Set2.setFocusableInTouchMode(false);
-        team2Set3.setFocusableInTouchMode(false);
-
-        team1Set1.setVisibility(View.VISIBLE);
-        team2Set1.setVisibility(View.VISIBLE);
-        team1Set2.setVisibility(View.VISIBLE);
-        team2Set2.setVisibility(View.VISIBLE);
-        team1Set3.setVisibility(View.VISIBLE);
-        team2Set3.setVisibility(View.VISIBLE);
-        team1Set1.requestFocus();
-        imm.showSoftInput(team1Set1, InputMethodManager.SHOW_IMPLICIT);
-
-        team1Set1.addTextChangedListener(new TextWatcher() {
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                team1Set1.setFocusableInTouchMode(true);
-            }
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                team1Set1.setFocusableInTouchMode(false);
-
-                /*if (team1Set1.getText().toString().length() == 2) {
-
-                    team2Set1.requestFocus();
-                    if (Integer.parseInt(team1Set1.getText().toString()) >= Integer.parseInt(pktInSet)) {
-                        team1Set2.setFocusableInTouchMode(true);
-                    }
-                }*/
-            }
-
-            public void afterTextChanged(Editable s) {
-            }
-        });
-
-        team2Set1.addTextChangedListener(new TextWatcher() {
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                team2Set1.setFocusableInTouchMode(false);
-
-                /*if (team2Set1.getText().toString().length() == 2) {
-                    team1Set2.setFocusableInTouchMode(true);
-                    if (checkPointsInSet(team1Set1, team2Set1, pktInSet)) {
-                        team1Set2.requestFocus();
-                        imm.showSoftInput(team1Set2, InputMethodManager.SHOW_IMPLICIT);
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set1.setText(null);
-                        team2Set1.setText(null);
-                        team1Set1.setFocusableInTouchMode(true);
-                        team2Set1.setFocusableInTouchMode(true);
-                        team1Set1.requestFocus();
-
-                    }
-                }*/
-            }
-
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        //AFTER CLICK ACTION NEXT CHECK EVERYTHINK
-        team2Set1.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_NEXT) {
-
-                    if (checkPointsInSet(team1Set1, team2Set1, pktInSet)) {
-                        team1Set2.setFocusableInTouchMode(true);
-                        team1Set2.requestFocus();
-                        imm.showSoftInput(team1Set2, InputMethodManager.SHOW_IMPLICIT);
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set1.setText(null);
-                        team2Set1.setText(null);
-                        team1Set1.setFocusableInTouchMode(true);
-                        team2Set1.setFocusableInTouchMode(true);
-                        team1Set1.requestFocus();
-
-                    }
-                }
-                return false;
-            }
-        });
-
-
-
-
-        team1Set2.addTextChangedListener(new TextWatcher() {
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                team2Set2.setFocusableInTouchMode(true);
-            }
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                team1Set2.setFocusableInTouchMode(false);
-
-                /*if (team1Set2.getText().toString().length() == 2) {
-
-                    team2Set2.requestFocus();
-                    if (Integer.parseInt(team1Set2.getText().toString()) >= Integer.parseInt(pktInSet)) {
-                        team1Set3.setFocusableInTouchMode(true);
-                    }
-
-                }*/
-            }
-
-            public void afterTextChanged(Editable s) {
-            }
-        });
-
-        team2Set2.addTextChangedListener(new TextWatcher() {
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                team2Set2.setFocusableInTouchMode(false);
-
-                /*if (team2Set2.getText().toString().length() == 2) {
-
-                    team1Set3.setFocusableInTouchMode(true);
-                    if (checkPointsInSet(team1Set2, team2Set2, pktInSet)) {
-                        if (checkTieBreak(team1Set1, team1Set2, team2Set1, team2Set2)) {
-                            team1Set3.requestFocus();
-                        } else {
-
-                            disableEnableControls(true, vg);
-                            Runnable delayedTask = new Runnable() {
-                                @Override
-                                public void run() {
-                                    imm.hideSoftInputFromWindow(team2Set2.getWindowToken(), 0);
-                                    team1Set1.setVisibility(View.INVISIBLE);
-                                    team2Set1.setVisibility(View.INVISIBLE);
-                                    team1Set2.setVisibility(View.INVISIBLE);
-                                    team2Set2.setVisibility(View.INVISIBLE);
-                                    team1Set3.setVisibility(View.INVISIBLE);
-                                    team2Set3.setVisibility(View.INVISIBLE);
-                                }
-                            };
-                            view.postDelayed(delayedTask, 500);
-
-                        }
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set2.setText(null);
-                        team2Set2.setText(null);
-
-                        team1Set2.setFocusableInTouchMode(true);
-                        team2Set2.setFocusableInTouchMode(true);
-                        team1Set2.requestFocus();
-
-                    }
-
-                }*/
-            }
-
-
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-
-        //AFTER CLICK ACTION NEXT CHECK EVERYTHINK
-        team2Set2.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_NEXT) {
-                    if (checkPointsInSet(team1Set2, team2Set2, pktInSet)) {
-                        if (checkTieBreak(team1Set1, team1Set2, team2Set1, team2Set2)) {
-                            team1Set3.setFocusableInTouchMode(true);
-                            team1Set3.requestFocus();
-                            imm.showSoftInput(team1Set3, InputMethodManager.SHOW_IMPLICIT);
-                        } else {
-
-                            disableEnableControls(true, vg);
-
-                            imm.hideSoftInputFromWindow(team2Set2.getWindowToken(), 0);
-                            team1Set1.setVisibility(View.INVISIBLE);
-                            team2Set1.setVisibility(View.INVISIBLE);
-                            team1Set2.setVisibility(View.INVISIBLE);
-                            team2Set2.setVisibility(View.INVISIBLE);
-                            team1Set3.setVisibility(View.INVISIBLE);
-                            team2Set3.setVisibility(View.INVISIBLE);
-
-                            //Reset all
-                            team1Set1.setOnEditorActionListener(null);
-                            team2Set1.setOnEditorActionListener(null);
-                            team1Set2.setOnEditorActionListener(null);
-                            team2Set2.setOnEditorActionListener(null);
-                            team1Set3.setOnEditorActionListener(null);
-                            team2Set3.setOnEditorActionListener(null);
-
-
-
-
-                        }
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set2.setText(null);
-                        team2Set2.setText(null);
-
-                        team1Set2.setFocusableInTouchMode(true);
-                        team2Set2.setFocusableInTouchMode(true);
-                        team1Set2.requestFocus();
-
-                    }
-                }
-                return false;
-            }
-        });
-
-        team1Set3.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                team2Set3.setFocusableInTouchMode(true);
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                team1Set3.setFocusableInTouchMode(false);
-
-                /*if (team1Set3.getText().toString().length() == 2) {
-
-                    team2Set3.requestFocus();
-
-                }*/
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-
-        team2Set3.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                team2Set3.setFocusableInTouchMode(false);
-                /*if (team2Set3.getText().toString().length() == 2) {
-                    if (checkPointsInSet(team1Set3, team2Set3, pktInTieBreak)) {
-                        disableEnableControls(true, vg);
-                        Runnable delayedTask = new Runnable() {
-                            @Override
-                            public void run() {
-                                imm.hideSoftInputFromWindow(team2Set3.getWindowToken(), 0);
-                                team1Set1.setVisibility(View.INVISIBLE);
-                                team2Set1.setVisibility(View.INVISIBLE);
-                                team1Set2.setVisibility(View.INVISIBLE);
-                                team2Set2.setVisibility(View.INVISIBLE);
-                                team1Set3.setVisibility(View.INVISIBLE);
-                                team2Set3.setVisibility(View.INVISIBLE);
-                            }
-                        };
-                        view.postDelayed(delayedTask, 500);
-
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set3.setText(null);
-                        team2Set3.setText(null);
-
-                        team1Set3.setFocusableInTouchMode(true);
-                        team2Set3.setFocusableInTouchMode(true);
-                        team1Set3.requestFocus();
-
-                    }
-
-                }*/
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-
-        team2Set3.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_NEXT) {
-                    if (checkPointsInSet(team1Set3, team2Set3, pktInTieBreak)) {
-                        disableEnableControls(true, vg);
-
-                        imm.hideSoftInputFromWindow(team2Set3.getWindowToken(), 0);
-                        team1Set1.setVisibility(View.INVISIBLE);
-                        team2Set1.setVisibility(View.INVISIBLE);
-                        team1Set2.setVisibility(View.INVISIBLE);
-                        team2Set2.setVisibility(View.INVISIBLE);
-                        team1Set3.setVisibility(View.INVISIBLE);
-                        team2Set3.setVisibility(View.INVISIBLE);
-
-                        //Reset all
-                        team1Set1.setOnEditorActionListener(null);
-                        team2Set1.setOnEditorActionListener(null);
-                        team1Set2.setOnEditorActionListener(null);
-                        team2Set2.setOnEditorActionListener(null);
-                        team1Set3.setOnEditorActionListener(null);
-                        team2Set3.setOnEditorActionListener(null);
-
-
-
-                    } else {
-                        Toast.makeText(getActivity().getApplicationContext(), "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
-                        team1Set3.setText(null);
-                        team2Set3.setText(null);
-
-                        team1Set3.setFocusableInTouchMode(true);
-                        team2Set3.setFocusableInTouchMode(true);
-                        team1Set3.requestFocus();
-
-                    }
-                }
-                return false;
-            }
-        });
-
-    }
-
-    private void disableEnableControls(boolean enable, ViewGroup vg) {
-        for (int i = 0; i < vg.getChildCount(); i++) {
-            View child = vg.getChildAt(i);
-            if (child instanceof Button) {
-                child.setEnabled(enable);
-
-            } else if (child instanceof ViewGroup) {
-                disableEnableControls(enable, (ViewGroup) child);
-            }
-        }
-    }
-
-
-    boolean checkPointsInSet(EditText team1, EditText team2, String pktInSet) {
-        String Res1 = team1.getText().toString();
-        String Res2 = team2.getText().toString();
-        return !Res1.equals("") && !Res2.equals("") && ((Math.abs(Integer.parseInt(Res1) - Integer.parseInt(Res2)) > 2 && (Integer.parseInt(pktInSet) == Integer.parseInt(Res1) && Integer.parseInt(Res2) < Integer.parseInt(pktInSet)) || (Integer.parseInt(pktInSet) == Integer.parseInt(Res2) && Integer.parseInt(Res1) < Integer.parseInt(pktInSet))) || (Math.abs(Integer.parseInt(Res1) - Integer.parseInt(Res2)) == 2 && ((Integer.parseInt(Res1) >= Integer.parseInt(pktInSet)) || Integer.parseInt(Res2) >= Integer.parseInt(pktInSet))));
-    }
-
-    boolean checkTieBreak(EditText team1Set1, EditText team1Set2, EditText team2Set1, EditText team2Set2) {
-        return (Integer.parseInt(team1Set1.getText().toString()) > Integer.parseInt(team2Set1.getText().toString()) && Integer.parseInt(team1Set2.getText().toString()) < Integer.parseInt(team2Set2.getText().toString())) || (Integer.parseInt(team1Set1.getText().toString()) < Integer.parseInt(team2Set1.getText().toString()) && Integer.parseInt(team1Set2.getText().toString()) > Integer.parseInt(team2Set2.getText().toString()));
-    }
 }
 
 

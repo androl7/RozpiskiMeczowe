@@ -93,6 +93,7 @@ public class FragmentTabCup32_3 extends Fragment {
         final Button win24 = getActivity().findViewById(R.id.cup32WIN_24);
 
 
+
         setResult(team1,team32,win1);
 
         setResult(team17,team16,win2);

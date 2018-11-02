@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/brazwybor2"
+    android:focusableInTouchMode="true"
     tools:context="com.example.adam.rozpiskimeczowe.everyoneForEveryone.EFEactiv">
 
-    <Button
-        android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="START"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 
     <CheckBox
         android:id="@+id/checkBox3"
@@ -21,7 +15,8 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@id/textHowMuchTeams"
         android:text="3"
-        android:layout_marginStart="5dp"/>
+        android:layout_marginStart="5dp"
+        android:buttonTint="#66310c"/>
 
     <CheckBox
         android:id="@+id/checkBox4"
@@ -30,7 +25,8 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@id/checkBox3"
         android:text="4"
-        android:layout_marginStart="15dp"/>
+        android:layout_marginStart="15dp"
+        android:buttonTint="#66310c"/>
 
     <CheckBox
         android:id="@+id/checkBox5"
@@ -39,16 +35,8 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/checkBox4"
         android:text="5"
-        android:layout_marginStart="15dp"/>
-
-    <CheckBox
-        android:id="@+id/checkBox6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/checkBox5"
-        android:text="6"
-        android:layout_marginStart="15dp"/>
+        android:layout_marginStart="15dp"
+        android:buttonTint="#66310c"/>
 
     <EditText
         android:id="@+id/Name1"
@@ -79,19 +67,13 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/Name3" />
 
-    <EditText
+    <!--<EditText
         android:id="@+id/Name5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/Name4" />
+        android:layout_below="@+id/Name4" />-->
 
-    <EditText
-        android:id="@+id/Name6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/Name5" />
 
     <TextView
         android:id="@+id/textHowMuchTeams"
@@ -100,17 +82,10 @@
         android:layout_alignParentTop="true"
         android:text="Ilość drużyn: "
         android:textSize="23sp"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:id="@+id/textNumberOfSets"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="41dp"
-        android:text="Ilość setów: "
-        android:textSize="23sp" />
+        android:textColor="#000000"/>
+
+
 
     <TextView
         android:id="@+id/textNamesOfTeams"
@@ -119,27 +94,9 @@
         android:layout_marginTop="15dp"
         android:text="Nazwy drużyn: "
         android:textSize="23sp"
-        android:layout_below="@+id/textNumberOfSets"
+        android:layout_below="@+id/textPkt"
         android:layout_alignStart="@+id/textHowMuchTeams"
-        />
-
-    <CheckBox
-        android:id="@+id/checkBoxSets1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textNumberOfSets"
-        android:layout_toEndOf="@id/textHowMuchTeams"
-        android:text="1"
-         />
-
-    <CheckBox
-        android:id="@+id/checkBoxSets2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/checkBoxSets1"
-        android:layout_alignTop="@+id/textNumberOfSets"
-        android:text="2"
-        android:layout_marginLeft="15dp"
+        android:textColor="#000000"
         />
 
 
@@ -147,10 +104,10 @@
         android:id="@+id/textPkt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/checkBox5"
-        android:layout_alignTop="@+id/textNumberOfSets"
+        android:layout_below="@+id/textHowMuchTeams"
         android:text="Pkt:"
-        android:textSize="20sp" />
+        android:textSize="23sp"
+        android:textColor="#000000" />
 
     <EditText
         android:id="@+id/brazEditTextPkt"
@@ -160,7 +117,10 @@
         android:layout_toEndOf="@+id/textPkt"
         android:ems="2"
         android:inputType="number"
-        android:textSize="15sp" />
+        android:textSize="20sp"
+        android:maxLength="2"
+        android:background="@drawable/rounded_edittext"
+        android:gravity="center" />
 
 
 </RelativeLayout>
