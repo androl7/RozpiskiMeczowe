@@ -1,39 +1,40 @@
 package com.example.adam.rozpiskimeczowe.cup.cup64;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adam.rozpiskimeczowe.Database;
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.SetResultsForCup;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian16.BRAZactiv16;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.otaliastudios.zoom.ZoomLayout;
 
-import java.util.Objects;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FragmentTabCup64_1 extends Fragment {
+    Map<Integer,ArrayList<EditText>> mapPointsInMatches;
+    Map<Integer,ArrayList<String>> mapElimination;
+    ArrayList<Button> listResultButtons;
     Toast toast;
     String pktInSet = "21";
     String pktInTieBreak = "15";
+    String typeOfTour = "cup64";
     SetResultsForCup setResultsForCup;
     int numberOfMatches = 0;
     int actualMatch = 0;
@@ -56,16 +57,29 @@ public class FragmentTabCup64_1 extends Fragment {
     String R6;
     String R7;
     String R8;
-
-
+    String nameOfTour;
+    RelativeLayout introLayout;
+    FirebaseFirestore db;
+    Database database;
+    ZoomLayout zoomLayout;
 
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_fragment_tab_cup64_1, container, false);
+
+        //UJEDNOLICIĆ METODĘ POBIERAJĄCĄ WYNIKI I UPDATE, DODAĆ WSZEDZIE NAZWE TURNIEJU !!!!!
+        db = FirebaseFirestore.getInstance();
+        mapPointsInMatches = new HashMap<>();
+        listResultButtons = new ArrayList<>();
+        mapElimination = new HashMap<>();
+        nameOfTour = getActivity().getIntent().getStringExtra("nameOfTour");
+
         setHasOptionsMenu(true);
 
         relativeLayout = view.findViewById(R.id.cup64relLayout);
+        zoomLayout = view.findViewById(R.id.cup64_zoomLayout);
+
 
         //Add NumberOfMatches
         numbersOfMatchesArray = new TextView[56];
@@ -75,7 +89,7 @@ public class FragmentTabCup64_1 extends Fragment {
             numbersOfMatchesArray[i] = view.findViewById(resID);
         }
 
-        setResultsForCup = new SetResultsForCup(getActivity(),container,pktInSet,pktInTieBreak,numberOfMatches,actualMatch,relativeLayout,numbersOfMatchesArray,view,"cup64");
+        setResultsForCup = new SetResultsForCup(nameOfTour,listResultButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,numberOfMatches,actualMatch,relativeLayout,numbersOfMatchesArray,view,"cup64",zoomLayout);
 
 
         final EditText Res1_1 = view.findViewById(R.id.cup64Res1_1);
@@ -91,6 +105,8 @@ public class FragmentTabCup64_1 extends Fragment {
         Res1_64.setVisibility(View.INVISIBLE);
         Res1_64_2set.setVisibility(View.INVISIBLE);
         Res1_64_3set.setVisibility(View.INVISIBLE);
+
+
 
 
         final EditText Res2_33 = view.findViewById(R.id.cup64Res2_33);
@@ -1140,55 +1156,57 @@ public class FragmentTabCup64_1 extends Fragment {
         setResultsForCup.withCheckWithoutLosser("E63","E2",team63,team2,win32,Res32_63,Res32_63_2set,Res32_63_3set,Res32_2,Res32_2_2set,Res32_2_3set);
 
 
-        setResultsForCup.withoutLosserAndCheck(win1,"WIN.1",win2,"WIN.2",win33,Res33_Win_1,Res33_Win_1_2set,Res33_Win_1_3set,Res33_Win_2,Res33_Win_2_2set,Res33_Win_2_3set);
+        setResultsForCup.withoutLosserAndCheck(win1,win2,win33,Res33_Win_1,Res33_Win_1_2set,Res33_Win_1_3set,Res33_Win_2,Res33_Win_2_2set,Res33_Win_2_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win3,"WIN.3",win4,"WIN.4",win34,Res34_Win_3,Res34_Win_3_2set,Res34_Win_3_3set,Res34_Win_4,Res34_Win_4_2set,Res34_Win_4_3set);
+        setResultsForCup.withoutLosserAndCheck(win3,win4,win34,Res34_Win_3,Res34_Win_3_2set,Res34_Win_3_3set,Res34_Win_4,Res34_Win_4_2set,Res34_Win_4_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win5,"WIN.5",win6,"WIN.6",win35,Res35_Win_5,Res35_Win_5_2set,Res35_Win_5_3set,Res35_Win_6,Res35_Win_6_2set,Res35_Win_6_3set);
+        setResultsForCup.withoutLosserAndCheck(win5,win6,win35,Res35_Win_5,Res35_Win_5_2set,Res35_Win_5_3set,Res35_Win_6,Res35_Win_6_2set,Res35_Win_6_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win7,"WIN.7",win8,"WIN.8",win36,Res36_Win_7,Res36_Win_7_2set,Res36_Win_7_3set,Res36_Win_8,Res36_Win_8_2set,Res36_Win_8_3set);
+        setResultsForCup.withoutLosserAndCheck(win7,win8,win36,Res36_Win_7,Res36_Win_7_2set,Res36_Win_7_3set,Res36_Win_8,Res36_Win_8_2set,Res36_Win_8_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win9,"WIN.9",win10,"WIN.10",win37,Res37_Win_9,Res37_Win_9_2set,Res37_Win_9_3set,Res37_Win_10,Res37_Win_10_2set,Res37_Win_10_3set);
+        setResultsForCup.withoutLosserAndCheck(win9,win10,win37,Res37_Win_9,Res37_Win_9_2set,Res37_Win_9_3set,Res37_Win_10,Res37_Win_10_2set,Res37_Win_10_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win11,"WIN.11",win12,"WIN.12",win38,Res38_Win_11,Res38_Win_11_2set,Res38_Win_11_3set,Res38_Win_12,Res38_Win_12_2set,Res38_Win_12_3set);
+        setResultsForCup.withoutLosserAndCheck(win11,win12,win38,Res38_Win_11,Res38_Win_11_2set,Res38_Win_11_3set,Res38_Win_12,Res38_Win_12_2set,Res38_Win_12_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win13,"WIN.13",win14,"WIN.14",win39,Res39_Win_13,Res39_Win_13_2set,Res39_Win_13_3set,Res39_Win_14,Res39_Win_14_2set,Res39_Win_14_3set);
+        setResultsForCup.withoutLosserAndCheck(win13,win14,win39,Res39_Win_13,Res39_Win_13_2set,Res39_Win_13_3set,Res39_Win_14,Res39_Win_14_2set,Res39_Win_14_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win15,"WIN.15",win16,"WIN.16",win40,Res40_Win_15,Res40_Win_15_2set,Res40_Win_15_3set,Res40_Win_16,Res40_Win_16_2set,Res40_Win_16_3set);
+        setResultsForCup.withoutLosserAndCheck(win15,win16,win40,Res40_Win_15,Res40_Win_15_2set,Res40_Win_15_3set,Res40_Win_16,Res40_Win_16_2set,Res40_Win_16_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win17,"WIN.17",win18,"WIN.18",win41,Res41_Win_17,Res41_Win_17_2set,Res41_Win_17_3set,Res41_Win_18,Res41_Win_18_2set,Res41_Win_18_3set);
+        setResultsForCup.withoutLosserAndCheck(win17,win18,win41,Res41_Win_17,Res41_Win_17_2set,Res41_Win_17_3set,Res41_Win_18,Res41_Win_18_2set,Res41_Win_18_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win19,"WIN.19",win20,"WIN.20",win42,Res42_Win_19,Res42_Win_19_2set,Res42_Win_19_3set,Res42_Win_20,Res42_Win_20_2set,Res42_Win_20_3set);
+        setResultsForCup.withoutLosserAndCheck(win19,win20,win42,Res42_Win_19,Res42_Win_19_2set,Res42_Win_19_3set,Res42_Win_20,Res42_Win_20_2set,Res42_Win_20_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win21,"WIN.21",win22,"WIN.22",win43,Res43_Win_21,Res43_Win_21_2set,Res43_Win_21_3set,Res43_Win_22,Res43_Win_22_2set,Res43_Win_22_3set);
+        setResultsForCup.withoutLosserAndCheck(win21,win22,win43,Res43_Win_21,Res43_Win_21_2set,Res43_Win_21_3set,Res43_Win_22,Res43_Win_22_2set,Res43_Win_22_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win23,"WIN.23",win24,"WIN.24",win44,Res44_Win_23,Res44_Win_23_2set,Res44_Win_23_3set,Res44_Win_24,Res44_Win_24_2set,Res44_Win_24_3set);
+        setResultsForCup.withoutLosserAndCheck(win23,win24,win44,Res44_Win_23,Res44_Win_23_2set,Res44_Win_23_3set,Res44_Win_24,Res44_Win_24_2set,Res44_Win_24_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win25,"WIN.25",win26,"WIN.26",win45,Res45_Win_25,Res45_Win_25_2set,Res45_Win_25_3set,Res45_Win_26,Res45_Win_26_2set,Res45_Win_26_3set);
+        setResultsForCup.withoutLosserAndCheck(win25,win26,win45,Res45_Win_25,Res45_Win_25_2set,Res45_Win_25_3set,Res45_Win_26,Res45_Win_26_2set,Res45_Win_26_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win27,"WIN.27",win28,"WIN.28",win46,Res46_Win_27,Res46_Win_27_2set,Res46_Win_27_3set,Res46_Win_28,Res46_Win_28_2set,Res46_Win_28_3set);
+        setResultsForCup.withoutLosserAndCheck(win27,win28,win46,Res46_Win_27,Res46_Win_27_2set,Res46_Win_27_3set,Res46_Win_28,Res46_Win_28_2set,Res46_Win_28_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win29,"WIN.29",win30,"WIN.30",win47,Res47_Win_29,Res47_Win_29_2set,Res47_Win_29_3set,Res47_Win_30,Res47_Win_30_2set,Res47_Win_30_3set);
+        setResultsForCup.withoutLosserAndCheck(win29,win30,win47,Res47_Win_29,Res47_Win_29_2set,Res47_Win_29_3set,Res47_Win_30,Res47_Win_30_2set,Res47_Win_30_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win31,"WIN.31",win32,"WIN.32",win48,Res48_Win_31,Res48_Win_31_2set,Res48_Win_31_3set,Res48_Win_32,Res48_Win_32_2set,Res48_Win_32_3set);
+        setResultsForCup.withoutLosserAndCheck(win31,win32,win48,Res48_Win_31,Res48_Win_31_2set,Res48_Win_31_3set,Res48_Win_32,Res48_Win_32_2set,Res48_Win_32_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win33,"WIN.33",win34,"WIN.34",win49,Res49_Win_33,Res49_Win_33_2set,Res49_Win_33_3set,Res49_Win_34,Res49_Win_34_2set,Res49_Win_34_3set);
+        setResultsForCup.withoutLosserAndCheck(win33,win34,win49,Res49_Win_33,Res49_Win_33_2set,Res49_Win_33_3set,Res49_Win_34,Res49_Win_34_2set,Res49_Win_34_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win35,"WIN.35",win36,"WIN.36",win50,Res50_Win_35,Res50_Win_35_2set,Res50_Win_35_3set,Res50_Win_36,Res50_Win_36_2set,Res50_Win_36_3set);
+        setResultsForCup.withoutLosserAndCheck(win35,win36,win50,Res50_Win_35,Res50_Win_35_2set,Res50_Win_35_3set,Res50_Win_36,Res50_Win_36_2set,Res50_Win_36_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win37,"WIN.37",win38,"WIN.38",win51,Res51_Win_37,Res51_Win_37_2set,Res51_Win_37_3set,Res51_Win_38,Res51_Win_38_2set,Res51_Win_38_3set);
+        setResultsForCup.withoutLosserAndCheck(win37,win38,win51,Res51_Win_37,Res51_Win_37_2set,Res51_Win_37_3set,Res51_Win_38,Res51_Win_38_2set,Res51_Win_38_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win39,"WIN.39",win40,"WIN.40",win52,Res52_Win_39,Res52_Win_39_2set,Res52_Win_39_3set,Res52_Win_40,Res52_Win_40_2set,Res52_Win_40_3set);
+        setResultsForCup.withoutLosserAndCheck(win39,win40,win52,Res52_Win_39,Res52_Win_39_2set,Res52_Win_39_3set,Res52_Win_40,Res52_Win_40_2set,Res52_Win_40_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win41,"WIN.41",win42,"WIN.42",win53,Res53_Win_41,Res53_Win_41_2set,Res53_Win_41_3set,Res53_Win_42,Res53_Win_42_2set,Res53_Win_42_3set);
+        setResultsForCup.withoutLosserAndCheck(win41,win42,win53,Res53_Win_41,Res53_Win_41_2set,Res53_Win_41_3set,Res53_Win_42,Res53_Win_42_2set,Res53_Win_42_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win43,"WIN.43",win44,"WIN.44",win54,Res54_Win_43,Res54_Win_43_2set,Res54_Win_43_3set,Res54_Win_44,Res54_Win_44_2set,Res54_Win_44_3set);
+        setResultsForCup.withoutLosserAndCheck(win43,win44,win54,Res54_Win_43,Res54_Win_43_2set,Res54_Win_43_3set,Res54_Win_44,Res54_Win_44_2set,Res54_Win_44_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win45,"WIN.45",win46,"WIN.46",win55,Res55_Win_45,Res55_Win_45_2set,Res55_Win_45_3set,Res55_Win_46,Res55_Win_46_2set,Res55_Win_46_3set);
+        setResultsForCup.withoutLosserAndCheck(win45,win46,win55,Res55_Win_45,Res55_Win_45_2set,Res55_Win_45_3set,Res55_Win_46,Res55_Win_46_2set,Res55_Win_46_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win47,"WIN.47",win48,"WIN.48",win56,Res56_Win_47,Res56_Win_47_2set,Res56_Win_47_3set,Res56_Win_48,Res56_Win_48_2set,Res56_Win_48_3set);
+        setResultsForCup.withoutLosserAndCheck(win47,win48,win56,Res56_Win_47,Res56_Win_47_2set,Res56_Win_47_3set,Res56_Win_48,Res56_Win_48_2set,Res56_Win_48_3set);
 
 
+        database = new Database(mapElimination,mapPointsInMatches,listResultButtons);
+        database.getResultFromDatabaseWithUpdate(nameOfTour,typeOfTour);
 
 
         toast = Toast.makeText(getActivity().getApplicationContext(), "Wprowadz wczesniejszy wynik !", Toast.LENGTH_SHORT);
@@ -1211,6 +1229,7 @@ public class FragmentTabCup64_1 extends Fragment {
             case R.id.menuStartButton:
                 Intent braz16 = new Intent(getActivity(),BRAZactiv16.class);
 
+                braz16.putExtra("nameOfTour",nameOfTour);
                 braz16.putExtra("NameOfTeam1",R1);
                 braz16.putExtra("NameOfTeam2",R2);
                 braz16.putExtra("NameOfTeam3",R3);

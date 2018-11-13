@@ -18,15 +18,26 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adam.rozpiskimeczowe.Database;
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.SetResultsForCup;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian16.BRAZactiv16;
+import com.otaliastudios.zoom.ZoomLayout;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class FragmentTabCup32_1 extends Fragment {
+    Map<Integer,ArrayList<EditText>> mapPointsInMatches;
+    ArrayList<Button> listResultButtons;
+    Map<Integer,ArrayList<String>> mapElimination;
     Toast toast;
     String pktInSet = "21";
     String pktInTieBreak = "15";
+    String typeOfTour = "cup32";
+    String nameOfTour;
     SetResultsForCup setResultsForCup;
     View view;
     int numberOfMatches = 0;
@@ -50,13 +61,22 @@ public class FragmentTabCup32_1 extends Fragment {
     Button win23;
     Button win24;
 
+    Database database;
+
+    ZoomLayout zoomLayout;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_fragment_tab_cup32_1, container, false);
-
-
+        mapPointsInMatches = new HashMap<>();
+        listResultButtons = new ArrayList<>();
+        mapElimination = new HashMap<>();
+        zoomLayout = view.findViewById(R.id.cup32_zoomLayout);
         relativeLayout = view.findViewById(R.id.cup32relLayout);
+
+
+
+        nameOfTour = getActivity().getIntent().getStringExtra("nameOfTour");
         //Add NumberOfMatches
         numbersOfMatchesArray = new TextView[24];
         for(int i=0; i<numbersOfMatchesArray.length; i++) {
@@ -65,7 +85,7 @@ public class FragmentTabCup32_1 extends Fragment {
             numbersOfMatchesArray[i] = view.findViewById(resID);
         }
 
-        setResultsForCup = new SetResultsForCup(getActivity(),container,pktInSet,pktInTieBreak,numberOfMatches,actualMatch,relativeLayout,numbersOfMatchesArray,view,"cup32");
+        setResultsForCup = new SetResultsForCup(nameOfTour,listResultButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,numberOfMatches,actualMatch,relativeLayout,numbersOfMatchesArray,view,"cup32",zoomLayout);
 
 
 
@@ -549,24 +569,25 @@ public class FragmentTabCup32_1 extends Fragment {
         setResultsForCup.withCheckWithoutLosser("E31","E2",team31,team2,win16,res16_31,res16_31_2set,res16_31_3set,res16_2,res16_2_2set,res16_2_3set);
 
 
-        setResultsForCup.withoutLosserAndCheck(win1,"WIN.1",win2,"WIN.2",win17,res17_Win_1,res17_Win_1_2set,res17_Win_1_3set,res17_Win_2,res17_Win_2_2set,res17_Win_2_3set);
+        setResultsForCup.withoutLosserAndCheck(win1,win2,win17,res17_Win_1,res17_Win_1_2set,res17_Win_1_3set,res17_Win_2,res17_Win_2_2set,res17_Win_2_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win3,"WIN.3",win4,"WIN.4",win18,res18_Win_3,res18_Win_3_2set,res18_Win_3_3set,res18_Win_4,res18_Win_4_2set,res18_Win_4_3set);
+        setResultsForCup.withoutLosserAndCheck(win3,win4,win18,res18_Win_3,res18_Win_3_2set,res18_Win_3_3set,res18_Win_4,res18_Win_4_2set,res18_Win_4_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win5,"WIN.5",win6,"WIN.6",win19,res19_Win_5,res19_Win_5_2set,res19_Win_5_3set,res19_Win_6,res19_Win_6_2set,res19_Win_6_3set);
+        setResultsForCup.withoutLosserAndCheck(win5,win6,win19,res19_Win_5,res19_Win_5_2set,res19_Win_5_3set,res19_Win_6,res19_Win_6_2set,res19_Win_6_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win7,"WIN.7",win8,"WIN.8",win20,res20_Win_7,res20_Win_7_2set,res20_Win_7_3set,res20_Win_8,res20_Win_8_2set,res20_Win_8_3set);
+        setResultsForCup.withoutLosserAndCheck(win7,win8,win20,res20_Win_7,res20_Win_7_2set,res20_Win_7_3set,res20_Win_8,res20_Win_8_2set,res20_Win_8_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win9,"WIN.9",win10,"WIN.10",win21,res21_Win_9,res21_Win_9_2set,res21_Win_9_3set,res21_Win_10,res21_Win_10_2set,res21_Win_10_3set);
+        setResultsForCup.withoutLosserAndCheck(win9,win10,win21,res21_Win_9,res21_Win_9_2set,res21_Win_9_3set,res21_Win_10,res21_Win_10_2set,res21_Win_10_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win11,"WIN.11",win12,"WIN.12",win22,res22_Win_11,res22_Win_11_2set,res22_Win_11_3set,res22_Win_12,res22_Win_12_2set,res22_Win_12_3set);
+        setResultsForCup.withoutLosserAndCheck(win11,win12,win22,res22_Win_11,res22_Win_11_2set,res22_Win_11_3set,res22_Win_12,res22_Win_12_2set,res22_Win_12_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win13,"WIN.13",win14,"WIN.14",win23,res23_Win_13,res23_Win_13_2set,res23_Win_13_3set,res23_Win_14,res23_Win_14_2set,res23_Win_14_3set);
+        setResultsForCup.withoutLosserAndCheck(win13,win14,win23,res23_Win_13,res23_Win_13_2set,res23_Win_13_3set,res23_Win_14,res23_Win_14_2set,res23_Win_14_3set);
 
-        setResultsForCup.withoutLosserAndCheck(win15,"WIN.15",win16,"WIN.16",win24,res24_Win_15,res24_Win_15_2set,res24_Win_15_3set,res24_Win_16,res24_Win_16_2set,res24_Win_16_3set);
+        setResultsForCup.withoutLosserAndCheck(win15,win16,win24,res24_Win_15,res24_Win_15_2set,res24_Win_15_3set,res24_Win_16,res24_Win_16_2set,res24_Win_16_3set);
 
 
-
+        database = new Database(mapElimination,mapPointsInMatches,listResultButtons);
+        database.getResultFromDatabaseWithUpdate(nameOfTour,typeOfTour);
 
         toast = Toast.makeText(getActivity().getApplicationContext(), "Wprowadz wczesniejszy wynik !", Toast.LENGTH_SHORT);
 
@@ -587,7 +608,7 @@ public class FragmentTabCup32_1 extends Fragment {
         switch (item.getItemId()) {
             case R.id.menuStartButton:
                 Intent braz16 = new Intent(getActivity(),BRAZactiv16.class);
-
+                braz16.putExtra("nameOfTour",nameOfTour);
                 braz16.putExtra("NameOfTeam1",R1);
                 braz16.putExtra("NameOfTeam2",R2);
                 braz16.putExtra("NameOfTeam3",R3);

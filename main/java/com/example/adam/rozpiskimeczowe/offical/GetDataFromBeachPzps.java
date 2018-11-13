@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,6 +41,7 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
     private AlertDialog alertDialog;
     private Context context;
     private String idOfTour;
+    private ImageView imageView;
 
     GetDataFromBeachPzps(ListView list, Context context,String idOfTour) {
         this.idOfTour = idOfTour;
@@ -119,7 +121,7 @@ public class GetDataFromBeachPzps extends AsyncTask<Void, Void, Void> {
             customAdapter = new CustomAdapter(context);
             list.setAdapter(customAdapter);
         } else {
-        Toast.makeText(context,"Nie istnieje turniej o takim ID",Toast.LENGTH_SHORT).show();
+        Toast.makeText(context,"Nie istnieje turniej o takim ID lub nie masz połączenia z internetem",Toast.LENGTH_SHORT).show();
     }}
 
 

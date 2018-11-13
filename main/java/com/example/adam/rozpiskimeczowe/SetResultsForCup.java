@@ -11,6 +11,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.otaliastudios.zoom.ZoomLayout;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class SetResultsForCup implements ISetResultsForCup {
@@ -23,8 +28,11 @@ public class SetResultsForCup implements ISetResultsForCup {
     View view;
     private String numberOfCup;
     private SetDetailedResultFor2Sets setDetailedResultFor2Sets;
+    Database database;
+    Map<Integer,ArrayList<EditText>> mapPointsInMatches;
+    ArrayList<Button> listResultButtons;
 
-    public SetResultsForCup(Context context, ViewGroup vg, String pktInSet, String pktInTieBreak, int numberOfMatches,int actualMatch,RelativeLayout relativeLayout,TextView[] numbersOfMatchesArray,View view, String numberOfCup){
+    public SetResultsForCup(String nameOfTour,ArrayList listResultButtons,Map<Integer,ArrayList<EditText>> mapPointsInMatches,String typeOfTour,Context context, ViewGroup vg, String pktInSet, String pktInTieBreak, int numberOfMatches, int actualMatch, RelativeLayout relativeLayout, TextView[] numbersOfMatchesArray, View view, String numberOfCup, ZoomLayout zoomLayout){
         this.numberOfCup = numberOfCup;
         this.context = context;
         this.numberOfMatches = numberOfMatches;
@@ -34,32 +42,50 @@ public class SetResultsForCup implements ISetResultsForCup {
         this.view = view;
         this.toast = Toast.makeText(context, "Wprowadz wczesniejszy wynik !", Toast.LENGTH_SHORT);
         InputMethodManager imm = (InputMethodManager) Objects.requireNonNull(context.getSystemService(Context.INPUT_METHOD_SERVICE));
-        this.setDetailedResultFor2Sets = new SetDetailedResultFor2Sets(context,vg, imm,pktInSet,pktInTieBreak);
+        this.setDetailedResultFor2Sets = new SetDetailedResultFor2Sets(nameOfTour,typeOfTour,context,vg, imm,pktInSet,pktInTieBreak,zoomLayout);
+        database = new Database();
+        this.mapPointsInMatches = mapPointsInMatches;
+        this.listResultButtons = listResultButtons;
     }
 
 
     //Method to set Results to next Buttons without loser and check
     @Override
-    public void withoutLosserAndCheck(final Button firstPlayer, final String firstPlayerString, final Button secundPlayer, final String secundPlayerString, final Button ResultButton, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+    public void withoutLosserAndCheck(final Button firstPlayer, final Button secundPlayer, final Button ResultButton, final EditText pointsFor1In1Set, final EditText pointsFor1In2Set, final EditText pointsFor1In3Set, final EditText pointsFor2In1Set, final EditText pointsFor2In2Set, final EditText pointsFor2In3Set) {
+        final String winForCheck = "WIN.";
         final String undoResultString = "WIN."+(numberOfMatches+1);
         //Add NumberOfMatches
         numberOfMatches++;
         numbersOfMatchesArray[actualMatch].setText(String.valueOf(numberOfMatches));
         actualMatch++;
         ResultButton.setText(undoResultString);
+        //Add number Of match for database
+        pointsFor1In1Set.setTag(String.valueOf(numberOfMatches));
+        pointsFor2In1Set.setTag(String.valueOf(numberOfMatches));
+        //add hashMap of results
+        ArrayList arrayList = new ArrayList();
+        arrayList.add(pointsFor1In1Set);
+        arrayList.add(pointsFor1In2Set);
+        arrayList.add(pointsFor1In3Set);
+        arrayList.add(pointsFor2In1Set);
+        arrayList.add(pointsFor2In2Set);
+        arrayList.add(pointsFor2In3Set);
+        mapPointsInMatches.put(numberOfMatches,arrayList);
+        listResultButtons.add(ResultButton);
+
 
 
         firstPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (firstPlayer.getText().equals(firstPlayerString) || secundPlayer.getText().equals(secundPlayerString)) {
+                if (firstPlayer.getText().toString().substring(0,4).equals(winForCheck) || secundPlayer.getText().toString().substring(0,4).equals(winForCheck)) {
                     toast.show();
                 } else {
                     if (!pointsFor1In1Set.getText().toString().equals("")) {
                         Toast.makeText(context, "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
                     }else {
                         ResultButton.setText(firstPlayer.getText());
-                        setDetailedResultFor2Sets.set(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                        setDetailedResultFor2Sets.set(firstPlayer,pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
                     }
                 }
 
@@ -69,14 +95,15 @@ public class SetResultsForCup implements ISetResultsForCup {
         secundPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (secundPlayer.getText().equals(secundPlayerString) || firstPlayer.getText().equals(firstPlayerString)) {
+                if (firstPlayer.getText().toString().substring(0,4).equals(winForCheck) || secundPlayer.getText().toString().substring(0,4).equals(winForCheck)) {
                     toast.show();
                 } else {
                     if (!pointsFor1In1Set.getText().toString().equals("")) {
                         Toast.makeText(context, "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
                     }else {
                         ResultButton.setText(secundPlayer.getText());
-                        setDetailedResultFor2Sets.set(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                        setDetailedResultFor2Sets.set(secundPlayer,pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+
                     }
                 }
 
@@ -181,6 +208,20 @@ public class SetResultsForCup implements ISetResultsForCup {
             //Add NumberOfMatches
             numberOfMatches++;
             numbersOfMatchesArray[actualMatch].setText(String.valueOf(numberOfMatches));
+            //Add number Of match for database
+            pointsFor1In1Set.setTag(String.valueOf(numberOfMatches));
+            pointsFor2In1Set.setTag(String.valueOf(numberOfMatches));
+            //add hashMap of results
+            ArrayList arrayList = new ArrayList();
+            arrayList.add(pointsFor1In1Set);
+            arrayList.add(pointsFor1In2Set);
+            arrayList.add(pointsFor1In3Set);
+            arrayList.add(pointsFor2In1Set);
+            arrayList.add(pointsFor2In2Set);
+            arrayList.add(pointsFor2In3Set);
+            mapPointsInMatches.put(numberOfMatches,arrayList);
+            listResultButtons.add(ResultButton);
+
             ResultButton.setText(undoResultString);
             actualMatch++;
         }
@@ -195,10 +236,11 @@ public class SetResultsForCup implements ISetResultsForCup {
             @Override
             public void onClick(View v) {
                 if (!pointsFor1In1Set.getText().toString().equals("")) {
-                    Toast.makeText(context, "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_LONG).show();
                 }else {
                     ResultButton.setText(firstPlayer.getText());
-                    setDetailedResultFor2Sets.set(pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                    setDetailedResultFor2Sets.set(firstPlayer,pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+
                 }
             }
         });
@@ -208,29 +250,30 @@ public class SetResultsForCup implements ISetResultsForCup {
             @Override
             public void onClick(View v) {
                 if (!pointsFor1In1Set.getText().toString().equals("")) {
-                    Toast.makeText(context, "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_LONG).show();
                 }else {
                     ResultButton.setText(secundPlayer.getText());
-                    setDetailedResultFor2Sets.set(pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                    setDetailedResultFor2Sets.set(secundPlayer,pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
                 }
             }
         });
 
+        if(!firstPlayer.getText().equals("")&&!secundPlayer.getText().equals("")) {
+            ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    ResultButton.setText(undoResultString);
+                    pointsFor1In1Set.setText("");
+                    pointsFor1In2Set.setText("");
+                    pointsFor1In3Set.setText("");
+                    pointsFor2In1Set.setText("");
+                    pointsFor2In2Set.setText("");
+                    pointsFor2In3Set.setText("");
 
-        ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-
-                return true;
-            }
-        });
+                    return true;
+                }
+            });
+        }
 
     }
 

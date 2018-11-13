@@ -4,17 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/brazwybor2"
-    tools:context=".offical.OfficalListWihTeams">
+    tools:context=".offical.OfficalListWihTeams"
+    android:focusableInTouchMode="true">
 
+    <EditText
+        android:id="@+id/Offical_NameOfTour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:hint="Nazwa Turnieju"
+        />
     <Button
         android:id="@+id/getDataBtn"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:text="Pobierz listę"
         android:background="@drawable/button_shape"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/Offical_NameOfTour"
+        android:layout_marginBottom="5dp"/>
     <ListView
         android:id="@+id/getDataListView"
         android:layout_width="match_parent"
@@ -25,6 +34,16 @@
         android:layout_below="@+id/getDataBtn"
         android:descendantFocusability="afterDescendants"
         android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/OfficalImageViewRoadToBeachPzps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/getDataBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/road_to_beach_pzps"
+        />
 
 
     <EditText

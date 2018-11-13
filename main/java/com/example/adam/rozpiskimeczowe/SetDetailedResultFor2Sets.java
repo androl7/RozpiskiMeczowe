@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.otaliastudios.zoom.ZoomLayout;
 
 public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
     private Context context;
@@ -21,20 +21,48 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
     private InputMethodManager imm;
     private String pktInSet;
     private String pktInTieBreak;
+   // private ZoomLayout zoomLayout;
+    private Database database;
+    private String typeOfTour;
+    private String nameOfTour;
 
-    public SetDetailedResultFor2Sets(Context context, ViewGroup vg, InputMethodManager imm, String pktInSet, String pktInTieBreak){
+
+    SetDetailedResultFor2Sets(String nameOfTour,String typeOfTour,Context context, ViewGroup vg, InputMethodManager imm, String pktInSet, String pktInTieBreak) {
+        this.nameOfTour=nameOfTour;
         this.context = context;
         this.vg = vg;
         this.imm = imm;
         this.pktInSet = pktInSet;
         this.pktInTieBreak = pktInTieBreak;
+        database = new Database();
+        this.typeOfTour = typeOfTour;
+
+    }
+
+    SetDetailedResultFor2Sets(String nameOfTour,String typeOfTour,Context context, ViewGroup vg, InputMethodManager imm, String pktInSet, String pktInTieBreak,ZoomLayout zoomLayout) {
+        this.nameOfTour = nameOfTour;
+        this.context = context;
+        this.vg = vg;
+        this.imm = imm;
+        this.pktInSet = pktInSet;
+        this.pktInTieBreak = pktInTieBreak;
+     //   this.zoomLayout = zoomLayout;
+        database = new Database();
+        this.typeOfTour = typeOfTour;
+
     }
 
     // Method to add points of Sets
     @Override
-    public void set(final EditText team1Set1, final EditText team1Set2, final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3) {
+    public void set(final Button winner, final EditText team1Set1, final EditText team1Set2, final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3) {
+        //OGARNĄĆ TUTAJ PRZESUNIECIE
+        /*int [] coor = new int[2];
+        team1Set1.getLocationInWindow(coor);
+        int a = - 1290 - coor[0];
+        int b = - 2033 - coor[1];
 
 
+        zoomLayout.moveTo(3,a,b,true);*/
         team1Set1.setFocusableInTouchMode(true);
         team2Set1.setFocusableInTouchMode(true);
 
@@ -128,8 +156,6 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
         });
 
 
-
-
         team1Set2.addTextChangedListener(new TextWatcher() {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 team2Set2.setFocusableInTouchMode(true);
@@ -215,10 +241,10 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                             team1Set3.requestFocus();
                             imm.showSoftInput(team1Set3, InputMethodManager.SHOW_IMPLICIT);
                         } else {
-                            if(checkSets(team1Set1,team1Set2,team1Set3,team2Set1,team2Set2,team2Set3)) {
+                            if (checkSets(team1Set1, team1Set2, team1Set3, team2Set1, team2Set2, team2Set3)) {
 
                                 disableEnableControls(true, vg);
-
+                                database.addResultToDatabase(nameOfTour,typeOfTour,winner,team1Set1, team1Set2, team1Set3, team2Set1, team2Set2, team2Set3);
                                 imm.hideSoftInputFromWindow(team2Set2.getWindowToken(), 0);
                                 team1Set1.setVisibility(View.INVISIBLE);
                                 team2Set1.setVisibility(View.INVISIBLE);
@@ -235,7 +261,9 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                                 team1Set3.setOnEditorActionListener(null);
                                 team2Set3.setOnEditorActionListener(null);
 
-                            }else {
+
+
+                            } else {
                                 Toast.makeText(context, "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
                                 team1Set1.setText(null);
                                 team2Set1.setText(null);
@@ -246,7 +274,6 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                                 team2Set1.setFocusableInTouchMode(true);
                                 team1Set1.requestFocus();
                             }
-
 
 
                         }
@@ -339,9 +366,9 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_NEXT) {
                     if (checkPointsInSet(team1Set3, team2Set3, pktInTieBreak)) {
-                        if(checkSets(team1Set1,team1Set2,team1Set3,team2Set1,team2Set2,team2Set3)) {
+                        if (checkSets(team1Set1, team1Set2, team1Set3, team2Set1, team2Set2, team2Set3)) {
                             disableEnableControls(true, vg);
-
+                            database.addResultToDatabase(nameOfTour,typeOfTour,winner,team1Set1, team1Set2, team1Set3, team2Set1, team2Set2, team2Set3);
                             imm.hideSoftInputFromWindow(team2Set3.getWindowToken(), 0);
                             team1Set1.setVisibility(View.INVISIBLE);
                             team2Set1.setVisibility(View.INVISIBLE);
@@ -357,7 +384,7 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                             team2Set2.setOnEditorActionListener(null);
                             team1Set3.setOnEditorActionListener(null);
                             team2Set3.setOnEditorActionListener(null);
-                        }else {
+                        } else {
                             Toast.makeText(context, "Wynik jest niepoprawny", Toast.LENGTH_SHORT).show();
                             team1Set3.setText(null);
                             team1Set2.setText(null);
@@ -371,7 +398,6 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                             team2Set1.setFocusableInTouchMode(true);
                             team1Set1.requestFocus();
                         }
-
 
 
                     } else {
@@ -415,7 +441,7 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
         return (Integer.parseInt(team1Set1.getText().toString()) > Integer.parseInt(team2Set1.getText().toString()) && Integer.parseInt(team1Set2.getText().toString()) < Integer.parseInt(team2Set2.getText().toString())) || (Integer.parseInt(team1Set1.getText().toString()) < Integer.parseInt(team2Set1.getText().toString()) && Integer.parseInt(team1Set2.getText().toString()) > Integer.parseInt(team2Set2.getText().toString()));
     }
 
-    private boolean checkSets(EditText winner_1, EditText winner_2, EditText winner_3, EditText losser_1, EditText losser_2, EditText losser_3){
+    private boolean checkSets(EditText winner_1, EditText winner_2, EditText winner_3, EditText losser_1, EditText losser_2, EditText losser_3) {
         String strTeam1_1 = winner_1.getText().toString();
         String strTeam1_2 = winner_2.getText().toString();
         String strTeam1_3 = winner_3.getText().toString();
@@ -423,22 +449,22 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
         String strTeam2_2 = losser_2.getText().toString();
         String strTeam2_3 = losser_3.getText().toString();
 
-        int setFor1=0;
-        int setFor2=0;
+        int setFor1 = 0;
+        int setFor2 = 0;
 
-        if(Integer.parseInt(strTeam1_1)>Integer.parseInt(strTeam2_1)){
+        if (Integer.parseInt(strTeam1_1) > Integer.parseInt(strTeam2_1)) {
             setFor1++;
         }
-        if(Integer.parseInt(strTeam1_1)<Integer.parseInt(strTeam2_1)){
+        if (Integer.parseInt(strTeam1_1) < Integer.parseInt(strTeam2_1)) {
             setFor2++;
         }
-        if(Integer.parseInt(strTeam1_2)>Integer.parseInt(strTeam2_2)){
+        if (Integer.parseInt(strTeam1_2) > Integer.parseInt(strTeam2_2)) {
             setFor1++;
         }
-        if(Integer.parseInt(strTeam1_2)<Integer.parseInt(strTeam2_2)){
+        if (Integer.parseInt(strTeam1_2) < Integer.parseInt(strTeam2_2)) {
             setFor2++;
         }
-        if(!strTeam1_3.equals("")&&!strTeam2_3.equals("")) {
+        if (!strTeam1_3.equals("") && !strTeam2_3.equals("")) {
             if (Integer.parseInt(strTeam1_3) > Integer.parseInt(strTeam2_3)) {
                 setFor1++;
             }
@@ -447,11 +473,11 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
             }
         }
 
-        return  setFor1>setFor2;
+        return setFor1 > setFor2;
     }
 
 
-    public void setForGroup(final EditText team1Set1, final EditText team1Set2, final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3, final TextView setsFor1, final TextView setsFor1_2, final TextView setsFor2,final TextView setsFor2_2) {
+    public void setForGroup(final EditText team1Set1, final EditText team1Set2, final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3, final TextView setsFor1, final TextView setsFor1_2, final TextView setsFor2, final TextView setsFor2_2) {
 
         setsFor1.setVisibility(View.INVISIBLE);
         setsFor2.setVisibility(View.INVISIBLE);
@@ -548,8 +574,6 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
         });
 
 
-
-
         team1Set2.addTextChangedListener(new TextWatcher() {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 team2Set2.setFocusableInTouchMode(true);
@@ -636,46 +660,37 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                             imm.showSoftInput(team1Set3, InputMethodManager.SHOW_IMPLICIT);
                         } else {
 
-                                disableEnableControls(true, vg);
+                            disableEnableControls(true, vg);
 
-                                imm.hideSoftInputFromWindow(team2Set2.getWindowToken(), 0);
-                                team1Set1.setVisibility(View.INVISIBLE);
-                                team2Set1.setVisibility(View.INVISIBLE);
-                                team1Set2.setVisibility(View.INVISIBLE);
-                                team2Set2.setVisibility(View.INVISIBLE);
-                                team1Set3.setVisibility(View.INVISIBLE);
-                                team2Set3.setVisibility(View.INVISIBLE);
+                            imm.hideSoftInputFromWindow(team2Set2.getWindowToken(), 0);
+                            team1Set1.setVisibility(View.INVISIBLE);
+                            team2Set1.setVisibility(View.INVISIBLE);
+                            team1Set2.setVisibility(View.INVISIBLE);
+                            team2Set2.setVisibility(View.INVISIBLE);
+                            team1Set3.setVisibility(View.INVISIBLE);
+                            team2Set3.setVisibility(View.INVISIBLE);
 
                             String strTeam1_1 = team1Set1.getText().toString();
                             String strTeam1_2 = team1Set2.getText().toString();
-                            String strTeam1_3 = team1Set3.getText().toString();
                             String strTeam2_1 = team2Set1.getText().toString();
                             String strTeam2_2 = team2Set2.getText().toString();
-                            String strTeam2_3 = team2Set2.getText().toString();
 
-                            int setFor1=0;
-                            int setFor2=0;
+                            int setFor1 = 0;
+                            int setFor2 = 0;
 
-                            if(Integer.parseInt(strTeam1_1)>Integer.parseInt(strTeam2_1)){
+                            if (Integer.parseInt(strTeam1_1) > Integer.parseInt(strTeam2_1)) {
                                 setFor1++;
                             }
-                            if(Integer.parseInt(strTeam1_1)<Integer.parseInt(strTeam2_1)){
+                            if (Integer.parseInt(strTeam1_1) < Integer.parseInt(strTeam2_1)) {
                                 setFor2++;
                             }
-                            if(Integer.parseInt(strTeam1_2)>Integer.parseInt(strTeam2_2)){
+                            if (Integer.parseInt(strTeam1_2) > Integer.parseInt(strTeam2_2)) {
                                 setFor1++;
                             }
-                            if(Integer.parseInt(strTeam1_2)<Integer.parseInt(strTeam2_2)){
+                            if (Integer.parseInt(strTeam1_2) < Integer.parseInt(strTeam2_2)) {
                                 setFor2++;
                             }
-                            if(!strTeam1_3.equals("")&&!strTeam2_3.equals("")) {
-                                if (Integer.parseInt(strTeam1_3) > Integer.parseInt(strTeam2_3)) {
-                                    setFor1++;
-                                }
-                                if (Integer.parseInt(strTeam1_3) < Integer.parseInt(strTeam2_3)) {
-                                    setFor2++;
-                                }
-                            }
+
 
                             setsFor1.setText(String.valueOf(setFor1));
                             setsFor1_2.setText(String.valueOf(setFor1));
@@ -684,18 +699,17 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                             setsFor2_2.setText(String.valueOf(setFor2));
 
 
-
                             setsFor1.setVisibility(View.VISIBLE);
                             setsFor2.setVisibility(View.VISIBLE);
 
 
-                                //Reset all
-                                team1Set1.setOnEditorActionListener(null);
-                                team2Set1.setOnEditorActionListener(null);
-                                team1Set2.setOnEditorActionListener(null);
-                                team2Set2.setOnEditorActionListener(null);
-                                team1Set3.setOnEditorActionListener(null);
-                                team2Set3.setOnEditorActionListener(null);
+                            //Reset all
+                            team1Set1.setOnEditorActionListener(null);
+                            team2Set1.setOnEditorActionListener(null);
+                            team1Set2.setOnEditorActionListener(null);
+                            team2Set2.setOnEditorActionListener(null);
+                            team1Set3.setOnEditorActionListener(null);
+                            team2Set3.setOnEditorActionListener(null);
 
 
                         }
@@ -804,38 +818,37 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                         String strTeam1_3 = team1Set3.getText().toString();
                         String strTeam2_1 = team2Set1.getText().toString();
                         String strTeam2_2 = team2Set2.getText().toString();
-                        String strTeam2_3 = team2Set2.getText().toString();
+                        String strTeam2_3 = team2Set3.getText().toString();
 
-                        int setFor1=0;
-                        int setFor2=0;
+                        int setFor1 = 0;
+                        int setFor2 = 0;
 
-                        if(Integer.parseInt(strTeam1_1)>Integer.parseInt(strTeam2_1)){
+                        if (Integer.parseInt(strTeam1_1) > Integer.parseInt(strTeam2_1)) {
                             setFor1++;
                         }
-                        if(Integer.parseInt(strTeam1_1)<Integer.parseInt(strTeam2_1)){
+                        if (Integer.parseInt(strTeam1_1) < Integer.parseInt(strTeam2_1)) {
                             setFor2++;
                         }
-                        if(Integer.parseInt(strTeam1_2)>Integer.parseInt(strTeam2_2)){
+                        if (Integer.parseInt(strTeam1_2) > Integer.parseInt(strTeam2_2)) {
                             setFor1++;
                         }
-                        if(Integer.parseInt(strTeam1_2)<Integer.parseInt(strTeam2_2)){
+                        if (Integer.parseInt(strTeam1_2) < Integer.parseInt(strTeam2_2)) {
                             setFor2++;
                         }
-                        if(!strTeam1_3.equals("")&&!strTeam2_3.equals("")) {
-                            if (Integer.parseInt(strTeam1_3) > Integer.parseInt(strTeam2_3)) {
-                                setFor1++;
-                            }
-                            if (Integer.parseInt(strTeam1_3) < Integer.parseInt(strTeam2_3)) {
-                                setFor2++;
-                            }
+
+                        if (Integer.parseInt(strTeam1_3) > Integer.parseInt(strTeam2_3)) {
+                            setFor1++;
                         }
+                        if (Integer.parseInt(strTeam1_3) < Integer.parseInt(strTeam2_3)) {
+                            setFor2++;
+                        }
+
 
                         setsFor1.setText(String.valueOf(setFor1));
                         setsFor1_2.setText(String.valueOf(setFor1));
 
                         setsFor2.setText(String.valueOf(setFor2));
                         setsFor2_2.setText(String.valueOf(setFor2));
-
 
 
                         setsFor1.setVisibility(View.VISIBLE);
@@ -849,7 +862,6 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                         team2Set2.setOnEditorActionListener(null);
                         team1Set3.setOnEditorActionListener(null);
                         team2Set3.setOnEditorActionListener(null);
-
 
 
                     } else {

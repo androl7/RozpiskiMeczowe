@@ -1,19 +1,27 @@
 package com.example.adam.rozpiskimeczowe.cup.cup64;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.example.adam.rozpiskimeczowe.R;
+import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
 import java.util.Objects;
 import java.util.TreeMap;
@@ -24,10 +32,21 @@ public class FragmentTabCup64_2 extends Fragment {
     CustomAdapter customAdapter;
     TreeMap<Integer, Values> resultsOfMatches;
     Integer numberOfMatch=0;
+    /*android.support.v7.widget.Toolbar search;
+    MaterialSearchView search_view;*/
+
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_fragment_tab_cup64_2, container, false);
+
+
+        /*search = view.findViewById(R.id.toolbar2);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(search);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Contacts");*/
+
+
 
         resultsOfMatches = new TreeMap<>();
 
@@ -802,7 +821,8 @@ public class FragmentTabCup64_2 extends Fragment {
                 holder.PointsFor2_2 = convertView.findViewById(R.id.brazFrag2PointsFor2_2);
                 holder.PointsFor1_3 = convertView.findViewById(R.id.brazFrag2PointsFor1_3);
                 holder.PointsFor2_3 = convertView.findViewById(R.id.brazFrag2PointsFor2_3);
-                //wyliczyć trzeba sety
+
+
                 holder.Sets1 = convertView.findViewById(R.id.brazFrag2Sets1);
                 holder.Sets2 = convertView.findViewById(R.id.brazFrag2Sets2);
 
@@ -902,4 +922,12 @@ public class FragmentTabCup64_2 extends Fragment {
 
     }
 
+    /*@Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.action_bar_search,menu);
+        search_view =  getActivity().findViewById(R.id.search_view);
+        final MenuItem item = menu.findItem(R.id.action_search);
+        search_view.setMenuItem(item);
+    }*/
 }

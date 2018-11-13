@@ -7,11 +7,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_tag_faces_black_24dp"
+        android:icon="@drawable/icon_app"
         android:label="@string/app_name"
         android:roundIcon="@drawable/icon_app"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustPan|adjustResize"
         tools:replace="icon">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -29,12 +30,11 @@
         <activity android:name=".brazylian.brazylian16.BRAZactiv16" />
         <activity android:name=".everyoneForEveryone.Results" />
         <activity android:name=".everyoneForEveryone.EFEactiv4" />
-
         <activity android:name=".offical.OfficalListWihTeams" />
-
         <activity android:name=".cup.cup32.CUPactiv32" />
         <activity android:name=".cup.cup64.CUPactiv64" />
-        <activity android:name=".cup.CUPactiv"/>
+        <activity android:name=".cup.CUPactiv" />
+        <activity android:name=".loadDatabase.LoadingList"></activity>
     </application>
 
 </manifest>

@@ -103,6 +103,7 @@
             android:background="@drawable/menu_button"/>
 
         <ImageButton
+            android:id="@+id/menu_Button_Load"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"

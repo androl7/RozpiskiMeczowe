@@ -25,6 +25,7 @@ public class FragmentTabBraz16_2 extends Fragment {
     CustomAdapter customAdapter;
     TreeMap<Integer, Values> resultsOfMatches;
     Integer numberOfMatch=0;
+    String winForCheck = "WIN.";
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -453,8 +454,6 @@ public class FragmentTabBraz16_2 extends Fragment {
             }
 
         }
-
-
     }
 
     class CustomAdapter extends BaseAdapter {

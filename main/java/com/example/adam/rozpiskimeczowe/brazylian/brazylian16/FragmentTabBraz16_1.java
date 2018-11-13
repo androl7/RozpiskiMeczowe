@@ -12,25 +12,42 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.adam.rozpiskimeczowe.Database;
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.SetResultsForBraz;
+import com.otaliastudios.zoom.ZoomLayout;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class FragmentTabBraz16_1 extends Fragment {
+    Map<Integer,ArrayList<EditText>> mapPointsInMatches;
+    Map<Integer,ArrayList<String>> mapElimination;
+    ArrayList<Button> listResultButtons;
     Toast toast;
     String pktInSet = "21";
     String pktInTieBreak = "15";
+    String typeOfTour = "braz16";
     View view;
     SetResultsForBraz setResultsForBraz;
-
+    ZoomLayout zoomLayout;
+    String nameOfTour;
+    Database database;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_fragment_tab_braz16_1, container, false);
 
+        nameOfTour = getActivity().getIntent().getStringExtra("nameOfTour");
+        mapPointsInMatches = new HashMap<>();
+        listResultButtons = new ArrayList<>();
+        mapElimination = new HashMap<>();
 
-        setResultsForBraz = new SetResultsForBraz(getActivity(),container,pktInSet,pktInTieBreak);
+
+        zoomLayout = view.findViewById(R.id.braz16_zoomLayout);
+        setResultsForBraz = new SetResultsForBraz(nameOfTour,listResultButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,zoomLayout);
 
 
         final EditText Res1_1 = view.findViewById(R.id.braz16Res1_1);
@@ -653,6 +670,10 @@ public class FragmentTabBraz16_1 extends Fragment {
 
         //30 MECZ FINAL
         setResultsForBraz.WithCheckWithoutLoser(win27, "WIN.27", win28, "WIN.28", win30, "WIN.30", braz16Res30_Win_27, braz16Res30_Win_27_2set, braz16Res30_Win_27_3set, braz16Res30_Win_28, braz16Res30_Win_28_2set, braz16Res30_Win_28_3set);
+
+
+        database = new Database(mapElimination,mapPointsInMatches,listResultButtons);
+        database.getResultFromDatabaseWithUpdate(nameOfTour,typeOfTour);
 
 
         return view;

@@ -11,7 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.adam.rozpiskimeczowe.R;
@@ -34,7 +38,7 @@ public class CUPactiv64 extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.tabs64);
         tabLayout.setupWithViewPager(mViewPager);
-        getSupportActionBar().setTitle("System pucharowy: Eliminacje");
+        //getSupportActionBar().setTitle("System pucharowy: Eliminacje");
 
         setTheme(R.style.AppTheme);
         tabLayout.setTabTextColors(ColorStateList.valueOf(Color.WHITE));

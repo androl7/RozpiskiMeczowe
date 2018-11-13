@@ -5,7 +5,9 @@
     android:orientation="vertical"
     >
 
+
     <com.otaliastudios.zoom.ZoomLayout
+        android:id="@+id/cup64_zoomLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical|horizontal"
@@ -23,10 +25,12 @@
         app:hasClickableChildren="true"
         >
 
+
+
         <RelativeLayout
             android:id="@+id/cup64relLayout"
             android:layout_width="1300dp"
-            android:layout_height="2100dp"
+            android:layout_height="2400dp"
             >
 
             <View
@@ -7496,6 +7500,9 @@
 
 
         </RelativeLayout>
+
     </com.otaliastudios.zoom.ZoomLayout>
+
+
 
 </RelativeLayout>

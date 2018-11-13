@@ -36,6 +36,7 @@ import java.util.Objects;
 
 public class EFEactiv3 extends AppCompatActivity {
     String pktInTieBreak = "15";
+    String typeOfTour = "Group_3";
     String pktInSet;
     LinearLayout linearLayout;
     TextView name1;
@@ -79,7 +80,7 @@ public class EFEactiv3 extends AppCompatActivity {
         linearLayout = findViewById(R.id.Efe3MainLayout);
 
         pktInSet = getIntent().getStringExtra("pktInSet");
-        SetResultsForGroups setResultsForGroups = new SetResultsForGroups(this, vg, pktInSet, pktInTieBreak);
+        SetResultsForGroups setResultsForGroups = new SetResultsForGroups(typeOfTour,this, vg, pktInSet, pktInTieBreak);
 
 
         final LinearLayout layoutSets12 = findViewById(R.id.efe3_linear_sets_12);
@@ -144,7 +145,7 @@ public class EFEactiv3 extends AppCompatActivity {
         res23_3_3.setVisibility(View.INVISIBLE);
 
         //TextView only With Sets
-        final TextView res21_2 = findViewById(R.id.EFE_3_res21_2);
+        final TextView res21_2 = findViewById(R.id.EFE_3_res21_2 );
         final TextView res21_1 = findViewById(R.id.EFE_3_res21_1);
         final TextView res31_3 = findViewById(R.id.EFE_3_res31_3);
         final TextView res31_1 = findViewById(R.id.EFE_3_res31_1);

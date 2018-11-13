@@ -277,8 +277,7 @@
                 android:id="@+id/efe3_linear_sets_13"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:weightSum="11"
-                android:background="@drawable/group_column">
+                android:weightSum="11">
 
                 <TextView
                     android:id="@+id/EFE_3_res13_1"
@@ -300,7 +299,7 @@
                 <TextView
                     android:id="@+id/EFE_3_res13_3"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="fill_parent"
                     android:layout_weight="5"
                     android:gravity="center"
                     android:numeric="integer"

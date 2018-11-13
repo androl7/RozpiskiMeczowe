@@ -2,8 +2,11 @@ package com.example.adam.rozpiskimeczowe.offical;
 
 import android.content.Context;
 import android.content.Intent;
+import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,23 +14,35 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.adam.rozpiskimeczowe.Database;
 import com.example.adam.rozpiskimeczowe.R;
+import com.example.adam.rozpiskimeczowe.TypeOfTournaments;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian8.BRAZactiv8;
 import com.example.adam.rozpiskimeczowe.cup.cup32.CUPactiv32;
 import com.example.adam.rozpiskimeczowe.cup.cup64.CUPactiv64;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 
 public class OfficalListWihTeams extends AppCompatActivity {
 
-
+    EditText editTextNameOfTour;
     GetDataFromBeachPzps getDataFromBeachPzps;
     ArrayList<String> namesToExport;
+    Database database;
 
 
     @Override
@@ -35,6 +50,9 @@ public class OfficalListWihTeams extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offical_list_with_teams);
 
+        database = new Database();
+
+        editTextNameOfTour = findViewById(R.id.Offical_NameOfTour);
         final InputMethodManager imm = (InputMethodManager) Objects.requireNonNull(getSystemService(Context.INPUT_METHOD_SERVICE));
         namesToExport = new ArrayList<>();
 
@@ -54,6 +72,8 @@ public class OfficalListWihTeams extends AppCompatActivity {
                 imm.hideSoftInputFromWindow(btnGetData.getWindowToken(), 0);
                 getDataFromBeachPzps = new GetDataFromBeachPzps(list, OfficalListWihTeams.this, ed.getText().toString());
                 getDataFromBeachPzps.execute();
+                ImageView imageView = findViewById(R.id.OfficalImageViewRoadToBeachPzps);
+                imageView.setVisibility(View.INVISIBLE);
 
 
             }
@@ -72,8 +92,8 @@ public class OfficalListWihTeams extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.menuStartButton:
-                //ZABEZPIECZENIE !!!
-                if (getDataFromBeachPzps != null) {
+                //ZABEZPIECZENIE dodać sprawdzenie czy jest taki turniej już o tej nazwie !!!
+                if (getDataFromBeachPzps != null || editTextNameOfTour.getText().toString().equals("")) {
                     if (getDataFromBeachPzps.getNameOfFirstPlayers().size() != 0) {
 
                         Intent intent;
@@ -81,12 +101,14 @@ public class OfficalListWihTeams extends AppCompatActivity {
                             intent = new Intent(this, CUPactiv32.class);
                         } else {
                             intent = new Intent(this, CUPactiv64.class);
+                            database.addOfficalTournamentToDatabase(getDataFromBeachPzps,editTextNameOfTour.getText().toString(),TypeOfTournaments.Offical_64.toString());
                         }
 
                         for (int i = 0; i < getDataFromBeachPzps.getNameOfFirstPlayers().size(); i++) {
                             intent.putExtra("NameOfTeam" + (i + 1), getDataFromBeachPzps.getNameOfFirstPlayers().get(i) + "\n" + getDataFromBeachPzps.getNameOfSecondPlayers().get(i));
                         }
                         intent.putExtra("quantityOfTeams",String.valueOf(getDataFromBeachPzps.getNameOfFirstPlayers().size()));
+                        intent.putExtra("nameOfTour",editTextNameOfTour.getText().toString());
                         startActivity(intent);
 
                     } else {
@@ -98,5 +120,7 @@ public class OfficalListWihTeams extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }
 

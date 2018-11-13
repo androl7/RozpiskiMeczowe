@@ -28,7 +28,7 @@
         android:layout_marginStart="15dp"
         android:buttonTint="#66310c"/>
 
-    <CheckBox
+    <!--<CheckBox
         android:id="@+id/checkBox5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         android:layout_toEndOf="@+id/checkBox4"
         android:text="5"
         android:layout_marginStart="15dp"
-        android:buttonTint="#66310c"/>
+        android:buttonTint="#66310c"/>-->
 
     <EditText
         android:id="@+id/Name1"
@@ -120,7 +120,8 @@
         android:textSize="20sp"
         android:maxLength="2"
         android:background="@drawable/rounded_edittext"
-        android:gravity="center" />
+        android:gravity="center"
+        android:text="21"/>
 
 
 </RelativeLayout>

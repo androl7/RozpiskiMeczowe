@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.adam.rozpiskimeczowe.loadDatabase.LoadingList;
 import com.example.adam.rozpiskimeczowe.offical.OfficalListWihTeams;
 import com.example.adam.rozpiskimeczowe.everyoneForEveryone.EFEactiv;
 import com.example.adam.rozpiskimeczowe.brazylian.BRAZactiv;
@@ -41,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intent3);
+            }
+        });
+
+
+        final Intent intent4 = new Intent (this, LoadingList.class);
+        ImageButton Load = findViewById(R.id.menu_Button_Load);
+        Load.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent4);
             }
         });
 

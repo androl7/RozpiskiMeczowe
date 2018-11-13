@@ -1,443 +1,1095 @@
-
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Efe4MainLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!-- NAZWA --> <!-- 1 WIERSZ -->
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:shrinkColumns="*"  android:stretchColumns="*" android:background="#ffffff">
-        <TextView
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:textSize="18dp" android:text="Każdy na każdego dla 4 zawodników "  android:layout_span="4"
-            android:padding="18dip" android:background="#b0b0b0"
-            android:textColor="#000"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    >
 
-
-<!--
-     WIERSZ 1
--->
-    <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="9"
+        android:background="@drawable/group_rows">
 
         <TextView
-            android:id="@+id/TextView05"
+            android:id="@+id/efe4_X1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#dcdcdc"
             android:gravity="center"
             android:padding="15dip"
             android:text="X"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/TextView04"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="15dip"
             android:textColor="#000000"
-            android:text="1"/>
+            android:background="@drawable/group_column"/>
 
         <TextView
-            android:id="@+id/TextView03"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="15dip"
-            android:textColor="#000000"
-            android:text="2"/>
-
-        <TextView
-            android:id="@+id/TextView14"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="15dip"
-            android:textColor="#000000"
-            android:text="3"/>
-        <TextView
-            android:id="@+id/TextView15"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="15dip"
-            android:textColor="#000000"
-            android:text="4"/>
-    </TableRow>
-
-    <!-- 2 WIERSZ -->
-    <TableRow
-        android:id="@+id/tableRow2"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-
-        <TextView
-            android:id="@+id/TextView01"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
+            android:id="@+id/efe4_1inRow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
             android:gravity="center"
             android:padding="15dip"
             android:text="1"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/TextView02"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="15dip"
             android:textColor="#000000"
-            android:text="X"/>
-        <!--
-                WYNIK 1-2
-        -->
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/res12_1"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:textColor="#000000"
-                android:numeric="integer"/>
-
-            <TextView
-                android:layout_weight="0.36"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:text=":"
-                android:textColor="#000000" />
-
-            <EditText
-                android:id="@+id/res12_2"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:textColor="#000000"
-                android:numeric="integer"/>
-
-        </LinearLayout>
-        <!--
-                WYNIK 1-3
-        -->
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/res13_1"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:textColor="#000000"
-                android:numeric="integer"/>
-
-            <TextView
-                android:layout_weight="0.37"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:text=":"
-                android:textColor="#000000" />
-
-            <EditText
-                android:id="@+id/res13_3"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:textColor="#000000"
-                android:numeric="integer"/>
-
-        </LinearLayout>
-<!--
-        WYNIK 1-4
--->
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/res14_1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:numeric="integer"
-                android:textColor="#000000" />
-
-            <TextView
-                android:layout_weight="0.36"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:text=":"
-                android:textColor="#000000" />
-
-            <EditText
-                android:id="@+id/res14_4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:numeric="integer"
-                android:textColor="#000000" />
-
-        </LinearLayout>
-    </TableRow>
-
-
-    <!-- 3 WIERSZ -->
-    <TableRow
-        android:id="@+id/tableRow3"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+            android:background="@drawable/group_column"/>
 
         <TextView
-            android:id="@+id/TextView06"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
+            android:id="@+id/efe4_2inRow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
             android:gravity="center"
             android:padding="15dip"
             android:text="2"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:background="@drawable/group_column"/>
+
+        <TextView
+            android:id="@+id/efe4_3inRow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="3"
+            android:textColor="#000000"
+            android:background="@drawable/group_column"/>
+
+        <TextView
+            android:id="@+id/efe4_4inRow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="4"
+            android:textColor="#000000"
+            android:background="@drawable/group_column"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="9"
+        android:background="@drawable/group_rows">
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="1"
+            android:textColor="#000000"
+            android:background="@drawable/group_column"/>
+
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="X"
+            android:textColor="#000000"
+            android:background="@drawable/group_column"/>
+        <!--
+                WYNIK 1-2
+        -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/group_column">
+
+            <LinearLayout
+                android:id="@+id/efe4_linear_sets_12"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11">
+
+                <TextView
+                    android:id="@+id/EFE_4_res12_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/EFE_4_res12_2"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/efe4_linear_points_12"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res12_1_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+
+                        android:id="@+id/EFE_4_res12_1_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+
+
+                        android:id="@+id/EFE_4_res12_1_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res12_2_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res12_2_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res12_2_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <!--
+                WYNIK 1-3
+        -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:id="@+id/efe4_linear_sets_13"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11"
+                android:background="@drawable/group_column">
+
+                <TextView
+                    android:id="@+id/EFE_4_res13_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/EFE_4_res13_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/efe4_linear_points_13"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11"
+                android:background="@drawable/group_column">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res13_1_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res13_1_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res13_1_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res13_3_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res13_3_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res13_3_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:id="@+id/efe4_linear_sets_14"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11"
+                android:background="@drawable/group_column">
+
+                <TextView
+                    android:id="@+id/EFE_4_res14_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/EFE_4_res14_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/efe4_linear_points_14"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11"
+                android:background="@drawable/group_column">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res14_1_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res14_1_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res14_1_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res14_4_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res14_4_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res14_4_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="9"
+        >
+
+
+        <TextView
+            android:id="@+id/TextView06"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="2"
+            android:textColor="#000000"
+            android:background="@drawable/group_column"/>
         <!--
                 WYNIK 2-1 TEXTVIEW
         -->
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_weight="2"
+            android:weightSum="11"
+            android:background="@drawable/group_column">
 
             <TextView
-                android:id="@+id/res21_2"
-                android:layout_weight="1"
+                android:id="@+id/EFE_4_res21_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:textColor="#000000" />
 
             <TextView
-                android:layout_weight="0.44"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:text=":"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/res21_1"
-                android:layout_weight="1"
+                android:id="@+id/EFE_4_res21_1"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_height="fill_parent"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:textColor="#000000" />
+
         </LinearLayout>
+
 
         <TextView
             android:id="@+id/TextView09"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
             android:gravity="center"
             android:padding="15dip"
             android:text="X"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:background="@drawable/group_column"/>
         <!--
                 WYNIK 2-3
         -->
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_weight="2">
 
-            <EditText
-                android:id="@+id/res23_2"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:textColor="#000000"
-                android:numeric="integer"/>
+            <LinearLayout
+                android:id="@+id/efe4_linear_sets_23"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11"
+                android:background="@drawable/group_column">
 
-            <TextView
-                android:layout_weight="0.36"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:text=":"
-                android:textColor="#000000" />
+                <TextView
+                    android:id="@+id/EFE_4_res23_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
 
-            <EditText
-                android:id="@+id/res23_3"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:textColor="#000000"
-                android:numeric="integer"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
 
-        </LinearLayout> />
+                <TextView
+                    android:id="@+id/EFE_4_res23_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
 
-        <!--
-        WYNIK 2-4
--->
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/efe4_linear_points_23"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res23_2_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res23_2_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res23_2_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res23_3_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res23_3_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res23_3_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_weight="2">
 
-            <EditText
-                android:id="@+id/res24_2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:numeric="integer"
-                android:textColor="#000000" />
+            <LinearLayout
+                android:id="@+id/efe4_linear_sets_24"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11"
+                android:background="@drawable/group_column">
 
-            <TextView
-                android:layout_weight="0.36"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:text=":"
-                android:textColor="#000000" />
+                <TextView
+                    android:id="@+id/EFE_4_res24_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
 
-            <EditText
-                android:id="@+id/res24_4"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:numeric="integer"
-                android:textColor="#000000" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
 
-        </LinearLayout>
-    </TableRow>
+                <TextView
+                    android:id="@+id/EFE_4_res24_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
 
+            </LinearLayout>
 
-    <!-- 4 WIERSZ -->
-    <TableRow
-        android:id="@+id/tableRow4"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+            <LinearLayout
+                android:id="@+id/efe4_linear_points_24"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res24_2_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res24_2_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res24_2_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res24_4_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res24_4_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res24_4_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="9"
+        android:background="@drawable/group_rows">
 
         <TextView
             android:id="@+id/TextView07"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#dcdcdc"
             android:gravity="center"
             android:padding="15dip"
             android:text="3"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:background="@drawable/group_column"/>
         <!--
                 WYNIK 3-1 TEXTVIEW
         -->
+
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_weight="2"
+            android:weightSum="11"
+            android:background="@drawable/group_column">
 
             <TextView
-                android:id="@+id/res31_3"
-                android:layout_weight="1"
+                android:id="@+id/EFE_4_res31_3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:textColor="#000000" />
 
             <TextView
-                android:layout_weight="0.44"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:text=":"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/res31_1"
-                android:layout_weight="1"
+                android:id="@+id/EFE_4_res31_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:textColor="#000000" />
-
         </LinearLayout>
+
         <!--
                 WYNIK 3-2 TEXTVIEW
         -->
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_weight="2"
+            android:weightSum="11"
+            android:background="@drawable/group_column">
 
             <TextView
-                android:id="@+id/res32_3"
-                android:layout_weight="1"
+                android:id="@+id/EFE_4_res32_3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:textColor="#000000" />
 
             <TextView
-                android:layout_weight="0.47"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:text=":"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/res32_2"
-                android:layout_weight="1"
+                android:id="@+id/EFE_4_res32_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:textColor="#000000" />
 
@@ -445,373 +1097,500 @@
 
         <TextView
             android:id="@+id/TextView10"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
             android:gravity="center"
             android:padding="15dip"
             android:text="X"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:background="@drawable/group_column"/>
 
-        <!--
-        WYNIK 3-4
--->
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_weight="2">
 
-            <EditText
-                android:id="@+id/res34_3"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:textColor="#000000"
-                android:numeric="integer"/>
+            <LinearLayout
+                android:id="@+id/efe4_linear_sets_34"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11"
+                android:background="@drawable/group_column">
 
-            <TextView
-                android:layout_weight="0.36"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:text=":"
-                android:textColor="#000000" />
+                <TextView
+                    android:id="@+id/EFE_4_res34_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
 
-            <EditText
-                android:id="@+id/res34_4"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="#dcdcdc"
-                android:gravity="center"
-                android:textColor="#000000"
-                android:numeric="integer"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
 
-        </LinearLayout>
-    </TableRow>
+                <TextView
+                    android:id="@+id/EFE_4_res34_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/efe4_linear_points_34"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res34_3_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res34_3_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res34_3_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <EditText
+                        android:id="@+id/EFE_4_res34_4_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res34_4_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/EFE_4_res34_4_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:maxLength="2"
+                        android:numeric="integer"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
-
-<!--
-    ========== WIERSZ 5 ============
--->
-
-    <TableRow
-        android:id="@+id/tableRow5"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="9"
+        android:background="@drawable/group_rows">
 
         <TextView
-            android:id="@+id/TextView13"
+            android:id="@+id/TextView08"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#dcdcdc"
             android:gravity="center"
             android:padding="15dip"
             android:text="4"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:background="@drawable/group_column"/>
         <!--
-                WYNIK 4-1 TEXTVIEW
+                WYNIK 3-1 TEXTVIEW
         -->
+
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_weight="2"
+            android:weightSum="11"
+            android:background="@drawable/group_column">
 
             <TextView
-                android:id="@+id/res41_4"
-                android:layout_weight="1"
+                android:id="@+id/EFE_4_res41_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:textColor="#000000" />
 
             <TextView
-                android:layout_weight="0.44"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:text=":"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/res41_1"
-                android:layout_weight="1"
+                android:id="@+id/EFE_4_res41_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:textColor="#000000" />
-
         </LinearLayout>
+
         <!--
-                WYNIK 4-2 TEXTVIEW
+                WYNIK 3-2 TEXTVIEW
         -->
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_weight="2"
+            android:weightSum="11"
+            android:background="@drawable/group_column">
 
             <TextView
-                android:id="@+id/res42_4"
-                android:layout_weight="1"
+                android:id="@+id/EFE_4_res42_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:textColor="#000000" />
 
             <TextView
-                android:layout_weight="0.47"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:text=":"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/res42_2"
-                android:layout_weight="1"
+                android:id="@+id/EFE_4_res42_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="5"
                 android:gravity="center"
                 android:textColor="#000000" />
 
         </LinearLayout>
 
-        <!--
-        WYNIK 1-4
--->
+
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_weight="2"
+            android:weightSum="11"
+            android:background="@drawable/group_column">
 
             <TextView
-                android:id="@+id/res43_4"
+                android:id="@+id/EFE_4_res43_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
+                android:layout_weight="5"
                 android:gravity="center"
-                android:numeric="integer"
                 android:textColor="#000000" />
 
             <TextView
-                android:layout_weight="0.36"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#dcdcdc"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:text=":"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/res43_3"
+                android:id="@+id/EFE_4_res43_3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#dcdcdc"
+                android:layout_weight="5"
                 android:gravity="center"
-                android:numeric="integer"
                 android:textColor="#000000" />
 
         </LinearLayout>
 
         <TextView
-            android:id="@+id/TextView12"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
+            android:id="@+id/TextView11"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
             android:gravity="center"
             android:padding="15dip"
             android:text="X"
-            android:textColor="#000000" />
-    </TableRow>
+            android:textColor="#000000"
+            android:background="@drawable/group_column"/>
+    </LinearLayout>
 
-    <!--Rozpiska meczy-->
-    <TableRow
-        android:id="@+id/tableRow6"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
 
-        <TextView
-            android:id="@+id/TextMatches01"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:gravity="center"
-            android:padding="10dip"
-            android:text="1-4"
-            android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/TextMatches02"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:gravity="center"
-            android:padding="10dip"
-            android:text="2-3"
-            android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/TextMatches03"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:gravity="center"
-            android:padding="10dip"
-            android:text="1-3"
-            android:textColor="#000000" />
 
-        <TextView
-            android:id="@+id/TextMatches04"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:gravity="center"
-            android:padding="10dip"
-            android:text="4-2"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/TextMatches05"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:gravity="center"
-            android:padding="10dip"
-            android:text="1-2"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/TextMatches06"
-            android:layout_weight="1"
-            android:background="#ffffff"
-            android:gravity="center"
-            android:padding="10dip"
-            android:text="3-4"
-            android:textColor="#000000" />
-    </TableRow>
-
-    <!--Wiersze z nazwami-->
 
     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="1">
+        android:weightSum="6"
+        >
+
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#4aaacfa0"
-            android:gravity="bottom"
-            android:padding="9dip"
+            android:id="@+id/Efe_4TextMatches01"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="1:4"
             android:textColor="#000000"
-            android:text="1."/>
+            android:background="@drawable/group_row_1"/>
 
         <TextView
-            android:id="@+id/TeamName01"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#4aaacfa0"
-            android:gravity="bottom"
-            android:padding="9dip"
-            android:textColor="#000000" />
+            android:id="@+id/Efe_4TextMatches02"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="2:3"
+            android:textColor="#000000"
+            android:background="@drawable/group_row_1"/>
+
+        <TextView
+            android:id="@+id/Efe_4TextMatches03"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="1:3"
+            android:textColor="#000000"
+            android:background="@drawable/group_row_1"/>
+        <TextView
+            android:id="@+id/Efe_4TextMatches04"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="2:4"
+            android:textColor="#000000"
+            android:background="@drawable/group_row_1"/>
+        <TextView
+            android:id="@+id/Efe_4TextMatches05"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="1:2"
+            android:textColor="#000000"
+            android:background="@drawable/group_row_1"/>
+        <TextView
+            android:id="@+id/Efe_4TextMatches06"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="3:4"
+            android:textColor="#000000"
+            android:background="@drawable/group_row_1"/>
+
     </LinearLayout>
 
 
     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="1">
+        android:background="@drawable/group_rows_2"
+        >
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#4aaacfa0"
-            android:gravity="bottom"
-            android:padding="9dip"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="1."
             android:textColor="#000000"
-            android:text="2."/>
-
-        <TextView
-            android:id="@+id/TeamName02"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#4aaacfa0"
-            android:gravity="bottom"
-            android:padding="9dip"
-            android:textColor="#000000" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#4aaacfa0"
-            android:gravity="bottom"
-            android:padding="9dip"
-            android:textColor="#000000"
-            android:text="3."
             />
 
         <TextView
-            android:id="@+id/TeamName03"
+            android:id="@+id/EFE_4_TeamName01"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#4aaacfa0"
-            android:gravity="bottom"
-            android:padding="9dip"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|start"
+            android:padding="10dip"
             android:textColor="#000000" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="1">
+        android:background="@drawable/group_rows_2"
+        >
+
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#4aaacfa0"
-            android:gravity="bottom"
-            android:padding="9dip"
-            android:textColor="#000000"
-            android:text="4."/>
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="2."
+            android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/TeamName04"
+            android:id="@+id/EFE_4_TeamName02"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#4aaacfa0"
-            android:gravity="bottom"
-            android:padding="9dip"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|start"
+            android:padding="10dip"
             android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/group_rows_2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="3."
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/EFE_4_TeamName03"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|start"
+            android:padding="10dip"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/group_rows_2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="4."
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/EFE_4_TeamName04"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|start"
+            android:padding="10dip"
+            android:textColor="#000000" />
+
     </LinearLayout>
 
 
 
-    <Button
-        android:id="@+id/buttonResults"
-        android:gravity="center"
-        android:text="Przejdz do Wyników" />
-    </TableLayout>
-</ScrollView>
+</LinearLayout>

@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.SetResultsForBraz;
+import com.otaliastudios.zoom.ZoomLayout;
 
 import java.util.Objects;
 
@@ -21,17 +22,18 @@ public class FragmentTabBraz8_1 extends Fragment {
     Toast toast;
     String pktInSet = "21";
     String pktInTieBreak = "15";
+    String typeOfTour = "braz8";
     View view;
     SetResultsForBraz setResultsForBraz;
-
+    ZoomLayout zoomLayout;
 
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_fragment_tab_braz8_1, container, false);
 
-
-        setResultsForBraz = new SetResultsForBraz(getActivity(),container,pktInSet,pktInTieBreak);
+        zoomLayout = view.findViewById(R.id.braz8_zoomLayout);
+        //setResultsForBraz = new SetResultsForBraz(typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,zoomLayout);
 
 
 

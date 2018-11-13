@@ -17,10 +17,11 @@ public class SetResultsForGroups implements ISetResultsForGroups {
     private SetDetailedResultFor2Sets setDetailedResultFor2Sets;
 
 
-    public SetResultsForGroups(Context context, ViewGroup vg, String pktInSet, String pktInTieBreak){
+
+    public SetResultsForGroups(String typeOfTour,Context context, ViewGroup vg, String pktInSet, String pktInTieBreak){
         this.context = context;
         InputMethodManager imm = (InputMethodManager) Objects.requireNonNull(context.getSystemService(Context.INPUT_METHOD_SERVICE));
-        this.setDetailedResultFor2Sets = new SetDetailedResultFor2Sets(context,vg, imm,pktInSet,pktInTieBreak);
+        this.setDetailedResultFor2Sets = new SetDetailedResultFor2Sets("",typeOfTour,context,vg, imm,pktInSet,pktInTieBreak);
 
     }
 
