@@ -1,6 +1,8 @@
 package com.example.adam.rozpiskimeczowe;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,9 +30,9 @@ public class SetResultsForCup implements ISetResultsForCup {
     View view;
     private String numberOfCup;
     private SetDetailedResultFor2Sets setDetailedResultFor2Sets;
-    Database database;
-    Map<Integer,ArrayList<EditText>> mapPointsInMatches;
-    ArrayList<Button> listResultButtons;
+    private Map<Integer,ArrayList<EditText>> mapPointsInMatches;
+    private ArrayList<Button> listResultButtons;
+    private DeleteResultBrazAndCup deleteResultBrazAndCup;
 
     public SetResultsForCup(String nameOfTour,ArrayList listResultButtons,Map<Integer,ArrayList<EditText>> mapPointsInMatches,String typeOfTour,Context context, ViewGroup vg, String pktInSet, String pktInTieBreak, int numberOfMatches, int actualMatch, RelativeLayout relativeLayout, TextView[] numbersOfMatchesArray, View view, String numberOfCup, ZoomLayout zoomLayout){
         this.numberOfCup = numberOfCup;
@@ -43,9 +45,9 @@ public class SetResultsForCup implements ISetResultsForCup {
         this.toast = Toast.makeText(context, "Wprowadz wczesniejszy wynik !", Toast.LENGTH_SHORT);
         InputMethodManager imm = (InputMethodManager) Objects.requireNonNull(context.getSystemService(Context.INPUT_METHOD_SERVICE));
         this.setDetailedResultFor2Sets = new SetDetailedResultFor2Sets(nameOfTour,typeOfTour,context,vg, imm,pktInSet,pktInTieBreak,zoomLayout);
-        database = new Database();
         this.mapPointsInMatches = mapPointsInMatches;
         this.listResultButtons = listResultButtons;
+        deleteResultBrazAndCup = new DeleteResultBrazAndCup(context,nameOfTour,typeOfTour);
     }
 
 
@@ -113,13 +115,8 @@ public class SetResultsForCup implements ISetResultsForCup {
         ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
+                AlertDialog diaBox = deleteResultBrazAndCup.deleteResult(ResultButton,undoResultString,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
+                diaBox.show();
                 return true;
             }
         });
@@ -262,19 +259,14 @@ public class SetResultsForCup implements ISetResultsForCup {
             ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    ResultButton.setText(undoResultString);
-                    pointsFor1In1Set.setText("");
-                    pointsFor1In2Set.setText("");
-                    pointsFor1In3Set.setText("");
-                    pointsFor2In1Set.setText("");
-                    pointsFor2In2Set.setText("");
-                    pointsFor2In3Set.setText("");
-
+                    AlertDialog diaBox = deleteResultBrazAndCup.deleteResult(ResultButton,undoResultString,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
+                    diaBox.show();
                     return true;
                 }
             });
         }
 
     }
+
 
 }

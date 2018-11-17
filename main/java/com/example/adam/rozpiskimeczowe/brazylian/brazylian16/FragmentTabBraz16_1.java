@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.adam.rozpiskimeczowe.Database;
@@ -35,6 +36,7 @@ public class FragmentTabBraz16_1 extends Fragment {
     ZoomLayout zoomLayout;
     String nameOfTour;
     Database database;
+    String onlyWatch;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -675,7 +677,15 @@ public class FragmentTabBraz16_1 extends Fragment {
         database = new Database(mapElimination,mapPointsInMatches,listResultButtons);
         database.getResultFromDatabaseWithUpdate(nameOfTour,typeOfTour);
 
+        RelativeLayout relativeLayout = view.findViewById(R.id.braz16_relLayout);
+        onlyWatch = getActivity().getIntent().getStringExtra("OnlyWatch");
+        if(onlyWatch!=null){
+            final int childCount = relativeLayout.getChildCount();
+            for (int i = 0; i < childCount; i++) {
+                relativeLayout.getChildAt(i).setEnabled(false);
 
+            }
+        }
         return view;
     }
 }

@@ -60,7 +60,7 @@ public class FragmentTabCup32_1 extends Fragment {
     Button win22;
     Button win23;
     Button win24;
-
+    String onlyWatch;
     Database database;
 
     ZoomLayout zoomLayout;
@@ -74,7 +74,7 @@ public class FragmentTabCup32_1 extends Fragment {
         zoomLayout = view.findViewById(R.id.cup32_zoomLayout);
         relativeLayout = view.findViewById(R.id.cup32relLayout);
 
-
+        setHasOptionsMenu(true);
 
         nameOfTour = getActivity().getIntent().getStringExtra("nameOfTour");
         //Add NumberOfMatches
@@ -591,14 +591,21 @@ public class FragmentTabCup32_1 extends Fragment {
 
         toast = Toast.makeText(getActivity().getApplicationContext(), "Wprowadz wczesniejszy wynik !", Toast.LENGTH_SHORT);
 
+        onlyWatch = getActivity().getIntent().getStringExtra("OnlyWatch");
+        if(onlyWatch!=null){
+            final int childCount = relativeLayout.getChildCount();
+            for (int i = 0; i < childCount; i++) {
+                relativeLayout.getChildAt(i).setEnabled(false);
 
+            }
+        }
 
         return view;
     }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.action_bar_with_start_button, menu);
+        inflater.inflate(R.menu.action_bar_with_main_button, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -606,8 +613,9 @@ public class FragmentTabCup32_1 extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.menuStartButton:
+            case R.id.menuMainButton:
                 Intent braz16 = new Intent(getActivity(),BRAZactiv16.class);
+
                 braz16.putExtra("nameOfTour",nameOfTour);
                 braz16.putExtra("NameOfTeam1",R1);
                 braz16.putExtra("NameOfTeam2",R2);

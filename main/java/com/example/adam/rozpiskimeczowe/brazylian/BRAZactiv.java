@@ -6,11 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
@@ -28,7 +30,7 @@ import java.util.Objects;
 
 
 public class BRAZactiv extends AppCompatActivity {
-    int quantityOfTeam=0;
+    int quantityOfTeam = 0;
     String[] names;
     CustomAdapter customAdapter;
 
@@ -67,12 +69,12 @@ public class BRAZactiv extends AppCompatActivity {
 
         final RadioButton radioButton8 = findViewById(R.id.brazRadioButton8);
         final RadioButton radioButton16 = findViewById(R.id.brazRadioButton16);
-        final RadioButton radioButton24 = findViewById(R.id.brazRadioButton24);
+        /*final RadioButton radioButton24 = findViewById(R.id.brazRadioButton24);*/
 
         radioButton8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(quantityOfTeam!=8) {
+                if (quantityOfTeam != 8) {
                     quantityOfTeam = 8;
                     customAdapter = new CustomAdapter(getApplicationContext());
                     list.setAdapter(customAdapter);
@@ -83,7 +85,7 @@ public class BRAZactiv extends AppCompatActivity {
         radioButton16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(quantityOfTeam!=16) {
+                if (quantityOfTeam != 16) {
                     quantityOfTeam = 16;
                     customAdapter = new CustomAdapter(getApplicationContext());
                     list.setAdapter(customAdapter);
@@ -91,16 +93,16 @@ public class BRAZactiv extends AppCompatActivity {
             }
         });
 
-        radioButton24.setOnClickListener(new View.OnClickListener() {
+        /*radioButton24.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(quantityOfTeam!=24) {
+                if (quantityOfTeam != 24) {
                     quantityOfTeam = 24;
                     customAdapter = new CustomAdapter(getApplicationContext());
                     list.setAdapter(customAdapter);
                 }
             }
-        });
+        });*/
 
     }
 
@@ -138,7 +140,7 @@ public class BRAZactiv extends AppCompatActivity {
 
         @Override
         public String getItem(int position) {
-            return names[position] +"\n" + names[position + quantityOfTeam];
+            return names[position] + "\n" + names[position + quantityOfTeam];
         }
 
 
@@ -148,10 +150,10 @@ public class BRAZactiv extends AppCompatActivity {
         }
 
         @Override
-        public View getView(final int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, final ViewGroup parent) {
             final ViewHolder holder;
-            for(int i =0;i<quantityOfTeam;i++){
-                rValues[i]="R"+(i+1);
+            for (int i = 0; i < quantityOfTeam; i++) {
+                rValues[i] = "R" + (i + 1);
             }
             if (convertView == null) {
                 holder = new ViewHolder();
@@ -163,7 +165,6 @@ public class BRAZactiv extends AppCompatActivity {
                 holder.editText = convertView.findViewById(R.id.brazItemListEditTextName1);
                 holder.editText2 = convertView.findViewById(R.id.brazItemListEditTextName2);
                 holder.textView = convertView.findViewById(R.id.brazItemListtextViewR);
-
 
 
                 convertView.setTag(holder);
@@ -188,9 +189,33 @@ public class BRAZactiv extends AppCompatActivity {
                 @Override
                 public void onFocusChange(View view, boolean b) {
                     if (!b) {
-                        names[position + quantityOfTeam] = holder.editText2.getText().toString();
+                        names[position+quantityOfTeam] = holder.editText2.getText().toString();
+
                     }
                 }
+            });
+
+
+            holder.editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                    if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                        holder.editText2.requestFocus();
+                    }
+                    return false;
+                }
+
+            });
+
+            holder.editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+
+                    }
+                    return false;
+                }
+
             });
 
             return convertView;
@@ -198,27 +223,28 @@ public class BRAZactiv extends AppCompatActivity {
 
         private class ViewHolder {
 
-            protected EditText editText;
-            protected EditText editText2;
-            protected TextView textView;
+            EditText editText;
+            EditText editText2;
+            TextView textView;
 
         }
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.action_bar_with_start_button,menu);
+        getMenuInflater().inflate(R.menu.action_bar_with_start_button, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             //START WITH CHECK
             case R.id.menuStartButton:
 
-                if(quantityOfTeam!=0) {
-                    boolean checkNull=true;
+                if (quantityOfTeam != 0) {
+                    boolean checkNull = true;
                     for (String name : names) {
                         if (name == null || name.equals("")) {
                             //TU MA BYĆ FALSE !!!
@@ -227,26 +253,26 @@ public class BRAZactiv extends AppCompatActivity {
                         }
                     }
                     Intent intent;
-                    if(checkNull) {
-                        if(quantityOfTeam==8){
-                            intent = new Intent(this,BRAZactiv8.class);
-                        }else if(quantityOfTeam==16){
-                            intent = new Intent(this,BRAZactiv16.class);
-                        }else {
-                            Toast.makeText(this,"24 Coming soon",Toast.LENGTH_SHORT).show();
+                    if (checkNull) {
+                        if (quantityOfTeam == 8) {
+                            intent = new Intent(this, BRAZactiv8.class);
+                        } else if (quantityOfTeam == 16) {
+                            intent = new Intent(this, BRAZactiv16.class);
+                        } else {
+                            Toast.makeText(this, "24 Coming soon", Toast.LENGTH_SHORT).show();
                             return super.onOptionsItemSelected(item);
                         }
 
                         for (int i = 0; i < names.length / 2; i++) {
-                            intent.putExtra("NameOfTeam" + (i+1), customAdapter.getItem(i));
+                            intent.putExtra("NameOfTeam" + (i + 1), customAdapter.getItem(i));
                         }
                         startActivity(intent);
 
-                    }else {
-                        Toast.makeText(getApplicationContext(),"Podaj nazwiska wszystkich graczy",Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Podaj nazwiska wszystkich graczy", Toast.LENGTH_SHORT).show();
                     }
-                }else {
-                    Toast.makeText(getApplicationContext(),"Wybierz ilość drużyn.",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Wybierz ilość drużyn.", Toast.LENGTH_SHORT).show();
                 }
 
         }

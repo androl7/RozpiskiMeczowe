@@ -25,6 +25,7 @@
         app:zoomEnabled="true">
 
         <RelativeLayout
+            android:id="@+id/braz16_relLayout"
             android:layout_width="1150dp"
             android:layout_height="1150dp">
 

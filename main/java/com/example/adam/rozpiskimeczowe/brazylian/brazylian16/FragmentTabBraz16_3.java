@@ -1,6 +1,7 @@
 package com.example.adam.rozpiskimeczowe.brazylian.brazylian16;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -14,13 +15,14 @@ import android.widget.TextView;
 
 import com.example.adam.rozpiskimeczowe.R;
 
+import java.util.Map;
 import java.util.Objects;
 import java.util.TreeMap;
 
 public class FragmentTabBraz16_3 extends Fragment {
     View view;
     CustomAdapter customAdapter;
-    TreeMap<Integer, Values> losersOfMatches;
+    TreeMap<Integer, String> losersOfMatches;
     Integer numberOfMatch=0;
     String quantityOfTeams;
 
@@ -120,11 +122,20 @@ public class FragmentTabBraz16_3 extends Fragment {
         //30 MECZ FINAL
         setResult(win27, win28,win30);
 
+
+        for(int i=losersOfMatches.size()-1;i>0;i--){
+                if (checkLossers(losersOfMatches.get(losersOfMatches.keySet().toArray()[i])) && checkLossers(losersOfMatches.get(losersOfMatches.keySet().toArray()[i-1]))) {
+                    losersOfMatches.remove(losersOfMatches.keySet().toArray()[i]);
+                }
+        }
         customAdapter = new CustomAdapter(Objects.requireNonNull(getActivity()).getApplicationContext(),losersOfMatches);
         list.setAdapter(customAdapter);
 
         return view;
+
+
     }
+
 
     //refresh fragment
     @Override
@@ -142,49 +153,55 @@ public class FragmentTabBraz16_3 extends Fragment {
 
         if(numberOfMatch==0) {
 
-            Values value = new Values("Miejsca 13 - 16");
+            String value = "13 - 16";
             losersOfMatches.put(numberOfMatch, value);
             numberOfMatch++;
         }
 
         if(numberOfMatch==5) {
-            Values value = new Values("Miejsca 9-12:");
+            String value = "9 - 12";
             losersOfMatches.put(numberOfMatch, value);
             numberOfMatch++;
         }
 
         if(numberOfMatch==10) {
-            Values value = new Values("Miejsca 7-8:");
+            String value = "7 - 8";
             losersOfMatches.put(numberOfMatch, value);
             numberOfMatch++;
         }
 
         if(numberOfMatch==13) {
-            Values value = new Values("Miejsca 5-6:");
+            String value = "5 - 6";
             losersOfMatches.put(numberOfMatch, value);
             numberOfMatch++;
         }
 
         if(numberOfMatch==16) {
-            Values value = new Values("Miejsce 4:");
+            String value = "4";
             losersOfMatches.put(numberOfMatch, value);
             numberOfMatch++;
 
-            Values value2 = new Values("Miejsce 3:");
+
+        }
+
+        if(numberOfMatch==18){
+            String value2 = "3";
             losersOfMatches.put(numberOfMatch, value2);
             numberOfMatch++;
         }
 
 
         if(numberOfMatch==20) {
-            Values value = new Values("Miejsce 2:");
+            String value = "2";
             losersOfMatches.put(numberOfMatch, value);
             numberOfMatch++;
-
-            Values value2 = new Values("Miejsce 1:");
+        }
+        if(numberOfMatch==22){
+            String value2 = "1";
             losersOfMatches.put(numberOfMatch, value2);
             numberOfMatch++;
         }
+
 
 
 
@@ -193,48 +210,69 @@ public class FragmentTabBraz16_3 extends Fragment {
         String strTeam1 = team1.getText().toString();
         String strTeam2 = team2.getText().toString();
         String winner = winnerOfMatch.getText().toString();
+
         if (strTeam2.equals(winner)&&!strTeam1.equals("")) {
-            Values value = new Values(strTeam1);
-            losersOfMatches.put(numberOfMatch, value);
-            if(numberOfMatch==18) {
-                numberOfMatch++;
-                Values value3 = new Values(strTeam2);
-                losersOfMatches.put(numberOfMatch, value3);
+            if(numberOfMatch ==19||numberOfMatch==23) {
+                losersOfMatches.put(numberOfMatch, strTeam2);
+            }else {
+                losersOfMatches.put(numberOfMatch, strTeam1);
             }
-            if(numberOfMatch==22) {
-                numberOfMatch++;
-                Values value3 = new Values(strTeam2);
-                losersOfMatches.put(numberOfMatch, value3);
 
+            if(numberOfMatch==17) {
+                losersOfMatches.put(numberOfMatch, strTeam1);
+                numberOfMatch++;
+                setResult(team1,team2,winnerOfMatch);
+                return;
             }
+
+
+
+            if(numberOfMatch==21) {
+                losersOfMatches.put(numberOfMatch, strTeam1);
+                numberOfMatch++;
+                setResult(team1,team2,winnerOfMatch);
+                return;
+            }
+
+
+
         } else if(strTeam1.equals(winner)&&!strTeam2.equals("")) {
-            Values value = new Values(strTeam2);
-            losersOfMatches.put(numberOfMatch, value);
-
-            if(numberOfMatch==18) {
-                numberOfMatch++;
-                Values value3 = new Values(strTeam1);
-                losersOfMatches.put(numberOfMatch, value3);
+            if(numberOfMatch ==19||numberOfMatch==23) {
+                losersOfMatches.put(numberOfMatch, strTeam1);
+            }else {
+                losersOfMatches.put(numberOfMatch, strTeam2);
             }
 
-            if(numberOfMatch==22) {
+            if(numberOfMatch==17) {
+                losersOfMatches.put(numberOfMatch, strTeam2);
                 numberOfMatch++;
-                Values value3 = new Values(strTeam1);
-                losersOfMatches.put(numberOfMatch, value3);
+                setResult(team1,team2,winnerOfMatch);
+                return;
             }
+
+
+
+            if(numberOfMatch==21) {
+                losersOfMatches.put(numberOfMatch, strTeam2);
+                numberOfMatch++;
+                setResult(team1,team2,winnerOfMatch);
+                return;
+            }
+
         }
         numberOfMatch++;
+
     }
 
 
-}
+
 
 class CustomAdapter extends BaseAdapter {
     private Context context;
-    TreeMap<Integer, Values> losersOfMatches;
+    TreeMap<Integer, String> losersOfMatches;
 
 
-    CustomAdapter(Context context,TreeMap<Integer, Values> losersOfMatches) {
+    CustomAdapter(Context context,TreeMap<Integer, String> losersOfMatches) {
         this.context = context;
         this.losersOfMatches = losersOfMatches;
     }
@@ -264,12 +302,22 @@ class CustomAdapter extends BaseAdapter {
         convertView = inflater.inflate(R.layout.fragment3_item_list, null, true);
 
 
-
         holder.textViewTeam = convertView.findViewById(R.id.fragment3TextView);
         Object key = losersOfMatches.keySet().toArray()[position];
-        String teamStr = losersOfMatches.get(key).team;
+
+
+
+        String teamStr = losersOfMatches.get(key);
         teamStr = teamStr.replace("\n","/");
         holder.textViewTeam.setText(teamStr);
+
+        if(checkLossers(holder.textViewTeam.getText().toString())){
+            holder.textViewTeam.setTextSize(20F);
+            holder.textViewTeam.setTypeface(null, Typeface.BOLD);
+        }else {
+            holder.textViewTeam.setTextSize(15F);
+            holder.textViewTeam.setVisibility(View.VISIBLE);
+        }
 
         convertView.setTag(holder);
 
@@ -280,15 +328,8 @@ class CustomAdapter extends BaseAdapter {
     private class ViewHolder {
         TextView textViewTeam;
     }
-
 }
-
-class Values {
-    String team;
-
-
-    Values( String team) {
-        this.team = team;
+     boolean checkLossers(String valueToCheck){
+        return valueToCheck.equals("13 - 16")||valueToCheck.equals("9 - 12")||valueToCheck.equals("7 - 8")||valueToCheck.equals("5 - 6")||valueToCheck.equals("4")||valueToCheck.equals("3")||valueToCheck.equals("2")||valueToCheck.equals("1");
     }
-
 }

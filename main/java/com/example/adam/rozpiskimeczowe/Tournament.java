@@ -6,9 +6,10 @@ import java.util.HashMap;
 public class Tournament{
     String name;
     String type;
-    ArrayList<String> teams;
-    HashMap<String,ArrayList<String>> eliminationResults;
-    HashMap<String,ArrayList<String>> mainResults;
+    private ArrayList<String> teams;
+    private HashMap<String,ArrayList<String>> eliminationResults;
+    private HashMap<String,ArrayList<String>> mainResults;
+    private String password;
 
     public Tournament(String name, String type, ArrayList<String> teams, HashMap<String, ArrayList<String>> eliminationResults,HashMap<String, ArrayList<String>> mainResults) {
         this.name = name;
@@ -59,11 +60,11 @@ public class Tournament{
         this.teams = teams;
     }
 
-    public void setEliminationResults(HashMap<String, ArrayList<String>> eliminationResults) {
-        this.eliminationResults = eliminationResults;
+    public String getPassword() {
+        return password;
     }
 
-    public void setMainResults(HashMap<String, ArrayList<String>> mainResults) {
-        this.mainResults = mainResults;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

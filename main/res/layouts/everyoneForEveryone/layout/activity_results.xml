@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.adam.rozpiskimeczowe.everyoneForEveryone.Results">
+    tools:context="com.example.adam.rozpiskimeczowe.everyoneForEveryone.Results"
+    android:background="@drawable/brazwybor2">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,46 +20,71 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext"
+                >
                 <TextView
                     android:id="@+id/teamNameRes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:layout_marginRight="25dp"
                     android:text="M."
+                    android:textColor="@color/colorPrimary"
                     />
+
                 <TextView
                     android:id="@+id/teamPoints"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:text="NAZWA"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/teamNameRes"
+                    android:layout_toStartOf="@+id/Group_res_wins"
                     android:layout_toEndOf="@+id/teamNameRes"
-                    android:layout_marginLeft="53dp"
-                    android:layout_marginStart="53dp" />
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+
+                     />
                 <TextView
+                    android:id="@+id/Group_res_wins"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
-                    android:text="WINS   SETS.   PKT."
-                    android:layout_alignParentRight="true"/>
+                    android:text="WINS"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/Group_res_sets"
+                    android:textColor="@color/colorPrimary"/>
+                <TextView
+                    android:id="@+id/Group_res_sets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="SETS"
+                    android:layout_toStartOf="@+id/Group_res_pkt"
+                    android:textColor="@color/colorPrimary"/>
+                <TextView
+                    android:id="@+id/Group_res_pkt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="PKT"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/colorPrimary"/>
             </RelativeLayout>
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext">
                 <TextView
                     android:id="@+id/teamNameRes01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:layout_marginRight="25dp"
-                    android:text="1.  "
+                    android:text="1. "
+                    android:textColor="@color/colorPrimary"
                     />
                 <TextView
                     android:id="@+id/teamPoints01"
@@ -66,193 +92,151 @@
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorPrimary"
                     />
                 <TextView
                     android:id="@+id/teamSets1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="60dp"
-                    android:textSize="20dp"/>
+                    android:layout_marginRight="50dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"
+                    />
+
                 <TextView
                     android:id="@+id/teamWins1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="120dp"
-                    android:textSize="20dp"/>
+                    android:layout_marginRight="105dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"/>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext">
                 <TextView
                     android:id="@+id/teamNameRes02"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:layout_marginRight="25dp"
-                    android:text="2.  "/>
+                    android:text="2. "
+                    android:textColor="@color/colorPrimary"/>
                 <TextView
                     android:id="@+id/teamPoints02"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorPrimary"
                     />
                 <TextView
                     android:id="@+id/teamSets2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="60dp"
-                    android:textSize="20dp"/>
+                    android:layout_marginRight="50dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"/>
 
                 <TextView
                     android:id="@+id/teamWins2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="120dp"
-                    android:textSize="20dp"/>
+                    android:layout_marginRight="105dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"/>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext">
                 <TextView
                     android:id="@+id/teamNameRes03"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:layout_marginRight="25dp"
-                    android:text="3.  "/>
+                    android:text="3. "
+                    android:textColor="@color/colorPrimary"/>
                 <TextView
                     android:id="@+id/teamPoints03"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorPrimary"
                     />
                 <TextView
                     android:id="@+id/teamSets3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="60dp"
-                    android:textSize="20dp"/>
+                    android:layout_marginRight="50dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"/>
                 <TextView
                     android:id="@+id/teamWins3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="120dp"
-                    android:textSize="20dp"/>
+                    android:layout_marginRight="105dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"/>
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/Group_res_4layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_edittext">
                 <TextView
                     android:id="@+id/teamNameRes04"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:layout_marginRight="25dp"
-                    android:text="4.  "/>
+                    android:text="4. "
+                    android:textColor="@color/colorPrimary"/>
                 <TextView
                     android:id="@+id/teamPoints04"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorPrimary"
                     />
                 <TextView
                     android:id="@+id/teamSets4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="60dp"
-                    android:textSize="20dp"/>
+                    android:layout_marginRight="50dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"/>
 
                 <TextView
                     android:id="@+id/teamWins4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="120dp"
-                    android:textSize="20dp"/>
+                    android:layout_marginRight="105dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimary"/>
             </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
-                <TextView
-                    android:id="@+id/teamNameRes05"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:layout_marginRight="25dp"
-                    android:text="5.  "/>
-                <TextView
-                    android:id="@+id/teamPoints05"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    />
-                <TextView
-                    android:id="@+id/teamWins5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="60dp"
-                    android:textSize="20dp"/>/>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
-                <TextView
-                    android:id="@+id/teamNameRes06"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:layout_marginRight="25dp"
-                    android:text="6.  "/>
-                <TextView
-                    android:id="@+id/teamPoints06"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    />
-                <TextView
-                    android:id="@+id/teamWins6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="60dp"
-                    android:textSize="20dp"/>
-            </RelativeLayout>
-
 
         </LinearLayout>
     </ScrollView>

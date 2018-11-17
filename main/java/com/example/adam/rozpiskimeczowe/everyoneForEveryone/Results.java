@@ -3,6 +3,7 @@ package com.example.adam.rozpiskimeczowe.everyoneForEveryone;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.adam.rozpiskimeczowe.R;
@@ -18,15 +19,11 @@ public class Results extends AppCompatActivity {
         TextView teamNameRes02 = findViewById(R.id.teamNameRes02);
         TextView teamNameRes03 = findViewById(R.id.teamNameRes03);
         TextView teamNameRes04 = findViewById(R.id.teamNameRes04);
-        TextView teamNameRes05 = findViewById(R.id.teamNameRes05);
-        TextView teamNameRes06 = findViewById(R.id.teamNameRes06);
 
         TextView teamPoints1 = findViewById(R.id.teamPoints01);
         TextView teamPoints2 = findViewById(R.id.teamPoints02);
         TextView teamPoints3 = findViewById(R.id.teamPoints03);
         TextView teamPoints4 = findViewById(R.id.teamPoints04);
-        TextView teamPoints5 = findViewById(R.id.teamPoints05);
-        TextView teamPoints6 = findViewById(R.id.teamPoints06);
 
         TextView teamSets1 = findViewById(R.id.teamSets1);
         TextView teamSets2 = findViewById(R.id.teamSets2);
@@ -37,8 +34,7 @@ public class Results extends AppCompatActivity {
         TextView teamWins2 = findViewById(R.id.teamWins2);
         TextView teamWins3 = findViewById(R.id.teamWins3);
         TextView teamWins4 = findViewById(R.id.teamWins4);
-        TextView teamWins5 = findViewById(R.id.teamWins5);
-        TextView teamWins6 = findViewById(R.id.teamWins6);
+        RelativeLayout relativeLayout = findViewById(R.id.Group_res_4layout);
 
 
 
@@ -70,15 +66,11 @@ public class Results extends AppCompatActivity {
 
 
 
-        if(teamNameRes04.getText().equals("4.  ")){
+        if(sTeamNameRes04==null){
             teamNameRes04.setVisibility(View.INVISIBLE);
+            relativeLayout.setVisibility(View.INVISIBLE);
         }
-        if(teamNameRes05.getText().equals("5.  ")){
-            teamNameRes05.setVisibility(View.INVISIBLE);
-        }
-        if(teamNameRes06.getText().equals("6.  ")){
-            teamNameRes06.setVisibility(View.INVISIBLE);
-        }
+
 
     }
 }

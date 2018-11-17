@@ -25,7 +25,7 @@ public class BRAZactiv8 extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-        getSupportActionBar().setTitle("System brazylijski dla 8 zespołów");
+        getSupportActionBar().setTitle("Brazylijski: 8");
         tabLayout.setTabTextColors(ColorStateList.valueOf(Color.WHITE));
 
     }

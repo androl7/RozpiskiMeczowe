@@ -192,9 +192,6 @@ public class EFEactiv3 extends AppCompatActivity {
                 int team2Wins = 0;
                 int team3Wins = 0;
 
-                int team1Points=0;
-                int team2Points=0;
-                int team3Points=0;
 
                 int sets12_1 = 0;
                 int sets13_1 = 0;
@@ -216,27 +213,13 @@ public class EFEactiv3 extends AppCompatActivity {
                 }
 
 
-                try {
-                    team1Points = Integer.parseInt(res12_1_1.getText().toString()) + Integer.parseInt(res12_1_2.getText().toString()) + Integer.parseInt(res13_1_1.getText().toString()) + Integer.parseInt(res13_1_2.getText().toString());
-                    if (!res12_1_3.getText().toString().equals("") || !res13_1_3.getText().toString().equals("")) {
-                        team1Points = +Integer.parseInt(res12_1_3.getText().toString()) + Integer.parseInt(res13_1_3.getText().toString());
-                    }
 
+                    int team1Points = addPoints(res12_1_1,res12_1_2,res12_1_3,res13_1_1,res13_1_2,res13_1_3);
 
-                    team2Points = Integer.parseInt(res12_2_1.getText().toString()) + Integer.parseInt(res12_2_2.getText().toString()) + Integer.parseInt(res23_2_1.getText().toString()) + Integer.parseInt(res23_2_2.getText().toString());
+                    int team2Points = addPoints(res12_2_1,res12_2_2,res12_2_3,res23_2_1,res23_2_2,res23_2_3);
 
-                    if (!res12_2_3.getText().toString().equals("") || !res23_2_3.getText().toString().equals("")) {
-                        team2Points = +Integer.parseInt(res12_2_3.getText().toString()) + Integer.parseInt(res23_2_3.getText().toString());
-                    }
+                    int team3Points = addPoints(res13_3_1,res13_3_2,res13_3_3,res23_3_1,res23_3_2,res23_3_3);
 
-                    team3Points = Integer.parseInt(res13_3_1.getText().toString()) + Integer.parseInt(res13_3_2.getText().toString()) + Integer.parseInt(res23_3_1.getText().toString()) + Integer.parseInt(res23_3_2.getText().toString());
-
-                    if (!res13_3_3.getText().toString().equals("") || !res23_3_3.getText().toString().equals("")) {
-                        team3Points = +Integer.parseInt(res13_3_3.getText().toString()) + Integer.parseInt(res23_3_3.getText().toString());
-                    }
-                }catch (NumberFormatException e){
-
-                }
 
 
                 if (sets12_1 > sets12_2) {
@@ -333,5 +316,40 @@ public class EFEactiv3 extends AppCompatActivity {
                 return compareWins;
             }
         }
+    }
+    int addPoints(EditText res1_1,EditText res1_2, EditText res1_3,EditText res2_1,EditText res2_2, EditText res2_3){
+        int ires1_1=0;
+        int ires1_2=0;
+        int ires1_3=0;
+        int ires2_1=0;
+        int ires2_2=0;
+        int ires2_3=0;
+
+        if(!res1_1.getText().toString().equals("")){
+            ires1_1 = Integer.parseInt(res1_1.getText().toString());
+        }
+
+        if(!res1_2.getText().toString().equals("")){
+            ires1_2 = Integer.parseInt(res1_2.getText().toString());
+        }
+
+        if(!res1_3.getText().toString().equals("")){
+            ires1_3 = Integer.parseInt(res1_3.getText().toString());
+        }
+
+        if(!res2_1.getText().toString().equals("")){
+            ires2_1 = Integer.parseInt(res2_1.getText().toString());
+        }
+
+        if(!res2_2.getText().toString().equals("")){
+            ires2_2 = Integer.parseInt(res2_2.getText().toString());
+        }
+
+        if(!res2_3.getText().toString().equals("")){
+            ires2_3 = Integer.parseInt(res2_3.getText().toString());
+        }
+
+
+        return ires1_1 + ires1_2 + ires1_3 + ires2_1 + ires2_2 + ires2_3;
     }
 }

@@ -51,6 +51,7 @@
             android:textCursorDrawable="@null"
             android:gravity="center"
             android:inputType="textCapSentences"
+            android:imeOptions="actionDone"
             />
     </LinearLayout>
 

@@ -1,6 +1,7 @@
 package com.example.adam.rozpiskimeczowe.cup.cup32;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -20,8 +21,8 @@ import java.util.TreeMap;
 public class FragmentTabCup32_3 extends Fragment {
     View view;
     CustomAdapter customAdapter;
-    TreeMap<Integer, Values> losersOfMatches;
-    Integer numberOfMatch=0;
+    TreeMap<Integer, String> losersOfMatches;
+    Integer numberOfMatch = 0;
     String quantityOfTeams;
 
     @Override
@@ -93,57 +94,62 @@ public class FragmentTabCup32_3 extends Fragment {
         final Button win24 = getActivity().findViewById(R.id.cup32WIN_24);
 
 
+        setResult(team1, team32, win1);
 
-        setResult(team1,team32,win1);
+        setResult(team17, team16, win2);
 
-        setResult(team17,team16,win2);
+        setResult(team9, team24, win3);
 
-        setResult(team9,team24,win3);
+        setResult(team25, team8, win4);
 
-        setResult(team25,team8,win4);
+        setResult(team5, team28, win5);
 
-        setResult(team5,team28,win5);
+        setResult(team21, team12, win6);
 
-        setResult(team21,team12,win6);
+        setResult(team13, team20, win7);
 
-        setResult(team13,team20,win7);
+        setResult(team29, team4, win8);
 
-        setResult(team29,team4,win8);
+        setResult(team3, team30, win9);
 
-        setResult(team3,team30,win9);
+        setResult(team19, team14, win10);
 
-        setResult(team19,team14,win10);
+        setResult(team11, team22, win11);
 
-        setResult(team11,team22,win11);
+        setResult(team27, team6, win12);
 
-        setResult(team27,team6,win12);
+        setResult(team7, team26, win13);
 
-        setResult(team7,team26,win13);
+        setResult(team23, team10, win14);
 
-        setResult(team23,team10,win14);
+        setResult(team15, team18, win15);
 
-        setResult(team15,team18,win15);
-
-        setResult(team31,team2,win16);
+        setResult(team31, team2, win16);
 
 
-        setResult(win1,win2,win17);
+        setResult(win1, win2, win17);
 
-        setResult(win3,win4,win18);
+        setResult(win3, win4, win18);
 
-        setResult(win5,win6,win19);
+        setResult(win5, win6, win19);
 
-        setResult(win7,win8,win20);
+        setResult(win7, win8, win20);
 
-        setResult(win9,win10,win21);
+        setResult(win9, win10, win21);
 
-        setResult(win11,win12,win22);
+        setResult(win11, win12, win22);
 
-        setResult(win13,win14,win23);
+        setResult(win13, win14, win23);
 
-        setResult(win15,win16,win24);
+        setResult(win15, win16, win24);
 
-        customAdapter = new CustomAdapter(Objects.requireNonNull(getActivity()).getApplicationContext(),losersOfMatches);
+        for(int i=losersOfMatches.size()-1;i>0;i--){
+            if (checkLossers(losersOfMatches.get(losersOfMatches.keySet().toArray()[i])) && checkLossers(losersOfMatches.get(losersOfMatches.keySet().toArray()[i-1]))) {
+                losersOfMatches.remove(losersOfMatches.keySet().toArray()[i]);
+            }
+        }
+
+        customAdapter = new CustomAdapter(Objects.requireNonNull(getActivity()).getApplicationContext(), losersOfMatches);
         list.setAdapter(customAdapter);
 
         return view;
@@ -155,7 +161,7 @@ public class FragmentTabCup32_3 extends Fragment {
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser) {
             assert getFragmentManager() != null;
-            numberOfMatch=0;
+            numberOfMatch = 0;
             losersOfMatches.clear();
             getFragmentManager().beginTransaction().detach(this).attach(this).commit();
         }
@@ -163,20 +169,20 @@ public class FragmentTabCup32_3 extends Fragment {
 
     void setResult(Button team1, Button team2, Button winnerOfMatch) {
 
-        if(numberOfMatch==0) {
-            if(quantityOfTeams.equals("25")){
-                Values value = new Values("Miejsce 25:");
+        if (numberOfMatch == 0) {
+            if (quantityOfTeams.equals("25")) {
+                String value = "25";
                 losersOfMatches.put(numberOfMatch, value);
                 numberOfMatch++;
-            }else {
-                Values value = new Values("Miejsca 25-" + quantityOfTeams);
+            } else {
+                String value = "25-" + quantityOfTeams;
                 losersOfMatches.put(numberOfMatch, value);
                 numberOfMatch++;
             }
         }
 
-        if(numberOfMatch==16) {
-            Values value = new Values("Miejsca 17-24:");
+        if (numberOfMatch == 16) {
+            String value = "17-24";
             losersOfMatches.put(numberOfMatch, value);
             numberOfMatch++;
         }
@@ -185,77 +191,78 @@ public class FragmentTabCup32_3 extends Fragment {
         String strTeam1 = team1.getText().toString();
         String strTeam2 = team2.getText().toString();
         String winner = winnerOfMatch.getText().toString();
-        if (strTeam2.equals(winner)&&!strTeam1.equals("")) {
-            Values value = new Values(strTeam1);
-            losersOfMatches.put(numberOfMatch, value);
-        } else if(strTeam1.equals(winner)&&!strTeam2.equals("")) {
-            Values value = new Values(strTeam2);
-            losersOfMatches.put(numberOfMatch, value);
+        if (strTeam2.equals(winner) && !strTeam1.equals("")) {
+            losersOfMatches.put(numberOfMatch, strTeam1);
+        } else if (strTeam1.equals(winner) && !strTeam2.equals("")) {
+            losersOfMatches.put(numberOfMatch, strTeam2);
         }
         numberOfMatch++;
     }
-}
-
-class CustomAdapter extends BaseAdapter {
-    private Context context;
-    TreeMap<Integer, Values> losersOfMatches;
 
 
-    CustomAdapter(Context context,TreeMap<Integer, Values> losersOfMatches) {
-        this.context = context;
-        this.losersOfMatches = losersOfMatches;
+    class CustomAdapter extends BaseAdapter {
+        private Context context;
+        TreeMap<Integer, String> losersOfMatches;
+
+
+        CustomAdapter(Context context, TreeMap<Integer, String> losersOfMatches) {
+            this.context = context;
+            this.losersOfMatches = losersOfMatches;
+        }
+
+        @Override
+        public int getCount() {
+            return losersOfMatches.size();
+        }
+
+        @Override
+        public Object getItem(int i) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int i) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            final ViewHolder holder;
+
+
+            holder = new ViewHolder();
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = inflater.inflate(R.layout.fragment3_item_list, null, true);
+
+
+            holder.textViewTeam = convertView.findViewById(R.id.fragment3TextView);
+            Object key = losersOfMatches.keySet().toArray()[position];
+            String teamStr = losersOfMatches.get(key);
+            teamStr = teamStr.replace("\n", "/");
+            holder.textViewTeam.setText(teamStr);
+
+            if(checkLossers(holder.textViewTeam.getText().toString())){
+                holder.textViewTeam.setTextSize(20F);
+                holder.textViewTeam.setTypeface(null, Typeface.BOLD);
+            }else {
+                holder.textViewTeam.setTextSize(15F);
+                holder.textViewTeam.setVisibility(View.VISIBLE);
+            }
+
+            convertView.setTag(holder);
+
+
+            return convertView;
+        }
+
+        private class ViewHolder {
+            TextView textViewTeam;
+        }
+
     }
 
-    @Override
-    public int getCount() {
-        return losersOfMatches.size();
-    }
-
-    @Override
-    public Object getItem(int i) {
-        return null;
-    }
-
-    @Override
-    public long getItemId(int i) {
-        return 0;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        final ViewHolder holder;
-
-
-        holder = new ViewHolder();
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        convertView = inflater.inflate(R.layout.fragment3_item_list, null, true);
-
-
-
-        holder.textViewTeam = convertView.findViewById(R.id.fragment3TextView);
-        Object key = losersOfMatches.keySet().toArray()[position];
-        String teamStr = losersOfMatches.get(key).team;
-        teamStr = teamStr.replace("\n","/");
-        holder.textViewTeam.setText(teamStr);
-
-        convertView.setTag(holder);
-
-
-        return convertView;
-    }
-
-    private class ViewHolder {
-        TextView textViewTeam;
-    }
-
-}
-
-class Values {
-    String team;
-
-
-    Values( String team) {
-        this.team = team;
+    boolean checkLossers(String valueToCheck){
+        return valueToCheck.equals("25")||valueToCheck.equals("25-" + quantityOfTeams)||valueToCheck.equals("17-24");
     }
 
 }

@@ -1,12 +1,11 @@
 package com.example.adam.rozpiskimeczowe.offical;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,21 +18,13 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.adam.rozpiskimeczowe.Database;
+import com.example.adam.rozpiskimeczowe.GenerateKey;
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.TypeOfTournaments;
-import com.example.adam.rozpiskimeczowe.brazylian.brazylian8.BRAZactiv8;
 import com.example.adam.rozpiskimeczowe.cup.cup32.CUPactiv32;
 import com.example.adam.rozpiskimeczowe.cup.cup64.CUPactiv64;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 
@@ -43,12 +34,16 @@ public class OfficalListWihTeams extends AppCompatActivity {
     GetDataFromBeachPzps getDataFromBeachPzps;
     ArrayList<String> namesToExport;
     Database database;
+    Intent intent;
+    Context context = this;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offical_list_with_teams);
+
+        getSupportActionBar().setTitle("Offical");
 
         database = new Database();
 
@@ -83,7 +78,7 @@ public class OfficalListWihTeams extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.action_bar_with_start_button, menu);
+        getMenuInflater().inflate(R.menu.action_bar_with_utworz_button, menu);
         return true;
     }
 
@@ -91,34 +86,63 @@ public class OfficalListWihTeams extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.menuStartButton:
-                //ZABEZPIECZENIE dodać sprawdzenie czy jest taki turniej już o tej nazwie !!!
-                if (getDataFromBeachPzps != null || editTextNameOfTour.getText().toString().equals("")) {
-                    if (getDataFromBeachPzps.getNameOfFirstPlayers().size() != 0) {
-
-                        Intent intent;
-                        if (getDataFromBeachPzps.getNameOfFirstPlayers().size() <= 40) {
-                            intent = new Intent(this, CUPactiv32.class);
+            case R.id.menuUtworzButton:
+                if(!editTextNameOfTour.getText().toString().equals("")) {
+                    if (getDataFromBeachPzps != null) {
+                        if (getDataFromBeachPzps.getNameOfFirstPlayers().size() != 0) {
+                            final String password = GenerateKey.randomString();
+                            //ZABEZPIECZENIE dodać sprawdzenie czy jest taki turniej już o tej nazwie !!!
+                            AlertDialog alrD = createAlert(password);
+                            alrD.show();
                         } else {
-                            intent = new Intent(this, CUPactiv64.class);
-                            database.addOfficalTournamentToDatabase(getDataFromBeachPzps,editTextNameOfTour.getText().toString(),TypeOfTournaments.Offical_64.toString());
+                            Toast.makeText(context, "Pobierz listę zawodników", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(context, "Pobierz listę zawodników", Toast.LENGTH_SHORT).show();
+                    }
+                }else {
+                    Toast.makeText(context, "Nazwij turniej", Toast.LENGTH_SHORT).show();
+                }
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    AlertDialog createAlert(final String password) {
+        return new AlertDialog.Builder(context)
+                //set message, title, and icon
+                .setTitle(password)
+                .setMessage("!!! Zapisz klucz do turnieju, musisz go mieć żeby móc go modyfikować w przyszłości !!!")
+
+
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int whichButton) {
+
+
+                        if (getDataFromBeachPzps.getNameOfFirstPlayers().size() <= 40) {
+                            intent = new Intent(context, CUPactiv32.class);
+                            database.addOfficalTournamentToDatabase(getDataFromBeachPzps, editTextNameOfTour.getText().toString(), TypeOfTournaments.Offical_32.toString(), password);
+                        } else {
+                            intent = new Intent(context, CUPactiv64.class);
+                            database.addOfficalTournamentToDatabase(getDataFromBeachPzps, editTextNameOfTour.getText().toString(), TypeOfTournaments.Offical_64.toString(), password);
                         }
 
                         for (int i = 0; i < getDataFromBeachPzps.getNameOfFirstPlayers().size(); i++) {
                             intent.putExtra("NameOfTeam" + (i + 1), getDataFromBeachPzps.getNameOfFirstPlayers().get(i) + "\n" + getDataFromBeachPzps.getNameOfSecondPlayers().get(i));
                         }
-                        intent.putExtra("quantityOfTeams",String.valueOf(getDataFromBeachPzps.getNameOfFirstPlayers().size()));
-                        intent.putExtra("nameOfTour",editTextNameOfTour.getText().toString());
-                        startActivity(intent);
+                        intent.putExtra("quantityOfTeams", String.valueOf(getDataFromBeachPzps.getNameOfFirstPlayers().size()));
+                        intent.putExtra("nameOfTour", editTextNameOfTour.getText().toString());
 
-                    } else {
-                        Toast.makeText(this, "Najpierw pobierz listę zawodników", Toast.LENGTH_SHORT).show();
+
+                        dialog.dismiss();
+                        startActivity(intent);
                     }
-                } else {
-                    Toast.makeText(this, "Najpierw pobierz listę zawodników", Toast.LENGTH_SHORT).show();
-                }
-        }
-        return super.onOptionsItemSelected(item);
+
+                })
+
+                .create();
+
     }
 
 

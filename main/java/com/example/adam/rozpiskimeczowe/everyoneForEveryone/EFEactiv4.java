@@ -298,10 +298,8 @@ public class EFEactiv4 extends AppCompatActivity {
                 int team1Wins = 0;
                 int team2Wins = 0;
                 int team3Wins = 0;
+                int team4Wins = 0;
 
-                int team1Points=0;
-                int team2Points=0;
-                int team3Points=0;
 
                 int sets12_1 = 0;
                 int sets13_1 = 0;
@@ -309,6 +307,12 @@ public class EFEactiv4 extends AppCompatActivity {
                 int sets23_2 = 0;
                 int sets23_3 = 0;
                 int sets13_3 = 0;
+                int sets14_1 = 0;
+                int sets14_4 = 0;
+                int sets24_2 = 0;
+                int sets24_4 = 0;
+                int sets34_3 = 0;
+                int sets34_4 = 0;
 
                 try {
                     sets12_1 = Integer.parseInt(res12_1.getText().toString());
@@ -318,32 +322,28 @@ public class EFEactiv4 extends AppCompatActivity {
                     sets23_3 = Integer.parseInt(res23_3.getText().toString());
                     sets13_3 = Integer.parseInt(res13_3.getText().toString());
 
+                    sets14_1 = Integer.parseInt(res14_1.getText().toString());
+                    sets14_4 = Integer.parseInt(res14_4.getText().toString());
+                    sets24_2 = Integer.parseInt(res24_2.getText().toString());
+                    sets24_4 = Integer.parseInt(res24_4.getText().toString());
+                    sets34_3 = Integer.parseInt(res34_3.getText().toString());
+                    sets34_4 = Integer.parseInt(res34_4.getText().toString());
+
+
                 } catch (NumberFormatException e) {
 
                 }
 
 
-                try {
-                    team1Points = Integer.parseInt(res12_1_1.getText().toString()) + Integer.parseInt(res12_1_2.getText().toString()) + Integer.parseInt(res13_1_1.getText().toString()) + Integer.parseInt(res13_1_2.getText().toString());
-                    if (!res12_1_3.getText().toString().equals("") || !res13_1_3.getText().toString().equals("")) {
-                        team1Points = +Integer.parseInt(res12_1_3.getText().toString()) + Integer.parseInt(res13_1_3.getText().toString());
-                    }
 
+                    int team1Points = addPoints(res12_1_1,res12_1_2,res12_1_3,res13_1_1,res13_1_2,res13_1_3,res14_1_1,res14_1_2,res14_1_3);
 
-                    team2Points = Integer.parseInt(res12_2_1.getText().toString()) + Integer.parseInt(res12_2_2.getText().toString()) + Integer.parseInt(res23_2_1.getText().toString()) + Integer.parseInt(res23_2_2.getText().toString());
+                    int team2Points = addPoints(res12_2_1,res12_2_2,res12_2_3,res23_2_1,res23_2_2,res23_2_3,res24_2_1,res24_2_2,res24_2_3);
 
-                    if (!res12_2_3.getText().toString().equals("") || !res23_2_3.getText().toString().equals("")) {
-                        team2Points = +Integer.parseInt(res12_2_3.getText().toString()) + Integer.parseInt(res23_2_3.getText().toString());
-                    }
+                    int team3Points = addPoints(res13_3_1,res13_3_2,res13_3_3,res23_3_1,res23_3_2,res23_3_3,res34_3_1,res34_3_2,res34_3_3);
 
-                    team3Points = Integer.parseInt(res13_3_1.getText().toString()) + Integer.parseInt(res13_3_2.getText().toString()) + Integer.parseInt(res23_3_1.getText().toString()) + Integer.parseInt(res23_3_2.getText().toString());
+                    int team4Points = addPoints(res14_4_1,res14_4_2,res14_4_3,res24_4_1,res24_4_2,res24_4_3,res34_4_1,res34_4_2,res34_4_3);
 
-                    if (!res13_3_3.getText().toString().equals("") || !res23_3_3.getText().toString().equals("")) {
-                        team3Points = +Integer.parseInt(res13_3_3.getText().toString()) + Integer.parseInt(res23_3_3.getText().toString());
-                    }
-                }catch (NumberFormatException e){
-
-                }
 
 
                 if (sets12_1 > sets12_2) {
@@ -363,10 +363,28 @@ public class EFEactiv4 extends AppCompatActivity {
                     team3Wins++;
                 }
 
+                if (sets14_1 > sets14_4) {
+                    team1Wins++;
+                } else if (sets14_1 < sets14_4) {
+                    team4Wins++;
+                }
 
-                int team1Sets = sets12_1 + sets13_1;
-                int team2Sets = sets12_2 + sets23_2;
-                int team3Sets = sets13_3 + sets23_3;
+                if (sets24_2 > sets24_4) {
+                    team2Wins++;
+                } else if (sets24_2 < sets24_4) {
+                    team4Wins++;
+                }
+                if (sets34_3 > sets34_4) {
+                    team3Wins++;
+                } else if (sets34_3 < sets34_4) {
+                    team4Wins++;
+                }
+
+
+                int team1Sets = sets12_1 + sets13_1 + sets14_1;
+                int team2Sets = sets12_2 + sets23_2 + sets24_2;
+                int team3Sets = sets13_3 + sets23_3 + sets34_3;
+                int team4Sets = sets14_4 + sets24_4 + sets34_4;
 
 
                 List<Score> scores = new ArrayList<>();
@@ -374,23 +392,28 @@ public class EFEactiv4 extends AppCompatActivity {
                 scores.add(new Score(team1Wins, team1Sets, team1Points, name1.getText().toString()));
                 scores.add(new Score(team2Wins, team2Sets, team2Points, name2.getText().toString()));
                 scores.add(new Score(team3Wins, team3Sets, team3Points, name3.getText().toString()));
+                scores.add(new Score(team4Wins, team4Sets, team4Points, name4.getText().toString()));
 
                 Collections.sort(scores);
 
 
                 Intent intent = new Intent(EFEactiv4.this, Results.class);
-                intent.putExtra("team1Wins", Integer.toString(scores.get(2).getWins()));
-                intent.putExtra("team2Wins", Integer.toString(scores.get(1).getWins()));
-                intent.putExtra("team3Wins", Integer.toString(scores.get(0).getWins()));
-                intent.putExtra("team1Sets", Integer.toString(scores.get(2).getSets()));
-                intent.putExtra("team2Sets", Integer.toString(scores.get(1).getSets()));
-                intent.putExtra("team3Sets", Integer.toString(scores.get(0).getSets()));
-                intent.putExtra("team1Points", Integer.toString(scores.get(2).getPoints()));
-                intent.putExtra("team2Points", Integer.toString(scores.get(1).getPoints()));
-                intent.putExtra("team3Points", Integer.toString(scores.get(0).getPoints()));
-                intent.putExtra("NameOfTeam1", scores.get(2).getName());
-                intent.putExtra("NameOfTeam2", scores.get(1).getName());
-                intent.putExtra("NameOfTeam3", scores.get(0).getName());
+                intent.putExtra("team1Wins", Integer.toString(scores.get(3).getWins()));
+                intent.putExtra("team2Wins", Integer.toString(scores.get(2).getWins()));
+                intent.putExtra("team3Wins", Integer.toString(scores.get(1).getWins()));
+                intent.putExtra("team4Wins", Integer.toString(scores.get(0).getWins()));
+                intent.putExtra("team1Sets", Integer.toString(scores.get(3).getSets()));
+                intent.putExtra("team2Sets", Integer.toString(scores.get(2).getSets()));
+                intent.putExtra("team3Sets", Integer.toString(scores.get(1).getSets()));
+                intent.putExtra("team4Sets", Integer.toString(scores.get(0).getSets()));
+                intent.putExtra("team1Points", Integer.toString(scores.get(3).getPoints()));
+                intent.putExtra("team2Points", Integer.toString(scores.get(2).getPoints()));
+                intent.putExtra("team3Points", Integer.toString(scores.get(1).getPoints()));
+                intent.putExtra("team4Points", Integer.toString(scores.get(0).getPoints()));
+                intent.putExtra("NameOfTeam1", scores.get(3).getName());
+                intent.putExtra("NameOfTeam2", scores.get(2).getName());
+                intent.putExtra("NameOfTeam3", scores.get(1).getName());
+                intent.putExtra("NameOfTeam4", scores.get(0).getName());
                 startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
@@ -440,5 +463,55 @@ public class EFEactiv4 extends AppCompatActivity {
                 return compareWins;
             }
         }
+    }
+    int addPoints(EditText res1_1,EditText res1_2, EditText res1_3,EditText res2_1,EditText res2_2, EditText res2_3,EditText res3_1,EditText res3_2, EditText res3_3){
+        int ires1_1=0;
+        int ires1_2=0;
+        int ires1_3=0;
+        int ires2_1=0;
+        int ires2_2=0;
+        int ires2_3=0;
+        int ires3_1=0;
+        int ires3_2=0;
+        int ires3_3=0;
+
+        if(!res1_1.getText().toString().equals("")){
+            ires1_1 = Integer.parseInt(res1_1.getText().toString());
+        }
+
+        if(!res1_2.getText().toString().equals("")){
+            ires1_2 = Integer.parseInt(res1_2.getText().toString());
+        }
+
+        if(!res1_3.getText().toString().equals("")){
+            ires1_3 = Integer.parseInt(res1_3.getText().toString());
+        }
+
+        if(!res2_1.getText().toString().equals("")){
+            ires2_1 = Integer.parseInt(res2_1.getText().toString());
+        }
+
+        if(!res2_2.getText().toString().equals("")){
+            ires2_2 = Integer.parseInt(res2_2.getText().toString());
+        }
+
+        if(!res2_3.getText().toString().equals("")){
+            ires2_3 = Integer.parseInt(res2_3.getText().toString());
+        }
+
+        if(!res3_1.getText().toString().equals("")){
+            ires3_1 = Integer.parseInt(res3_1.getText().toString());
+        }
+
+        if(!res3_2.getText().toString().equals("")){
+            ires3_2 = Integer.parseInt(res3_2.getText().toString());
+        }
+
+        if(!res3_3.getText().toString().equals("")){
+            ires3_3 = Integer.parseInt(res3_3.getText().toString());
+        }
+
+
+        return ires1_1 + ires1_2 + ires1_3 + ires2_1 + ires2_2 + ires2_3 + ires3_1 + ires3_2 + ires3_3;
     }
 }

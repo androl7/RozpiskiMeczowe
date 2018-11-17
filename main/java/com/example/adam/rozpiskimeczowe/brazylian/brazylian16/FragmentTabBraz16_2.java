@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,6 @@ public class FragmentTabBraz16_2 extends Fragment {
     CustomAdapter customAdapter;
     TreeMap<Integer, Values> resultsOfMatches;
     Integer numberOfMatch=0;
-    String winForCheck = "WIN.";
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,6 +37,18 @@ public class FragmentTabBraz16_2 extends Fragment {
         list.setItemsCanFocus(true);
         customAdapter = new CustomAdapter(Objects.requireNonNull(getActivity()).getApplicationContext());
         list.setAdapter(customAdapter);
+
+        final SwipeRefreshLayout pullToRefresh = view.findViewById(R.id.braz16_pullToRefresh);
+        pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                assert getFragmentManager() != null;
+                numberOfMatch=0;
+                resultsOfMatches.clear();
+                getFragmentManager().beginTransaction().detach(FragmentTabBraz16_2.this).attach(FragmentTabBraz16_2.this).commit();
+                pullToRefresh.setRefreshing(false);
+            }
+        });
 
         final Button team1 = getActivity().findViewById(R.id.braz16Team01);
         final Button team2 = getActivity().findViewById(R.id.braz16Team02);
@@ -503,8 +515,9 @@ public class FragmentTabBraz16_2 extends Fragment {
 
             convertView.setTag(holder);
 
-
-            Integer key = Integer.parseInt(resultsOfMatches.keySet().toArray()[position].toString());
+            //revert list
+            int b = resultsOfMatches.size()-position-1;
+            Integer key = Integer.parseInt(resultsOfMatches.keySet().toArray()[b].toString());
 
             String numberOfMatch = resultsOfMatches.get(key).numberOfMatch.toString();
             holder.textViewWithNumber.setText(numberOfMatch);

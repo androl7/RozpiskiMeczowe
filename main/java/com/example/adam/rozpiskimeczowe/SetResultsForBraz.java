@@ -1,6 +1,8 @@
 package com.example.adam.rozpiskimeczowe;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -27,6 +29,7 @@ public class SetResultsForBraz implements ISetResultsForBraz {
     private Map<Integer, ArrayList<EditText>> mapPointsInMatches;
     private ArrayList<Button> listResultButtons;
     private String winForCheck = "WIN.";
+    private DeleteResultBrazAndCup deleteResultBrazAndCup;
 
     public SetResultsForBraz(String nameOfTour, ArrayList listResultButtons, Map<Integer, ArrayList<EditText>> mapPointsInMatches, String typeOfTour, Context context, ViewGroup vg, String pktInSet, String pktInTieBreak, ZoomLayout zoomLayout) {
         this.context = context;
@@ -35,6 +38,7 @@ public class SetResultsForBraz implements ISetResultsForBraz {
         this.setDetailedResultFor2Sets = new SetDetailedResultFor2Sets(nameOfTour, typeOfTour, context, vg, imm, pktInSet, pktInTieBreak, zoomLayout);
         this.mapPointsInMatches = mapPointsInMatches;
         this.listResultButtons = listResultButtons;
+        this.deleteResultBrazAndCup = new DeleteResultBrazAndCup(context,nameOfTour,typeOfTour);
     }
 
     //Method to set Results to next Buttons with loser and check
@@ -94,14 +98,8 @@ public class SetResultsForBraz implements ISetResultsForBraz {
         ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
+                AlertDialog diaBox = deleteResultBrazAndCup.deleteResult(ResultButton,undoResultString,ResultButton2,undoResultString2,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
+                diaBox.show();
                 return true;
             }
         });
@@ -109,14 +107,8 @@ public class SetResultsForBraz implements ISetResultsForBraz {
         ResultButton2.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
+                AlertDialog diaBox = deleteResultBrazAndCup.deleteResult(ResultButton,undoResultString,ResultButton2,undoResultString2,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
+                diaBox.show();
                 return true;
             }
         });
@@ -179,13 +171,8 @@ public class SetResultsForBraz implements ISetResultsForBraz {
         ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
+                AlertDialog diaBox = deleteResultBrazAndCup.deleteResult(ResultButton,undoResultString,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
+                diaBox.show();
                 return true;
             }
         });
@@ -248,14 +235,8 @@ public class SetResultsForBraz implements ISetResultsForBraz {
         ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
+                AlertDialog diaBox = deleteResultBrazAndCup.deleteResult(ResultButton,undoResultString,ResultButton2,undoResultString2,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
+                diaBox.show();
                 return true;
             }
         });
@@ -263,15 +244,8 @@ public class SetResultsForBraz implements ISetResultsForBraz {
         ResultButton2.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                ResultButton.setText(undoResultString);
-                ResultButton2.setText(undoResultString2);
-                pointsFor1In1Set.setText("");
-                pointsFor1In2Set.setText("");
-                pointsFor1In3Set.setText("");
-                pointsFor2In1Set.setText("");
-                pointsFor2In2Set.setText("");
-                pointsFor2In3Set.setText("");
-
+                AlertDialog diaBox = deleteResultBrazAndCup.deleteResult(ResultButton,undoResultString,ResultButton2,undoResultString2,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
+                diaBox.show();
                 return true;
             }
         });

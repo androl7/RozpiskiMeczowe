@@ -16,9 +16,14 @@ import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.SetResultsForBraz;
 import com.otaliastudios.zoom.ZoomLayout;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class FragmentTabBraz8_1 extends Fragment {
+    Map<Integer,ArrayList<EditText>> mapPointsInMatches;
+    ArrayList<Button> listResultButtons;
     Toast toast;
     String pktInSet = "21";
     String pktInTieBreak = "15";
@@ -33,7 +38,9 @@ public class FragmentTabBraz8_1 extends Fragment {
         view = inflater.inflate(R.layout.fragment_fragment_tab_braz8_1, container, false);
 
         zoomLayout = view.findViewById(R.id.braz8_zoomLayout);
-        //setResultsForBraz = new SetResultsForBraz(typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,zoomLayout);
+        mapPointsInMatches = new HashMap<>();
+        listResultButtons = new ArrayList<>();
+        setResultsForBraz = new SetResultsForBraz("333",listResultButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,zoomLayout);
 
 
 
@@ -312,7 +319,7 @@ public class FragmentTabBraz8_1 extends Fragment {
         setResultsForBraz.WithCheckWithoutLoser(lost6, "LOST.6", win7, "WIN.7", win9, "WIN.9", braz8Res9_Lost_6, braz8Res9_Lost_6_2set, braz8Res9_Lost_6_3set, braz8Res9_Win_7, braz8Res9_Win_7_2set, braz8Res9_Win_7_3set);
 
         //10 MECZ
-        setResultsForBraz.WithCheckWithoutLoser(win8, "WIN.8", lost5, "LOST.5", win10, "WIN.10", braz8Res10_Lost_5, braz8Res10_Lost_5_2set, braz8Res10_Lost_5_3set, braz8Res10_Win_8, braz8Res10_Win_8_2set, braz8Res10_Win_8_3set);
+        setResultsForBraz.WithCheckWithoutLoser(win8, "WIN.8", lost5, "LOST.5", win10, "WIN.10", braz8Res10_Win_8, braz8Res10_Win_8_2set, braz8Res10_Win_8_3set, braz8Res10_Lost_5, braz8Res10_Lost_5_2set, braz8Res10_Lost_5_3set);
 
         //11 MECZ
         setResultsForBraz.WithLoserAndCheck(win5, "WIN.5", win9, "WIN.9", win11, "WIN.11", lost11, "LOST.11", braz8Res11_Win_5, braz8Res11_Win_5_2set, braz8Res11_Win_5_3set, braz8Res11_Win_9, braz8Res11_Win_9_2set, braz8Res11_Win_9_3set);

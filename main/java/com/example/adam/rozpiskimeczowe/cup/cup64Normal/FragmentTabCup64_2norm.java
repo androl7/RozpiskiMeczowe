@@ -1,4 +1,4 @@
-package com.example.adam.rozpiskimeczowe.cup.cup64;
+package com.example.adam.rozpiskimeczowe.cup.cup64Normal;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.TreeMap;
 
 
-public class FragmentTabCup64_2 extends Fragment {
+public class FragmentTabCup64_2norm extends Fragment {
     View view;
     CustomAdapter customAdapter;
     TreeMap<Integer, Values> resultsOfMatches;
@@ -53,7 +53,7 @@ public class FragmentTabCup64_2 extends Fragment {
                 assert getFragmentManager() != null;
                 numberOfMatch = 0;
                 resultsOfMatches.clear();
-                getFragmentManager().beginTransaction().detach(FragmentTabCup64_2.this).attach(FragmentTabCup64_2.this).commit();
+                getFragmentManager().beginTransaction().detach(FragmentTabCup64_2norm.this).attach(FragmentTabCup64_2norm.this).commit();
                 pullToRefresh.setRefreshing(false);
             }
         });

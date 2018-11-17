@@ -7,7 +7,10 @@
     android:focusableInTouchMode="true"
     android:id="@+id/cup64_2MainLayout">
 
-
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/cup64_pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <ListView
         android:id="@+id/listViewCup64Frag2"
         android:layout_width="match_parent"
@@ -17,6 +20,7 @@
         android:descendantFocusability="afterDescendants"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 
     <!--<FrameLayout

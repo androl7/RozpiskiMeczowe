@@ -1,4 +1,4 @@
-package com.example.adam.rozpiskimeczowe.cup.cup64;
+package com.example.adam.rozpiskimeczowe.cup.cup64Normal;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.TreeMap;
 
 
-public class FragmentTabCup64_3 extends Fragment {
+public class FragmentTabCup64_3norm extends Fragment {
     View view;
     CustomAdapter customAdapter;
     TreeMap<Integer, String> losersOfMatches;

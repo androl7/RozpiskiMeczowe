@@ -284,41 +284,6 @@
             android:layout_weight="2">
 
             <LinearLayout
-                android:id="@+id/efe4_linear_sets_13"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:weightSum="11"
-                android:background="@drawable/group_column">
-
-                <TextView
-                    android:id="@+id/EFE_4_res13_1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5"
-                    android:gravity="center"
-                    android:numeric="integer"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text=":"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:id="@+id/EFE_4_res13_3"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5"
-                    android:gravity="center"
-                    android:numeric="integer"
-                    android:textColor="#000000" />
-
-            </LinearLayout>
-
-            <LinearLayout
                 android:id="@+id/efe4_linear_points_13"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
@@ -340,8 +305,8 @@
                         android:background="@null"
                         android:gravity="center"
                         android:imeOptions="actionNext"
+                        android:inputType="number"
                         android:maxLength="2"
-                        android:numeric="integer"
                         android:paddingBottom="0dp"
                         android:singleLine="true"
                         android:textColor="#000000"
@@ -355,8 +320,8 @@
                         android:background="@null"
                         android:gravity="center"
                         android:imeOptions="actionNext"
+                        android:inputType="number"
                         android:maxLength="2"
-                        android:numeric="integer"
                         android:paddingBottom="0dp"
                         android:singleLine="true"
                         android:textColor="#000000"
@@ -370,8 +335,8 @@
                         android:background="@null"
                         android:gravity="center"
                         android:imeOptions="actionNext"
+                        android:inputType="number"
                         android:maxLength="2"
-                        android:numeric="integer"
                         android:paddingBottom="0dp"
                         android:singleLine="true"
                         android:textColor="#000000"
@@ -402,8 +367,8 @@
                         android:background="@null"
                         android:gravity="center"
                         android:imeOptions="actionNext"
+                        android:inputType="number"
                         android:maxLength="2"
-                        android:numeric="integer"
                         android:paddingBottom="0dp"
                         android:singleLine="true"
                         android:textColor="#000000"
@@ -417,8 +382,8 @@
                         android:background="@null"
                         android:gravity="center"
                         android:imeOptions="actionNext"
+                        android:inputType="number"
                         android:maxLength="2"
-                        android:numeric="integer"
                         android:paddingBottom="0dp"
                         android:singleLine="true"
                         android:textColor="#000000"
@@ -432,36 +397,32 @@
                         android:background="@null"
                         android:gravity="center"
                         android:imeOptions="actionNext"
+                        android:inputType="number"
                         android:maxLength="2"
-                        android:numeric="integer"
                         android:paddingBottom="0dp"
                         android:singleLine="true"
                         android:textColor="#000000"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"
+                        />
                 </LinearLayout>
             </LinearLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2">
 
             <LinearLayout
-                android:id="@+id/efe4_linear_sets_14"
+                android:id="@+id/efe4_linear_sets_13"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:weightSum="11"
-                android:background="@drawable/group_column">
+                >
 
                 <TextView
-                    android:id="@+id/EFE_4_res14_1"
+                    android:id="@+id/EFE_4_res13_1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
                     android:gravity="center"
                     android:numeric="integer"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    />
 
                 <TextView
                     android:layout_width="0dp"
@@ -472,15 +433,24 @@
                     android:textColor="#000000" />
 
                 <TextView
-                    android:id="@+id/EFE_4_res14_4"
+                    android:id="@+id/EFE_4_res13_3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
                     android:gravity="center"
                     android:numeric="integer"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    />
 
             </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
 
             <LinearLayout
                 android:id="@+id/efe4_linear_points_14"
@@ -604,6 +574,43 @@
                         android:textSize="10sp" />
                 </LinearLayout>
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/efe4_linear_sets_14"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="11"
+                >
+
+                <TextView
+                    android:id="@+id/EFE_4_res14_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/EFE_4_res14_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:numeric="integer"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+
         </RelativeLayout>
     </LinearLayout>
 

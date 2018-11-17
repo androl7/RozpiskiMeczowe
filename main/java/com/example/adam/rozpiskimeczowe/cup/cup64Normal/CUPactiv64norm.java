@@ -1,4 +1,4 @@
-package com.example.adam.rozpiskimeczowe.cup.cup64;
+package com.example.adam.rozpiskimeczowe.cup.cup64Normal;
 
 
 import android.content.res.ColorStateList;
@@ -12,8 +12,8 @@ import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.cup.PagerAdapter;
 
 
-public class CUPactiv64 extends AppCompatActivity {
-    NonSwipeableViewPagerCup64 mViewPager;
+public class CUPactiv64norm extends AppCompatActivity {
+    NonSwipeableViewPagerCup64norm mViewPager;
 
 
     @Override
@@ -27,7 +27,7 @@ public class CUPactiv64 extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.tabs64);
         tabLayout.setupWithViewPager(mViewPager);
-        getSupportActionBar().setTitle("Puchar 64: Eliminacje");
+        //getSupportActionBar().setTitle("System pucharowy: Eliminacje");
 
         setTheme(R.style.AppTheme);
         tabLayout.setTabTextColors(ColorStateList.valueOf(Color.WHITE));
@@ -37,9 +37,9 @@ public class CUPactiv64 extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager){
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new FragmentTabCup64_1(),"ROZPISKA");
-        adapter.addFragment(new FragmentTabCup64_2(),"WYNIKI");
-        adapter.addFragment(new FragmentTabCup64_3(),"MIEJSCA");
+        adapter.addFragment(new FragmentTabCup64_1norm(),"ROZPISKA");
+        adapter.addFragment(new FragmentTabCup64_2norm(),"WYNIKI");
+        adapter.addFragment(new FragmentTabCup64_3norm(),"MIEJSCA");
         viewPager.setOffscreenPageLimit(2);
         viewPager.setAdapter(adapter);
     }

@@ -7,19 +7,20 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.adam.rozpiskimeczowe.offical.GetDataFromBeachPzps;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Database {
@@ -40,7 +41,7 @@ public class Database {
         db = FirebaseFirestore.getInstance();
     }
 
-    public void addOfficalTournamentToDatabase(GetDataFromBeachPzps getDataFromBeachPzps, String nameOfTour, String typeOfTour) {
+    public void addOfficalTournamentToDatabase(GetDataFromBeachPzps getDataFromBeachPzps, String nameOfTour, String typeOfTour, String password) {
         ArrayList listOfTeams = new ArrayList();
         for (int i = 0; i < getDataFromBeachPzps.getNameOfFirstPlayers().size(); i++) {
             String nameOfTeam = getDataFromBeachPzps.getNameOfFirstPlayers().get(i) + "\n" + getDataFromBeachPzps.getNameOfSecondPlayers().get(i);
@@ -49,6 +50,7 @@ public class Database {
         Map<String, Object> tournament = new HashMap<>();
         tournament.put("Type", typeOfTour);
         tournament.put("Teams", listOfTeams);
+        tournament.put("Key",password);
 
         db.collection("tournaments").document(nameOfTour)
                 .set(tournament)
@@ -68,33 +70,38 @@ public class Database {
 
     void addResultToDatabase(String nameOfTour,String typeOfTour,Button winner, EditText res1_1, EditText res1_2, EditText res1_3, EditText res2_1, EditText res2_2, EditText res2_3) {
 
-        //add points to arrayList
-        ArrayList<String> pointsInSets = new ArrayList<>();
-        pointsInSets.add(res1_1.getText().toString());
-        pointsInSets.add(res1_2.getText().toString());
-        pointsInSets.add(res1_3.getText().toString());
-        pointsInSets.add(res2_1.getText().toString());
-        pointsInSets.add(res2_2.getText().toString());
-        pointsInSets.add(res2_3.getText().toString());
-        pointsInSets.add(winner.getText().toString());
+        try {
+            //add points to arrayList
+            ArrayList<String> pointsInSets = new ArrayList<>();
+            pointsInSets.add(res1_1.getText().toString());
+            pointsInSets.add(res1_2.getText().toString());
+            pointsInSets.add(res1_3.getText().toString());
+            pointsInSets.add(res2_1.getText().toString());
+            pointsInSets.add(res2_2.getText().toString());
+            pointsInSets.add(res2_3.getText().toString());
+            pointsInSets.add(winner.getText().toString());
 
-        Map<String, Object> result = new HashMap<>();
-        result.put(res1_1.getTag().toString(), pointsInSets);
+            Map<String, Object> result = new HashMap<>();
+            result.put(res1_1.getTag().toString(), pointsInSets);
 
-        db.collection("tournaments").document(nameOfTour).collection("Matches").document(typeOfTour)
-                .set(result, SetOptions.merge())
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.d(TAG, "DocumentSnapshot successfully written!");
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error writing document", e);
-                    }
-                });
+            db.collection("tournaments").document(nameOfTour).collection("Matches").document(typeOfTour)
+                    .set(result, SetOptions.merge())
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Log.d(TAG, "DocumentSnapshot successfully written!");
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.w(TAG, "Error writing document", e);
+                        }
+                    });
+        }catch (NullPointerException e){
+            //document path is null
+
+        }
 
 
     }
@@ -108,7 +115,7 @@ public class Database {
                         public void onSuccess(DocumentSnapshot snapshot) {
                             if(snapshot != null && snapshot.exists()){
                                 mapResults = (HashMap) snapshot.getData();
-                                addResultFromDatabase();
+                                getResultFromDatabase();
                             }
                         }
                     });
@@ -125,7 +132,7 @@ public class Database {
 
                     if (snapshot != null && snapshot.exists()) {
                         mapResults = (HashMap) snapshot.getData();
-                        addResultFromDatabase();
+                        getResultFromDatabase();
                     } else {
 
                     }
@@ -136,7 +143,7 @@ public class Database {
         }
     }
 
-     private void addResultFromDatabase() {
+     private void getResultFromDatabase() {
         if (mapResults != null&&mapPointsInMatches!=null) {
             for (int i = 0; i < mapResults.size(); i++) {
                 int key = Integer.parseInt(mapResults.keySet().toArray()[i].toString());
@@ -147,6 +154,22 @@ public class Database {
             }
         }
     }
+
+     void deleteResultFromDatabase(String numberOfMatch,String nameOfTour,String typeOfTour) {
+         try {
+             DocumentReference docRef = db.collection("tournaments").document(nameOfTour).collection("Matches").document(typeOfTour);
+             Map<String, Object> delete = new HashMap<>();
+             delete.put(numberOfMatch, FieldValue.delete());
+
+             docRef.update(delete).addOnCompleteListener(new OnCompleteListener<Void>() {
+                 @Override
+                 public void onComplete(@NonNull Task<Void> task) {
+                 }
+             });
+         }catch (NullPointerException e){
+             //document path is null
+         }
+     }
 
 
 }

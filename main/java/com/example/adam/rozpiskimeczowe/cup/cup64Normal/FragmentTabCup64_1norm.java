@@ -1,4 +1,4 @@
-package com.example.adam.rozpiskimeczowe.cup.cup64;
+package com.example.adam.rozpiskimeczowe.cup.cup64Normal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,14 +27,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FragmentTabCup64_1 extends Fragment {
+public class FragmentTabCup64_1norm extends Fragment {
     Map<Integer,ArrayList<EditText>> mapPointsInMatches;
     Map<Integer,ArrayList<String>> mapElimination;
     ArrayList<Button> listResultButtons;
     Toast toast;
     String pktInSet = "21";
     String pktInTieBreak = "15";
-    String typeOfTour = "cup64";
+    String typeOfTour = "cup64Norm";
     SetResultsForCup setResultsForCup;
     int numberOfMatches = 0;
     int actualMatch = 0;
@@ -1206,63 +1206,13 @@ public class FragmentTabCup64_1 extends Fragment {
         setResultsForCup.withoutLosserAndCheck(win47,win48,win56,Res56_Win_47,Res56_Win_47_2set,Res56_Win_47_3set,Res56_Win_48,Res56_Win_48_2set,Res56_Win_48_3set);
 
 
-        database = new Database(mapElimination,mapPointsInMatches,listResultButtons);
-        database.getResultFromDatabaseWithUpdate(nameOfTour,typeOfTour);
 
 
         toast = Toast.makeText(getActivity().getApplicationContext(), "Wprowadz wczesniejszy wynik !", Toast.LENGTH_SHORT);
 
 
-        onlyWatch = getActivity().getIntent().getStringExtra("OnlyWatch");
-        if(onlyWatch!=null){
-            final int childCount = relativeLayout.getChildCount();
-            for (int i = 0; i < childCount; i++) {
-                relativeLayout.getChildAt(i).setEnabled(false);
-
-            }
-        }
         return view;
     }
-
-
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.action_bar_with_main_button, menu);
-        super.onCreateOptionsMenu(menu, inflater);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.menuMainButton:
-                Intent braz16 = new Intent(getActivity(),BRAZactiv16.class);
-
-                braz16.putExtra("nameOfTour",nameOfTour);
-                braz16.putExtra("NameOfTeam1",R1);
-                braz16.putExtra("NameOfTeam2",R2);
-                braz16.putExtra("NameOfTeam3",R3);
-                braz16.putExtra("NameOfTeam4",R4);
-                braz16.putExtra("NameOfTeam5",R5);
-                braz16.putExtra("NameOfTeam6",R6);
-                braz16.putExtra("NameOfTeam7",R7);
-                braz16.putExtra("NameOfTeam8",R8);
-                braz16.putExtra("NameOfTeam9",win49.getText().toString());
-                braz16.putExtra("NameOfTeam10",win50.getText().toString());
-                braz16.putExtra("NameOfTeam11",win51.getText().toString());
-                braz16.putExtra("NameOfTeam12",win52.getText().toString());
-                braz16.putExtra("NameOfTeam13",win53.getText().toString());
-                braz16.putExtra("NameOfTeam14",win54.getText().toString());
-                braz16.putExtra("NameOfTeam15",win55.getText().toString());
-                braz16.putExtra("NameOfTeam16",win56.getText().toString());
-                braz16.putExtra("OnlyWatch",onlyWatch);
-                startActivity(braz16);
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-
 
 }
 

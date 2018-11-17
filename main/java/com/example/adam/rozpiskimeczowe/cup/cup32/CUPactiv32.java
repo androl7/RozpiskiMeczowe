@@ -25,7 +25,7 @@ public class CUPactiv32 extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.tabs32);
         tabLayout.setupWithViewPager(mViewPager);
-        getSupportActionBar().setTitle("System pucharowy: Eliminacje");
+        getSupportActionBar().setTitle("Puchar 32: Eliminacje");
 
         setTheme(R.style.AppTheme);
         tabLayout.setTabTextColors(ColorStateList.valueOf(Color.WHITE));

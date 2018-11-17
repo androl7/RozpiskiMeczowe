@@ -44,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textNamesOfTeams"
         android:layout_alignParentStart="true"
+        android:singleLine="true"
         android:inputType="text" />
 
     <EditText
@@ -51,6 +52,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:singleLine="true"
+        android:inputType="text"
         android:layout_below="@+id/Name1" />
 
     <EditText
@@ -58,14 +61,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/Name2" />
+        android:layout_below="@+id/Name2"
+        android:singleLine="true"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/Name4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/Name3" />
+        android:layout_below="@+id/Name3"
+        android:singleLine="true"
+        android:inputType="text"/>
 
     <!--<EditText
         android:id="@+id/Name5"
