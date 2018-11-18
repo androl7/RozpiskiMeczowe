@@ -28,7 +28,7 @@ public class EFEactiv extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_efeactiv);
-
+        getSupportActionBar().setTitle("System grupowy ");
         toastNameTeams = Toast.makeText(getApplicationContext(), "Nazwij wszyskie drużyny", Toast.LENGTH_SHORT);
         toastPktInSet = Toast.makeText(getApplicationContext(), "Podaj do ilu pkt bedzie rozgrywany set", Toast.LENGTH_SHORT);
 

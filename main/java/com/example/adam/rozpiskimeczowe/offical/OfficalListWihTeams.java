@@ -23,8 +23,13 @@ import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.TypeOfTournaments;
 import com.example.adam.rozpiskimeczowe.cup.cup32.CUPactiv32;
 import com.example.adam.rozpiskimeczowe.cup.cup64.CUPactiv64;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -36,6 +41,7 @@ public class OfficalListWihTeams extends AppCompatActivity {
     Database database;
     Intent intent;
     Context context = this;
+    private FirebaseFirestore db;
 
 
     @Override
@@ -43,8 +49,8 @@ public class OfficalListWihTeams extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offical_list_with_teams);
 
-        getSupportActionBar().setTitle("Offical");
-
+        getSupportActionBar().setTitle("Oficjalny:");
+        db = FirebaseFirestore.getInstance();
         database = new Database();
 
         editTextNameOfTour = findViewById(R.id.Offical_NameOfTour);
@@ -90,10 +96,31 @@ public class OfficalListWihTeams extends AppCompatActivity {
                 if(!editTextNameOfTour.getText().toString().equals("")) {
                     if (getDataFromBeachPzps != null) {
                         if (getDataFromBeachPzps.getNameOfFirstPlayers().size() != 0) {
-                            final String password = GenerateKey.randomString();
-                            //ZABEZPIECZENIE dodać sprawdzenie czy jest taki turniej już o tej nazwie !!!
-                            AlertDialog alrD = createAlert(password);
-                            alrD.show();
+                            final ArrayList listOfNames = new ArrayList();
+                            db.collection("tournaments").get()
+                                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                        @Override
+                                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                                            if (!queryDocumentSnapshots.isEmpty()) {
+                                                List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+
+                                                for (DocumentSnapshot d : list) {
+                                                    listOfNames.add(d.getId());
+
+                                                }
+                                                if(!listOfNames.contains(editTextNameOfTour.getText().toString())) {
+                                                    final String password = GenerateKey.randomString();
+                                                    //ZABEZPIECZENIE dodać sprawdzenie czy jest taki turniej już o tej nazwie !!!
+                                                    AlertDialog alrD = createAlert(password);
+                                                    alrD.show();
+                                                }else {
+                                                    Toast.makeText(context, "Zmień nazwę, istnieje już taki turniej", Toast.LENGTH_SHORT).show();
+                                                }
+                                            }
+                                        }
+                                    });
+
                         } else {
                             Toast.makeText(context, "Pobierz listę zawodników", Toast.LENGTH_SHORT).show();
                         }

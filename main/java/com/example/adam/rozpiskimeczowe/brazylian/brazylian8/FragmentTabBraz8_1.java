@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class FragmentTabBraz8_1 extends Fragment {
+public class FragmentTabBraz8_1 extends Fragment  {
     Map<Integer,ArrayList<EditText>> mapPointsInMatches;
     ArrayList<Button> listResultButtons;
     Toast toast;
@@ -334,8 +334,11 @@ public class FragmentTabBraz8_1 extends Fragment {
         setResultsForBraz.WithCheckWithoutLoser(win11, "WIN.11", win12, "WIN.12", win14, "WIN.14", braz8Res14_Win_11, braz8Res14_Win_11_2set, braz8Res14_Win_11_3set, braz8Res14_Win_12, braz8Res14_Win_12_2set, braz8Res14_Win_12_3set);
 
         return view;
+
     }
+
 }
+
 
 
 

@@ -79,6 +79,7 @@ public class EFEactiv3 extends AppCompatActivity {
         ViewGroup vg = findViewById(android.R.id.content);
         linearLayout = findViewById(R.id.Efe3MainLayout);
 
+        getSupportActionBar().setTitle("Grupowy: 3");
         pktInSet = getIntent().getStringExtra("pktInSet");
         SetResultsForGroups setResultsForGroups = new SetResultsForGroups(typeOfTour,this, vg, pktInSet, pktInTieBreak);
 
@@ -178,7 +179,7 @@ public class EFEactiv3 extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.action_bar_with_start_button, menu);
+        inflater.inflate(R.menu.action_bar_with_wyniki_button, menu);
         return true;
     }
 
@@ -186,7 +187,7 @@ public class EFEactiv3 extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.menuStartButton:
+            case R.id.menuWynikiButton:
 
                 int team1Wins = 0;
                 int team2Wins = 0;

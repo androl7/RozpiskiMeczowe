@@ -2,6 +2,9 @@ package com.example.adam.rozpiskimeczowe.everyoneForEveryone;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -14,6 +17,8 @@ public class Results extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
+
+        getSupportActionBar().setTitle("Szczegółowe wyniki");
 
         TextView teamNameRes01 = findViewById(R.id.teamNameRes01);
         TextView teamNameRes02 = findViewById(R.id.teamNameRes02);
@@ -72,5 +77,21 @@ public class Results extends AppCompatActivity {
         }
 
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.action_bar_with_powrot_button, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.menuPowrotButton:
+                onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
