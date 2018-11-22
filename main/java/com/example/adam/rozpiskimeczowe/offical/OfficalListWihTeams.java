@@ -42,6 +42,7 @@ public class OfficalListWihTeams extends AppCompatActivity {
     Intent intent;
     Context context = this;
     private FirebaseFirestore db;
+    String local;
 
 
     @Override
@@ -52,7 +53,7 @@ public class OfficalListWihTeams extends AppCompatActivity {
         getSupportActionBar().setTitle("Oficjalny:");
         db = FirebaseFirestore.getInstance();
         database = new Database();
-
+        local = getIntent().getStringExtra("Local");
         editTextNameOfTour = findViewById(R.id.Offical_NameOfTour);
         final InputMethodManager imm = (InputMethodManager) Objects.requireNonNull(getSystemService(Context.INPUT_METHOD_SERVICE));
         namesToExport = new ArrayList<>();
@@ -96,31 +97,48 @@ public class OfficalListWihTeams extends AppCompatActivity {
                 if(!editTextNameOfTour.getText().toString().equals("")) {
                     if (getDataFromBeachPzps != null) {
                         if (getDataFromBeachPzps.getNameOfFirstPlayers().size() != 0) {
-                            final ArrayList listOfNames = new ArrayList();
-                            db.collection("tournaments").get()
-                                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                                        @Override
-                                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                            if(local==null) {
+                                final ArrayList listOfNames = new ArrayList();
+                                db.collection("tournaments").get()
+                                        .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                            @Override
+                                            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
-                                            if (!queryDocumentSnapshots.isEmpty()) {
-                                                List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                                                if (!queryDocumentSnapshots.isEmpty()) {
+                                                    List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
 
-                                                for (DocumentSnapshot d : list) {
-                                                    listOfNames.add(d.getId());
+                                                    for (DocumentSnapshot d : list) {
+                                                        listOfNames.add(d.getId());
 
-                                                }
-                                                if(!listOfNames.contains(editTextNameOfTour.getText().toString())) {
-                                                    final String password = GenerateKey.randomString();
-                                                    //ZABEZPIECZENIE dodać sprawdzenie czy jest taki turniej już o tej nazwie !!!
-                                                    AlertDialog alrD = createAlert(password);
-                                                    alrD.show();
-                                                }else {
-                                                    Toast.makeText(context, "Zmień nazwę, istnieje już taki turniej", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                    if (!listOfNames.contains(editTextNameOfTour.getText().toString())) {
+                                                        final String password = GenerateKey.randomString();
+                                                        //ZABEZPIECZENIE dodać sprawdzenie czy jest taki turniej już o tej nazwie !!!
+                                                        AlertDialog alrD = createAlert(password);
+                                                        alrD.show();
+                                                    } else {
+                                                        Toast.makeText(context, "Zmień nazwę, istnieje już taki turniej", Toast.LENGTH_SHORT).show();
+                                                    }
                                                 }
                                             }
-                                        }
-                                    });
+                                        });
 
+                            }else {
+                                //IF ONLY LOCAL
+                                if (getDataFromBeachPzps.getNameOfFirstPlayers().size() <= 40) {
+                                    intent = new Intent(context, CUPactiv32.class);
+                                } else {
+                                    intent = new Intent(context, CUPactiv64.class);
+                                }
+
+                                for (int i = 0; i < getDataFromBeachPzps.getNameOfFirstPlayers().size(); i++) {
+                                    intent.putExtra("NameOfTeam" + (i + 1), getDataFromBeachPzps.getNameOfFirstPlayers().get(i) + "\n" + getDataFromBeachPzps.getNameOfSecondPlayers().get(i));
+                                }
+                                intent.putExtra("quantityOfTeams", String.valueOf(getDataFromBeachPzps.getNameOfFirstPlayers().size()));
+                                intent.putExtra("nameOfTour", editTextNameOfTour.getText().toString());
+
+                                startActivity(intent);
+                            }
                         } else {
                             Toast.makeText(context, "Pobierz listę zawodników", Toast.LENGTH_SHORT).show();
                         }

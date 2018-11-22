@@ -22,10 +22,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adam.rozpiskimeczowe.LocalDatabase.TableControllerTeams;
+import com.example.adam.rozpiskimeczowe.LocalDatabase.TableControllerTournament;
+import com.example.adam.rozpiskimeczowe.LocalDatabase.Team;
+import com.example.adam.rozpiskimeczowe.LocalDatabase.TournamentLocal;
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian16.BRAZactiv16;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian8.BRAZactiv8;
 
+import java.util.List;
 import java.util.Objects;
 
 
@@ -33,12 +38,15 @@ public class BRAZactiv extends AppCompatActivity {
     int quantityOfTeam = 0;
     String[] names;
     CustomAdapter customAdapter;
+    String type ="";
+    EditText nameOfTour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brazactiv);
 
+        nameOfTour = findViewById(R.id.brazNameOfTour);
         getSupportActionBar().setTitle("System brazylijski");
 
         final ListView list = findViewById(R.id.listView);
@@ -248,7 +256,7 @@ public class BRAZactiv extends AppCompatActivity {
                     for (String name : names) {
                         if (name == null || name.equals("")) {
                             //TU MA BYĆ FALSE !!!
-                            checkNull = false;
+                            checkNull = true;
                             break;
                         }
                     }
@@ -256,15 +264,33 @@ public class BRAZactiv extends AppCompatActivity {
                     if (checkNull) {
                         if (quantityOfTeam == 8) {
                             intent = new Intent(this, BRAZactiv8.class);
+                            type = "braz8";
                         } else if (quantityOfTeam == 16) {
                             intent = new Intent(this, BRAZactiv16.class);
+                            type = "braz16";
                         } else {
                             Toast.makeText(this, "24 Coming soon", Toast.LENGTH_SHORT).show();
                             return super.onOptionsItemSelected(item);
                         }
 
+                        String nameTour =  nameOfTour.getText().toString();
+                        TournamentLocal tournamentLocal = new TournamentLocal();
+                        tournamentLocal.setNazwa(nameTour);
+                        tournamentLocal.setTyp(type);
+                        new TableControllerTournament(getApplicationContext()).create(tournamentLocal);
+                        //ZMIANA !!!! SIZE MI WCHODZI ZLE !!! TRZBEA JAKOŚ ZROBIĆ getid!!
+                        List<TournamentLocal> tournamets = new TableControllerTournament(getApplicationContext()).read();
+                        int id=0;
+                        for(TournamentLocal tour:tournamets){
+                            if (tour.getNazwa().equals(nameTour)){
+                                id = tour.getId();
+                                break;
+                            }
+                        }
                         for (int i = 0; i < names.length / 2; i++) {
                             intent.putExtra("NameOfTeam" + (i + 1), customAdapter.getItem(i));
+                            Team team = new Team(customAdapter.getItem(i),id);
+                            new TableControllerTeams(getApplicationContext()).create(team);
                         }
                         startActivity(intent);
 

@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".loadDatabase.LoadingListOffical"
+    tools:context=".loadDatabase.LoadingListLocal"
     android:background="@drawable/plaza"
     >
 
     <ListView
-        android:id="@+id/Loading_list"
+        android:id="@+id/Loading_list_local"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </ListView>

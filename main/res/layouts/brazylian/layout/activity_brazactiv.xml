@@ -8,12 +8,18 @@
     android:focusableInTouchMode="true"
     android:id="@+id/brazMainLayout">
 
-
+    <EditText
+        android:id="@+id/brazNameOfTour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:hint="Nazwa Turnieju"/>
     <RadioGroup
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_toEndOf="@+id/textHowMuchTeams"
     android:orientation="horizontal"
+        android:layout_below="@+id/brazNameOfTour"
     >
     <RadioButton
         android:id="@+id/brazRadioButton8"
@@ -44,11 +50,12 @@
         android:id="@+id/textHowMuchTeams"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+
         android:text="Ilość drużyn: "
         android:textSize="23sp"
         android:layout_alignParentStart="true"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:layout_below="@+id/brazNameOfTour"/>
 
 
     <TextView
@@ -64,7 +71,7 @@
         android:id="@+id/brazEditTextPkt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_below="@+id/textHowMuchTeams"
         android:layout_marginStart="2dp"
         android:layout_toEndOf="@+id/textPkt"
         android:ems="2"

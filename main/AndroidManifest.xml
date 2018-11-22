@@ -34,7 +34,9 @@
         <activity android:name=".cup.cup32.CUPactiv32" />
         <activity android:name=".cup.cup64.CUPactiv64" />
         <activity android:name=".cup.CUPactiv" />
-        <activity android:name=".loadDatabase.LoadingList"></activity>
+        <activity android:name=".loadDatabase.LoadingListOffical" />
+        <activity android:name=".loadDatabase.SelectLoadingList" />
+        <activity android:name=".loadDatabase.LoadingListLocal"></activity>
     </application>
 
 </manifest>

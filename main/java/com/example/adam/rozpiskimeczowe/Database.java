@@ -1,12 +1,16 @@
 package com.example.adam.rozpiskimeczowe;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.adam.rozpiskimeczowe.offical.GetDataFromBeachPzps;
+import com.example.adam.rozpiskimeczowe.offical.OfficalListWihTeams;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -169,6 +173,23 @@ public class Database {
          }catch (NullPointerException e){
              //document path is null
          }
+     }
+
+     void checkPassword(final String password, final Context context){
+        db.collection("users").document("admin").get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot snapshot) {
+                        if(snapshot !=null && snapshot.exists()){
+                            ArrayList pass =(ArrayList) snapshot.getData().get("haslo");
+                            if(pass.contains(password)){
+                                context.startActivity(new Intent(context,OfficalListWihTeams.class));
+                            }else {
+                                Toast.makeText(context,"Złe hasło",Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    }
+                });
      }
 
 

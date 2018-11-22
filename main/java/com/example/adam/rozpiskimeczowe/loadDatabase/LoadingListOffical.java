@@ -11,7 +11,6 @@ import android.support.annotation.ColorInt;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.method.PasswordTransformationMethod;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +23,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adam.rozpiskimeczowe.AsteriskPasswordTransformationMethod;
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.Tournament;
 import com.example.adam.rozpiskimeczowe.TypeOfTournaments;
@@ -41,7 +41,7 @@ import java.util.Objects;
 
 import dmax.dialog.SpotsDialog;
 
-public class LoadingList extends AppCompatActivity {
+public class LoadingListOffical extends AppCompatActivity {
     private FirebaseFirestore db;
     private AlertDialog alertDialog;
     ArrayList<Tournament> adapterArrayList;
@@ -179,7 +179,7 @@ public class LoadingList extends AppCompatActivity {
         editText.getBackground().mutate().setColorFilter(getResources().getColor(R.color.Grey), PorterDuff.Mode.SRC_ATOP);
         editText.setHintTextColor(getResources().getColor(R.color.Grey));
         //KURSOR ZMIENIC NA BIAŁY OGÓLNIE STYL TEGO ALERTU !!!!!!!!!!
-        LoadingList.setCursorColor(editText, Color.WHITE);
+        LoadingListOffical.setCursorColor(editText, Color.WHITE);
 
         final AlertDialog alertDialog = new  AlertDialog.Builder(new ContextThemeWrapper(context,R.style.AlertDialogCustom))
                 //set message, title, and icon
@@ -300,27 +300,6 @@ public class LoadingList extends AppCompatActivity {
         }
     }
 
-    public class AsteriskPasswordTransformationMethod extends PasswordTransformationMethod {
-        @Override
-        public CharSequence getTransformation(CharSequence source, View view) {
-            return new PasswordCharSequence(source);
-        }
 
-        private class PasswordCharSequence implements CharSequence {
-            private CharSequence mSource;
-            public PasswordCharSequence(CharSequence source) {
-                mSource = source; // Store char sequence
-            }
-            public char charAt(int index) {
-                return '*'; // This is the important part
-            }
-            public int length() {
-                return mSource.length(); // Return default
-            }
-            public CharSequence subSequence(int start, int end) {
-                return mSource.subSequence(start, end); // Return default
-            }
-        }
-    }
 
 }
