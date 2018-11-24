@@ -14,7 +14,7 @@ public class SelectLoadingList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_loading_list);
-
+        getSupportActionBar().setTitle("Wczytaj ");
         Button offical = findViewById(R.id.SelectLoadingOfficalList);
 
         offical.setOnClickListener(new View.OnClickListener() {

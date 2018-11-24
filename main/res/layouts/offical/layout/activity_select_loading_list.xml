@@ -17,19 +17,17 @@
     <Button
         android:id="@+id/SelectLoadingOfficalList"
         android:layout_weight="1"
-        android:text="Oficjalne"
         android:layout_width="130dp"
         android:layout_height="200dp"
-        android:background="@drawable/rounded_edittext"
+        android:background="@drawable/imagebuttonoffical"
         android:layout_marginEnd="5dp"/>
 
     <Button
         android:id="@+id/SelectLoadingLocalList"
-        android:text="Moje"
         android:layout_weight="1"
         android:layout_width="130dp"
         android:layout_height="200dp"
         android:layout_marginStart="5dp"
-        android:background="@drawable/rounded_edittext"/>
+        android:background="@drawable/imagebuttonmoje"/>
     </LinearLayout>
 </RelativeLayout>

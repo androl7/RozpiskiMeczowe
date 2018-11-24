@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 
+import com.example.adam.rozpiskimeczowe.loadDatabase.LoadingListLocal;
 import com.example.adam.rozpiskimeczowe.loadDatabase.LoadingListOffical;
 import com.example.adam.rozpiskimeczowe.everyoneForEveryone.EFEactiv;
 import com.example.adam.rozpiskimeczowe.brazylian.BRAZactiv;
@@ -63,12 +64,13 @@ Database database;
         });
 
 
-        final Intent intent4 = new Intent (this, SelectLoadingList.class);
+        //final Intent intent4 = new Intent (this, SelectLoadingList.class);
         ImageButton Load = findViewById(R.id.menu_Button_Load);
         Load.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(intent4);
+                AlertDialog alertDialog = createAlert2();
+                alertDialog.show();
             }
         });
 
@@ -133,6 +135,44 @@ Database database;
                 });
             }
         });
+
+        return alertDialog;
+
+
+    }
+
+    AlertDialog createAlert2()
+    {
+
+        final AlertDialog alertDialog = new  AlertDialog.Builder(new ContextThemeWrapper(context,R.style.AlertDialogCustom))
+                //set message, title, and icon
+                .setTitle("Które turnieje wczytać ? ")
+                .setPositiveButton("Officjalne",  new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        dialog.dismiss();
+                        Intent intent = new Intent(context,LoadingListOffical.class);
+                        startActivity(intent);
+                    }
+                })
+
+
+                .setNegativeButton("Moje", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        dialog.dismiss();
+                        Intent intent = new Intent(context,LoadingListLocal.class);
+                        startActivity(intent);
+                    }
+                })
+
+                .setNeutralButton("Anuluj", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        dialog.dismiss();
+                    }
+                })
+                .create();
 
         return alertDialog;
 
