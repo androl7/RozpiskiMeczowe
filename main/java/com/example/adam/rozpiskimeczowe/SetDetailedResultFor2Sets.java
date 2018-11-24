@@ -13,7 +13,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adam.rozpiskimeczowe.LocalDatabase.Match;
+import com.example.adam.rozpiskimeczowe.LocalDatabase.TableControllerMatches;
+import com.example.adam.rozpiskimeczowe.LocalDatabase.TableControllerTournament;
+import com.example.adam.rozpiskimeczowe.LocalDatabase.TournamentLocal;
 import com.otaliastudios.zoom.ZoomLayout;
+
+import java.util.List;
 
 public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
     private Context context;
@@ -25,6 +31,7 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
     private Database database;
     private String typeOfTour;
     private String nameOfTour;
+    private String local;
 
 
     SetDetailedResultFor2Sets(String nameOfTour,String typeOfTour,Context context, ViewGroup vg, InputMethodManager imm, String pktInSet, String pktInTieBreak) {
@@ -39,7 +46,7 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
 
     }
 
-    SetDetailedResultFor2Sets(String nameOfTour,String typeOfTour,Context context, ViewGroup vg, InputMethodManager imm, String pktInSet, String pktInTieBreak,ZoomLayout zoomLayout) {
+    SetDetailedResultFor2Sets(String nameOfTour,String typeOfTour,Context context, ViewGroup vg, InputMethodManager imm, String pktInSet, String pktInTieBreak,ZoomLayout zoomLayout,String local) {
         this.nameOfTour = nameOfTour;
         this.context = context;
         this.vg = vg;
@@ -49,14 +56,14 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
      //   this.zoomLayout = zoomLayout;
         database = new Database();
         this.typeOfTour = typeOfTour;
-
+        this.local = local;
     }
 
 
 
     // Method to add points of Sets
     @Override
-    public void set(final Button winner, final EditText team1Set1, final EditText team1Set2, final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3) {
+    public void set(final Button winner,final Button losser, final EditText team1Set1, final EditText team1Set2, final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3) {
         //OGARNĄĆ TUTAJ PRZESUNIECIE
         /*int [] coor = new int[2];
         team1Set1.getLocationInWindow(coor);
@@ -249,7 +256,19 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                             if (checkSets(team1Set1, team1Set2, team1Set3, team2Set1, team2Set2, team2Set3)) {
 
                                 disableEnableControls(true, vg);
-                                database.addResultToDatabase(nameOfTour,typeOfTour,winner,team1Set1, team1Set2, team1Set3, team2Set1, team2Set2, team2Set3);
+                                if(local!=null) {
+                                    List<TournamentLocal> tournamets = new TableControllerTournament(context).read();
+                                    int id = 0;
+                                    for (TournamentLocal tour : tournamets) {
+                                        if (tour.getNazwa().equals(nameOfTour)) {
+                                            id = tour.getId();
+                                            break;
+                                        }
+                                    }
+                                    new TableControllerMatches(context).create(new Match(team1Set1.getTag().toString(), winner.getText().toString(),losser.getText().toString(), team1Set1.getText().toString(), team1Set2.getText().toString(), team1Set3.getText().toString(), team2Set1.getText().toString(), team2Set2.getText().toString(), team2Set3.getText().toString(), id));
+                                }else {
+                                    database.addResultToDatabase(nameOfTour, typeOfTour, winner,losser, team1Set1, team1Set2, team1Set3, team2Set1, team2Set2, team2Set3);
+                                }
                                 imm.hideSoftInputFromWindow(team2Set2.getWindowToken(), 0);
                                 team1Set1.setVisibility(View.INVISIBLE);
                                 team2Set1.setVisibility(View.INVISIBLE);
@@ -373,7 +392,21 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                     if (checkPointsInSet(team1Set3, team2Set3, pktInTieBreak)) {
                         if (checkSets(team1Set1, team1Set2, team1Set3, team2Set1, team2Set2, team2Set3)) {
                             disableEnableControls(true, vg);
-                            database.addResultToDatabase(nameOfTour,typeOfTour,winner,team1Set1, team1Set2, team1Set3, team2Set1, team2Set2, team2Set3);
+                            //OFFLINE
+                            if(local!=null) {
+                                List<TournamentLocal> tournamets = new TableControllerTournament(context).read();
+                                int id = 0;
+                                for (TournamentLocal tour : tournamets) {
+                                    if (tour.getNazwa().equals(nameOfTour)) {
+                                        id = tour.getId();
+                                        break;
+                                    }
+                                }
+                                new TableControllerMatches(context).create(new Match(team1Set1.getTag().toString(), winner.getText().toString(),losser.getText().toString(), team1Set1.getText().toString(), team1Set2.getText().toString(), team1Set3.getText().toString(), team2Set1.getText().toString(), team2Set2.getText().toString(), team2Set3.getText().toString(), id));
+                            }else {
+                                //ONLINE
+                                database.addResultToDatabase(nameOfTour,typeOfTour,winner,losser,team1Set1, team1Set2, team1Set3, team2Set1, team2Set2, team2Set3);
+                            }
                             imm.hideSoftInputFromWindow(team2Set3.getWindowToken(), 0);
                             team1Set1.setVisibility(View.INVISIBLE);
                             team2Set1.setVisibility(View.INVISIBLE);
@@ -483,6 +516,7 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
 
 
     public void setForGroup(final EditText team1Set1, final EditText team1Set2, final EditText team1Set3, final EditText team2Set1, final EditText team2Set2, final EditText team2Set3, final TextView setsFor1, final TextView setsFor1_2, final TextView setsFor2, final TextView setsFor2_2) {
+
 
         setsFor1.setVisibility(View.INVISIBLE);
         setsFor2.setVisibility(View.INVISIBLE);
@@ -707,7 +741,15 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                             setsFor1.setVisibility(View.VISIBLE);
                             setsFor2.setVisibility(View.VISIBLE);
 
-
+                            List<TournamentLocal> tournamets = new TableControllerTournament(context).read();
+                            int id = 0;
+                            for (TournamentLocal tour : tournamets) {
+                                if (tour.getNazwa().equals(nameOfTour)) {
+                                    id = tour.getId();
+                                    break;
+                                }
+                            }
+                            new TableControllerMatches(context).create(new Match(setsFor1.getTag().toString(), String.valueOf(setFor1),String.valueOf(setFor2), team1Set1.getText().toString(), team1Set2.getText().toString(), team1Set3.getText().toString(), team2Set1.getText().toString(), team2Set2.getText().toString(), team2Set3.getText().toString(), id));
                             //Reset all
                             team1Set1.setOnEditorActionListener(null);
                             team2Set1.setOnEditorActionListener(null);
@@ -859,6 +901,15 @@ public class SetDetailedResultFor2Sets implements ISetDetailedResultFor2Sets {
                         setsFor1.setVisibility(View.VISIBLE);
                         setsFor2.setVisibility(View.VISIBLE);
 
+                        List<TournamentLocal> tournamets = new TableControllerTournament(context).read();
+                        int id = 0;
+                        for (TournamentLocal tour : tournamets) {
+                            if (tour.getNazwa().equals(nameOfTour)) {
+                                id = tour.getId();
+                                break;
+                            }
+                        }
+                        new TableControllerMatches(context).create(new Match(setsFor1.getTag().toString(), String.valueOf(setFor1),String.valueOf(setFor2), team1Set1.getText().toString(), team1Set2.getText().toString(), team1Set3.getText().toString(), team2Set1.getText().toString(), team2Set2.getText().toString(), team2Set3.getText().toString(), id));
 
                         //Reset all
                         team1Set1.setOnEditorActionListener(null);

@@ -11,7 +11,13 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.adam.rozpiskimeczowe.LocalDatabase.TableControllerTeams;
+import com.example.adam.rozpiskimeczowe.LocalDatabase.TableControllerTournament;
+import com.example.adam.rozpiskimeczowe.LocalDatabase.Team;
+import com.example.adam.rozpiskimeczowe.LocalDatabase.TournamentLocal;
 import com.example.adam.rozpiskimeczowe.R;
+
+import java.util.List;
 
 public class EFEactiv extends AppCompatActivity {
     Toast toastNameTeams;
@@ -23,6 +29,7 @@ public class EFEactiv extends AppCompatActivity {
     EditText pktInSet;
     CheckBox box3;
     CheckBox box4;
+    EditText nameOfTour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +39,7 @@ public class EFEactiv extends AppCompatActivity {
         toastNameTeams = Toast.makeText(getApplicationContext(), "Nazwij wszyskie drużyny", Toast.LENGTH_SHORT);
         toastPktInSet = Toast.makeText(getApplicationContext(), "Podaj do ilu pkt bedzie rozgrywany set", Toast.LENGTH_SHORT);
 
+        nameOfTour = findViewById(R.id.GroupNameOfTour);
 
         name1 = findViewById(R.id.Name1);
         name2 = findViewById(R.id.Name2);
@@ -111,6 +119,7 @@ public class EFEactiv extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             //START WITH CHECK
+            //SPRAWDZENIE NAZWY TURNIEJU W SQLITE !!!!
             case R.id.menuStartButton:
                 Intent intent2 = new Intent(EFEactiv.this, Results.class);
                 intent2.putExtra("Bool3", box3.isChecked());
@@ -128,6 +137,37 @@ public class EFEactiv extends AppCompatActivity {
                             intent.putExtra("NameOfTeam2", name2.getText().toString());
                             intent.putExtra("NameOfTeam3", name3.getText().toString());
                             intent.putExtra("pktInSet", pktInSet.getText().toString());
+                            intent.putExtra("nameOfTour", nameOfTour.getText().toString());
+
+                            List<TournamentLocal> tournamets = new TableControllerTournament(getApplicationContext()).read();
+                            for(TournamentLocal tour:tournamets){
+                                if(tour.getNazwa().equals(nameOfTour.getText().toString())){
+                                    Toast.makeText(getApplicationContext(),"Istnieje już turniej o takiej nazwie",Toast.LENGTH_SHORT).show();
+                                    return super.onOptionsItemSelected(item);
+                                }
+                            }
+                            TournamentLocal tournamentLocal = new TournamentLocal();
+                            tournamentLocal.setNazwa(nameOfTour.getText().toString());
+                            tournamentLocal.setTyp("Group3");
+                            tournamentLocal.setPktInSet(pktInSet.getText().toString());
+                            new TableControllerTournament(getApplicationContext()).create(tournamentLocal);
+
+                            tournamets = new TableControllerTournament(getApplicationContext()).read();
+                            int id=0;
+                            for(TournamentLocal tour:tournamets){
+                                if (tour.getNazwa().equals(nameOfTour.getText().toString())){
+                                    id = tour.getId();
+                                    break;
+                                }
+                            }
+
+                            Team team1 = new Team(name1.getText().toString(),id);
+                            new TableControllerTeams(getApplicationContext()).create(team1);
+                            Team team2 = new Team(name2.getText().toString(),id);
+                            new TableControllerTeams(getApplicationContext()).create(team2);
+                            Team team3 = new Team(name3.getText().toString(),id);
+                            new TableControllerTeams(getApplicationContext()).create(team3);
+
                             startActivity(intent);
                         }
                     }
@@ -144,6 +184,31 @@ public class EFEactiv extends AppCompatActivity {
                             intent.putExtra("NameOfTeam3", name3.getText().toString());
                             intent.putExtra("NameOfTeam4", name4.getText().toString());
                             intent.putExtra("pktInSet", pktInSet.getText().toString());
+                            intent.putExtra("nameOfTour", nameOfTour.getText().toString());
+
+                            TournamentLocal tournamentLocal = new TournamentLocal();
+                            tournamentLocal.setNazwa(nameOfTour.getText().toString());
+                            tournamentLocal.setTyp("Group4");
+                            tournamentLocal.setPktInSet(pktInSet.getText().toString());
+                            new TableControllerTournament(getApplicationContext()).create(tournamentLocal);
+
+                            List<TournamentLocal> tournamets = new TableControllerTournament(getApplicationContext()).read();
+                            int id=0;
+                            for(TournamentLocal tour:tournamets){
+                                if (tour.getNazwa().equals(nameOfTour.getText().toString())){
+                                    id = tour.getId();
+                                    break;
+                                }
+                            }
+
+                            Team team1 = new Team(name1.getText().toString(),id);
+                            new TableControllerTeams(getApplicationContext()).create(team1);
+                            Team team2 = new Team(name2.getText().toString(),id);
+                            new TableControllerTeams(getApplicationContext()).create(team2);
+                            Team team3 = new Team(name3.getText().toString(),id);
+                            new TableControllerTeams(getApplicationContext()).create(team3);
+                            Team team4 = new Team(name4.getText().toString(),id);
+                            new TableControllerTeams(getApplicationContext()).create(team4);
                             startActivity(intent);
                         }
                     }

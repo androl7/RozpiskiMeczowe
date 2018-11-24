@@ -34,7 +34,7 @@ public class SetResultsForCup implements ISetResultsForCup {
     private ArrayList<Button> listResultButtons;
     private DeleteResultBrazAndCup deleteResultBrazAndCup;
 
-    public SetResultsForCup(String nameOfTour,ArrayList listResultButtons,Map<Integer,ArrayList<EditText>> mapPointsInMatches,String typeOfTour,Context context, ViewGroup vg, String pktInSet, String pktInTieBreak, int numberOfMatches, int actualMatch, RelativeLayout relativeLayout, TextView[] numbersOfMatchesArray, View view, String numberOfCup, ZoomLayout zoomLayout){
+    public SetResultsForCup(String nameOfTour,ArrayList listResultButtons,Map<Integer,ArrayList<EditText>> mapPointsInMatches,String typeOfTour,Context context, ViewGroup vg, String pktInSet, String pktInTieBreak, int numberOfMatches, int actualMatch, RelativeLayout relativeLayout, TextView[] numbersOfMatchesArray, View view, String numberOfCup, ZoomLayout zoomLayout,String local){
         this.numberOfCup = numberOfCup;
         this.context = context;
         this.numberOfMatches = numberOfMatches;
@@ -44,7 +44,7 @@ public class SetResultsForCup implements ISetResultsForCup {
         this.view = view;
         this.toast = Toast.makeText(context, "Wprowadz wczesniejszy wynik !", Toast.LENGTH_SHORT);
         InputMethodManager imm = (InputMethodManager) Objects.requireNonNull(context.getSystemService(Context.INPUT_METHOD_SERVICE));
-        this.setDetailedResultFor2Sets = new SetDetailedResultFor2Sets(nameOfTour,typeOfTour,context,vg, imm,pktInSet,pktInTieBreak,zoomLayout);
+        this.setDetailedResultFor2Sets = new SetDetailedResultFor2Sets(nameOfTour,typeOfTour,context,vg, imm,pktInSet,pktInTieBreak,zoomLayout,local);
         this.mapPointsInMatches = mapPointsInMatches;
         this.listResultButtons = listResultButtons;
         deleteResultBrazAndCup = new DeleteResultBrazAndCup(context,nameOfTour,typeOfTour);
@@ -87,7 +87,7 @@ public class SetResultsForCup implements ISetResultsForCup {
                         Toast.makeText(context, "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
                     }else {
                         ResultButton.setText(firstPlayer.getText());
-                        setDetailedResultFor2Sets.set(firstPlayer,pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                        setDetailedResultFor2Sets.set(firstPlayer,secundPlayer,pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
                     }
                 }
 
@@ -104,7 +104,7 @@ public class SetResultsForCup implements ISetResultsForCup {
                         Toast.makeText(context, "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Natomiast jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_SHORT).show();
                     }else {
                         ResultButton.setText(secundPlayer.getText());
-                        setDetailedResultFor2Sets.set(secundPlayer,pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                        setDetailedResultFor2Sets.set(secundPlayer,firstPlayer,pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
 
                     }
                 }
@@ -115,7 +115,7 @@ public class SetResultsForCup implements ISetResultsForCup {
         ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                AlertDialog diaBox = deleteResultBrazAndCup.deleteResult(ResultButton,undoResultString,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
+                AlertDialog diaBox = deleteResultBrazAndCup.deleteResult(ResultButton,undoResultString,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set,null);
                 diaBox.show();
                 return true;
             }
@@ -236,7 +236,7 @@ public class SetResultsForCup implements ISetResultsForCup {
                     Toast.makeText(context, "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_LONG).show();
                 }else {
                     ResultButton.setText(firstPlayer.getText());
-                    setDetailedResultFor2Sets.set(firstPlayer,pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
+                    setDetailedResultFor2Sets.set(firstPlayer,secundPlayer,pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set, pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set);
 
                 }
             }
@@ -250,7 +250,7 @@ public class SetResultsForCup implements ISetResultsForCup {
                     Toast.makeText(context, "Wynik został już wprowadzony, jeśli chcesz go cofnąć przytrzymaj przycisk wygranego lub przegranego. Jeśli chcesz zobaczyć dokładny wynik, wejdz w zakladkę WYNIKI.", Toast.LENGTH_LONG).show();
                 }else {
                     ResultButton.setText(secundPlayer.getText());
-                    setDetailedResultFor2Sets.set(secundPlayer,pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
+                    setDetailedResultFor2Sets.set(secundPlayer,firstPlayer,pointsFor2In1Set, pointsFor2In2Set, pointsFor2In3Set, pointsFor1In1Set, pointsFor1In2Set, pointsFor1In3Set);
                 }
             }
         });
@@ -259,7 +259,7 @@ public class SetResultsForCup implements ISetResultsForCup {
             ResultButton.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    AlertDialog diaBox = deleteResultBrazAndCup.deleteResult(ResultButton,undoResultString,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set);
+                    AlertDialog diaBox = deleteResultBrazAndCup.deleteResult(ResultButton,undoResultString,pointsFor1In1Set,pointsFor1In2Set,pointsFor1In3Set,pointsFor2In1Set,pointsFor2In2Set,pointsFor2In3Set,null);
                     diaBox.show();
                     return true;
                 }

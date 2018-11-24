@@ -31,7 +31,9 @@ import java.io.FileReader;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class EFEactiv4 extends AppCompatActivity {
@@ -104,15 +106,21 @@ public class EFEactiv4 extends AppCompatActivity {
     EditText res34_4_2;
     EditText res34_4_3;
 
+    Map<Integer,ArrayList<String>> mapResults;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_efeactiv4);
+
+        mapResults = new HashMap<>();
+        mapResults = (HashMap<Integer,ArrayList<String>>)getIntent().getSerializableExtra("resMap");
+
         ViewGroup vg = findViewById(android.R.id.content);
         linearLayout = findViewById(R.id.Efe4MainLayout);
-
+        String nameOfTour = getIntent().getStringExtra("nameOfTour");
         getSupportActionBar().setTitle("Grupowy: 4");
         pktInSet = getIntent().getStringExtra("pktInSet");
-        SetResultsForGroups setResultsForGroups = new SetResultsForGroups(typeOfTour,this, vg, pktInSet, pktInTieBreak);
+        SetResultsForGroups setResultsForGroups = new SetResultsForGroups(nameOfTour,typeOfTour,this, vg, pktInSet, pktInTieBreak);
 
 
         final LinearLayout layoutSets12 = findViewById(R.id.efe4_linear_sets_12);
@@ -272,6 +280,97 @@ public class EFEactiv4 extends AppCompatActivity {
         name3.setText(getIntent().getStringExtra("NameOfTeam3"));
         name4.setText(getIntent().getStringExtra("NameOfTeam4"));
 
+
+        if(mapResults!=null) {
+            if (mapResults.get(1) != null) {
+                res12_1.setText(mapResults.get(1).get(6));
+                res21_1.setText(mapResults.get(1).get(6));
+                res12_1_1.setText(mapResults.get(1).get(0));
+                res12_1_2.setText(mapResults.get(1).get(1));
+                res12_1_3.setText(mapResults.get(1).get(2));
+
+                res12_2.setText(mapResults.get(1).get(7));
+                res21_2.setText(mapResults.get(1).get(7));
+                res12_2_1.setText(mapResults.get(1).get(3));
+                res12_2_2.setText(mapResults.get(1).get(4));
+                res12_2_3.setText(mapResults.get(1).get(5));
+                TM1.setPaintFlags(TM1.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+
+            if (mapResults.get(2) != null) {
+                res13_1.setText(mapResults.get(2).get(6));
+                res31_1.setText(mapResults.get(2).get(6));
+                res13_1_1.setText(mapResults.get(2).get(0));
+                res13_1_2.setText(mapResults.get(2).get(1));
+                res13_1_3.setText(mapResults.get(2).get(2));
+
+                res13_3.setText(mapResults.get(2).get(7));
+                res31_3.setText(mapResults.get(2).get(7));
+                res13_3_1.setText(mapResults.get(2).get(3));
+                res13_3_2.setText(mapResults.get(2).get(4));
+                res13_3_3.setText(mapResults.get(2).get(5));
+                TM2.setPaintFlags(TM2.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+
+            if (mapResults.get(3) != null) {
+                res23_2.setText(mapResults.get(3).get(6));
+                res32_2.setText(mapResults.get(3).get(6));
+                res23_2_1.setText(mapResults.get(3).get(0));
+                res23_2_2.setText(mapResults.get(3).get(1));
+                res23_2_3.setText(mapResults.get(3).get(2));
+
+                res23_3.setText(mapResults.get(3).get(7));
+                res32_3.setText(mapResults.get(3).get(7));
+                res23_3_1.setText(mapResults.get(3).get(3));
+                res23_3_2.setText(mapResults.get(3).get(4));
+                res23_3_3.setText(mapResults.get(3).get(5));
+                TM3.setPaintFlags(TM3.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+
+            if (mapResults.get(4) != null) {
+                res14_1.setText(mapResults.get(4).get(6));
+                res41_1.setText(mapResults.get(4).get(6));
+                res14_1_1.setText(mapResults.get(4).get(0));
+                res14_1_2.setText(mapResults.get(4).get(1));
+                res14_1_3.setText(mapResults.get(4).get(2));
+
+                res14_4.setText(mapResults.get(4).get(7));
+                res41_4.setText(mapResults.get(4).get(7));
+                res14_4_1.setText(mapResults.get(4).get(3));
+                res14_4_2.setText(mapResults.get(4).get(4));
+                res14_4_3.setText(mapResults.get(4).get(5));
+                TM4.setPaintFlags(TM4.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+            if (mapResults.get(5) != null) {
+                res24_2.setText(mapResults.get(5).get(6));
+                res42_2.setText(mapResults.get(5).get(6));
+                res24_2_1.setText(mapResults.get(5).get(0));
+                res24_2_2.setText(mapResults.get(5).get(1));
+                res24_2_3.setText(mapResults.get(5).get(2));
+
+                res24_4.setText(mapResults.get(5).get(7));
+                res42_4.setText(mapResults.get(5).get(7));
+                res24_4_1.setText(mapResults.get(5).get(3));
+                res24_4_2.setText(mapResults.get(5).get(4));
+                res24_4_3.setText(mapResults.get(5).get(5));
+                TM5.setPaintFlags(TM5.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+            if (mapResults.get(6) != null) {
+                res34_3.setText(mapResults.get(6).get(6));
+                res43_3.setText(mapResults.get(6).get(6));
+                res34_3_1.setText(mapResults.get(6).get(0));
+                res34_3_2.setText(mapResults.get(6).get(1));
+                res34_3_3.setText(mapResults.get(6).get(2));
+
+                res34_4.setText(mapResults.get(6).get(7));
+                res43_4.setText(mapResults.get(6).get(7));
+                res34_4_1.setText(mapResults.get(6).get(3));
+                res34_4_2.setText(mapResults.get(6).get(4));
+                res34_4_3.setText(mapResults.get(6).get(5));
+                TM6.setPaintFlags(TM6.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+        }
+
         // dodanie wyników
         setResultsForGroups.set(layoutSets14, res14_1_1, res14_1_2, res14_1_3, res14_4_1, res14_4_2, res14_4_3, res14_1, res14_4, res41_1, res41_4, TM1);
         setResultsForGroups.set(layoutSets23, res23_2_1, res23_2_2, res23_2_3, res23_3_1, res23_3_2, res23_3_3, res23_2, res23_3, res32_2, res32_3, TM2);
@@ -279,6 +378,7 @@ public class EFEactiv4 extends AppCompatActivity {
         setResultsForGroups.set(layoutSets24, res24_2_1, res24_2_2, res24_2_3, res24_4_1, res24_4_2, res24_4_3, res24_2, res24_4, res42_2, res42_4, TM4);
         setResultsForGroups.set(layoutSets12, res12_1_1, res12_1_2, res12_1_3, res12_2_1, res12_2_2, res12_2_3, res12_1, res12_2, res21_1, res21_2, TM5);
         setResultsForGroups.set(layoutSets34, res34_3_1, res34_3_2, res34_3_3, res34_4_1, res34_4_2, res34_4_3, res34_3, res34_4, res43_3, res43_4, TM6);
+
 
 
     }

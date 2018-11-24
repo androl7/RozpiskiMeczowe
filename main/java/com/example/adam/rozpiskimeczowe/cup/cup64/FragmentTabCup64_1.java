@@ -68,7 +68,7 @@ public class FragmentTabCup64_1 extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_fragment_tab_cup64_1, container, false);
 
-
+        String local = getActivity().getIntent().getStringExtra("local");
 
         db = FirebaseFirestore.getInstance();
         mapPointsInMatches = new HashMap<>();
@@ -90,7 +90,7 @@ public class FragmentTabCup64_1 extends Fragment {
             numbersOfMatchesArray[i] = view.findViewById(resID);
         }
 
-        setResultsForCup = new SetResultsForCup(nameOfTour,listResultButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,numberOfMatches,actualMatch,relativeLayout,numbersOfMatchesArray,view,"cup64",zoomLayout);
+        setResultsForCup = new SetResultsForCup(nameOfTour,listResultButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,numberOfMatches,actualMatch,relativeLayout,numbersOfMatchesArray,view,"cup64",zoomLayout,local);
 
 
         final EditText Res1_1 = view.findViewById(R.id.cup64Res1_1);

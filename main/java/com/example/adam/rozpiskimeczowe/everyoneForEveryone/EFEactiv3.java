@@ -31,7 +31,9 @@ import java.io.FileReader;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class EFEactiv3 extends AppCompatActivity {
@@ -73,15 +75,21 @@ public class EFEactiv3 extends AppCompatActivity {
     EditText res23_3_2;
     EditText res23_3_3;
 
+    Map<Integer,ArrayList<String>> mapResults;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_efe_activ3);
-        ViewGroup vg = findViewById(android.R.id.content);
+        ViewGroup vg = (ViewGroup) ((ViewGroup) this.findViewById(android.R.id.content)).getChildAt(0);
         linearLayout = findViewById(R.id.Efe3MainLayout);
+        String nameOfTour = getIntent().getStringExtra("nameOfTour");
+        mapResults = new HashMap<>();
+        mapResults = (HashMap<Integer,ArrayList<String>>)getIntent().getSerializableExtra("resMap");
+
 
         getSupportActionBar().setTitle("Grupowy: 3");
         pktInSet = getIntent().getStringExtra("pktInSet");
-        SetResultsForGroups setResultsForGroups = new SetResultsForGroups(typeOfTour,this, vg, pktInSet, pktInTieBreak);
+        SetResultsForGroups setResultsForGroups = new SetResultsForGroups(nameOfTour,typeOfTour,this, vg, pktInSet, pktInTieBreak);
 
 
         final LinearLayout layoutSets12 = findViewById(R.id.efe3_linear_sets_12);
@@ -168,10 +176,58 @@ public class EFEactiv3 extends AppCompatActivity {
         name2.setText(getIntent().getStringExtra("NameOfTeam2"));
         name3.setText(getIntent().getStringExtra("NameOfTeam3"));
 
+        if(mapResults!=null) {
+            if (mapResults.get(1) != null) {
+                res12_1.setText(mapResults.get(1).get(6));
+                res21_1.setText(mapResults.get(1).get(6));
+                res12_1_1.setText(mapResults.get(1).get(0));
+                res12_1_2.setText(mapResults.get(1).get(1));
+                res12_1_3.setText(mapResults.get(1).get(2));
+
+                res12_2.setText(mapResults.get(1).get(7));
+                res21_2.setText(mapResults.get(1).get(7));
+                res12_2_1.setText(mapResults.get(1).get(3));
+                res12_2_2.setText(mapResults.get(1).get(4));
+                res12_2_3.setText(mapResults.get(1).get(5));
+                TM1.setPaintFlags(TM1.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+
+            if (mapResults.get(2) != null) {
+                res13_1.setText(mapResults.get(2).get(6));
+                res31_1.setText(mapResults.get(2).get(6));
+                res13_1_1.setText(mapResults.get(2).get(0));
+                res13_1_2.setText(mapResults.get(2).get(1));
+                res13_1_3.setText(mapResults.get(2).get(2));
+
+                res13_3.setText(mapResults.get(2).get(7));
+                res31_3.setText(mapResults.get(2).get(7));
+                res13_3_1.setText(mapResults.get(2).get(3));
+                res13_3_2.setText(mapResults.get(2).get(4));
+                res13_3_3.setText(mapResults.get(2).get(5));
+                TM2.setPaintFlags(TM2.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+
+            if (mapResults.get(3) != null) {
+                res23_2.setText(mapResults.get(3).get(6));
+                res32_2.setText(mapResults.get(3).get(6));
+                res23_2_1.setText(mapResults.get(3).get(0));
+                res23_2_2.setText(mapResults.get(3).get(1));
+                res23_2_3.setText(mapResults.get(3).get(2));
+
+                res23_3.setText(mapResults.get(3).get(7));
+                res32_3.setText(mapResults.get(3).get(7));
+                res23_3_1.setText(mapResults.get(3).get(3));
+                res23_3_2.setText(mapResults.get(3).get(4));
+                res23_3_3.setText(mapResults.get(3).get(5));
+                TM3.setPaintFlags(TM3.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            }
+        }
+
         // dodanie wyników
         setResultsForGroups.set(layoutSets12, res12_1_1, res12_1_2, res12_1_3, res12_2_1, res12_2_2, res12_2_3, res12_1, res12_2, res21_1, res21_2, TM1);
         setResultsForGroups.set(layoutSets13, res13_1_1, res13_1_2, res13_1_3, res13_3_1, res13_3_2, res13_3_3, res13_1, res13_3, res31_1, res31_3, TM2);
         setResultsForGroups.set(layoutSets23, res23_2_1, res23_2_2, res23_2_3, res23_3_1, res23_3_2, res23_3_3, res23_2, res23_3, res32_2, res32_3, TM3);
+
 
 
     }

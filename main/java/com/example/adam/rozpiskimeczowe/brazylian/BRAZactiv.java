@@ -27,6 +27,7 @@ import com.example.adam.rozpiskimeczowe.LocalDatabase.TableControllerTournament;
 import com.example.adam.rozpiskimeczowe.LocalDatabase.Team;
 import com.example.adam.rozpiskimeczowe.LocalDatabase.TournamentLocal;
 import com.example.adam.rozpiskimeczowe.R;
+import com.example.adam.rozpiskimeczowe.Tournament;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian16.BRAZactiv16;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian8.BRAZactiv8;
 
@@ -40,6 +41,7 @@ public class BRAZactiv extends AppCompatActivity {
     CustomAdapter customAdapter;
     String type ="";
     EditText nameOfTour;
+    EditText editTextPkt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,7 @@ public class BRAZactiv extends AppCompatActivity {
         list.setItemsCanFocus(true);
 
         // lost focus after set points in set
-        final EditText editTextPkt = findViewById(R.id.brazEditTextPkt);
+        editTextPkt = findViewById(R.id.brazEditTextPkt);
         final RelativeLayout relativeLayout = findViewById(R.id.brazMainLayout);
         final InputMethodManager imm = (InputMethodManager) Objects.requireNonNull(getApplicationContext()).getSystemService(Context.INPUT_METHOD_SERVICE);
 
@@ -274,12 +276,21 @@ public class BRAZactiv extends AppCompatActivity {
                         }
 
                         String nameTour =  nameOfTour.getText().toString();
+
+                        List<TournamentLocal> tournamets = new TableControllerTournament(getApplicationContext()).read();
+                        for(TournamentLocal tour:tournamets){
+                            if(tour.getNazwa().equals(nameTour)){
+                                Toast.makeText(getApplicationContext(),"Istnieje już turniej o takiej nazwie",Toast.LENGTH_SHORT).show();
+                                return super.onOptionsItemSelected(item);
+                            }
+                        }
                         TournamentLocal tournamentLocal = new TournamentLocal();
                         tournamentLocal.setNazwa(nameTour);
                         tournamentLocal.setTyp(type);
+                        tournamentLocal.setPktInSet(editTextPkt.getText().toString());
                         new TableControllerTournament(getApplicationContext()).create(tournamentLocal);
-                        //ZMIANA !!!! SIZE MI WCHODZI ZLE !!! TRZBEA JAKOŚ ZROBIĆ getid!!
-                        List<TournamentLocal> tournamets = new TableControllerTournament(getApplicationContext()).read();
+
+                        tournamets = new TableControllerTournament(getApplicationContext()).read();
                         int id=0;
                         for(TournamentLocal tour:tournamets){
                             if (tour.getNazwa().equals(nameTour)){
@@ -292,6 +303,9 @@ public class BRAZactiv extends AppCompatActivity {
                             Team team = new Team(customAdapter.getItem(i),id);
                             new TableControllerTeams(getApplicationContext()).create(team);
                         }
+                        intent.putExtra("nameOfTour",nameTour);
+                        intent.putExtra("local","true");
+                        intent.putExtra("pktInSet",editTextPkt.getText().toString());
                         startActivity(intent);
 
                     } else {

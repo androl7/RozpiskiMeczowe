@@ -6,6 +6,7 @@ public class TournamentLocal {
     private int id;
     private String nazwa;
     private String typ;
+    private String pktInSet;
 
     TournamentLocal(String nazwa, String typ){
         this.nazwa = nazwa;
@@ -38,5 +39,13 @@ public class TournamentLocal {
 
     public void setTyp(String typ) {
         this.typ = typ;
+    }
+
+    public void setPktInSet(String pktInSet) {
+        this.pktInSet = pktInSet;
+    }
+
+    public String getPktInSet() {
+        return pktInSet;
     }
 }

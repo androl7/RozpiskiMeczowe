@@ -18,8 +18,9 @@ public class TableControllerMatches extends DBHelper  {
 
         ContentValues values = new ContentValues();
 
-        values.put("idM", match.getIdM());
         values.put("nrM", match.getNrM());
+        values.put("winner",match.getWinner());
+        values.put("losser",match.getLosser());
         values.put("res1_1", match.getRes1_1());
         values.put("res1_2", match.getRes1_2());
         values.put("res1_3", match.getRes1_3());
@@ -49,19 +50,23 @@ public class TableControllerMatches extends DBHelper  {
             do {
 
                 int idM = Integer.parseInt(cursor.getString(cursor.getColumnIndex("idM")));
-                int nrM = Integer.parseInt(cursor.getString(cursor.getColumnIndex("nrM")));
-                int res1_1 = Integer.parseInt(cursor.getString(cursor.getColumnIndex("res1_1")));
-                int res1_2 = Integer.parseInt(cursor.getString(cursor.getColumnIndex("res1_2")));
-                int res1_3 = Integer.parseInt(cursor.getString(cursor.getColumnIndex("res1_3")));
-                int res2_1 = Integer.parseInt(cursor.getString(cursor.getColumnIndex("res2_1")));
-                int res2_2 = Integer.parseInt(cursor.getString(cursor.getColumnIndex("res2_2")));
-                int res2_3 = Integer.parseInt(cursor.getString(cursor.getColumnIndex("res2_3")));
+                String nrM = cursor.getString(cursor.getColumnIndex("nrM"));
+                String winner = cursor.getString(cursor.getColumnIndex("winner"));
+                String losser = cursor.getString(cursor.getColumnIndex("losser"));
+                String res1_1 = cursor.getString(cursor.getColumnIndex("res1_1"));
+                String res1_2 = cursor.getString(cursor.getColumnIndex("res1_2"));
+                String res1_3 = cursor.getString(cursor.getColumnIndex("res1_3"));
+                String res2_1 = cursor.getString(cursor.getColumnIndex("res2_1"));
+                String res2_2 = cursor.getString(cursor.getColumnIndex("res2_2"));
+                String res2_3 = cursor.getString(cursor.getColumnIndex("res2_3"));
 
                 int teamidTour = Integer.parseInt(cursor.getString(cursor.getColumnIndex("idTour")));
 
                 Match match = new Match();
                 match.setIdM(idM);
                 match.setNrM(nrM);
+                match.setWinner(winner);
+                match.setLosser(losser);
                 match.setRes1_1(res1_1);
                 match.setRes1_2(res1_2);
                 match.setRes1_3(res1_3);
@@ -79,5 +84,16 @@ public class TableControllerMatches extends DBHelper  {
         db.close();
 
         return recordsList;
+    }
+
+    public boolean delete(int nrM) {
+        boolean deleteSuccessful;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        deleteSuccessful = db.delete("matches", "nrM ='" + nrM + "'", null) > 0;
+        db.close();
+
+        return deleteSuccessful;
+
     }
 }

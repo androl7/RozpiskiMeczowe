@@ -26,9 +26,10 @@ import java.util.Objects;
 public class FragmentTabBraz16_1 extends Fragment {
     Map<Integer,ArrayList<EditText>> mapPointsInMatches;
     Map<Integer,ArrayList<String>> mapElimination;
+    HashMap<String,Button> mapLossersButtons;
     ArrayList<Button> listResultButtons;
     Toast toast;
-    String pktInSet = "21";
+    String pktInSet;
     String pktInTieBreak = "15";
     String typeOfTour = "braz16";
     View view;
@@ -43,13 +44,20 @@ public class FragmentTabBraz16_1 extends Fragment {
         view = inflater.inflate(R.layout.fragment_fragment_tab_braz16_1, container, false);
 
         nameOfTour = getActivity().getIntent().getStringExtra("nameOfTour");
+        String local = getActivity().getIntent().getStringExtra("local");
         mapPointsInMatches = new HashMap<>();
         listResultButtons = new ArrayList<>();
-        mapElimination = new HashMap<>();
+        mapLossersButtons = new HashMap<>();
+
+
+        pktInSet = getActivity().getIntent().getStringExtra("pktInSet");
+        if(pktInSet==null){
+            pktInSet="21";
+        }
 
 
         zoomLayout = view.findViewById(R.id.braz16_zoomLayout);
-        setResultsForBraz = new SetResultsForBraz(nameOfTour,listResultButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,zoomLayout);
+        setResultsForBraz = new SetResultsForBraz(nameOfTour,listResultButtons,mapLossersButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,zoomLayout,local);
 
 
         final EditText Res1_1 = view.findViewById(R.id.braz16Res1_1);
@@ -673,9 +681,16 @@ public class FragmentTabBraz16_1 extends Fragment {
         //30 MECZ FINAL
         setResultsForBraz.WithCheckWithoutLoser(win27, "WIN.27", win28, "WIN.28", win30, "WIN.30", braz16Res30_Win_27, braz16Res30_Win_27_2set, braz16Res30_Win_27_3set, braz16Res30_Win_28, braz16Res30_Win_28_2set, braz16Res30_Win_28_3set);
 
+        if(local!=null) {
+            mapElimination = new HashMap<>();
+            mapElimination = (HashMap<Integer,ArrayList<String>>)getActivity().getIntent().getSerializableExtra("resMap");
+            getResultFromLocalDatabase(mapElimination,mapPointsInMatches,listResultButtons);
+        }else {
+            mapElimination = new HashMap<>();
+            database = new Database(mapElimination, mapPointsInMatches, listResultButtons);
+            database.getResultFromDatabaseWithUpdateForBraz(nameOfTour, typeOfTour,mapLossersButtons);
+        }
 
-        database = new Database(mapElimination,mapPointsInMatches,listResultButtons);
-        database.getResultFromDatabaseWithUpdate(nameOfTour,typeOfTour);
 
         RelativeLayout relativeLayout = view.findViewById(R.id.braz16_relLayout);
         onlyWatch = getActivity().getIntent().getStringExtra("OnlyWatch");
@@ -687,6 +702,26 @@ public class FragmentTabBraz16_1 extends Fragment {
             }
         }
         return view;
+    }
+
+    private void getResultFromLocalDatabase(Map<Integer,ArrayList<String>> mapResults,Map<Integer,ArrayList<EditText>> mapPointsInMatches,ArrayList<Button> listResultButtons) {
+        if (mapResults != null&&mapPointsInMatches!=null) {
+            for (int i = 0; i < mapResults.size(); i++) {
+                int key = Integer.parseInt(mapResults.keySet().toArray()[i].toString());
+                for (int j = 0; j < 6; j++) {
+                    mapPointsInMatches
+                            .get(key)
+                            .get(j)
+                            .setText(mapResults
+                                    .get(key)
+                                    .get(j));
+                }
+                listResultButtons.get(key - 1).setText(mapResults.get(key).get(6));
+                if(mapLossersButtons.get(String.valueOf(key))!=null) {
+                    mapLossersButtons.get(String.valueOf(key)).setText(mapResults.get(key).get(7));
+                }
+            }
+        }
     }
 }
 

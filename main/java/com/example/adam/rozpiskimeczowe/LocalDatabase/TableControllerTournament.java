@@ -20,6 +20,7 @@ public class TableControllerTournament extends DBHelper{
 
         values.put("name", tournamentLocal.getNazwa());
         values.put("typ", tournamentLocal.getTyp());
+        values.put("pktInSet",tournamentLocal.getPktInSet());
 
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -44,11 +45,13 @@ public class TableControllerTournament extends DBHelper{
                 int idTour = Integer.parseInt(cursor.getString(cursor.getColumnIndex("idTour")));
                 String tournamentName = cursor.getString(cursor.getColumnIndex("name"));
                 String tournamentType = cursor.getString(cursor.getColumnIndex("typ"));
+                String tournamentpktInSet = cursor.getString(cursor.getColumnIndex("pktInSet"));
 
                 TournamentLocal tournamentLocal = new TournamentLocal();
                 tournamentLocal.setId(idTour);
                 tournamentLocal.setNazwa(tournamentName);
                 tournamentLocal.setTyp(tournamentType);
+                tournamentLocal.setPktInSet(tournamentpktInSet);
 
                 recordsList.add(tournamentLocal);
 

@@ -6,7 +6,7 @@
 
     <item
         android:id="@+id/menuStartButton"
-        android:title="Start"
+        android:title="Utwórz"
         app:showAsAction="always"
 
         />

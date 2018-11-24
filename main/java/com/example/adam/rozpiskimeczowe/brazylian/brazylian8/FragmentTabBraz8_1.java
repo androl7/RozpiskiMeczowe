@@ -22,10 +22,13 @@ import java.util.Map;
 import java.util.Objects;
 
 public class FragmentTabBraz8_1 extends Fragment  {
+    String nameOfTour;
     Map<Integer,ArrayList<EditText>> mapPointsInMatches;
     ArrayList<Button> listResultButtons;
+    Map<Integer,ArrayList<String>> mapElimination;
+    HashMap<String,Button> mapLossersButtons;
     Toast toast;
-    String pktInSet = "21";
+    String pktInSet;
     String pktInTieBreak = "15";
     String typeOfTour = "braz8";
     View view;
@@ -36,11 +39,20 @@ public class FragmentTabBraz8_1 extends Fragment  {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_fragment_tab_braz8_1, container, false);
-
+        String local = getActivity().getIntent().getStringExtra("local");
+        nameOfTour = getActivity().getIntent().getStringExtra("nameOfTour");
         zoomLayout = view.findViewById(R.id.braz8_zoomLayout);
         mapPointsInMatches = new HashMap<>();
         listResultButtons = new ArrayList<>();
-        setResultsForBraz = new SetResultsForBraz("333",listResultButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,zoomLayout);
+        mapLossersButtons = new HashMap<>();
+
+        pktInSet = getActivity().getIntent().getStringExtra("pktInSet");
+        if(pktInSet==null){
+            pktInSet="21";
+        }
+
+
+        setResultsForBraz = new SetResultsForBraz(nameOfTour,listResultButtons,mapLossersButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,zoomLayout,local);
 
 
 
@@ -333,8 +345,27 @@ public class FragmentTabBraz8_1 extends Fragment  {
         //14 MECZ FINAL
         setResultsForBraz.WithCheckWithoutLoser(win11, "WIN.11", win12, "WIN.12", win14, "WIN.14", braz8Res14_Win_11, braz8Res14_Win_11_2set, braz8Res14_Win_11_3set, braz8Res14_Win_12, braz8Res14_Win_12_2set, braz8Res14_Win_12_3set);
 
+
+        mapElimination = new HashMap<>();
+        mapElimination = (HashMap<Integer,ArrayList<String>>)getActivity().getIntent().getSerializableExtra("resMap");
+        getResultFromLocalDatabase(mapElimination,mapPointsInMatches,listResultButtons);
         return view;
 
+    }
+
+    private void getResultFromLocalDatabase(Map<Integer,ArrayList<String>> mapResults,Map<Integer,ArrayList<EditText>> mapPointsInMatches,ArrayList<Button> listResultButtons) {
+        if (mapResults != null&&mapPointsInMatches!=null) {
+            for (int i = 0; i < mapResults.size(); i++) {
+                int key = Integer.parseInt(mapResults.keySet().toArray()[i].toString());
+                for (int j = 0; j < 6; j++) {
+                    mapPointsInMatches.get(key).get(j).setText(mapResults.get(key).get(j));
+                }
+                listResultButtons.get(key - 1).setText(mapResults.get(key).get(6));
+                if(mapLossersButtons.get(String.valueOf(key))!=null) {
+                    mapLossersButtons.get(String.valueOf(key)).setText(mapResults.get(key).get(7));
+                }
+            }
+        }
     }
 
 }

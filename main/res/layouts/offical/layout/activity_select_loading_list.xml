@@ -7,20 +7,29 @@
     tools:context=".loadDatabase.SelectLoadingList"
     android:background="@drawable/plaza">
 
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
     <Button
         android:id="@+id/SelectLoadingOfficalList"
-        android:layout_marginTop="50dp"
-        android:text="Offical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_weight="1"
+        android:text="Oficjalne"
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_marginEnd="5dp"/>
 
     <Button
         android:id="@+id/SelectLoadingLocalList"
-        android:layout_marginTop="200dp"
-        android:text="local"
-        android:layout_below="@+id/SelectLoadingOfficalList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+        android:text="Moje"
+        android:layout_weight="1"
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/rounded_edittext"/>
+    </LinearLayout>
 </RelativeLayout>

@@ -72,7 +72,7 @@ public class Database {
                 });
     }
 
-    void addResultToDatabase(String nameOfTour,String typeOfTour,Button winner, EditText res1_1, EditText res1_2, EditText res1_3, EditText res2_1, EditText res2_2, EditText res2_3) {
+    void addResultToDatabase(String nameOfTour,String typeOfTour,Button winner,Button losser, EditText res1_1, EditText res1_2, EditText res1_3, EditText res2_1, EditText res2_2, EditText res2_3) {
 
         try {
             //add points to arrayList
@@ -84,6 +84,7 @@ public class Database {
             pointsInSets.add(res2_2.getText().toString());
             pointsInSets.add(res2_3.getText().toString());
             pointsInSets.add(winner.getText().toString());
+            pointsInSets.add(losser.getText().toString());
 
             Map<String, Object> result = new HashMap<>();
             result.put(res1_1.getTag().toString(), pointsInSets);
@@ -155,6 +156,57 @@ public class Database {
                     mapPointsInMatches.get(key).get(j).setText(mapResults.get(String.valueOf(key)).get(j));
                 }
                 listResultButtons.get(key - 1).setText(mapResults.get(String.valueOf(key)).get(6));
+            }
+        }
+    }
+
+    public void getResultFromDatabaseWithUpdateForBraz(String nameOfTour, String typeOfTour,final HashMap<String,Button> mapLossersButtons){
+        try {
+            db.collection("tournaments").document(nameOfTour).collection("Matches").document(typeOfTour).get()
+                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot snapshot) {
+                            if(snapshot != null && snapshot.exists()){
+                                mapResults = (HashMap) snapshot.getData();
+                                getResultFromDatabaseForBraz(mapLossersButtons);
+                            }
+                        }
+                    });
+
+            final DocumentReference docRef = db.collection("tournaments").document(nameOfTour).collection("Matches").document(typeOfTour);
+            docRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                @Override
+                public void onEvent(@Nullable DocumentSnapshot snapshot,
+                                    @Nullable FirebaseFirestoreException e) {
+                    if (e != null) {
+
+                        return;
+                    }
+
+                    if (snapshot != null && snapshot.exists()) {
+                        mapResults = (HashMap) snapshot.getData();
+                        getResultFromDatabaseForBraz(mapLossersButtons);
+                    } else {
+
+                    }
+                }
+            });
+        }catch (Exception e){
+            Log.e("Database","getResultFromDatabaseWithUpdate");
+        }
+    }
+
+    private void getResultFromDatabaseForBraz(HashMap<String,Button> mapLossersButtons) {
+        if (mapResults != null&&mapPointsInMatches!=null) {
+            for (int i = 0; i < mapResults.size(); i++) {
+                int key = Integer.parseInt(mapResults.keySet().toArray()[i].toString());
+                for (int j = 0; j < 6; j++) {
+                    mapPointsInMatches.get(key).get(j).setText(mapResults.get(String.valueOf(key)).get(j));
+                }
+                listResultButtons.get(key - 1).setText(mapResults.get(String.valueOf(key)).get(6));
+                if(mapLossersButtons.get(String.valueOf(key))!=null) {
+                    mapLossersButtons.get(String.valueOf(key)).setText(mapResults.get(String.valueOf(key)).get(7));
+                }
             }
         }
     }

@@ -18,7 +18,8 @@ public class DBHelper extends SQLiteOpenHelper {
         String sqlTour = "CREATE TABLE tournaments"+
                 "( idTour INTEGER PRIMARY KEY AUTOINCREMENT, "+
                 "name TEXT, " +
-                "typ TEXT) ";
+                "typ TEXT, "+
+                "pktInSet TEXT) ";
         db.execSQL(sqlTour);
 
         String sqlTeams = "CREATE TABLE teams"+
@@ -30,13 +31,15 @@ public class DBHelper extends SQLiteOpenHelper {
 
         String sqlMatches = "CREATE TABLE matches"+
                 "( idM INTEGER PRIMARY KEY AUTOINCREMENT, "+
-                " NrM INTEGER , "+
-                "res1_1 INTEGER, " +
-                "res1_2 INTEGER, " +
-                "res1_3 INTEGER, " +
-                "res2_1 INTEGER, " +
-                "res2_2 INTEGER, " +
-                "res2_3 INTEGER, " +
+                "nrM TEXT, "+
+                "winner TEXT, "+
+                "losser TEXT, "+
+                "res1_1 TEXT, " +
+                "res1_2 TEXT, " +
+                "res1_3 TEXT, " +
+                "res2_1 TEXT, " +
+                "res2_2 TEXT, " +
+                "res2_3 TEXT, " +
                 "idTour INTEGER,"+
                 "FOREIGN KEY(idTour) REFERENCES tournaments(idTour)ON DELETE CASCADE)";
         db.execSQL(sqlMatches);

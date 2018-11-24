@@ -16,6 +16,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adam.rozpiskimeczowe.LocalDatabase.Match;
+import com.example.adam.rozpiskimeczowe.LocalDatabase.TableControllerMatches;
 import com.example.adam.rozpiskimeczowe.LocalDatabase.TableControllerTeams;
 import com.example.adam.rozpiskimeczowe.LocalDatabase.TableControllerTournament;
 import com.example.adam.rozpiskimeczowe.LocalDatabase.Team;
@@ -23,8 +25,15 @@ import com.example.adam.rozpiskimeczowe.LocalDatabase.TournamentLocal;
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian16.BRAZactiv16;
 import com.example.adam.rozpiskimeczowe.brazylian.brazylian8.BRAZactiv8;
+import com.example.adam.rozpiskimeczowe.everyoneForEveryone.EFEactiv;
+import com.example.adam.rozpiskimeczowe.everyoneForEveryone.EFEactiv3;
+import com.example.adam.rozpiskimeczowe.everyoneForEveryone.EFEactiv4;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class LoadingListLocal extends AppCompatActivity {
     CustomAdapter adapter;
@@ -52,7 +61,9 @@ public class LoadingListLocal extends AppCompatActivity {
                                 new TableControllerTournament(getApplicationContext()).delete(adapter.tournaments.get(position).getId());
                                 TournamentLocal tournamentLocal = adapter.tournaments.get(position);
                                 adapter.tournaments.remove(tournamentLocal);
-                                listview.setAdapter(adapter);
+                                if(adapter.getCount()!=0) {
+                                    listview.setAdapter(adapter);
+                                }
                                 dialog.dismiss();
                             }})
 
@@ -75,6 +86,7 @@ public class LoadingListLocal extends AppCompatActivity {
         CustomAdapter(Context context) {
             this.context = context;
             tournaments = new TableControllerTournament(getApplicationContext()).read();
+
         }
 
 
@@ -123,8 +135,12 @@ public class LoadingListLocal extends AppCompatActivity {
                         Intent intent;
                         if(tournaments.get(position).getTyp().equals("braz16")){
                             intent = new Intent(getApplicationContext(),BRAZactiv16.class);
-                        }else {
+                        }else if(tournaments.get(position).getTyp().equals("braz8")){
                             intent = new Intent(getApplicationContext(),BRAZactiv8.class);
+                        }else if(tournaments.get(position).getTyp().equals("Group3")){
+                            intent = new Intent(getApplicationContext(),EFEactiv3.class);
+                        }else {
+                            intent = new Intent(getApplicationContext(),EFEactiv4.class);
                         }
 
                         List<Team> teams = new TableControllerTeams(getApplicationContext()).read(String.valueOf(tournaments.get(position).getId()));
@@ -133,21 +149,35 @@ public class LoadingListLocal extends AppCompatActivity {
                         }
                         intent.putExtra("quantityOfTeams", String.valueOf(teams.size()));
                         intent.putExtra("nameOfTour", tournaments.get(position).getNazwa());
+                        intent.putExtra("pktInSet",tournaments.get(position).getPktInSet());
+
+                        Map<Integer,ArrayList<String>> mapResults = new HashMap<>();
+                        List<Match> matches = new TableControllerMatches(context).read(String.valueOf(tournaments.get(position).getId()));
+                        for(Match match:matches){
+                            ArrayList<String> arrayRes = new ArrayList<>();
+                            arrayRes.add(match.getRes1_1());
+                            arrayRes.add(match.getRes1_2());
+                            arrayRes.add(match.getRes1_3());
+                            arrayRes.add(match.getRes2_1());
+                            arrayRes.add(match.getRes2_2());
+                            arrayRes.add(match.getRes2_3());
+                            arrayRes.add(match.getWinner());
+                            arrayRes.add(match.getLosser());
+                            mapResults.put(Integer.parseInt(match.getNrM()),arrayRes);
+                        }
+                        intent.putExtra("resMap",(Serializable)mapResults);
+                        intent.putExtra("local","true");
 
                         startActivity(intent);
 
                     }
                 });
-
                 convertView.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
                     public boolean onLongClick(View view) {
-
                         return false;
                     }
                 });
-
-
 
             }
 

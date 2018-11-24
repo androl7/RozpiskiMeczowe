@@ -74,6 +74,8 @@ public class FragmentTabCup32_1 extends Fragment {
         zoomLayout = view.findViewById(R.id.cup32_zoomLayout);
         relativeLayout = view.findViewById(R.id.cup32relLayout);
 
+        String local = getActivity().getIntent().getStringExtra("local");
+
         setHasOptionsMenu(true);
 
         nameOfTour = getActivity().getIntent().getStringExtra("nameOfTour");
@@ -85,7 +87,7 @@ public class FragmentTabCup32_1 extends Fragment {
             numbersOfMatchesArray[i] = view.findViewById(resID);
         }
 
-        setResultsForCup = new SetResultsForCup(nameOfTour,listResultButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,numberOfMatches,actualMatch,relativeLayout,numbersOfMatchesArray,view,"cup32",zoomLayout);
+        setResultsForCup = new SetResultsForCup(nameOfTour,listResultButtons,mapPointsInMatches,typeOfTour,getActivity(),container,pktInSet,pktInTieBreak,numberOfMatches,actualMatch,relativeLayout,numbersOfMatchesArray,view,"cup32",zoomLayout,local);
 
 
 
@@ -633,6 +635,7 @@ public class FragmentTabCup32_1 extends Fragment {
                 braz16.putExtra("NameOfTeam14",win22.getText().toString());
                 braz16.putExtra("NameOfTeam15",win23.getText().toString());
                 braz16.putExtra("NameOfTeam16",win24.getText().toString());
+                braz16.putExtra("OnlyWatch",onlyWatch);
                 startActivity(braz16);
         }
         return super.onOptionsItemSelected(item);
