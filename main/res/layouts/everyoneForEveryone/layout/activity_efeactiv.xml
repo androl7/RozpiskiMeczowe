@@ -92,7 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/GroupNameOfTour"
-        android:text="Ilość drużyn: "
+        android:text="Liczba drużyn: "
         android:textSize="23sp"
         android:layout_alignParentStart="true"
         android:textColor="#000000"/>
@@ -117,7 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textHowMuchTeams"
-        android:text="Pkt:"
+        android:text="Pkt: "
         android:textSize="23sp"
         android:textColor="#000000" />
 

@@ -13,30 +13,46 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="adjustPan|adjustResize"
-        tools:replace="icon">
-        <activity android:name=".MainActivity">
+        tools:replace="icon"
+        >
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".everyoneForEveryone.EFEactiv" />
-        <activity android:name=".everyoneForEveryone.EFEactiv3" />
+        <activity android:name=".everyoneForEveryone.EFEactiv"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".everyoneForEveryone.EFEactiv3"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".brazylian.BRAZactiv"
-            android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".brazylian.brazylian8.BRAZactiv8" />
-        <activity android:name=".brazylian.brazylian16.BRAZactiv16" />
-        <activity android:name=".everyoneForEveryone.Results" />
-        <activity android:name=".everyoneForEveryone.EFEactiv4" />
-        <activity android:name=".offical.OfficalListWihTeams" />
-        <activity android:name=".cup.cup32.CUPactiv32" />
-        <activity android:name=".cup.cup64.CUPactiv64" />
-        <activity android:name=".cup.CUPactiv" />
-        <activity android:name=".loadDatabase.LoadingListOffical" />
-        <activity android:name=".loadDatabase.SelectLoadingList" />
-        <activity android:name=".loadDatabase.LoadingListLocal"></activity>
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".brazylian.brazylian8.BRAZactiv8"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".brazylian.brazylian16.BRAZactiv16"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".everyoneForEveryone.Results"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".everyoneForEveryone.EFEactiv4"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".offical.OfficalListWihTeams"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".cup.cup32.CUPactiv32"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".cup.cup64.CUPactiv64"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".cup.CUPactiv"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".loadDatabase.LoadingListOffical"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".loadDatabase.SelectLoadingList"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".loadDatabase.LoadingListLocal"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

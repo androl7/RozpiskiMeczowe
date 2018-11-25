@@ -312,7 +312,7 @@ public class BRAZactiv extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Podaj nazwiska wszystkich graczy", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(getApplicationContext(), "Wybierz ilość drużyn.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Wybierz liczbę drużyn.", Toast.LENGTH_SHORT).show();
                 }
 
         }

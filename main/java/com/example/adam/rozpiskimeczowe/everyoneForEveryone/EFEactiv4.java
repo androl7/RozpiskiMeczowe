@@ -20,6 +20,7 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adam.rozpiskimeczowe.MainActivity;
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.SetDetailedResultFor2Sets;
 import com.example.adam.rozpiskimeczowe.SetResultsForGroups;
@@ -560,6 +561,12 @@ public class EFEactiv4 extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+    }
+
 
 
     class Score implements Comparable<Score> {

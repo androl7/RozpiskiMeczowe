@@ -20,6 +20,7 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.adam.rozpiskimeczowe.MainActivity;
 import com.example.adam.rozpiskimeczowe.R;
 import com.example.adam.rozpiskimeczowe.SetDetailedResultFor2Sets;
 import com.example.adam.rozpiskimeczowe.SetResultsForGroups;
@@ -229,6 +230,12 @@ public class EFEactiv3 extends AppCompatActivity {
         setResultsForGroups.set(layoutSets23, res23_2_1, res23_2_2, res23_2_3, res23_3_1, res23_3_2, res23_3_3, res23_2, res23_3, res32_2, res32_3, TM3);
 
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
     }
 
     @Override
