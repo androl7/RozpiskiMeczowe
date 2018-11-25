@@ -75,7 +75,7 @@ public class EFEactiv3 extends AppCompatActivity {
     EditText res23_3_2;
     EditText res23_3_3;
 
-    Map<Integer,ArrayList<String>> mapResults;
+    Map<Integer, ArrayList<String>> mapResults;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,12 +84,12 @@ public class EFEactiv3 extends AppCompatActivity {
         linearLayout = findViewById(R.id.Efe3MainLayout);
         String nameOfTour = getIntent().getStringExtra("nameOfTour");
         mapResults = new HashMap<>();
-        mapResults = (HashMap<Integer,ArrayList<String>>)getIntent().getSerializableExtra("resMap");
+        mapResults = (HashMap<Integer, ArrayList<String>>) getIntent().getSerializableExtra("resMap");
 
 
         getSupportActionBar().setTitle("Grupowy: 3");
         pktInSet = getIntent().getStringExtra("pktInSet");
-        SetResultsForGroups setResultsForGroups = new SetResultsForGroups(nameOfTour,typeOfTour,this, vg, pktInSet, pktInTieBreak);
+        SetResultsForGroups setResultsForGroups = new SetResultsForGroups(nameOfTour, typeOfTour, this, vg, pktInSet, pktInTieBreak);
 
 
         final LinearLayout layoutSets12 = findViewById(R.id.efe3_linear_sets_12);
@@ -154,7 +154,7 @@ public class EFEactiv3 extends AppCompatActivity {
         res23_3_3.setVisibility(View.INVISIBLE);
 
         //TextView only With Sets
-        final TextView res21_2 = findViewById(R.id.EFE_3_res21_2 );
+        final TextView res21_2 = findViewById(R.id.EFE_3_res21_2);
         final TextView res21_1 = findViewById(R.id.EFE_3_res21_1);
         final TextView res31_3 = findViewById(R.id.EFE_3_res31_3);
         final TextView res31_1 = findViewById(R.id.EFE_3_res31_1);
@@ -176,7 +176,7 @@ public class EFEactiv3 extends AppCompatActivity {
         name2.setText(getIntent().getStringExtra("NameOfTeam2"));
         name3.setText(getIntent().getStringExtra("NameOfTeam3"));
 
-        if(mapResults!=null) {
+        if (mapResults != null) {
             if (mapResults.get(1) != null) {
                 res12_1.setText(mapResults.get(1).get(6));
                 res21_1.setText(mapResults.get(1).get(6));
@@ -229,7 +229,6 @@ public class EFEactiv3 extends AppCompatActivity {
         setResultsForGroups.set(layoutSets23, res23_2_1, res23_2_2, res23_2_3, res23_3_1, res23_3_2, res23_3_3, res23_2, res23_3, res32_2, res32_3, TM3);
 
 
-
     }
 
     @Override
@@ -259,24 +258,41 @@ public class EFEactiv3 extends AppCompatActivity {
 
                 try {
                     sets12_1 = Integer.parseInt(res12_1.getText().toString());
-                    sets13_1 = Integer.parseInt(res13_1.getText().toString());
-                    sets12_2 = Integer.parseInt(res12_2.getText().toString());
-                    sets23_2 = Integer.parseInt(res23_2.getText().toString());
-                    sets23_3 = Integer.parseInt(res23_3.getText().toString());
-                    sets13_3 = Integer.parseInt(res13_3.getText().toString());
+                } catch (NumberFormatException e) {
 
+                }
+                try {
+                    sets13_1 = Integer.parseInt(res13_1.getText().toString());
+                } catch (NumberFormatException e) {
+
+                }
+                try {
+                    sets12_2 = Integer.parseInt(res12_2.getText().toString());
+                } catch (NumberFormatException e) {
+
+                }
+                try {
+                    sets23_2 = Integer.parseInt(res23_2.getText().toString());
+                } catch (NumberFormatException e) {
+
+                }
+                try {
+                    sets23_3 = Integer.parseInt(res23_3.getText().toString());
+                } catch (NumberFormatException e) {
+
+                }
+                try {
+                    sets13_3 = Integer.parseInt(res13_3.getText().toString());
                 } catch (NumberFormatException e) {
 
                 }
 
 
+                int team1Points = addPoints(res12_1_1, res12_1_2, res12_1_3, res13_1_1, res13_1_2, res13_1_3);
 
-                    int team1Points = addPoints(res12_1_1,res12_1_2,res12_1_3,res13_1_1,res13_1_2,res13_1_3);
+                int team2Points = addPoints(res12_2_1, res12_2_2, res12_2_3, res23_2_1, res23_2_2, res23_2_3);
 
-                    int team2Points = addPoints(res12_2_1,res12_2_2,res12_2_3,res23_2_1,res23_2_2,res23_2_3);
-
-                    int team3Points = addPoints(res13_3_1,res13_3_2,res13_3_3,res23_3_1,res23_3_2,res23_3_3);
-
+                int team3Points = addPoints(res13_3_1, res13_3_2, res13_3_3, res23_3_1, res23_3_2, res23_3_3);
 
 
                 if (sets12_1 > sets12_2) {
@@ -374,35 +390,36 @@ public class EFEactiv3 extends AppCompatActivity {
             }
         }
     }
-    int addPoints(EditText res1_1,EditText res1_2, EditText res1_3,EditText res2_1,EditText res2_2, EditText res2_3){
-        int ires1_1=0;
-        int ires1_2=0;
-        int ires1_3=0;
-        int ires2_1=0;
-        int ires2_2=0;
-        int ires2_3=0;
 
-        if(!res1_1.getText().toString().equals("")){
+    int addPoints(EditText res1_1, EditText res1_2, EditText res1_3, EditText res2_1, EditText res2_2, EditText res2_3) {
+        int ires1_1 = 0;
+        int ires1_2 = 0;
+        int ires1_3 = 0;
+        int ires2_1 = 0;
+        int ires2_2 = 0;
+        int ires2_3 = 0;
+
+        if (!res1_1.getText().toString().equals("")) {
             ires1_1 = Integer.parseInt(res1_1.getText().toString());
         }
 
-        if(!res1_2.getText().toString().equals("")){
+        if (!res1_2.getText().toString().equals("")) {
             ires1_2 = Integer.parseInt(res1_2.getText().toString());
         }
 
-        if(!res1_3.getText().toString().equals("")){
+        if (!res1_3.getText().toString().equals("")) {
             ires1_3 = Integer.parseInt(res1_3.getText().toString());
         }
 
-        if(!res2_1.getText().toString().equals("")){
+        if (!res2_1.getText().toString().equals("")) {
             ires2_1 = Integer.parseInt(res2_1.getText().toString());
         }
 
-        if(!res2_2.getText().toString().equals("")){
+        if (!res2_2.getText().toString().equals("")) {
             ires2_2 = Integer.parseInt(res2_2.getText().toString());
         }
 
-        if(!res2_3.getText().toString().equals("")){
+        if (!res2_3.getText().toString().equals("")) {
             ires2_3 = Integer.parseInt(res2_3.getText().toString());
         }
 

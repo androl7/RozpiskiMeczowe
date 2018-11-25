@@ -258,7 +258,7 @@ public class BRAZactiv extends AppCompatActivity {
                     for (String name : names) {
                         if (name == null || name.equals("")) {
                             //TU MA BYĆ FALSE !!!
-                            checkNull = true;
+                            checkNull = false;
                             break;
                         }
                     }
